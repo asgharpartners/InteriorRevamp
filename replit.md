@@ -1,0 +1,41 @@
+# Overview
+
+This is a modern full-stack web application for "Nils Holger," a Scandinavian interior design company. The project showcases the company's services, portfolio, and allows clients to contact them through a form. The application features a sophisticated, responsive design with multilingual support (English/Swedish) and emphasizes the minimalist aesthetic typical of Scandinavian design.
+
+The website includes sections for company introduction, services overview, before/after project showcases, product categories, project references, team information, and contact functionality. It's built as a single-page application with smooth scrolling navigation and interactive components like image sliders and expandable service cards.
+
+# User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+# System Architecture
+
+## Frontend Architecture
+The frontend is built using **React 18** with **TypeScript** in a **Vite** development environment. The application uses **wouter** for client-side routing instead of React Router, providing a lightweight routing solution. State management is handled through **TanStack React Query** for server state and React's built-in Context API for application state like language preferences.
+
+The UI is constructed using **shadcn/ui** components built on top of **Radix UI** primitives, providing accessible and customizable components. **Tailwind CSS** handles styling with a custom design system featuring Scandinavian-inspired colors and typography. The application supports both English and Swedish languages through a custom translation system.
+
+## Backend Architecture
+The backend is an **Express.js** server written in TypeScript that serves both API endpoints and static files. The server uses **ESM modules** and is structured with separate route handlers and storage abstraction layers. The API provides endpoints for contact form submissions and data retrieval for projects, services, and products.
+
+Currently, the backend uses an in-memory storage implementation for development purposes, with interfaces defined for easy migration to a persistent database solution.
+
+## Data Storage Solutions
+The application is configured to use **PostgreSQL** as the primary database with **Drizzle ORM** for type-safe database operations. The database configuration points to **Neon Database** as the hosting provider. Database schemas are defined for users, projects, services, products, and contacts with proper relationships and constraints.
+
+Migration files are managed through Drizzle Kit, and the schema includes support for JSON fields for flexible data storage (like project tags). The current implementation uses a memory storage adapter for development, but the architecture supports easy swapping to the PostgreSQL implementation.
+
+## Authentication and Authorization
+The application structure includes user authentication schemas and session management setup using **connect-pg-simple** for PostgreSQL session storage. However, the current implementation appears to be primarily a public-facing website without active authentication requirements for end users.
+
+## External Dependencies
+The application integrates with several external services and libraries:
+
+- **Neon Database** (@neondatabase/serverless) for PostgreSQL hosting
+- **Radix UI** components for accessible UI primitives
+- **Lucide React** for consistent iconography
+- **React Hook Form** with **Zod** validation for form handling
+- **date-fns** for date manipulation
+- **Embla Carousel** for image sliders and carousels
+
+The build process uses **Vite** for development and **esbuild** for production bundling, with custom Replit integration plugins for development environment support. The application is configured for deployment with separate client and server build outputs.

@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Search, Menu } from "lucide-react" // Removed Globe
+import { Menu } from "lucide-react"
 import { useState } from "react"
 import MobileMenu from "./mobile-menu"
 import Image from "next/image"
@@ -36,82 +36,74 @@ export default function Header({ language, setLanguage }: HeaderProps) {
 
   return (
     <>
-      <header className={`relative z-50 bg-off-white transition-all duration-300 ease-in-out`}>
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between md:justify-start flex-nowrap">
-          {/* Logo Image - Far left, functions as "Start" button */}
-          <div className="flex-shrink-0 relative">
-            <button onClick={() => scrollToSection("hero")} className="focus:outline-none">
-              {/* Background overlay to match navigation color */}
-              <div
-                className="absolute inset-0 bg-off-white"
-                style={{
-                  backgroundColor: "#FFFAF6",
-                  mixBlendMode: "normal",
-                  zIndex: -1,
-                }}
-              />
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#2B2B2B] transition-all duration-300 ease-in-out">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between flex-nowrap">
+          {/* Logo with warm brown background - Far left */}
+          <div className="flex-shrink-0">
+            <button 
+              onClick={() => scrollToSection("hero")} 
+              className="focus:outline-none bg-[#AD8C44] rounded-lg p-2 hover:bg-[#936F39] transition-colors duration-200"
+            >
               <Image
                 src="/nils-holger-logo-new.png"
                 alt="Nils Holger Logo"
-                width={300} // Increased logo width
-                height={90} // Increased logo height
+                width={120}
+                height={36}
                 priority
-                className="object-contain relative"
-                style={{
-                  mixBlendMode: "multiply",
-                  filter: "contrast(1.2) brightness(1.1) saturate(1.1)",
-                  backgroundColor: "transparent",
-                }}
+                className="object-contain"
               />
             </button>
           </div>
 
-          {/* Desktop Navigation Links - visible on md and up */}
-          <nav className="hidden md:flex items-center space-x-4 ml-16">
+          {/* Desktop Navigation Links - Center/Right area */}
+          <nav className="hidden md:flex items-center space-x-8 ml-auto mr-6">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="text-[0.65rem] uppercase tracking-wide text-primary-brown hover:text-primary-brown font-medium transition-colors duration-200"
+                className="text-sm text-[#F5F5F5] hover:text-white font-medium transition-colors duration-200 uppercase tracking-wide"
               >
                 {item}
               </button>
             ))}
           </nav>
 
-          {/* Spacer to push right-aligned elements to the far right on md and up */}
-          <div className="flex-grow hidden md:block" />
-
-          {/* Desktop Right-aligned elements - visible on md and up */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="text-dark-grey hover:bg-off-white hover:text-primary-brown">
-              <Search className="w-4 h-4" />
-            </Button>
-            <Button
+          {/* Desktop Right-aligned elements */}
+          <div className="hidden md:flex items-center space-x-3">
+            {/* Language Toggle with yellow background */}
+            <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="flex items-center gap-0.5 bg-transparent hover:bg-off-white text-dark-grey hover:text-primary-brown text-[0.65rem] font-medium transition-colors tracking-wider px-2 py-0.5"
-              size="sm"
+              className="bg-[#FEEFC3] text-[#2B2B2B] px-3 py-1 rounded text-sm font-medium hover:bg-[#FEE68A] transition-colors duration-200"
             >
-              {/* Removed Globe icon */}
               {language === "sv" ? "SV" : "EN"}
-            </Button>
+            </button>
+            
+            {/* Book Consultation Button */}
             <Button
               variant="outline"
               size="sm"
-              className="bg-primary-brown hover:bg-dark-grey text-off-white border-primary-brown text-[0.6rem] uppercase tracking-wide px-4 py-2"
+              className="bg-[#2B2B2B] hover:bg-[#1A1A1A] text-[#F5F5F5] border-[#F5F5F5] text-xs uppercase tracking-wide px-4 py-2 h-8 whitespace-nowrap"
             >
               {t.bookConsultation}
             </Button>
           </div>
 
-          {/* Mobile Hamburger Menu Icon - hidden on md and up */}
+          {/* Mobile Hamburger Menu Icon */}
           <div className="md:hidden flex items-center">
-            <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(true)}>
-              <Menu className="w-6 h-6 text-dark-grey" />
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="text-[#F5F5F5] hover:text-white hover:bg-[#3B3B3B]"
+            >
+              <Menu className="w-6 h-6" />
             </Button>
           </div>
         </div>
       </header>
+
+      {/* Add padding to body content to account for fixed header */}
+      <div className="h-16"></div>
 
       {/* Mobile Menu Overlay */}
       <MobileMenu

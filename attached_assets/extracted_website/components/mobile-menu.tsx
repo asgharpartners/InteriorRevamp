@@ -63,7 +63,7 @@ export default function MobileMenu({ isOpen, onClose, language, setLanguage }: M
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-off-white transition-transform duration-500 ease-in-out ${
+      className={`fixed inset-0 z-[100] bg-[#2B2B2B] transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -90,28 +90,14 @@ export default function MobileMenu({ isOpen, onClose, language, setLanguage }: M
         </Button>
 
         {/* Logo Image for Mobile */}
-        <div className="mb-4 relative">
-          {/* Background overlay to match navigation color */}
-          <div
-            className="absolute inset-0 bg-off-white"
-            style={{
-              backgroundColor: "#FFFAF6",
-              mixBlendMode: "normal",
-              zIndex: -1,
-            }}
-          />
+        <div className="mb-4 bg-[#AD8C44] rounded-lg p-3">
           <Image
             src="/nils-holger-logo-new.png"
             alt="Nils Holger Logo"
-            width={350} // Increased logo width for mobile
-            height={105} // Increased logo height for mobile
+            width={200}
+            height={60}
             priority
-            className="object-contain relative"
-            style={{
-              mixBlendMode: "multiply",
-              filter: "contrast(1.2) brightness(1.1) saturate(1.1)",
-              backgroundColor: "transparent",
-            }}
+            className="object-contain"
           />
         </div>
 
@@ -135,13 +121,12 @@ export default function MobileMenu({ isOpen, onClose, language, setLanguage }: M
 
         {/* Language Toggle and Booking Button */}
         <div className="mt-12 flex flex-col space-y-4 w-full max-w-sm">
-          <Button
+          <button
             onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-            className="w-full h-12 rounded-full bg-primary-brown hover:bg-dark-grey text-off-white text-sm font-medium flex items-center justify-center gap-2 shadow-lg"
+            className="w-full h-12 rounded-full bg-[#FEEFC3] text-[#2B2B2B] text-sm font-medium hover:bg-[#FEE68A] transition-colors duration-200 shadow-lg"
           >
-            {/* Removed Globe icon */}
             {language === "sv" ? "SV" : "EN"}
-          </Button>
+          </button>
           <Button
             variant="outline"
             size="lg"

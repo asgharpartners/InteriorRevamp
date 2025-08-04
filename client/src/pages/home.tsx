@@ -1,4 +1,4 @@
-import { Header } from '@/components/header';
+import Header from '@/components/Header';
 import { HeroSlider } from '@/components/hero-slider';
 import { ServicesSection } from '@/components/services-section';
 import { BeforeAfterSlider } from '@/components/before-after-slider';

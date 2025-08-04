@@ -63,6 +63,21 @@ const config: Config = {
         "off-white": {
           DEFAULT: "#FFFAF6", // Updated to the specified Soft Cream
         },
+        // New header colors
+        "header-dark": {
+          DEFAULT: "#2B2B2B",
+        },
+        "logo-brown": {
+          DEFAULT: "#AD8C44",
+          hover: "#936F39",
+        },
+        "nav-text": {
+          DEFAULT: "#F5F5F5",
+        },
+        "language-bg": {
+          DEFAULT: "#FEEFC3",
+          hover: "#FEE68A",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

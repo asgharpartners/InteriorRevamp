@@ -34,41 +34,41 @@ export default function Header({ className = "" }: HeaderProps) {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between flex-nowrap">
-          {/* Logo with off-white semi-circle background - Far left */}
-          <div className="flex-shrink-0 relative">
+        {/* Logo with separate off-white background shape - Top left corner */}
+        <div className="absolute top-0 left-0 z-10">
+          <div 
+            className="bg-[#F5F5F5]"
+            style={{
+              width: '180px',
+              height: '60px',
+              borderRadius: '0 0 60px 0',
+              position: 'relative'
+            }}
+          >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none relative"
+              className="focus:outline-none absolute inset-0 flex items-center justify-start pl-6"
               data-testid="logo-button"
             >
-              {/* Off-white semi-circle background */}
-              <div 
-                className="absolute inset-0 bg-[#F5F5F5]"
-                style={{
-                  width: '160px',
-                  height: '50px',
-                  borderRadius: '25px 80px 80px 25px',
-                  transform: 'translateX(-8px) translateY(-2px)',
-                  zIndex: 0
-                }}
-              />
               <img
                 src="/logo.png"
                 alt="Nils Holger – Furniture & Projects"
-                className="object-contain relative z-10 h-12 max-w-[140px]"
+                className="object-contain h-10 max-w-[140px]"
                 style={{ filter: 'brightness(0.8) contrast(1.2)' }}
               />
             </button>
           </div>
+        </div>
 
-          {/* Desktop Navigation Links - Center area */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 space-x-10">
+        {/* Main navigation container - pushed right */}
+        <div className="container mx-auto px-6 py-4 flex items-center justify-end" style={{ paddingLeft: '200px' }}>
+          {/* Desktop Navigation Links - Right side */}
+          <nav className="hidden lg:flex items-center space-x-8 mr-8">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="text-sm text-[#F5F5F5] hover:text-white font-medium transition-colors duration-200 tracking-[0.2em]"
+                className="text-sm text-[#F5F5F5] hover:text-white font-medium transition-colors duration-200 tracking-[0.2em] uppercase"
                 data-testid={`nav-${item.toLowerCase()}`}
                 style={{ 
                   fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -85,7 +85,7 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Language Toggle - plain text */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="text-[#F5F5F5] hover:text-white text-sm font-medium transition-colors duration-200 tracking-[0.1em]"
+              className="text-[#F5F5F5] hover:text-white text-sm font-medium transition-colors duration-200 tracking-[0.1em] uppercase"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -96,7 +96,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-xs tracking-[0.1em] px-5 py-2 h-9 rounded-md whitespace-nowrap shadow-sm"
+              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-xs tracking-[0.1em] px-5 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
               data-testid="book-consultation"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -143,24 +143,25 @@ export default function Header({ className = "" }: HeaderProps) {
               <X className="w-8 h-8" />
             </Button>
 
-            {/* Logo Image for Mobile with semi-circle background */}
+            {/* Logo Image for Mobile with off-white background */}
             <div className="mb-8 relative">
               <div 
-                className="absolute inset-0 bg-[#F5F5F5]"
+                className="bg-[#F5F5F5] rounded-2xl p-4"
                 style={{
-                  width: '200px',
-                  height: '70px',
-                  borderRadius: '35px 100px 100px 35px',
-                  transform: 'translateX(-10px) translateY(-5px)',
-                  zIndex: 0
+                  width: '220px',
+                  height: '80px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
-              />
-              <img
-                src="/logo.png"
-                alt="Nils Holger – Furniture & Projects"
-                className="object-contain relative z-10 h-16 max-w-[180px]"
-                style={{ filter: 'brightness(0.8) contrast(1.2)' }}
-              />
+              >
+                <img
+                  src="/logo.png"
+                  alt="Nils Holger – Furniture & Projects"
+                  className="object-contain h-16 max-w-[180px]"
+                  style={{ filter: 'brightness(0.8) contrast(1.2)' }}
+                />
+              </div>
             </div>
 
             {/* Tagline */}

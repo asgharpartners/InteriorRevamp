@@ -50,10 +50,10 @@ export default function Header({ className = "" }: HeaderProps) {
               data-testid="logo-button"
             >
               <img
-                src="/nils-holger-logo.png"
+                src="/nh-logo-final.png"
                 alt="Nils Holger – Furniture & Projects"
-                className="object-contain h-16 max-w-[280px]"
-                style={{ filter: 'brightness(0.9) contrast(1.1)' }}
+                className="h-16"
+                style={{ objectFit: 'contain', maxWidth: '280px', display: 'block' }}
               />
             </button>
           </div>
@@ -152,10 +152,10 @@ export default function Header({ className = "" }: HeaderProps) {
                 }}
               >
                 <img
-                  src="/nils-holger-logo.png"
+                  src="/nh-logo-final.png"
                   alt="Nils Holger – Furniture & Projects"
-                  className="object-contain h-20 max-w-[300px]"
-                  style={{ filter: 'brightness(0.9) contrast(1.1)' }}
+                  className="h-20"
+                  style={{ objectFit: 'contain', maxWidth: '300px', display: 'block' }}
                 />
               </div>
             </div>

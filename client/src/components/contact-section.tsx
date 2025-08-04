@@ -69,6 +69,63 @@ export function ContactSection() {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-16">
+          {/* Contact Information & Map */}
+          <div>
+            <h3 className="font-serif text-2xl font-bold text-dark-brown mb-8">Visit Our Studio</h3>
+            
+            {/* Google Maps Embed */}
+            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.7824773928842!2d18.073669477032766!3d59.33482071040708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5c8d5c8d5d%3A0x1234567890abcdef!2sBirger%20Jarlsgatan%2099%2C%20113%2031%20Stockholm%2C%20Sweden!5e0!3m2!1sen!2sse!4v1699999999999!5m2!1sen!2sse"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Nils Holger Studio Location"
+              ></iframe>
+            </div>
+
+            {/* Contact Details */}
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <MapPin className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
+                <div>
+                  <p className="font-semibold text-dark-brown">Address</p>
+                  <p className="text-dark-grey">Birger Jarlsgatan 99</p>
+                  <p className="text-dark-grey">113 31 Stockholm, Sweden</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <Phone className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
+                <div>
+                  <p className="font-semibold text-dark-brown">Phone</p>
+                  <p className="text-dark-grey">+46 8 123 456 78</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <Mail className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
+                <div>
+                  <p className="font-semibold text-dark-brown">Email</p>
+                  <p className="text-dark-grey">info@nilsholger.se</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <Clock className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
+                <div>
+                  <p className="font-semibold text-dark-brown">Studio Hours</p>
+                  <p className="text-dark-grey">Monday - Friday: 9:00 - 17:00</p>
+                  <p className="text-dark-grey">Saturday: 10:00 - 15:00</p>
+                  <p className="text-dark-grey">Sunday: By appointment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Contact Form */}
           <div>
             <h3 className="font-serif text-2xl font-bold text-dark-brown mb-8">Send us a message</h3>

@@ -17,147 +17,182 @@ export function Header() {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-off-white/98 backdrop-blur-md">
-      <div className="container mx-auto px-6 py-6 flex items-center justify-between">
-        {/* Logo */}
+    <header className="fixed w-full top-0 z-50 bg-[#2B2B2B]">
+      <div className="w-full px-4 py-4 flex items-center justify-between">
+        {/* Logo with golden rounded background */}
         <div className="flex items-center">
-          <h1 className="text-dark-brown font-serif text-2xl font-bold tracking-tight">
-            Nils Holger Design
-          </h1>
+          <div className="bg-[#AD8C44] rounded-lg px-4 py-2">
+            <h1 className="text-white font-serif text-2xl font-bold tracking-tight">
+              Nils Holger
+            </h1>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-12">
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
-          >
-            {t('nav.about')}
-          </button>
-          <button 
-            onClick={() => scrollToSection('services')}
-            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
-          >
-            {t('nav.services')}
-          </button>
-          <button 
-            onClick={() => scrollToSection('products')}
-            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
-          >
-            {t('nav.products')}
-          </button>
-          <button 
-            onClick={() => scrollToSection('references')}
-            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
-          >
-            {t('nav.references')}
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')}
-            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
-          >
-            {t('nav.contact')}
-          </button>
-          
-          {/* Language Switcher */}
-          <div className="flex items-center space-x-3 ml-8">
+        <div className="hidden lg:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
             <button 
-              onClick={() => setLanguage('en')}
-              className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
-                language === 'en' ? 'text-dark-brown' : 'text-dark-grey hover:text-dark-brown'
-              }`}
+              onClick={() => scrollToSection('services')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
             >
-              EN
+              {t('nav.services')}
             </button>
-            <div className="w-px h-4 bg-dark-grey/30"></div>
+            <button 
+              onClick={() => scrollToSection('process')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              Process
+            </button>
+            <button 
+              onClick={() => scrollToSection('products')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              {t('nav.products')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('references')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              {t('nav.references')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('partners')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              Partners
+            </button>
+            <button 
+              onClick={() => scrollToSection('career')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              Career
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              {t('nav.about')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm"
+            >
+              {t('nav.contact')}
+            </button>
+          </nav>
+          
+          {/* Language Switcher with yellow background */}
+          <div className="bg-yellow-200 px-3 py-1 rounded flex items-center space-x-2">
             <button 
               onClick={() => setLanguage('sv')}
               className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
-                language === 'sv' ? 'text-dark-brown' : 'text-dark-grey hover:text-dark-brown'
+                language === 'sv' ? 'text-[#2B2B2B]' : 'text-[#2B2B2B]/60 hover:text-[#2B2B2B]'
               }`}
             >
               SV
+            </button>
+            <div className="w-px h-3 bg-[#2B2B2B]/30"></div>
+            <button 
+              onClick={() => setLanguage('en')}
+              className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
+                language === 'en' ? 'text-[#2B2B2B]' : 'text-[#2B2B2B]/60 hover:text-[#2B2B2B]'
+              }`}
+            >
+              EN
             </button>
           </div>
           
           {/* CTA Button */}
           <Button 
             onClick={() => scrollToSection('contact')}
-            className="bg-dark-brown text-off-white px-8 py-3 rounded-none font-medium text-sm uppercase tracking-wider hover:bg-dark-brown/90 transition-all duration-300"
+            className="bg-[#AD8C44] text-white px-6 py-2 rounded-lg font-medium text-sm hover:bg-[#AD8C44]/90 transition-all duration-300"
+            data-testid="header-cta-button"
           >
             {t('nav.bookConsultation')}
           </Button>
-        </nav>
+        </div>
 
         {/* Mobile Menu Button */}
         <button 
-          className="lg:hidden text-dark-brown p-2"
+          className="lg:hidden text-off-white p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Full width dark dropdown */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-off-white/98 backdrop-blur-md shadow-2xl">
-          <nav className="flex flex-col p-8 space-y-6">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
-            >
-              {t('nav.about')}
-            </button>
+        <div className="lg:hidden absolute top-full left-0 w-full bg-[#2B2B2B] shadow-2xl">
+          <nav className="flex flex-col p-6 space-y-4">
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
             >
               {t('nav.services')}
             </button>
             <button 
+              onClick={() => scrollToSection('process')}
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
+            >
+              Process
+            </button>
+            <button 
               onClick={() => scrollToSection('products')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
             >
               {t('nav.products')}
             </button>
             <button 
               onClick={() => scrollToSection('references')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
             >
               {t('nav.references')}
             </button>
             <button 
+              onClick={() => scrollToSection('partners')}
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
+            >
+              Partners
+            </button>
+            <button 
+              onClick={() => scrollToSection('career')}
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
+            >
+              Career
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
+            >
+              {t('nav.about')}
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
+              className="text-left text-off-white hover:text-[#AD8C44] transition-colors font-medium text-sm py-3"
             >
               {t('nav.contact')}
             </button>
             
-            <div className="flex items-center space-x-6 pt-6 border-t border-dark-grey/20">
-              <button 
-                onClick={() => setLanguage('en')}
-                className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
-                  language === 'en' ? 'text-dark-brown' : 'text-dark-grey'
-                }`}
-              >
-                EN
-              </button>
+            <div className="flex items-center space-x-4 pt-4 border-t border-off-white/20">
+              <span className="text-off-white/60 text-xs">Language:</span>
               <button 
                 onClick={() => setLanguage('sv')}
                 className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
-                  language === 'sv' ? 'text-dark-brown' : 'text-dark-grey'
+                  language === 'sv' ? 'text-[#AD8C44]' : 'text-off-white/60'
                 }`}
               >
                 SV
               </button>
+              <button 
+                onClick={() => setLanguage('en')}
+                className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
+                  language === 'en' ? 'text-[#AD8C44]' : 'text-off-white/60'
+                }`}
+              >
+                EN
+              </button>
             </div>
-            
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-dark-brown text-off-white mt-6 rounded-none font-medium text-sm uppercase tracking-wider hover:bg-dark-brown/90 transition-all duration-300 py-4"
-            >
-              {t('nav.bookConsultation')}
-            </Button>
           </nav>
         </div>
       )}

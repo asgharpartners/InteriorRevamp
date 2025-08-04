@@ -10,13 +10,34 @@ This is a modern B2B web platform for "Nils Holger Design," a Scandinavian inter
 
 **Target Audience:** B2B clients including hotel owners, restaurateurs, property developers, and office managers
 
-**Core Features:**
+**Updated Website Structure (Jan 2025):**
+1. Start/Hero - Full-width slideshow with logo and tagline
+2. Intro/Welcome - Mission statement and B2B positioning
+3. Services - 7 expandable service cards with descriptions
+4. Our Process - 4-step numbered workflow (Möte → Design → Produktion → Leverans)
+5. Products - Standard Products + In-House Manufacturing categories
+6. Before & After - Project transformation slider
+7. Reference Projects - Year-by-year timeline with sector filters
+8. Partners - Brand logos and collaboration opportunities
+9. Career & Internship - Student collaboration section
+10. About Us - Vision, story, team with yellow-bordered profile images
+11. Contact - Google Maps integration + booking form
+12. Footer - Complete site navigation and social links
+
+**Navigation Design:**
+- Dark brown (#2B2B2B) full-width header
+- Logo with warm golden brown (#AD8C44) rounded background
+- Right-aligned navigation with sticky "Boka gratis konsultation" button
+- Language toggle (SV/EN) in light yellow box
+- Mobile hamburger menu with full-width dark dropdown
+
+**Key Features:**
 - Bilingual support (Swedish/English)
-- Scalable e-commerce foundation for custom and standard products
-- Partnership showcases (HAY, Gubi, Muuto, IKEA)
-- Trust-building through project references and team introductions
-- Sustainability emphasis and material reuse narratives
-- Sticky "Book a free consultation" CTA with booking integration potential
+- Expandable service and product cards with "Läs mer" links
+- Year-based project timeline with sector filtering
+- Sticky CTA button that scales on mobile
+- Google Maps integration at Birger Jarlsgatan 99
+- Career section for student partnerships
 
 # User Preferences
 

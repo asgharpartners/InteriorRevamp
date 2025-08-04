@@ -1,4 +1,5 @@
-import { Lightbulb, Compass, Hammer, Home } from 'lucide-react';
+import { useState } from 'react';
+import { Lightbulb, Compass, Hammer, Home, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const services = [
@@ -62,43 +63,63 @@ const services = [
 
 export function ServicesSection() {
   const { t } = useLanguage();
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+
+  const toggleCard = (index: number) => {
+    const newExpanded = new Set(expandedCards);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedCards(newExpanded);
+  };
 
   return (
-    <section id="services" className="py-20 bg-off-white">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
-            {t('services.title')}
-          </h2>
-          <p className="text-xl text-dark-grey max-w-2xl mx-auto">
-            {t('services.subtitle')}
-          </p>
+          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Services</h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg mb-6 aspect-[3/4]">
-                <img 
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-dark-brown/20 group-hover:bg-dark-brown/40 transition-all duration-300" />
-              </div>
-              <div className="flex items-center mb-3">
-                <div className="text-warm-gold mr-3">
-                  {service.icon}
+        
+        <div className="max-w-5xl mx-auto space-y-4">
+          {services.slice(0, 7).map((service, index) => (
+            <div 
+              key={index} 
+              className="bg-white border border-dark-grey/10 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <div 
+                className="p-6 cursor-pointer flex items-center justify-between"
+                onClick={() => toggleCard(index)}
+                data-testid={`service-toggle-${index}`}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-[#AD8C44]">
+                    {service.icon}
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-dark-brown">
+                    {service.title}
+                  </h3>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-dark-brown">
-                  {service.title}
-                </h3>
+                <div className="text-[#AD8C44]">
+                  {expandedCards.has(index) ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                </div>
               </div>
-              <p className="text-dark-grey mb-4">
-                {service.description}
-              </p>
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-dark-grey">
-                <p>{service.longDescription}</p>
-              </div>
+              
+              {expandedCards.has(index) && (
+                <div className="px-6 pb-6 border-t border-dark-grey/10">
+                  <div className="pt-4">
+                    <p className="text-dark-grey mb-4">{service.description}</p>
+                    <p className="text-dark-brown text-sm leading-relaxed">{service.longDescription}</p>
+                    <button 
+                      className="mt-4 text-[#AD8C44] text-sm font-medium hover:text-[#AD8C44]/80 transition-colors"
+                      data-testid={`service-read-more-${index}`}
+                    >
+                      Läs mer →
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

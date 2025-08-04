@@ -26,109 +26,17 @@ export default function HomePage() {
       <Header />
       <HeroSlider />
       
-      {/* Intro Section */}
-      <section className="py-20 bg-off-white">
+      {/* Intro/Welcome Section */}
+      <section id="intro" className="py-20 bg-off-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">
-              {t('intro.title')}
+              Welcome to Nils Holger – Design & Furniture Projects
             </h2>
-            <p className="text-xl text-dark-grey mb-8">
-              Your trusted partner for commercial interior design and sustainable furniture solutions
+            <p className="text-xl text-dark-grey max-w-3xl mx-auto leading-relaxed">
+              Our mission is to be a reliable and flexible partner for interior design and construction 
+              in all types of public environments. We work in both interior and exterior spaces.
             </p>
-          </div>
-          
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div className="text-left space-y-6">
-              <p className="text-lg leading-relaxed">
-                {t('intro.paragraph1')}
-              </p>
-              <p className="text-lg leading-relaxed">
-                {t('intro.paragraph2')}
-              </p>
-              
-              {/* B2B Focus Points */}
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-warm-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-dark-brown text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-dark-brown mb-1">Hotels & Hospitality</h4>
-                    <p className="text-sm text-dark-grey">Creating memorable guest experiences</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-warm-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-dark-brown text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-dark-brown mb-1">Restaurants & Cafés</h4>
-                    <p className="text-sm text-dark-grey">Functional spaces that inspire</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-warm-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-dark-brown text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-dark-brown mb-1">Office Spaces</h4>
-                    <p className="text-sm text-dark-grey">Productive work environments</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-warm-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-dark-brown text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-dark-brown mb-1">Property Development</h4>
-                    <p className="text-sm text-dark-grey">End-to-end interior solutions</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Nils Holger commercial project showcase" 
-                className="rounded-lg shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-warm-gold rounded-full flex items-center justify-center animate-bounce">
-                <Home className="text-dark-brown text-xl" />
-              </div>
-            </div>
-          </div>
-
-          {/* Sustainability Section */}
-          <div className="bg-dark-brown/5 rounded-lg p-12 text-center">
-            <h3 className="font-serif text-3xl font-bold text-dark-brown mb-6">Committed to Sustainability</h3>
-            <p className="text-xl text-dark-grey mb-8 max-w-4xl mx-auto">
-              We believe in creating beautiful spaces that respect our planet. Our approach to sustainability goes beyond materials – 
-              it's about creating timeless designs that last generations and finding new life for existing furniture through expert restoration.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-dark-brown text-2xl">♻</span>
-                </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2">Material Reuse</h4>
-                <p className="text-dark-grey text-sm">Giving existing furniture new life through expert restoration and reupholstery</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-dark-brown text-2xl">🌿</span>
-                </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2">Sustainable Sourcing</h4>
-                <p className="text-dark-grey text-sm">Locally sourced, FSC-certified wood and eco-friendly materials</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-dark-brown text-2xl">⏳</span>
-                </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2">Timeless Design</h4>
-                <p className="text-dark-grey text-sm">Creating pieces built to last, reducing the need for replacement</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -173,90 +81,188 @@ export default function HomePage() {
       </section>
 
       <ServicesSection />
-      <BeforeAfterSlider />
-      <ProductsSection />
-      <ReferencesSection />
-
-      {/* Partners Section */}
-      <section className="py-20 bg-off-white">
+      
+      {/* Our Process Section */}
+      <section id="process" className="py-20 bg-off-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">Trusted Partners</h2>
-            <p className="text-xl text-dark-grey max-w-3xl mx-auto">
-              We collaborate with leading Scandinavian design brands and sustainable suppliers to deliver exceptional results for our B2B clients
-            </p>
+            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Our Process</h2>
           </div>
           
-          {/* Brand Partners */}
-          <div className="mb-16">
-            <h3 className="font-serif text-2xl font-bold text-dark-brown text-center mb-8">Brand Partners</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
-              <div className="bg-white border border-dark-grey/10 rounded-lg p-8 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                <span className="text-dark-brown font-serif font-bold text-2xl">HAY</span>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">1</span>
+                  </div>
+                  <div className="bg-[#AD8C44]/10 rounded-lg p-6">
+                    <h3 className="font-serif text-xl font-bold text-dark-brown mb-4">Förutsättningslöst Möte</h3>
+                    <ul className="text-sm text-dark-grey space-y-2 text-left">
+                      <li>• Behov och visioner</li>
+                      <li>• Tidplan</li>
+                      <li>• Omfattning</li>
+                      <li>• Budget</li>
+                      <li>• Upplägg</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div className="bg-white border border-dark-grey/10 rounded-lg p-8 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                <span className="text-dark-brown font-serif font-bold text-2xl">GUBI</span>
+              
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">2</span>
+                  </div>
+                  <div className="bg-[#AD8C44]/10 rounded-lg p-6">
+                    <h3 className="font-serif text-xl font-bold text-dark-brown mb-4">Design & Koncept</h3>
+                    <p className="text-sm text-dark-grey text-left">
+                      Utveckling av kreativa lösningar, materialval och detaljerade planer baserat på era behov och visioner.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-white border border-dark-grey/10 rounded-lg p-8 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                <span className="text-dark-brown font-serif font-bold text-2xl">MUUTO</span>
+              
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">3</span>
+                  </div>
+                  <div className="bg-[#AD8C44]/10 rounded-lg p-6">
+                    <h3 className="font-serif text-xl font-bold text-dark-brown mb-4">Produktion & Förädling</h3>
+                    <p className="text-sm text-dark-grey text-left">
+                      Tillverkning av skräddarsydda möbler och anpassningar med högsta kvalitet och hantverksskicklighet.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-white border border-dark-grey/10 rounded-lg p-8 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                <span className="text-dark-brown font-serif font-bold text-2xl">IKEA</span>
+              
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">4</span>
+                  </div>
+                  <div className="bg-[#AD8C44]/10 rounded-lg p-6">
+                    <h3 className="font-serif text-xl font-bold text-dark-brown mb-4">Leverans & Installation</h3>
+                    <p className="text-sm text-dark-grey text-left">
+                      Professionell installation och slutlig styling för att säkerställa att resultatet överträffar förväntningarna.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      
+      <div id="products">
+        <ProductsSection />
+      </div>
+      <BeforeAfterSlider />
+      
+      <div id="references">
+        <ReferencesSection />
+      </div>
 
-          {/* Professional Partners */}
-          <div className="mb-16">
-            <h3 className="font-serif text-2xl font-bold text-dark-brown text-center mb-8">Professional Network</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Compass className="text-dark-brown text-xl" />
+      {/* Career & Internship Section */}
+      <section id="career" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Career & Internship</h2>
+            <p className="text-xl text-dark-grey mb-8 leading-relaxed">
+              We believe in nurturing the next generation of designers and craftspeople. 
+              Our collaboration with students and young professionals creates opportunities for hands-on learning 
+              in real-world projects while contributing fresh perspectives to our work.
+            </p>
+            
+            <div className="bg-[#AD8C44]/5 rounded-lg p-8 mb-8">
+              <h3 className="font-serif text-2xl font-bold text-dark-brown mb-4">Student Collaboration</h3>
+              <p className="text-dark-grey mb-6">
+                We regularly partner with design schools and universities to provide internship opportunities, 
+                thesis project support, and mentorship programs. Students work alongside our experienced team 
+                on live projects, gaining valuable industry experience.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="text-left">
+                  <h4 className="font-semibold text-dark-brown mb-2">What We Offer:</h4>
+                  <ul className="text-sm text-dark-grey space-y-1">
+                    <li>• Real project experience</li>
+                    <li>• Professional mentorship</li>
+                    <li>• Portfolio development support</li>
+                    <li>• Industry network access</li>
+                  </ul>
                 </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2">Architects</h4>
-                <p className="text-dark-grey text-sm">Collaborating with leading architectural firms across Sweden</p>
+                <div className="text-left">
+                  <h4 className="font-semibold text-dark-brown mb-2">Areas of Focus:</h4>
+                  <ul className="text-sm text-dark-grey space-y-1">
+                    <li>• Interior design</li>
+                    <li>• Furniture craftsmanship</li>
+                    <li>• Project management</li>
+                    <li>• Sustainable design practices</li>
+                  </ul>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Hammer className="text-dark-brown text-xl" />
-                </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2">Builders</h4>
-                <p className="text-dark-grey text-sm">Trusted construction partners for seamless project execution</p>
+            </div>
+            
+            <div className="bg-dark-brown/5 rounded-lg p-6">
+              <h3 className="font-serif text-xl font-bold text-dark-brown mb-4">Job Openings & Opportunities</h3>
+              <p className="text-dark-grey mb-4">
+                <span className="inline-block bg-[#AD8C44] text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                  Launching Soon
+                </span>
+                Stay tuned for upcoming internship and full-time positions
+              </p>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300"
+                data-testid="career-contact-button"
+              >
+                Get In Touch
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-20 bg-off-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Partners</h2>
+          </div>
+          
+          {/* Brand Partners - Minimal layout matching footer style */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+              <div className="flex items-center justify-center p-4">
+                <span className="text-dark-brown/60 font-serif font-bold text-lg">HAY</span>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="text-dark-brown text-xl" />
-                </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2">Designers</h4>
-                <p className="text-dark-grey text-sm">Network of specialized designers for unique project requirements</p>
+              <div className="flex items-center justify-center p-4">
+                <span className="text-dark-brown/60 font-serif font-bold text-lg">GUBI</span>
+              </div>
+              <div className="flex items-center justify-center p-4">
+                <span className="text-dark-brown/60 font-serif font-bold text-lg">MUUTO</span>
+              </div>
+              <div className="flex items-center justify-center p-4">
+                <span className="text-dark-brown/60 font-serif font-bold text-lg">IKEA</span>
               </div>
             </div>
           </div>
           
           {/* Partnership CTA */}
-          <div className="bg-dark-brown/5 rounded-lg p-12 text-center">
-            <h3 className="font-serif text-3xl font-bold text-dark-brown mb-4">Join Our Partner Network</h3>
-            <p className="text-dark-grey mb-8 max-w-3xl mx-auto text-lg">
-              Are you an architect, designer, builder, or brand that shares our commitment to quality, sustainability, and Scandinavian design principles? 
-              We're always looking to expand our network of trusted collaborators for B2B projects.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-dark-brown text-off-white px-8 py-4 rounded-none font-medium text-sm uppercase tracking-wider hover:bg-dark-brown/90 transition-all duration-300"
-                data-testid="partner-inquiry-button"
-              >
-                Partnership Inquiry
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="border-2 border-dark-brown text-dark-brown px-8 py-4 rounded-none font-medium text-sm uppercase tracking-wider hover:bg-dark-brown hover:text-off-white transition-all duration-300"
-                data-testid="supplier-inquiry-button"
-              >
-                Become a Supplier
-              </button>
-            </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300"
+              data-testid="partner-inquiry-button"
+            >
+              Partner Inquiry
+            </button>
           </div>
         </div>
       </section>

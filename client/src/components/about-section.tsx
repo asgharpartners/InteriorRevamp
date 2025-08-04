@@ -87,13 +87,15 @@ export function AboutSection() {
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center group">
               <div className="relative mb-6">
-                <img 
-                  src={member.image}
-                  alt={`${member.name} - ${member.role}`}
-                  className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                />
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-warm-gold rounded-full flex items-center justify-center">
-                  <div className="text-dark-brown">
+                <div className="w-36 h-36 rounded-full mx-auto border-4 border-[#AD8C44] p-1">
+                  <img 
+                    src={member.image}
+                    alt={`${member.name} - ${member.role}`}
+                    className="w-full h-full rounded-full object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#AD8C44] rounded-full flex items-center justify-center">
+                  <div className="text-white">
                     {member.icon}
                   </div>
                 </div>

@@ -51,22 +51,39 @@ export function HeroSlider() {
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="slider-slide relative">
+          <div key={index} className="slider-slide relative group cursor-pointer">
             <div 
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${slide.image}')` }}
             />
-            <div className="absolute inset-0 bg-dark-brown/40" />
+            <div className="absolute inset-0 bg-dark-brown/40 group-hover:bg-dark-brown/20 transition-all duration-500" />
             <div className="absolute inset-0 flex items-center justify-center text-center text-white">
-              <div className="max-w-4xl px-4 opacity-0 hover:opacity-100 transition-opacity duration-500">
-                <h2 className="font-serif text-4xl md:text-6xl font-bold mb-4">
+              <div className="max-w-4xl px-4 group-hover:opacity-0 transition-opacity duration-500">
+                <div className="mb-8">
+                  <div className="bg-[#AD8C44] rounded-lg px-6 py-3 inline-block mb-4">
+                    <h1 className="font-serif text-3xl md:text-4xl font-bold text-white">
+                      Nils Holger
+                    </h1>
+                  </div>
+                  <p className="text-xl md:text-2xl font-light text-white/90">
+                    Design & Furniture Projects
+                  </p>
+                </div>
+                <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
                   {t(slide.titleKey)}
                 </h2>
-                <p className="text-lg md:text-xl">
+                <p className="text-lg md:text-xl text-white/80">
                   {t(slide.subtitleKey)}
                 </p>
               </div>
             </div>
+            
+            {/* Scroll cue arrow */}
+            {index === currentSlide && (
+              <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div className="w-6 h-6 border-r-2 border-b-2 border-white transform rotate-45"></div>
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -17,10 +17,10 @@ export function Header() {
 
   return (
     <header className="fixed w-full top-0 z-50">
-      {/* Curved white background for logo */}
-      <div className="absolute left-0 top-0 w-80 h-16 bg-white" 
+      {/* Large curved white background for logo */}
+      <div className="absolute left-0 top-0 w-full h-16 bg-white" 
            style={{
-             clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)'
+             clipPath: 'polygon(0 0, 80% 0, 90% 100%, 0 100%)'
            }}>
       </div>
       
@@ -29,20 +29,24 @@ export function Header() {
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           {/* Logo */}
           <div 
-            className="relative z-10 cursor-pointer flex items-center pl-6"
+            className="relative z-10 cursor-pointer flex items-center pl-12"
             onClick={() => scrollToSection('intro')}
           >
             <div>
-              <h1 className="font-serif text-lg font-bold text-[#4A2C2A]" style={{ fontFamily: 'serif' }}>
+              <h1 className="text-3xl font-bold text-[#4A2C2A]" 
+                  style={{ 
+                    fontFamily: 'Dancing Script, Brush Script MT, cursive',
+                    fontWeight: '700'
+                  }}>
                 Nils Holger
               </h1>
-              <p className="text-xs text-[#4A2C2A]/70 -mt-1">FURNITURE & PROJECTS</p>
+              <p className="text-xs text-[#4A2C2A]/80 -mt-2 tracking-[0.15em] font-semibold">FURNITURE & PROJECTS</p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <nav className="flex items-center space-x-8">
+          {/* Desktop Navigation - positioned in dark brown section */}
+          <div className="hidden lg:flex items-center space-x-6 ml-auto">
+            <nav className="flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-white hover:text-[#D4AF37] transition-colors font-medium text-sm tracking-wide"
@@ -76,7 +80,7 @@ export function Header() {
             </nav>
             
             {/* Search & CTA */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4">
               <button className="text-white hover:text-[#D4AF37] transition-colors">
                 <Search size={18} />
               </button>

@@ -17,10 +17,10 @@ export function Header() {
 
   return (
     <header className="fixed w-full top-0 z-50">
-      {/* Large curved white background for logo */}
-      <div className="absolute left-0 top-0 w-full h-16 bg-white" 
+      {/* Curved white background for logo */}
+      <div className="absolute left-0 top-0 w-80 h-16 bg-white" 
            style={{
-             clipPath: 'polygon(0 0, 80% 0, 90% 100%, 0 100%)'
+             clipPath: 'polygon(0 0, 85% 0, 100% 100%, 0 100%)'
            }}>
       </div>
       
@@ -29,44 +29,20 @@ export function Header() {
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           {/* Logo */}
           <div 
-            className="relative z-10 cursor-pointer flex items-center pl-12"
+            className="relative z-10 cursor-pointer flex items-center pl-6"
             onClick={() => scrollToSection('intro')}
           >
-            <div className="flex items-center">
-              <div className="text-[#8B4513]">
-                <div className="flex items-center">
-                  <span className="text-4xl font-bold" 
-                        style={{ 
-                          fontFamily: 'Brush Script MT, Dancing Script, Herr Von Muellerhoff, cursive',
-                          fontStyle: 'italic',
-                          color: '#D2691E',
-                          transform: 'rotate(-2deg)',
-                          textShadow: '2px 2px 4px rgba(139, 69, 19, 0.3)'
-                        }}>
-                    Nils
-                  </span>
-                  <span className="text-4xl font-bold ml-2" 
-                        style={{ 
-                          fontFamily: 'Brush Script MT, Dancing Script, Herr Von Muellerhoff, cursive',
-                          fontStyle: 'italic',
-                          color: '#8B4513',
-                          transform: 'rotate(1deg)',
-                          textShadow: '2px 2px 4px rgba(139, 69, 19, 0.3)'
-                        }}>
-                    Holger
-                  </span>
-                </div>
-                <p className="text-xs tracking-[0.25em] font-bold -mt-1 opacity-90" 
-                   style={{ color: '#8B4513' }}>
-                  FURNITURE & PROJECTS
-                </p>
-              </div>
+            <div>
+              <h1 className="font-serif text-lg font-bold text-[#4A2C2A]" style={{ fontFamily: 'serif' }}>
+                Nils Holger
+              </h1>
+              <p className="text-xs text-[#4A2C2A]/70 -mt-1">FURNITURE & PROJECTS</p>
             </div>
           </div>
 
-          {/* Desktop Navigation - positioned in dark brown section */}
-          <div className="hidden lg:flex items-center space-x-6 ml-auto">
-            <nav className="flex items-center space-x-6">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <nav className="flex items-center space-x-8">
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-white hover:text-[#D4AF37] transition-colors font-medium text-sm tracking-wide"
@@ -100,7 +76,7 @@ export function Header() {
             </nav>
             
             {/* Search & CTA */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-6">
               <button className="text-white hover:text-[#D4AF37] transition-colors">
                 <Search size={18} />
               </button>

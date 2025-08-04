@@ -17,62 +17,62 @@ export function Header() {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-off-white/95 backdrop-blur-sm border-b border-dark-grey/10">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="fixed w-full top-0 z-50 bg-off-white/98 backdrop-blur-md">
+      <div className="container mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <div>
-            <h1 className="text-dark-brown font-serif text-xl font-bold">Nils Holger</h1>
-          </div>
+          <h1 className="text-dark-brown font-serif text-2xl font-bold tracking-tight">
+            Nils Holger Design
+          </h1>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-12">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-dark-grey hover:text-dark-brown transition-colors"
+            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
           >
             {t('nav.about')}
           </button>
           <button 
             onClick={() => scrollToSection('services')}
-            className="text-dark-grey hover:text-dark-brown transition-colors"
+            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
           >
             {t('nav.services')}
           </button>
           <button 
             onClick={() => scrollToSection('products')}
-            className="text-dark-grey hover:text-dark-brown transition-colors"
+            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
           >
             {t('nav.products')}
           </button>
           <button 
             onClick={() => scrollToSection('references')}
-            className="text-dark-grey hover:text-dark-brown transition-colors"
+            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
           >
             {t('nav.references')}
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
-            className="text-dark-grey hover:text-dark-brown transition-colors"
+            className="text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider"
           >
             {t('nav.contact')}
           </button>
           
           {/* Language Switcher */}
-          <div className="flex items-center space-x-2 border-l border-dark-grey/20 pl-6">
+          <div className="flex items-center space-x-3 ml-8">
             <button 
               onClick={() => setLanguage('en')}
-              className={`font-semibold transition-colors ${
+              className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
                 language === 'en' ? 'text-dark-brown' : 'text-dark-grey hover:text-dark-brown'
               }`}
             >
               EN
             </button>
-            <span className="text-dark-grey/40">|</span>
+            <div className="w-px h-4 bg-dark-grey/30"></div>
             <button 
               onClick={() => setLanguage('sv')}
-              className={`font-semibold transition-colors ${
+              className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
                 language === 'sv' ? 'text-dark-brown' : 'text-dark-grey hover:text-dark-brown'
               }`}
             >
@@ -83,7 +83,7 @@ export function Header() {
           {/* CTA Button */}
           <Button 
             onClick={() => scrollToSection('contact')}
-            className="bg-dark-brown text-off-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
+            className="bg-dark-brown text-off-white px-8 py-3 rounded-none font-medium text-sm uppercase tracking-wider hover:bg-dark-brown/90 transition-all duration-300"
           >
             {t('nav.bookConsultation')}
           </Button>
@@ -91,52 +91,52 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button 
-          className="lg:hidden text-dark-brown"
+          className="lg:hidden text-dark-brown p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-off-white border-b border-dark-grey/10 shadow-lg">
-          <nav className="flex flex-col p-4 space-y-4">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-off-white/98 backdrop-blur-md shadow-2xl">
+          <nav className="flex flex-col p-8 space-y-6">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors"
+              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
             >
               {t('nav.about')}
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors"
+              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
             >
               {t('nav.services')}
             </button>
             <button 
               onClick={() => scrollToSection('products')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors"
+              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
             >
               {t('nav.products')}
             </button>
             <button 
               onClick={() => scrollToSection('references')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors"
+              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
             >
               {t('nav.references')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-left text-dark-grey hover:text-dark-brown transition-colors"
+              className="text-left text-dark-grey hover:text-dark-brown transition-colors font-medium text-sm uppercase tracking-wider py-2"
             >
               {t('nav.contact')}
             </button>
             
-            <div className="flex items-center space-x-4 pt-4 border-t border-dark-grey/20">
+            <div className="flex items-center space-x-6 pt-6 border-t border-dark-grey/20">
               <button 
                 onClick={() => setLanguage('en')}
-                className={`font-semibold transition-colors ${
+                className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
                   language === 'en' ? 'text-dark-brown' : 'text-dark-grey'
                 }`}
               >
@@ -144,7 +144,7 @@ export function Header() {
               </button>
               <button 
                 onClick={() => setLanguage('sv')}
-                className={`font-semibold transition-colors ${
+                className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
                   language === 'sv' ? 'text-dark-brown' : 'text-dark-grey'
                 }`}
               >
@@ -154,7 +154,7 @@ export function Header() {
             
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-dark-brown text-off-white mt-4"
+              className="bg-dark-brown text-off-white mt-6 rounded-none font-medium text-sm uppercase tracking-wider hover:bg-dark-brown/90 transition-all duration-300 py-4"
             >
               {t('nav.bookConsultation')}
             </Button>

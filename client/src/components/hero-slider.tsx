@@ -45,7 +45,7 @@ export function HeroSlider() {
   };
 
   return (
-    <section className="slider-container h-screen mt-20">
+    <section className="slider-container h-screen mt-24">
       <div 
         className="slider-track h-full"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}

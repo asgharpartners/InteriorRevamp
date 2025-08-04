@@ -24,9 +24,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-off-white">
       <Header />
-      <div style={{ paddingTop: '100px' }}>
-        <HeroSlider />
-      </div>
+      <HeroSlider />
       
       {/* Intro/Welcome Section */}
       <section id="intro" className="py-20 bg-off-white">

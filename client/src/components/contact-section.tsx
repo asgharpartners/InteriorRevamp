@@ -130,11 +130,15 @@ export function ContactSection() {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="residential">Residential Interior Design</SelectItem>
-                          <SelectItem value="commercial">Commercial Space Design</SelectItem>
+                          <SelectItem value="hotel">Hotel & Hospitality</SelectItem>
+                          <SelectItem value="restaurant">Restaurant & Café</SelectItem>
+                          <SelectItem value="office">Office Space Design</SelectItem>
+                          <SelectItem value="property">Property Development</SelectItem>
                           <SelectItem value="furniture">Custom Furniture</SelectItem>
                           <SelectItem value="renovation">Renovation Project</SelectItem>
-                          <SelectItem value="consultation">Consultation Only</SelectItem>
+                          <SelectItem value="partnership">Partnership Inquiry</SelectItem>
+                          <SelectItem value="supplier">Supplier Application</SelectItem>
+                          <SelectItem value="consultation">Free Consultation</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />

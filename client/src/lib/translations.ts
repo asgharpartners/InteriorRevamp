@@ -10,16 +10,16 @@ export const translations = {
     },
     hero: {
       slide1: {
-        title: "Timeless Scandinavian Design",
-        subtitle: "Creating spaces that inspire and endure"
+        title: "Transform Your Commercial Space",
+        subtitle: "Professional interior design solutions for hotels, restaurants, and office environments"
       },
       slide2: {
-        title: "Crafted with Precision", 
-        subtitle: "Every piece tells a story of Swedish craftsmanship"
+        title: "Scandinavian Design Excellence", 
+        subtitle: "Trusted by Sweden's leading hospitality and commercial brands"
       },
       slide3: {
-        title: "Sustainable Living",
-        subtitle: "Design that respects both people and planet"
+        title: "Sustainable Business Solutions",
+        subtitle: "Creating lasting value through environmentally conscious design"
       }
     },
     intro: {
@@ -90,6 +90,11 @@ export const translations = {
     footer: {
       newsletter: "Stay Updated",
       subscribe: "Subscribe"
+    },
+    stickyCta: {
+      title: "Ready to transform your space?",
+      subtitle: "Get a free consultation today",
+      button: "Book Now"
     }
   },
   sv: {
@@ -103,16 +108,16 @@ export const translations = {
     },
     hero: {
       slide1: {
-        title: "Tidlös Skandinavisk Design",
-        subtitle: "Skapar utrymmen som inspirerar och varar"
+        title: "Förvandla Era Kommersiella Lokaler",
+        subtitle: "Professionella inredningslösningar för hotell, restauranger och kontorsmiljöer"
       },
       slide2: {
-        title: "Handgjord med Precision",
-        subtitle: "Varje stycke berättar en historia av svenskt hantverk"
+        title: "Skandinavisk Designexcellens",
+        subtitle: "Förtroendet från Sveriges ledande hotell- och kommersiella varumärken"
       },
       slide3: {
-        title: "Hållbart Boende",
-        subtitle: "Design som respekterar både människor och planeten"
+        title: "Hållbara Affärslösningar",
+        subtitle: "Skapar bestående värde genom miljömedveten design"
       }
     },
     intro: {
@@ -183,6 +188,11 @@ export const translations = {
     footer: {
       newsletter: "Håll dig Uppdaterad",
       subscribe: "Prenumerera"
+    },
+    stickyCta: {
+      title: "Redo att förvandla era lokaler?",
+      subtitle: "Boka en gratis konsultation idag",
+      button: "Boka Nu"
     }
   }
 } as const;

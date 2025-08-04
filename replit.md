@@ -1,8 +1,22 @@
 # Overview
 
-This is a modern full-stack web application for "Nils Holger," a Scandinavian interior design company. The project showcases the company's services, portfolio, and allows clients to contact them through a form. The application features a sophisticated, responsive design with multilingual support (English/Swedish) and emphasizes the minimalist aesthetic typical of Scandinavian design.
+This is a modern B2B web platform for "Nils Holger Design," a Scandinavian interior design company specializing in public spaces and commercial projects. The project specification emphasizes professional yet warm branding, positioned as a reliable partner for hotel owners, restaurateurs, property developers, and office managers seeking tailored interior solutions.
 
-The website includes sections for company introduction, services overview, before/after project showcases, product categories, project references, team information, and contact functionality. It's built as a single-page application with smooth scrolling navigation and interactive components like image sliders and expandable service cards.
+**Key Brand Identity:**
+- Professional yet warm and human
+- Flexible and solution-oriented  
+- High quality with sustainability focus
+- Clean, minimalist Scandinavian simplicity
+
+**Target Audience:** B2B clients including hotel owners, restaurateurs, property developers, and office managers
+
+**Core Features:**
+- Bilingual support (Swedish/English)
+- Scalable e-commerce foundation for custom and standard products
+- Partnership showcases (HAY, Gubi, Muuto, IKEA)
+- Trust-building through project references and team introductions
+- Sustainability emphasis and material reuse narratives
+- Sticky "Book a free consultation" CTA with booking integration potential
 
 # User Preferences
 

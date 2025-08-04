@@ -1,0 +1,50 @@
+Nils Holger Website Project Specification
+
+1. Introduction
+
+This document outlines the final structure, content, and technical requirements for the Nils Holger website — a modern, Scandinavian B2B platform for showcasing interior design services, project references, and products tailored for public spaces. It serves as a central specification, while some deeper visual and structural details (e.g. layout drafts, prompt history, and image references) are maintained in external documents and links shared during the build process. Due to the extensive use of modular components, custom layouts, and interactive prompts, this document acts as a navigational overview rather than a repository of all design code or prompt data.
+
+The website is intended to communicate the brand’s identity clearly:
+
+Professional yet warm and human
+
+Flexible and solution-oriented
+
+High quality with a focus on sustainability
+
+Clean and minimalist in tone — rooted in Scandinavian simplicity
+
+The target audience includes B2B clients such as hotel owners, restaurateurs, property developers, and office managers who seek tailored, long-term interior solutions. The aim is to build trust and position Nils Holger as a reliable partner through clear communication, reference projects, and an intuitive, elegant interface.
+
+2. Project Goals
+
+The Nils Holger website is designed to support brand communication, lead generation, and future sales capabilities. Its goals are:
+
+Present a clear, minimalist structure aligned with Scandinavian design principles
+
+Provide intuitive access to services, product categories, project references, and selected products for direct purchase
+
+Highlight custom solutions, craftsmanship, and flexibility through storytelling and strong visuals
+
+Emphasize sustainability through dedicated content and material reuse narratives
+
+Simplify the client journey from inspiration to contact — including a sticky “Book a free consultation” button and booking integrations (e.g. TidyCal)
+
+Embed trust with real project examples, before/after modules, team introductions, and client-friendly workflows
+
+Support Swedish and English language versions (bilingual structure)
+
+Enable a scalable e-commerce foundation for selling:
+
+Custom-made/special collections developed and produced by Nils Holger
+
+Standard products and offerings from trusted external partners
+
+Be fully responsive across all devices, especially mobile
+
+Integrate optional smart features (e.g. an AI assistant, FAQ module, or search)
+
+Showcase brand and people partnerships — by publishing logos of collaborating companies (e.g. HAY, Gubi, Muuto, IKEA) as well as individuals such as architects, designers, and builders
+
+Provide a clear call-to-action for potential collaborators (e.g. "Partner with us") to reach out, including a form or booking prompt for new partnership inquiries
+

@@ -19,12 +19,9 @@ export function Header() {
   return (
     <header className="fixed w-full top-0 z-50 bg-off-white/95 backdrop-blur-sm border-b border-dark-grey/10">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Sculptural Logo */}
+        {/* Logo */}
         <div className="flex items-center">
-          <div className="bg-white p-4 rounded-tr-full rounded-br-3xl shadow-lg">
-            <div className="text-dark-brown font-serif text-2xl font-bold">NH</div>
-          </div>
-          <div className="ml-4">
+          <div>
             <h1 className="text-dark-brown font-serif text-xl font-bold">Nils Holger</h1>
             <p className="text-dark-grey text-sm">Interior Design & Furniture</p>
           </div>

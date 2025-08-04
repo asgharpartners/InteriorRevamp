@@ -54,11 +54,9 @@ export default function Header({ className = "" }: HeaderProps) {
                 }}
               />
               <img
-                src="/nils-holger-logo.png"
-                alt="Nils Holger Logo"
-                width={140}
-                height={46}
-                className="object-contain relative z-10"
+                src="/logo.png"
+                alt="Nils Holger – Furniture & Projects"
+                className="object-contain relative z-10 h-12 max-w-[140px]"
                 style={{ filter: 'brightness(0.8) contrast(1.2)' }}
               />
             </button>
@@ -158,11 +156,9 @@ export default function Header({ className = "" }: HeaderProps) {
                 }}
               />
               <img
-                src="/nils-holger-logo.png"
-                alt="Nils Holger Logo"
-                width={180}
-                height={60}
-                className="object-contain relative z-10"
+                src="/logo.png"
+                alt="Nils Holger – Furniture & Projects"
+                className="object-contain relative z-10 h-16 max-w-[180px]"
                 style={{ filter: 'brightness(0.8) contrast(1.2)' }}
               />
             </div>

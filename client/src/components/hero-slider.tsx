@@ -45,7 +45,7 @@ export function HeroSlider() {
   };
 
   return (
-    <section className="slider-container" style={{ height: 'calc(100vh - 100px)', marginTop: '100px' }}>
+    <section className="slider-container" style={{ height: '100vh', marginTop: '100px' }}>
       <div 
         className="slider-track h-full"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -59,13 +59,6 @@ export function HeroSlider() {
             <div className="absolute inset-0 bg-dark-brown/40 group-hover:bg-dark-brown/20 transition-all duration-500" />
             <div className="absolute inset-0 flex items-center justify-center text-center text-white">
               <div className="max-w-4xl px-4 group-hover:opacity-0 transition-opacity duration-500">
-                <div className="mb-8">
-                  <div className="bg-[#F5D97C] rounded-lg px-6 py-3 inline-block mb-4">
-                    <p className="text-xl md:text-2xl font-light text-[#3C2315]">
-                      Design & Furniture Projects
-                    </p>
-                  </div>
-                </div>
                 <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
                   {t(slide.titleKey)}
                 </h2>

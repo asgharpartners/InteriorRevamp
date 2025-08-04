@@ -51,10 +51,9 @@ export default function Header({ className = "" }: HeaderProps) {
               data-testid="logo-button"
             >
               <img
-                src="/logo.png"
+                src="/nils-holger-logo.png"
                 alt="Nils Holger – Furniture & Projects"
                 className="object-contain h-10 max-w-[140px]"
-                style={{ filter: 'brightness(0.8) contrast(1.2)' }}
               />
             </button>
           </div>
@@ -156,10 +155,9 @@ export default function Header({ className = "" }: HeaderProps) {
                 }}
               >
                 <img
-                  src="/logo.png"
+                  src="/nils-holger-logo.png"
                   alt="Nils Holger – Furniture & Projects"
                   className="object-contain h-16 max-w-[180px]"
-                  style={{ filter: 'brightness(0.8) contrast(1.2)' }}
                 />
               </div>
             </div>

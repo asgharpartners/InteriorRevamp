@@ -23,7 +23,6 @@ export function Header() {
         <div className="flex items-center">
           <div>
             <h1 className="text-dark-brown font-serif text-xl font-bold">Nils Holger</h1>
-            <p className="text-dark-grey text-sm">Interior Design & Furniture</p>
           </div>
         </div>
 

@@ -33,40 +33,25 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out">
-        {/* Logo with separate yellow background shape - Top left corner */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out" style={{ height: '100px' }}>
+        {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="bg-[#F5D97C]"
+            className="bg-[#F5D97C] flex items-center justify-start pl-8"
             style={{
               width: '300px',
               height: '100px',
-              borderRadius: '0 0 80px 0',
-              position: 'relative'
+              borderRadius: '0 0 80px 0'
             }}
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none absolute inset-0 flex items-center justify-start pl-8"
+              className="focus:outline-none"
               data-testid="logo-button"
             >
-              {/* Try logo image first, fallback to text */}
-              <img
-                src="/nils-holger-logo.png"
-                alt="Nils Holger – Furniture & Projects"
-                className="object-contain h-20 max-w-[280px]"
-                onError={(e) => {
-                  console.log('Logo failed to load, showing text fallback');
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const textLogo = target.nextElementSibling as HTMLElement;
-                  if (textLogo) textLogo.style.display = 'block';
-                }}
-              />
               <div 
                 className="text-[#3C2315] font-bold text-2xl tracking-wide"
                 style={{ 
-                  display: 'none',
                   fontFamily: '"Playfair Display", "Merriweather", serif'
                 }}
               >
@@ -79,8 +64,8 @@ export default function Header({ className = "" }: HeaderProps) {
           </div>
         </div>
 
-        {/* Main navigation container - pushed right */}
-        <div className="container mx-auto px-6 py-6 flex items-center justify-end" style={{ paddingLeft: '320px' }}>
+        {/* Main navigation container - same height as logo */}
+        <div className="container mx-auto px-6 flex items-center justify-end h-full" style={{ paddingLeft: '320px' }}>
           {/* Desktop Navigation Links - Right side */}
           <nav className="hidden lg:flex items-center space-x-8 mr-8">
             {t.nav.map((item, index) => (
@@ -162,35 +147,18 @@ export default function Header({ className = "" }: HeaderProps) {
               <X className="w-8 h-8" />
             </Button>
 
-            {/* Logo Image for Mobile with yellow background */}
+            {/* Logo for Mobile with yellow background */}
             <div className="mb-8 relative">
               <div 
-                className="bg-[#F5D97C] rounded-2xl p-6"
+                className="bg-[#F5D97C] rounded-2xl p-6 flex items-center justify-center"
                 style={{
                   width: '320px',
-                  height: '120px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
+                  height: '120px'
                 }}
               >
-                {/* Try logo image first, fallback to text */}
-                <img
-                  src="/nils-holger-logo.png"
-                  alt="Nils Holger – Furniture & Projects"
-                  className="object-contain h-24 max-w-[280px]"
-                  onError={(e) => {
-                    console.log('Mobile logo failed to load, showing text fallback');
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const textLogo = target.nextElementSibling as HTMLElement;
-                    if (textLogo) textLogo.style.display = 'block';
-                  }}
-                />
                 <div 
                   className="text-[#3C2315] font-bold text-3xl tracking-wide text-center"
                   style={{ 
-                    display: 'none',
                     fontFamily: '"Playfair Display", "Merriweather", serif'
                   }}
                 >

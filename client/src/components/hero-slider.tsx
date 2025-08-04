@@ -60,14 +60,11 @@ export function HeroSlider() {
             <div className="absolute inset-0 flex items-center justify-center text-center text-white">
               <div className="max-w-4xl px-4 group-hover:opacity-0 transition-opacity duration-500">
                 <div className="mb-8">
-                  <div className="bg-[#AD8C44] rounded-lg px-6 py-3 inline-block mb-4">
-                    <h1 className="font-serif text-3xl md:text-4xl font-bold text-white">
-                      Nils Holger
-                    </h1>
+                  <div className="bg-[#F5D97C] rounded-lg px-6 py-3 inline-block mb-4">
+                    <p className="text-xl md:text-2xl font-light text-[#3C2315]">
+                      Design & Furniture Projects
+                    </p>
                   </div>
-                  <p className="text-xl md:text-2xl font-light text-white/90">
-                    Design & Furniture Projects
-                  </p>
                 </div>
                 <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
                   {t(slide.titleKey)}

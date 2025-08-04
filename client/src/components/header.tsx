@@ -32,15 +32,35 @@ export function Header() {
             className="relative z-10 cursor-pointer flex items-center pl-12"
             onClick={() => scrollToSection('intro')}
           >
-            <div>
-              <h1 className="text-3xl font-bold text-[#4A2C2A]" 
-                  style={{ 
-                    fontFamily: 'Dancing Script, Brush Script MT, cursive',
-                    fontWeight: '700'
-                  }}>
-                Nils Holger
-              </h1>
-              <p className="text-xs text-[#4A2C2A]/80 -mt-2 tracking-[0.15em] font-semibold">FURNITURE & PROJECTS</p>
+            <div className="flex items-center">
+              <div className="text-[#8B4513]">
+                <div className="flex items-center">
+                  <span className="text-4xl font-bold" 
+                        style={{ 
+                          fontFamily: 'Brush Script MT, Dancing Script, Herr Von Muellerhoff, cursive',
+                          fontStyle: 'italic',
+                          color: '#D2691E',
+                          transform: 'rotate(-2deg)',
+                          textShadow: '2px 2px 4px rgba(139, 69, 19, 0.3)'
+                        }}>
+                    Nils
+                  </span>
+                  <span className="text-4xl font-bold ml-2" 
+                        style={{ 
+                          fontFamily: 'Brush Script MT, Dancing Script, Herr Von Muellerhoff, cursive',
+                          fontStyle: 'italic',
+                          color: '#8B4513',
+                          transform: 'rotate(1deg)',
+                          textShadow: '2px 2px 4px rgba(139, 69, 19, 0.3)'
+                        }}>
+                    Holger
+                  </span>
+                </div>
+                <p className="text-xs tracking-[0.25em] font-bold -mt-1 opacity-90" 
+                   style={{ color: '#8B4513' }}>
+                  FURNITURE & PROJECTS
+                </p>
+              </div>
             </div>
           </div>
 

@@ -44,33 +44,38 @@ export default function Header({ className = "" }: HeaderProps) {
             >
               {/* Off-white semi-circle background */}
               <div 
-                className="absolute inset-0 bg-[#FFFAF6] rounded-full transform -translate-x-2 -translate-y-1"
+                className="absolute inset-0 bg-[#F5F5F5]"
                 style={{
-                  width: '140px',
-                  height: '60px',
-                  borderRadius: '30px 100px 100px 30px',
-                  zIndex: -1
+                  width: '160px',
+                  height: '50px',
+                  borderRadius: '25px 80px 80px 25px',
+                  transform: 'translateX(-8px) translateY(-2px)',
+                  zIndex: 0
                 }}
               />
               <img
-                src="/nils-holger-logo-new.png"
+                src="/nils-holger-logo.png"
                 alt="Nils Holger Logo"
-                width={120}
-                height={40}
-                className="object-contain relative z-10 mix-blend-multiply"
+                width={140}
+                height={46}
+                className="object-contain relative z-10"
+                style={{ filter: 'brightness(0.8) contrast(1.2)' }}
               />
             </button>
           </div>
 
           {/* Desktop Navigation Links - Center area */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 space-x-12">
+          <nav className="hidden lg:flex items-center justify-center flex-1 space-x-10">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="text-sm text-[#F5F5F5] hover:text-white font-serif font-medium transition-colors duration-200 tracking-[0.15em]"
+                className="text-sm text-[#F5F5F5] hover:text-white font-medium transition-colors duration-200 tracking-[0.2em]"
                 data-testid={`nav-${item.toLowerCase()}`}
-                style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
+                style={{ 
+                  fontFamily: '"Playfair Display", "Merriweather", serif',
+                  fontWeight: '500'
+                }}
               >
                 {item}
               </button>
@@ -78,12 +83,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-6">
             {/* Language Toggle - plain text */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="text-[#F5F5F5] hover:text-white text-sm font-medium transition-colors duration-200 tracking-wide"
+              className="text-[#F5F5F5] hover:text-white text-sm font-medium transition-colors duration-200 tracking-[0.1em]"
               data-testid="language-toggle"
+              style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
               {language === "sv" ? "SV" : "EN"}
             </button>
@@ -92,8 +98,9 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#F5D97C] hover:bg-[#F3D563] text-[#3C2315] border-[#F5D97C] font-bold text-xs tracking-wide px-6 py-2 h-10 rounded-lg whitespace-nowrap"
+              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-xs tracking-[0.1em] px-5 py-2 h-9 rounded-md whitespace-nowrap shadow-sm"
               data-testid="book-consultation"
+              style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
               {t.bookConsultation}
             </Button>
@@ -141,30 +148,32 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Logo Image for Mobile with semi-circle background */}
             <div className="mb-8 relative">
               <div 
-                className="absolute inset-0 bg-[#FFFAF6] rounded-full transform -translate-x-4 -translate-y-2"
+                className="absolute inset-0 bg-[#F5F5F5]"
                 style={{
-                  width: '180px',
-                  height: '80px',
-                  borderRadius: '40px 120px 120px 40px',
-                  zIndex: -1
+                  width: '200px',
+                  height: '70px',
+                  borderRadius: '35px 100px 100px 35px',
+                  transform: 'translateX(-10px) translateY(-5px)',
+                  zIndex: 0
                 }}
               />
               <img
-                src="/nils-holger-logo-new.png"
+                src="/nils-holger-logo.png"
                 alt="Nils Holger Logo"
-                width={160}
+                width={180}
                 height={60}
-                className="object-contain relative z-10 mix-blend-multiply"
+                className="object-contain relative z-10"
+                style={{ filter: 'brightness(0.8) contrast(1.2)' }}
               />
             </div>
 
             {/* Tagline */}
-            <p className="text-[#F5F5F5] text-sm uppercase tracking-wide mb-12 max-w-xs font-serif">
+            <p className="text-[#F5F5F5] text-xs uppercase tracking-wide mb-10 max-w-xs text-center" style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}>
               {language === "sv" ? "ANPASSADE INREDNINGAR FÖR OFFENTLIGA MILJÖER" : "CUSTOM INTERIORS FOR PUBLIC ENVIRONMENTS"}
             </p>
 
             {/* Navigation Buttons */}
-            <nav className="flex flex-col space-y-4 w-full max-w-sm">
+            <nav className="flex flex-col space-y-3 w-full max-w-sm">
               {t.nav.map((item, index) => (
                 <button
                   key={index}
@@ -172,7 +181,7 @@ export default function Header({ className = "" }: HeaderProps) {
                     scrollToSection(["about", "services", "products", "references", "contact"][index])
                     setIsMobileMenuOpen(false)
                   }}
-                  className="w-full h-14 rounded-lg bg-[#FFFAF6] text-[#3C2315] hover:bg-[#F5F5F5] font-serif font-medium flex items-center justify-center px-8 shadow-lg tracking-wide"
+                  className="w-full h-12 rounded-md bg-[#F5F5F5] text-[#3C2315] hover:bg-[#EEEEEE] font-medium flex items-center justify-center px-6 shadow-md tracking-[0.1em]"
                   data-testid={`mobile-nav-${item.toLowerCase()}`}
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >
@@ -182,19 +191,21 @@ export default function Header({ className = "" }: HeaderProps) {
             </nav>
 
             {/* Language Toggle and Booking Button */}
-            <div className="mt-12 flex flex-col space-y-4 w-full max-w-sm">
+            <div className="mt-10 flex flex-col space-y-4 w-full max-w-sm">
               <button
                 onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-                className="text-[#F5F5F5] hover:text-white text-lg font-medium transition-colors duration-200 tracking-wide"
+                className="text-[#F5F5F5] hover:text-white text-base font-medium transition-colors duration-200 tracking-[0.1em]"
                 data-testid="mobile-language-toggle"
+                style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
               >
                 {language === "sv" ? "SV" : "EN"}
               </button>
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full h-14 rounded-lg bg-[#F5D97C] hover:bg-[#F3D563] text-[#3C2315] border-[#F5D97C] font-bold uppercase tracking-wide shadow-lg"
+                className="w-full h-12 rounded-md bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold tracking-[0.1em] shadow-md"
                 data-testid="mobile-book-consultation"
+                style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
               >
                 {t.bookConsultation}
               </Button>

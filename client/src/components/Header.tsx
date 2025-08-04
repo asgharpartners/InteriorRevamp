@@ -49,17 +49,12 @@ export default function Header({ className = "" }: HeaderProps) {
               className="focus:outline-none"
               data-testid="logo-button"
             >
-              <div 
-                className="text-[#3C2315] font-bold text-2xl tracking-wide"
-                style={{ 
-                  fontFamily: '"Playfair Display", "Merriweather", serif'
-                }}
-              >
-                NILS HOLGER
-                <div className="text-sm font-medium tracking-[0.2em] mt-1">
-                  FURNITURE & PROJECTS
-                </div>
-              </div>
+              <img
+                src="/nils-holger-logo.png"
+                alt="Nils Holger – Furniture & Projects"
+                className="object-contain h-16 max-w-[280px]"
+                style={{ filter: 'brightness(0.9) contrast(1.1)' }}
+              />
             </button>
           </div>
         </div>
@@ -156,17 +151,12 @@ export default function Header({ className = "" }: HeaderProps) {
                   height: '120px'
                 }}
               >
-                <div 
-                  className="text-[#3C2315] font-bold text-3xl tracking-wide text-center"
-                  style={{ 
-                    fontFamily: '"Playfair Display", "Merriweather", serif'
-                  }}
-                >
-                  NILS HOLGER
-                  <div className="text-base font-medium tracking-[0.2em] mt-2">
-                    FURNITURE & PROJECTS
-                  </div>
-                </div>
+                <img
+                  src="/nils-holger-logo.png"
+                  alt="Nils Holger – Furniture & Projects"
+                  className="object-contain h-20 max-w-[300px]"
+                  style={{ filter: 'brightness(0.9) contrast(1.1)' }}
+                />
               </div>
             </div>
 

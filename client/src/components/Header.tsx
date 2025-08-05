@@ -34,9 +34,9 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header className="relative top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
+      <header className="relative top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] overflow-hidden">
         {/* Logo with yellow background - Top left corner */}
-        <div className="absolute top-0 left-0 z-10">
+        <div className="absolute top-0 left-0 z-20">
           <div 
             className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-[450px] xl:w-[400px] lg:w-[350px] md:w-[320px] sm:w-[280px] w-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
             style={{
@@ -67,12 +67,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-center h-full 2xl:pl-[450px] xl:pl-[400px] lg:pl-[350px] md:pl-[320px] sm:pl-[280px] pl-[240px]"
-             style={{
-               borderRadius: '120px 0 0 0',
-               marginLeft: '200px',
-               background: 'linear-gradient(225deg, rgba(60,35,21,0.95) 0%, rgba(60,35,21,1) 100%)'
-             }}>
+        <div className="container mx-auto px-6 flex items-center justify-center h-full 2xl:pl-[450px] xl:pl-[400px] lg:pl-[350px] md:pl-[320px] sm:pl-[280px] pl-[240px]">
           {/* Desktop Navigation Links - Right side */}
           <nav className="hidden lg:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-2">
             {t.nav.map((item, index) => (

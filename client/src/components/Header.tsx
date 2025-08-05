@@ -36,14 +36,16 @@ export default function Header({ className = "" }: HeaderProps) {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
         {/* Logo with cream background - Left edge docked */}
-        <div className="absolute top-0 left-0 z-30">
+        <div className="absolute top-0 left-0 z-30 2xl:w-[480px] xl:w-[420px] lg:w-[380px] md:w-[340px] sm:w-[300px] w-[260px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
           <div 
-            className="flex items-center justify-start pl-4 2xl:w-[480px] xl:w-[420px] lg:w-[380px] md:w-[340px] sm:w-[300px] w-[260px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
+            className="flex items-center justify-start pl-4 w-full h-full"
             style={{
               background: '#FCF4EE',
               borderRadius: '0 0 120px 0',
-              boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
-              position: 'relative',
+              boxShadow: '0 8px 20px rgba(0,0,0,0.35)',
+              position: 'absolute',
+              top: 0,
+              left: 0,
               zIndex: 30
             }}
           >

@@ -38,7 +38,7 @@ export default function Header({ className = "" }: HeaderProps) {
         {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="flex items-center justify-start pl-8 shadow-lg"
+            className="flex items-center justify-start pl-2 shadow-lg"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               width: '280px',

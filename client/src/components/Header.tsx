@@ -39,7 +39,7 @@ export default function Header({ className = "" }: HeaderProps) {
         <div 
           className="flex items-center justify-start pl-4 w-full h-full"
           style={{
-            background: '#FCF4EE',
+            background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
             borderRadius: '0 0 140px 0',
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
           }}
@@ -118,7 +118,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#FCF4EE] hover:bg-white text-[#3C2315] border-[#FCF4EE] font-bold text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
+              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
               data-testid="book-consultation"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -170,7 +170,7 @@ export default function Header({ className = "" }: HeaderProps) {
               <div 
                 className="rounded-2xl p-6 flex items-center justify-center shadow-lg"
                 style={{
-                  background: '#FCF4EE',
+                  background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
                   width: '320px',
                   height: '120px',
                   border: '1px solid rgba(255,255,255,0.2)',

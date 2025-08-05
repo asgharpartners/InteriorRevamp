@@ -38,13 +38,14 @@ export default function Header({ className = "" }: HeaderProps) {
         {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full w-full 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
+            className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-[450px] xl:w-[400px] lg:w-[350px] md:w-[320px] sm:w-[280px] w-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 80px 0',
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',
-              position: 'relative'
+              position: 'relative',
+              clipPath: 'polygon(0% 0%, 80% 0%, 70% 100%, 0% 100%)'
             }}
           >
             <button 
@@ -55,7 +56,7 @@ export default function Header({ className = "" }: HeaderProps) {
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-52 xl:h-48 lg:h-44 md:h-40 sm:h-32 h-28"
+                className="2xl:h-60 xl:h-56 lg:h-52 md:h-48 sm:h-36 h-32"
                 style={{ 
                   objectFit: 'contain', 
                   display: 'block',

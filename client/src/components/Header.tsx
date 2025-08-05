@@ -63,28 +63,12 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Main Navigation Bar - Right side with concave curve docking */}
-      <nav className="fixed top-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:left-[380px] xl:left-[340px] lg:left-[320px] md:left-[290px] sm:left-[270px] left-[240px] right-0">
-        {/* SVG element creating the concave curve */}
-        <svg 
-          className="absolute left-0 top-0 h-full"
-          width="140"
-          height="100%"
-          viewBox="0 0 140 160"
-          preserveAspectRatio="none"
-          style={{ zIndex: 1 }}
-        >
-          <path 
-            d="M 0,0 Q 140,0 140,140 L 140,160 L 0,160 Z"
-            fill="#3C2315"
-          />
-        </svg>
-        
+      {/* Main Navigation Bar - Right side with flat edge */}
+      <nav className="fixed top-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0">
         <div 
           className="h-full w-full"
           style={{
-            background: '#3C2315',
-            marginLeft: '140px'
+            background: '#3C2315'
           }}
         >
           {/* Navigation container - right aligned content */}

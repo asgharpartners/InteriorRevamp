@@ -40,7 +40,7 @@ export default function Header({ className = "" }: HeaderProps) {
             className="flex items-center justify-start pl-8 shadow-lg"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              width: '300px',
+              width: '280px',
               height: '100px',
               borderRadius: '0 0 80px 0',
               border: '1px solid rgba(255,255,255,0.2)',
@@ -53,12 +53,22 @@ export default function Header({ className = "" }: HeaderProps) {
               className="focus:outline-none"
               data-testid="logo-button"
             >
+              <img
+                src="/nils-holger-logo.png"
+                alt="Nils Holger – Furniture & Projects"
+                className="h-16"
+                style={{ 
+                  objectFit: 'contain', 
+                  maxWidth: '260px', 
+                  display: 'block'
+                }}
+              />
             </button>
           </div>
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-end h-full" style={{ paddingLeft: '320px' }}>
+        <div className="container mx-auto px-6 flex items-center justify-end h-full" style={{ paddingLeft: '300px' }}>
           {/* Desktop Navigation Links - Right side */}
           <nav className="hidden lg:flex items-center space-x-8 mr-8">
             {t.nav.map((item, index) => (

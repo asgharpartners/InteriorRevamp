@@ -61,7 +61,8 @@ export default function Header({ className = "" }: HeaderProps) {
                   objectFit: 'contain', 
                   maxWidth: '260px', 
                   display: 'block',
-                  height: '480px'
+                  height: '480px',
+                  transform: 'scale(1.5)'
                 }}
               />
             </button>

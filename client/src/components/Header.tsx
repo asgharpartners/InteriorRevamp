@@ -63,10 +63,10 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Main Navigation Header */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
-        {/* Main navigation container - right aligned */}
-        <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-20">
+      {/* Main Navigation Bar - Right side only */}
+      <nav className="absolute top-0 right-0 z-40 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:w-[calc(100%-520px)] xl:w-[calc(100%-460px)] lg:w-[calc(100%-420px)] md:w-[calc(100%-380px)] sm:w-[calc(100%-340px)] w-[calc(100%-300px)]">
+        {/* Navigation container - right aligned content */}
+        <div className="h-full flex items-center justify-end pr-6">
           {/* Desktop Navigation Links - Right aligned */}
           <nav className="hidden lg:flex items-center space-x-6">
             {t.nav.map((item, index) => (
@@ -132,7 +132,7 @@ export default function Header({ className = "" }: HeaderProps) {
             </Button>
           </div>
         </div>
-      </header>
+      </nav>
 
       {/* Add padding to body content to account for fixed header */}
       <div className="2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"></div>

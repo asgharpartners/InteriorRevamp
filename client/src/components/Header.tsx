@@ -41,11 +41,10 @@ export default function Header({ className = "" }: HeaderProps) {
             className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-[450px] xl:w-[400px] lg:w-[350px] md:w-[320px] sm:w-[280px] w-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              borderRadius: '0 0 80px 0',
+              borderRadius: '0 0 120px 0',
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',
-              position: 'relative',
-              clipPath: 'polygon(0% 0%, 80% 0%, 70% 100%, 0% 100%)'
+              position: 'relative'
             }}
           >
             <button 
@@ -68,7 +67,12 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-center h-full 2xl:pl-[450px] xl:pl-[400px] lg:pl-[350px] md:pl-[320px] sm:pl-[280px] pl-[240px]">
+        <div className="container mx-auto px-6 flex items-center justify-center h-full 2xl:pl-[450px] xl:pl-[400px] lg:pl-[350px] md:pl-[320px] sm:pl-[280px] pl-[240px]"
+             style={{
+               borderRadius: '120px 0 0 0',
+               marginLeft: '200px',
+               background: 'linear-gradient(225deg, rgba(60,35,21,0.95) 0%, rgba(60,35,21,1) 100%)'
+             }}>
           {/* Desktop Navigation Links - Right side */}
           <nav className="hidden lg:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-2">
             {t.nav.map((item, index) => (

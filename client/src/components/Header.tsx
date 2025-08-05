@@ -142,8 +142,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Add padding to body content to account for fixed header */}
-      <div className="2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"></div>
+
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

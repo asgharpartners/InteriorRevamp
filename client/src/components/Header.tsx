@@ -40,7 +40,7 @@ export default function Header({ className = "" }: HeaderProps) {
           <div 
             className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-[450px] xl:w-[400px] lg:w-[350px] md:w-[320px] sm:w-[280px] w-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
             style={{
-              background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
+              background: '#FCF4EE',
               borderRadius: '0 0 120px 0',
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',
@@ -164,7 +164,7 @@ export default function Header({ className = "" }: HeaderProps) {
               <div 
                 className="rounded-2xl p-6 flex items-center justify-center shadow-lg"
                 style={{
-                  background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
+                  background: '#FCF4EE',
                   width: '320px',
                   height: '120px',
                   border: '1px solid rgba(255,255,255,0.2)',

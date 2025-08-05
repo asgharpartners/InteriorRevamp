@@ -34,15 +34,15 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out" style={{ height: '100px' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out" style={{ height: '120px' }}>
         {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="flex items-center justify-start pl-2 shadow-lg"
+            className="flex items-center justify-start pl-6 shadow-lg"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               width: '350px',
-              height: '100px',
+              height: '120px',
               borderRadius: '0 0 80px 0',
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',

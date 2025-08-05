@@ -53,14 +53,6 @@ export default function Header({ className = "" }: HeaderProps) {
               className="focus:outline-none"
               data-testid="logo-button"
             >
-              <div className="text-[#3C2315] font-bold text-xl tracking-wide">
-                <span style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}>
-                  NILS HOLGER
-                </span>
-                <div className="text-sm font-medium tracking-[0.1em] mt-1">
-                  FURNITURE & PROJECTS
-                </div>
-              </div>
             </button>
           </div>
         </div>

@@ -63,27 +63,24 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Main Navigation Bar - Right side with concave curve */}
-      <nav className="absolute top-0 right-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:w-[calc(100%-520px)] xl:w-[calc(100%-460px)] lg:w-[calc(100%-420px)] md:w-[calc(100%-380px)] sm:w-[calc(100%-340px)] w-[calc(100%-300px)]">
+      {/* Bridging element with concave curve */}
+      <div className="fixed top-0 z-45 2xl:left-[380px] xl:left-[340px] lg:left-[320px] md:left-[290px] sm:left-[270px] left-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]" style={{ width: '140px' }}>
+        <svg width="140" height="100%" viewBox="0 0 140 160" preserveAspectRatio="none">
+          <path 
+            d="M 0,0 Q 140,0 140,140 L 140,160 L 0,160 Z" 
+            fill="#3C2315"
+          />
+        </svg>
+      </div>
+
+      {/* Main Navigation Bar - Right side */}
+      <nav className="fixed top-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0">
         <div 
-          className="h-full w-full relative"
+          className="h-full w-full"
           style={{
             background: '#3C2315'
           }}
         >
-          {/* Create the concave curve by cutting out a circular section */}
-          <div 
-            className="absolute top-0 left-0 2xl:w-[140px] xl:w-[120px] lg:w-[100px] md:w-[90px] sm:w-[70px] w-[60px] 2xl:h-[140px] xl:h-[120px] lg:h-[100px] md:h-[90px] sm:h-[70px] h-[60px] overflow-hidden"
-          >
-            <div 
-              className="absolute bottom-0 right-0 2xl:w-[140px] xl:w-[120px] lg:w-[100px] md:w-[90px] sm:w-[70px] w-[60px] 2xl:h-[140px] xl:h-[120px] lg:h-[100px] md:h-[90px] sm:h-[70px] h-[60px]"
-              style={{
-                background: '#FCF4EE',
-                borderRadius: '50%',
-                transform: 'translate(50%, 50%)'
-              }}
-            ></div>
-          </div>
           {/* Navigation container - right aligned content */}
           <div className="h-full flex items-center justify-end pr-6 2xl:pl-36 xl:pl-32 lg:pl-28 md:pl-24 sm:pl-20 pl-16 relative z-10">
           {/* Desktop Navigation Links - Right aligned */}

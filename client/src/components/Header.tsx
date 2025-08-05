@@ -35,18 +35,15 @@ export default function Header({ className = "" }: HeaderProps) {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
-        {/* Logo with cream background - Left edge docked */}
-        <div className="absolute top-0 left-0 z-30 2xl:w-[480px] xl:w-[420px] lg:w-[380px] md:w-[340px] sm:w-[300px] w-[260px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
+        {/* Logo with cream background - Full coverage with seamless docking */}
+        <div className="absolute top-0 left-0 z-40 overflow-hidden">
           <div 
-            className="flex items-center justify-start pl-4 w-full h-full"
+            className="flex items-center justify-start pl-4 2xl:w-[520px] xl:w-[460px] lg:w-[420px] md:w-[380px] sm:w-[340px] w-[300px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
             style={{
               background: '#FCF4EE',
-              borderRadius: '0 0 120px 0',
-              boxShadow: '0 8px 20px rgba(0,0,0,0.35)',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              zIndex: 30
+              borderRadius: '0 0 140px 0',
+              position: 'relative',
+              zIndex: 40
             }}
           >
             <button 
@@ -68,8 +65,11 @@ export default function Header({ className = "" }: HeaderProps) {
           </div>
         </div>
 
-        {/* Main navigation container - right aligned */}
-        <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-20">
+        {/* Main navigation container - right aligned with seamless docking */}
+        <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-20"
+             style={{
+               marginLeft: '300px'
+             }}>
           {/* Desktop Navigation Links - Right aligned */}
           <nav className="hidden lg:flex items-center space-x-6">
             {t.nav.map((item, index) => (

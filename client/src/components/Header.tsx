@@ -70,9 +70,9 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-end h-full" style={{ paddingLeft: '370px' }}>
+        <div className="container mx-auto px-6 flex items-center justify-center h-full" style={{ paddingLeft: '370px' }}>
           {/* Desktop Navigation Links - Right side */}
-          <nav className="hidden lg:flex items-center space-x-8 mr-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {t.nav.map((item, index) => (
               <button
                 key={item}
@@ -90,11 +90,21 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {/* Language Toggle - plain text */}
+          <div className="hidden lg:flex items-center space-x-4 ml-auto">
+            {/* Search Bar */}
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm text-[#3C2315] w-32 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
+                data-testid="search-input"
+              />
+            </div>
+            
+            {/* Language Toggle - off-white background */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="text-[#F5F5F5] hover:text-white text-sm font-medium transition-colors duration-200 tracking-[0.1em] uppercase"
+              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-[0.1em] uppercase px-3 py-2 rounded-md"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >

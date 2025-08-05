@@ -55,11 +55,11 @@ export default function Header({ className = "" }: HeaderProps) {
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="xl:h-24 lg:h-20 md:h-16"
+                className="xl:h-28 lg:h-24 md:h-20"
                 style={{ 
                   objectFit: 'contain', 
                   display: 'block',
-                  maxWidth: '100%'
+                  maxWidth: '90%'
                 }}
               />
             </button>
@@ -69,12 +69,12 @@ export default function Header({ className = "" }: HeaderProps) {
         {/* Main navigation container - same height as logo */}
         <div className="container mx-auto px-6 flex items-center justify-center h-full xl:pl-[370px] lg:pl-[320px] md:pl-[300px]">
           {/* Desktop Navigation Links - Right side */}
-          <nav className="hidden lg:flex items-center 2xl:space-x-8 xl:space-x-6 lg:space-x-4">
+          <nav className="hidden lg:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-2">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="2xl:text-sm xl:text-xs lg:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 2xl:tracking-[0.2em] xl:tracking-[0.1em] lg:tracking-[0.05em] uppercase whitespace-nowrap"
+                className="2xl:text-sm xl:text-xs lg:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 2xl:tracking-[0.1em] xl:tracking-[0.05em] lg:tracking-0 uppercase whitespace-nowrap"
                 data-testid={`nav-${item.toLowerCase()}`}
                 style={{ 
                   fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -87,13 +87,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center 2xl:space-x-4 xl:space-x-3 lg:space-x-2 ml-auto">
+          <div className="hidden lg:flex items-center 2xl:space-x-3 xl:space-x-2 lg:space-x-1 ml-auto pl-4">
             {/* Search Bar */}
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-white border border-gray-300 rounded-md px-3 py-2 2xl:text-sm xl:text-xs lg:text-xs text-[#3C2315] 2xl:w-32 xl:w-28 lg:w-24 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
+                className="bg-white border border-gray-300 rounded-md 2xl:px-3 xl:px-2 lg:px-2 py-2 2xl:text-sm xl:text-xs lg:text-xs text-[#3C2315] 2xl:w-28 xl:w-24 lg:w-20 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
                 data-testid="search-input"
               />
             </div>
@@ -101,7 +101,7 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Language Toggle - off-white background */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] 2xl:text-sm xl:text-xs lg:text-xs font-medium transition-colors duration-200 2xl:tracking-[0.1em] xl:tracking-[0.05em] lg:tracking-0 uppercase 2xl:px-3 xl:px-2 lg:px-2 py-2 rounded-md whitespace-nowrap"
+              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] 2xl:text-sm xl:text-xs lg:text-xs font-medium transition-colors duration-200 2xl:tracking-[0.05em] xl:tracking-0 lg:tracking-0 uppercase 2xl:px-2 xl:px-2 lg:px-1 py-2 rounded-md whitespace-nowrap"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -112,7 +112,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold 2xl:text-xs xl:text-xs lg:text-xs 2xl:tracking-[0.1em] xl:tracking-[0.05em] lg:tracking-0 2xl:px-5 xl:px-4 lg:px-3 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
+              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold 2xl:text-xs xl:text-xs lg:text-xs 2xl:tracking-[0.05em] xl:tracking-0 lg:tracking-0 2xl:px-4 xl:px-3 lg:px-2 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
               data-testid="book-consultation"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >

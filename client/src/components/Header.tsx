@@ -40,7 +40,7 @@ export default function Header({ className = "" }: HeaderProps) {
           className="flex items-center justify-start pl-4 w-full h-full"
           style={{
             background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-            borderRadius: '0 0 110px 0',
+            borderRadius: '0 0 140px 0',
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
           }}
         >
@@ -63,8 +63,8 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Logo Navigation - Smaller curved element */}
-      <nav className="fixed top-0 left-0 z-50 2xl:w-[380px] xl:w-[340px] lg:w-[300px] md:w-[270px] sm:w-[240px] w-[210px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
+      {/* Main Navigation Bar - Right side with concave curve */}
+      <nav className="absolute top-0 right-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:w-[calc(100%-520px)] xl:w-[calc(100%-460px)] lg:w-[calc(100%-420px)] md:w-[calc(100%-380px)] sm:w-[calc(100%-340px)] w-[calc(100%-300px)]">
         <div 
           className="h-full w-full"
           style={{

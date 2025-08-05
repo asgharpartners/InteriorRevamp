@@ -37,11 +37,15 @@ export default function Header({ className = "" }: HeaderProps) {
         {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="bg-[#F5D97C] flex items-center justify-start pl-8"
+            className="flex items-center justify-start pl-8 shadow-lg"
             style={{
+              background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               width: '300px',
               height: '100px',
-              borderRadius: '0 0 80px 0'
+              borderRadius: '0 0 80px 0',
+              border: '1px solid rgba(255,255,255,0.2)',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',
+              position: 'relative'
             }}
           >
             <button 
@@ -50,10 +54,16 @@ export default function Header({ className = "" }: HeaderProps) {
               data-testid="logo-button"
             >
               <img
-                src="/nh-logo-final.png"
+                src="/logo-new.jpg"
                 alt="Nils Holger – Furniture & Projects"
                 className="h-16"
-                style={{ objectFit: 'contain', maxWidth: '280px', display: 'block' }}
+                style={{ 
+                  objectFit: 'contain', 
+                  maxWidth: '280px', 
+                  display: 'block',
+                  filter: 'brightness(1.1) contrast(1.2) saturate(0.9)',
+                  background: 'transparent'
+                }}
               />
             </button>
           </div>
@@ -145,17 +155,26 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Logo for Mobile with yellow background */}
             <div className="mb-8 relative">
               <div 
-                className="bg-[#F5D97C] rounded-2xl p-6 flex items-center justify-center"
+                className="rounded-2xl p-6 flex items-center justify-center shadow-lg"
                 style={{
+                  background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
                   width: '320px',
-                  height: '120px'
+                  height: '120px',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  boxShadow: '0 6px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)'
                 }}
               >
                 <img
-                  src="/nh-logo-final.png"
+                  src="/logo-new.jpg"
                   alt="Nils Holger – Furniture & Projects"
                   className="h-20"
-                  style={{ objectFit: 'contain', maxWidth: '300px', display: 'block' }}
+                  style={{ 
+                    objectFit: 'contain', 
+                    maxWidth: '300px', 
+                    display: 'block',
+                    filter: 'brightness(1.1) contrast(1.2) saturate(0.9)',
+                    background: 'transparent'
+                  }}
                 />
               </div>
             </div>

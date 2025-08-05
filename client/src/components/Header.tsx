@@ -34,16 +34,16 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out" style={{ height: '120px' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out" style={{ height: '90px' }}>
         {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="flex items-center justify-start pl-6 shadow-lg"
+            className="flex items-center justify-start pl-4 shadow-lg"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              width: '350px',
-              height: '120px',
-              borderRadius: '0 0 80px 0',
+              width: '330px',
+              height: '90px',
+              borderRadius: '0 0 60px 0',
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',
               position: 'relative'
@@ -59,10 +59,9 @@ export default function Header({ className = "" }: HeaderProps) {
                 alt="Nils Holger – Furniture & Projects"
                 style={{ 
                   objectFit: 'contain', 
-                  maxWidth: '260px', 
+                  maxWidth: '240px', 
                   display: 'block',
-                  height: '480px',
-                  transform: 'scale(1.5)'
+                  height: '70px'
                 }}
               />
             </button>
@@ -70,14 +69,14 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-center h-full" style={{ paddingLeft: '370px' }}>
+        <div className="container mx-auto px-4 flex items-center justify-center h-full" style={{ paddingLeft: '350px' }}>
           {/* Desktop Navigation Links - Right side */}
-          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-8 lg:space-x-6 md:space-x-4">
+          <nav className="hidden lg:flex items-center xl:space-x-6 lg:space-x-4 md:space-x-3">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="xl:text-sm lg:text-xs md:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 xl:tracking-[0.2em] lg:tracking-[0.1em] md:tracking-[0.05em] uppercase"
+                className="xl:text-xs lg:text-xs md:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 xl:tracking-[0.15em] lg:tracking-[0.1em] md:tracking-[0.05em] uppercase"
                 data-testid={`nav-${item.toLowerCase()}`}
                 style={{ 
                   fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -90,13 +89,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center xl:space-x-4 lg:space-x-3 md:space-x-2 ml-auto">
+          <div className="hidden lg:flex items-center xl:space-x-3 lg:space-x-2 md:space-x-2 ml-auto">
             {/* Search Bar */}
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-white border border-gray-300 rounded-md px-3 py-2 xl:text-sm lg:text-xs md:text-xs text-[#3C2315] xl:w-32 lg:w-28 md:w-24 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
+                className="bg-white border border-gray-300 rounded-md px-2 py-1.5 xl:text-xs lg:text-xs md:text-xs text-[#3C2315] xl:w-28 lg:w-24 md:w-20 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
                 data-testid="search-input"
               />
             </div>
@@ -104,7 +103,7 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Language Toggle - off-white background */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] xl:text-sm lg:text-xs md:text-xs font-medium transition-colors duration-200 xl:tracking-[0.1em] lg:tracking-[0.05em] md:tracking-0 uppercase xl:px-3 lg:px-2 md:px-2 py-2 rounded-md"
+              className="bg-[#FEEFCA] hover:bg-[#F5D97C] text-[#3C2315] xl:text-xs lg:text-xs md:text-xs font-medium transition-colors duration-200 xl:tracking-[0.1em] lg:tracking-[0.05em] md:tracking-0 uppercase xl:px-2.5 lg:px-2 md:px-1.5 py-1.5 rounded-md"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -115,7 +114,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold xl:text-xs lg:text-xs md:text-xs xl:tracking-[0.1em] lg:tracking-[0.05em] md:tracking-0 xl:px-5 lg:px-4 md:px-3 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
+              className="bg-[#FEEFCA] hover:bg-[#F5D97C] text-[#3C2315] border-[#FEEFCA] font-bold xl:text-xs lg:text-xs md:text-xs xl:tracking-[0.08em] lg:tracking-[0.04em] md:tracking-0 xl:px-4 lg:px-3 md:px-2 py-1.5 h-8 rounded-md whitespace-nowrap shadow-sm uppercase"
               data-testid="book-consultation"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -139,7 +138,7 @@ export default function Header({ className = "" }: HeaderProps) {
       </header>
 
       {/* Add padding to body content to account for fixed header */}
-      <div className="h-20"></div>
+      <div className="h-[90px]"></div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

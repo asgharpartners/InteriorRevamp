@@ -63,17 +63,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Bridging element with concave curve */}
-      <div className="fixed top-0 z-45 2xl:left-[380px] xl:left-[340px] lg:left-[320px] md:left-[290px] sm:left-[270px] left-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]" style={{ width: '140px' }}>
-        <svg width="140" height="100%" viewBox="0 0 140 160" preserveAspectRatio="none">
-          <path 
-            d="M 0,0 Q 140,0 140,140 L 140,160 L 0,160 Z" 
-            fill="#3C2315"
-          />
-        </svg>
-      </div>
-
-      {/* Main Navigation Bar - Right side */}
+      {/* Main Navigation Bar - Right side seamlessly connected */}
       <nav className="fixed top-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0">
         <div 
           className="h-full w-full"

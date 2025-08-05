@@ -42,6 +42,7 @@ This is a modern B2B web platform for "Nils Holger Design," a Scandinavian inter
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
+Work approach: Execute exact commands only - no suggestions or additional changes unless explicitly requested.
 
 # System Architecture
 

@@ -57,11 +57,11 @@ export default function Header({ className = "" }: HeaderProps) {
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="h-24"
                 style={{ 
                   objectFit: 'contain', 
                   maxWidth: '260px', 
-                  display: 'block'
+                  display: 'block',
+                  height: '480px'
                 }}
               />
             </button>

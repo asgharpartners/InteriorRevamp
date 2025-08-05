@@ -34,17 +34,17 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header className="relative top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] overflow-hidden">
-        {/* Logo with yellow background - Top left corner */}
-        <div className="absolute top-0 left-0 z-20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
+        {/* Logo with cream background - Left edge docked */}
+        <div className="absolute top-0 left-0 z-30">
           <div 
-            className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-[450px] xl:w-[400px] lg:w-[350px] md:w-[320px] sm:w-[280px] w-[240px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
+            className="flex items-center justify-start pl-4 2xl:w-[480px] xl:w-[420px] lg:w-[380px] md:w-[340px] sm:w-[300px] w-[260px] 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"
             style={{
               background: '#FCF4EE',
               borderRadius: '0 0 120px 0',
-              border: '1px solid rgba(255,255,255,0.2)',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3)',
-              position: 'relative'
+              boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
+              position: 'relative',
+              zIndex: 30
             }}
           >
             <button 
@@ -55,7 +55,7 @@ export default function Header({ className = "" }: HeaderProps) {
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-60 xl:h-56 lg:h-52 md:h-48 sm:h-36 h-32"
+                className="2xl:h-64 xl:h-60 lg:h-56 md:h-52 sm:h-40 h-36"
                 style={{ 
                   objectFit: 'contain', 
                   display: 'block',
@@ -66,15 +66,15 @@ export default function Header({ className = "" }: HeaderProps) {
           </div>
         </div>
 
-        {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-center h-full 2xl:pl-[450px] xl:pl-[400px] lg:pl-[350px] md:pl-[320px] sm:pl-[280px] pl-[240px]">
-          {/* Desktop Navigation Links - Right side */}
-          <nav className="hidden lg:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-2">
+        {/* Main navigation container - right aligned */}
+        <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-20">
+          {/* Desktop Navigation Links - Right aligned */}
+          <nav className="hidden lg:flex items-center space-x-6">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="2xl:text-sm xl:text-xs lg:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 2xl:tracking-[0.1em] xl:tracking-[0.05em] lg:tracking-0 uppercase whitespace-nowrap"
+                className="text-sm text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
                 data-testid={`nav-${item.toLowerCase()}`}
                 style={{ 
                   fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -87,13 +87,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center 2xl:space-x-3 xl:space-x-2 lg:space-x-1 ml-auto pl-4">
+          <div className="hidden lg:flex items-center space-x-3 ml-8">
             {/* Search Bar */}
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-white border border-gray-300 rounded-md 2xl:px-3 xl:px-2 lg:px-2 py-2 2xl:text-sm xl:text-xs lg:text-xs text-[#3C2315] 2xl:w-28 xl:w-24 lg:w-20 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
+                className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm text-[#3C2315] w-28 focus:outline-none focus:ring-1 focus:ring-[#FCF4EE]"
                 data-testid="search-input"
               />
             </div>
@@ -101,7 +101,7 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Language Toggle - off-white background */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] 2xl:text-sm xl:text-xs lg:text-xs font-medium transition-colors duration-200 2xl:tracking-[0.05em] xl:tracking-0 lg:tracking-0 uppercase 2xl:px-2 xl:px-2 lg:px-1 py-2 rounded-md whitespace-nowrap"
+              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -112,7 +112,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold 2xl:text-xs xl:text-xs lg:text-xs 2xl:tracking-[0.05em] xl:tracking-0 lg:tracking-0 2xl:px-4 xl:px-3 lg:px-2 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
+              className="bg-[#FCF4EE] hover:bg-white text-[#3C2315] border-[#FCF4EE] font-bold text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
               data-testid="book-consultation"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -136,7 +136,7 @@ export default function Header({ className = "" }: HeaderProps) {
       </header>
 
       {/* Add padding to body content to account for fixed header */}
-      <div className="h-20"></div>
+      <div className="2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]"></div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

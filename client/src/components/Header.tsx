@@ -41,7 +41,7 @@ export default function Header({ className = "" }: HeaderProps) {
             className="flex items-center justify-start pl-2 shadow-lg"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              width: '280px',
+              width: '350px',
               height: '100px',
               borderRadius: '0 0 80px 0',
               border: '1px solid rgba(255,255,255,0.2)',
@@ -70,7 +70,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-end h-full" style={{ paddingLeft: '300px' }}>
+        <div className="container mx-auto px-6 flex items-center justify-end h-full" style={{ paddingLeft: '370px' }}>
           {/* Desktop Navigation Links - Right side */}
           <nav className="hidden lg:flex items-center space-x-8 mr-8">
             {t.nav.map((item, index) => (

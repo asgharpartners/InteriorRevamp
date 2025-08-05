@@ -63,10 +63,17 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Main Navigation Bar - Right side only */}
-      <nav className="absolute top-0 right-0 z-40 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:w-[calc(100%-520px)] xl:w-[calc(100%-460px)] lg:w-[calc(100%-420px)] md:w-[calc(100%-380px)] sm:w-[calc(100%-340px)] w-[calc(100%-300px)]">
-        {/* Navigation container - right aligned content */}
-        <div className="h-full flex items-center justify-end pr-6">
+      {/* Main Navigation Bar - Right side with concave curve */}
+      <nav className="absolute top-0 right-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:w-[calc(100%-520px)] xl:w-[calc(100%-460px)] lg:w-[calc(100%-420px)] md:w-[calc(100%-380px)] sm:w-[calc(100%-340px)] w-[calc(100%-300px)]">
+        <div 
+          className="h-full w-full"
+          style={{
+            background: '#3C2315',
+            borderRadius: '140px 0 0 0'
+          }}
+        >
+          {/* Navigation container - right aligned content */}
+          <div className="h-full flex items-center justify-end pr-6 2xl:pl-36 xl:pl-32 lg:pl-28 md:pl-24 sm:pl-20 pl-16">
           {/* Desktop Navigation Links - Right aligned */}
           <nav className="hidden lg:flex items-center space-x-6">
             {t.nav.map((item, index) => (
@@ -130,6 +137,7 @@ export default function Header({ className = "" }: HeaderProps) {
             >
               <Menu className="w-6 h-6" />
             </Button>
+          </div>
           </div>
         </div>
       </nav>

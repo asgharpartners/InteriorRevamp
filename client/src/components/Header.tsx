@@ -34,11 +34,11 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out xl:h-[120px] lg:h-[100px] md:h-[90px]">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#3C2315] transition-all duration-300 ease-in-out 2xl:h-[140px] xl:h-[120px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px]">
         {/* Logo with yellow background - Top left corner */}
         <div className="absolute top-0 left-0 z-10">
           <div 
-            className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 shadow-lg xl:w-[350px] lg:w-[300px] md:w-[280px] xl:h-[120px] lg:h-[100px] md:h-[90px]"
+            className="flex items-center justify-start xl:pl-6 lg:pl-4 md:pl-3 sm:pl-2 pl-1 shadow-lg 2xl:w-[380px] xl:w-[350px] lg:w-[300px] md:w-[280px] sm:w-[240px] w-[200px] 2xl:h-[140px] xl:h-[120px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px]"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 80px 0',
@@ -55,7 +55,7 @@ export default function Header({ className = "" }: HeaderProps) {
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="xl:h-40 lg:h-36 md:h-32"
+                className="2xl:h-44 xl:h-40 lg:h-36 md:h-32 sm:h-24 h-20"
                 style={{ 
                   objectFit: 'contain', 
                   display: 'block',
@@ -67,7 +67,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
 
         {/* Main navigation container - same height as logo */}
-        <div className="container mx-auto px-6 flex items-center justify-center h-full xl:pl-[370px] lg:pl-[320px] md:pl-[300px]">
+        <div className="container mx-auto px-6 flex items-center justify-center h-full 2xl:pl-[400px] xl:pl-[370px] lg:pl-[320px] md:pl-[300px] sm:pl-[260px] pl-[220px]">
           {/* Desktop Navigation Links - Right side */}
           <nav className="hidden lg:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-2">
             {t.nav.map((item, index) => (

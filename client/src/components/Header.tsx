@@ -93,13 +93,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center space-x-3 ml-8">
+          <div className="hidden lg:flex items-center space-x-4 ml-10">
             {/* Search Bar */}
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm text-[#3C2315] w-28 focus:outline-none focus:ring-1 focus:ring-[#FCF4EE]"
+              className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm text-[#3C2315] w-32 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
                 data-testid="search-input"
               />
             </div>
@@ -107,7 +107,7 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Language Toggle - off-white background */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap"
+              className="bg-[#FCF4EE] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >

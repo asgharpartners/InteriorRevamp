@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { useLanguage } from "@/hooks/use-language"
+import nilsHolgerLogo from "@/assets/nils-holger-logo.png"
 
 interface HeaderProps {
   className?: string
@@ -54,7 +55,7 @@ export default function Header({ className = "" }: HeaderProps) {
               data-testid="logo-button"
             >
               <img
-                src="/nils-holger-logo.png"
+                src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
                 className="h-16"
                 style={{ 

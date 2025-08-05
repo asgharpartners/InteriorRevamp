@@ -72,16 +72,16 @@ export default function Header({ className = "" }: HeaderProps) {
         {/* Main navigation container - same height as logo */}
         <div className="container mx-auto px-6 flex items-center justify-center h-full" style={{ paddingLeft: '370px' }}>
           {/* Desktop Navigation Links - Right side */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-8 lg:space-x-6 md:space-x-4">
             {t.nav.map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                className="text-sm text-[#F5F5F5] hover:text-white font-medium transition-colors duration-200 tracking-[0.2em] uppercase"
+                className="xl:text-sm lg:text-xs md:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 xl:tracking-[0.2em] lg:tracking-[0.1em] md:tracking-[0.05em] uppercase"
                 data-testid={`nav-${item.toLowerCase()}`}
                 style={{ 
                   fontFamily: '"Playfair Display", "Merriweather", serif',
-                  fontWeight: '500'
+                  fontWeight: '700'
                 }}
               >
                 {item}
@@ -90,13 +90,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </nav>
 
           {/* Desktop Right-aligned elements */}
-          <div className="hidden lg:flex items-center space-x-4 ml-auto">
+          <div className="hidden lg:flex items-center xl:space-x-4 lg:space-x-3 md:space-x-2 ml-auto">
             {/* Search Bar */}
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm text-[#3C2315] w-32 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
+                className="bg-white border border-gray-300 rounded-md px-3 py-2 xl:text-sm lg:text-xs md:text-xs text-[#3C2315] xl:w-32 lg:w-28 md:w-24 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
                 data-testid="search-input"
               />
             </div>
@@ -104,7 +104,7 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Language Toggle - off-white background */}
             <button
               onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-[0.1em] uppercase px-3 py-2 rounded-md"
+              className="bg-[#F5F5F5] hover:bg-white text-[#3C2315] xl:text-sm lg:text-xs md:text-xs font-medium transition-colors duration-200 xl:tracking-[0.1em] lg:tracking-[0.05em] md:tracking-0 uppercase xl:px-3 lg:px-2 md:px-2 py-2 rounded-md"
               data-testid="language-toggle"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >
@@ -115,7 +115,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-xs tracking-[0.1em] px-5 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
+              className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold xl:text-xs lg:text-xs md:text-xs xl:tracking-[0.1em] lg:tracking-[0.05em] md:tracking-0 xl:px-5 lg:px-4 md:px-3 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
               data-testid="book-consultation"
               style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
             >

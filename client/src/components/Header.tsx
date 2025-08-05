@@ -40,7 +40,7 @@ export default function Header({ className = "" }: HeaderProps) {
           className="flex items-center justify-start pl-4 w-full h-full"
           style={{
             background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-            borderRadius: '0 0 50% 0',
+            borderRadius: '0 0 140px 0',
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
           }}
         >
@@ -63,13 +63,12 @@ export default function Header({ className = "" }: HeaderProps) {
         </div>
       </nav>
 
-      {/* Main Navigation Bar - Right side with mirrored curve */}
+      {/* Main Navigation Bar - Right side seamlessly connected */}
       <nav className="fixed top-0 z-40 transition-all duration-300 ease-in-out 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0">
         <div 
           className="h-full w-full"
           style={{
-            background: '#3C2315',
-            borderRadius: '50% 0 0 0'
+            background: '#3C2315'
           }}
         >
           {/* Navigation container - right aligned content */}

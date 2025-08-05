@@ -53,18 +53,14 @@ export default function Header({ className = "" }: HeaderProps) {
               className="focus:outline-none"
               data-testid="logo-button"
             >
-              <img
-                src="/logo-new.jpg"
-                alt="Nils Holger – Furniture & Projects"
-                className="h-16"
-                style={{ 
-                  objectFit: 'contain', 
-                  maxWidth: '280px', 
-                  display: 'block',
-                  filter: 'brightness(1.1) contrast(1.2) saturate(0.9)',
-                  background: 'transparent'
-                }}
-              />
+              <div className="text-[#3C2315] font-bold text-xl tracking-wide">
+                <span style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}>
+                  NILS HOLGER
+                </span>
+                <div className="text-sm font-medium tracking-[0.1em] mt-1">
+                  FURNITURE & PROJECTS
+                </div>
+              </div>
             </button>
           </div>
         </div>

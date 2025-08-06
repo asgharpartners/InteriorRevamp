@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
-// Using a placeholder for now - will be replaced with actual logo
-const nilsHolgerLogo = "/api/placeholder/200/80"
+const nilsHolgerLogo = "/nils-holger-logo.png"
 
 interface HeaderProps {
   className?: string
@@ -48,32 +47,19 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex flex-col items-center justify-center"
+              className="focus:outline-none"
               data-testid="logo-button"
             >
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-16 xl:h-14 lg:h-12 md:h-10 sm:h-8 h-6 mb-2"
+                className="2xl:h-20 xl:h-18 lg:h-16 md:h-14 sm:h-12 h-10"
                 style={{ 
                   objectFit: 'contain', 
-                  display: 'block'
+                  display: 'block',
+                  maxWidth: '100%'
                 }}
               />
-              <div className="text-center">
-                <h1 
-                  className="text-[#3C2315] 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm font-bold leading-tight"
-                  style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
-                >
-                  NILS HOLGER
-                </h1>
-                <p 
-                  className="text-[#3C2315] 2xl:text-base xl:text-sm lg:text-xs md:text-xs sm:text-xs text-xs font-medium tracking-wide"
-                  style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
-                >
-                  FURNITURE & PROJECTS
-                </p>
-              </div>
             </button>
           </div>
 

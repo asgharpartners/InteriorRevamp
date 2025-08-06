@@ -47,7 +47,7 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex items-center justify-start h-full w-full pl-8"
+              className="focus:outline-none flex items-center justify-start h-full w-full pl-2"
               data-testid="logo-button"
             >
               <img

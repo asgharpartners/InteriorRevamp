@@ -67,12 +67,14 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background with smooth convex left edge for puzzle-piece docking */}
+          {/* Dark brown navigation background with convex bulge for yellow to nestle into */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[340px] xl:left-[290px] lg:left-[250px] md:left-[210px] sm:left-[170px] left-[130px] right-0"
+            className="absolute top-0 h-full 2xl:left-[200px] xl:left-[180px] lg:left-[160px] md:left-[140px] sm:left-[120px] left-[100px] right-0"
             style={{
               background: '#3C2315',
-              borderRadius: '140px 0 0 140px'
+              borderRadius: '50% 0 0 50%',
+              width: 'calc(100% + 140px)',
+              marginLeft: '140px'
             }}
           >
             {/* Navigation container - right aligned content with adjusted padding for convex curve */}

@@ -48,19 +48,32 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none"
+              className="focus:outline-none flex flex-col items-center justify-center"
               data-testid="logo-button"
             >
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-64 xl:h-60 lg:h-56 md:h-52 sm:h-40 h-36"
+                className="2xl:h-16 xl:h-14 lg:h-12 md:h-10 sm:h-8 h-6 mb-2"
                 style={{ 
                   objectFit: 'contain', 
-                  display: 'block',
-                  maxWidth: '90%'
+                  display: 'block'
                 }}
               />
+              <div className="text-center">
+                <h1 
+                  className="text-[#3C2315] 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm font-bold leading-tight"
+                  style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
+                >
+                  NILS HOLGER
+                </h1>
+                <p 
+                  className="text-[#3C2315] 2xl:text-base xl:text-sm lg:text-xs md:text-xs sm:text-xs text-xs font-medium tracking-wide"
+                  style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
+                >
+                  FURNITURE & PROJECTS
+                </p>
+              </div>
             </button>
           </div>
 
@@ -73,14 +86,32 @@ export default function Header({ className = "" }: HeaderProps) {
             }}
           >
             {/* Navigation container - right aligned content */}
-            <div className="h-full flex items-center justify-end pr-6 pl-40 relative z-10">
+            <div className="h-full flex items-center justify-end pr-6 2xl:pl-52 xl:pl-48 lg:pl-44 md:pl-40 sm:pl-36 pl-32 relative z-10">
               {/* Desktop Navigation Links - Right aligned */}
-              <nav className="hidden lg:flex items-center space-x-6">
+              <nav className="hidden 2xl:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-3">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="text-sm text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
+                    className="2xl:text-sm xl:text-xs lg:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
+                    data-testid={`nav-${item.toLowerCase()}`}
+                    style={{ 
+                      fontFamily: '"Playfair Display", "Merriweather", serif',
+                      fontWeight: '700'
+                    }}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </nav>
+              
+              {/* Tablet Navigation Links - smaller and fewer items */}
+              <nav className="hidden lg:flex 2xl:hidden items-center space-x-2">
+                {["ABOUT", "SERVICES", "CONTACT"].map((item, index) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
+                    className="text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',

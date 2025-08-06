@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
-const nilsHolgerLogo = "/nils-holger-logo-final.png"
+const nilsHolgerLogo = "/nils-holger-logo-new.jpg"
 
 interface HeaderProps {
   className?: string

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
-const nilsHolgerLogo = "/nils-holger-logo.png"
+const nilsHolgerLogo = "/nils-holger-logo-new.png"
 
 interface HeaderProps {
   className?: string
@@ -45,9 +45,20 @@ export default function Header({ className = "" }: HeaderProps) {
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
             }}
           >
-            <div className="flex items-center justify-center h-full">
-              {/* Logo will be added here when provided */}
-            </div>
+            <button 
+              onClick={() => scrollToSection("hero")} 
+              className="focus:outline-none flex items-center justify-center h-full w-full px-4"
+              data-testid="logo-button"
+            >
+              <img
+                src={nilsHolgerLogo}
+                alt="Nils Holger – Furniture & Projects"
+                className="2xl:h-24 xl:h-20 lg:h-18 md:h-16 sm:h-14 h-12 max-w-full object-contain"
+                style={{ 
+                  filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))'
+                }}
+              />
+            </button>
           </div>
 
           {/* Dark brown navigation background with bulged edge for seamless docking */}

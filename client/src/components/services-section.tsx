@@ -28,11 +28,7 @@ const services = [
     description: "Certifierad byggövervakning och kvalitetssäkring enligt gällande regelverk.",
     longDescription: "Våra auktoriserade KA-ansvariga säkerställer att alla arbeten uppfyller svenska byggstandarder. Vi hanterar all dokumentation och inspektioner för trygg projektgenomförande."
   },
-  {
-    title: "EGEN TILLVERKNING",
-    description: "Skräddarsydda möbler och inredningslösningar från eget snickeri.",
-    longDescription: "I vår egen verkstad tillverkar vi unika möbler och inredningsdetaljer. Varje stycke är handgjort med traditionella tekniker och hållbara material som håller i generationer."
-  },
+
   {
     title: "OMKLÄDNAD & REPARATION",
     description: "Professionell restaurering och förnyelse av befintliga möbler.",
@@ -65,9 +61,9 @@ export function ServicesSection() {
         </p>
       </div>
 
-      {/* Services Grid */}
+      {/* Services Grid - 2 rows x 3 columns */}
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 min-h-[400px]">
           {services.map((service, index) => (
             <div 
               key={index}

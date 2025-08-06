@@ -31,12 +31,69 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">
-              Welcome to Nils Holger – Design & Furniture Projects
+              Välkommen till Nils Holger – Furniture & Projects
             </h2>
             <p className="text-xl text-dark-grey max-w-3xl mx-auto leading-relaxed">
-              Our mission is to be a reliable and flexible partner for interior design and construction 
-              in all types of public environments. We work in both interior and exterior spaces.
+              Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt. Vi arbetar i såväl interiöra som exteriöra miljöer och kombinerar estetisk kvalitet med funktionalitet och hållbarhet.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Three-Column Cards Section */}
+      <section className="bg-off-white">
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 h-auto">
+            {/* Card 1: Skräddarsydda lösningar */}
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="bg-white p-12 hover:shadow-xl hover:bg-gray-50 transition-all duration-300 cursor-pointer group text-left h-full flex flex-col justify-center border-r border-gray-100 last:border-r-0" 
+              data-testid="card-custom-solutions"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-dark-brown text-2xl">🔨</span>
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-dark-brown mb-4">Skräddarsydda lösningar</h3>
+                <p className="text-dark-grey leading-relaxed">
+                  Custom projects for hotels, offices, restaurants. We create tailored interior solutions that perfectly match your specific needs and vision.
+                </p>
+              </div>
+            </button>
+
+            {/* Card 2: Hållbarhet i fokus */}
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="bg-white p-12 hover:shadow-xl hover:bg-gray-50 transition-all duration-300 cursor-pointer group text-left h-full flex flex-col justify-center border-r border-gray-100 last:border-r-0" 
+              data-testid="card-sustainability"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-dark-brown text-2xl">♻️</span>
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-dark-brown mb-4">Hållbarhet i fokus</h3>
+                <p className="text-dark-grey leading-relaxed">
+                  Refurbishment, reuse, smart materials. Our sustainable approach extends the life of existing spaces while minimizing environmental impact.
+                </p>
+              </div>
+            </button>
+
+            {/* Card 3: Från idé till installation */}
+            <button 
+              onClick={() => scrollToSection('process')}
+              className="bg-white p-12 hover:shadow-xl hover:bg-gray-50 transition-all duration-300 cursor-pointer group text-left h-full flex flex-col justify-center" 
+              data-testid="card-complete-process"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-dark-brown text-2xl">🤝</span>
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-dark-brown mb-4">Från idé till installation</h3>
+                <p className="text-dark-grey leading-relaxed">
+                  Complete process from planning to delivery. We handle every step of your project with meticulous attention to detail and craftsmanship.
+                </p>
+              </div>
+            </button>
           </div>
         </div>
       </section>

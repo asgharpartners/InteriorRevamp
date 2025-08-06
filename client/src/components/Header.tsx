@@ -66,7 +66,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
           {/* Dark brown navigation background with bulged edge for seamless docking */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0"
+            className="absolute top-0 h-full 2xl:left-[380px] xl:left-[320px] lg:left-[280px] md:left-[240px] sm:left-[200px] left-[160px] right-0"
             style={{
               background: '#3C2315',
               borderRadius: '140px 0 0 0'

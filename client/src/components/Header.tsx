@@ -45,22 +45,9 @@ export default function Header({ className = "" }: HeaderProps) {
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
             }}
           >
-            <button 
-              onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none"
-              data-testid="logo-button"
-            >
-              <img
-                src={nilsHolgerLogo}
-                alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-20 xl:h-18 lg:h-16 md:h-14 sm:h-12 h-10"
-                style={{ 
-                  objectFit: 'contain', 
-                  display: 'block',
-                  maxWidth: '100%'
-                }}
-              />
-            </button>
+            <div className="flex items-center justify-center h-full">
+              {/* Logo will be added here when provided */}
+            </div>
           </div>
 
           {/* Dark brown navigation background with bulged edge for seamless docking */}

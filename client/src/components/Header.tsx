@@ -64,15 +64,16 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background */}
+          {/* Dark brown navigation background with concave curve for seamless docking */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0"
+            className="absolute top-0 h-full 2xl:left-[380px] xl:left-[340px] lg:left-[320px] md:left-[290px] sm:left-[270px] left-[240px] right-0"
             style={{
-              background: '#3C2315'
+              background: '#3C2315',
+              clipPath: 'path("M 140 0 Q 0 0 0 140 L 0 160 L 9999 160 L 9999 0 Z")'
             }}
           >
             {/* Navigation container - right aligned content */}
-            <div className="h-full flex items-center justify-end pr-6 2xl:pl-36 xl:pl-32 lg:pl-28 md:pl-24 sm:pl-20 pl-16 relative z-10">
+            <div className="h-full flex items-center justify-end pr-6 pl-40 relative z-10">
               {/* Desktop Navigation Links - Right aligned */}
               <nav className="hidden lg:flex items-center space-x-6">
                 {t.nav.map((item, index) => (

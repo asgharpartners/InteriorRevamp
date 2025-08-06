@@ -38,7 +38,7 @@ export default function Header({ className = "" }: HeaderProps) {
         <div className="h-full w-full relative">
           {/* Yellow logo background with curve */}
           <div 
-            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start pl-1"
+            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 140px 0',
@@ -47,7 +47,7 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex items-center justify-start h-full w-full pl-1"
+              className="focus:outline-none flex items-center justify-start h-full w-full"
               data-testid="logo-button"
             >
               <img

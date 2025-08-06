@@ -37,32 +37,7 @@ export default function Header({ className = "" }: HeaderProps) {
       <header className="fixed top-0 left-0 right-0 z-50 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
         {/* Unified background container */}
         <div className="h-full w-full relative">
-          {/* Yellow logo background with curve */}
-          <div 
-            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start pl-4"
-            style={{
-              background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              borderRadius: '0 0 140px 0',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-            }}
-          >
-            <button 
-              onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none"
-              data-testid="logo-button"
-            >
-              <img
-                src={nilsHolgerLogo}
-                alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-64 xl:h-60 lg:h-56 md:h-52 sm:h-40 h-36"
-                style={{ 
-                  objectFit: 'contain', 
-                  display: 'block',
-                  maxWidth: '90%'
-                }}
-              />
-            </button>
-          </div>
+          
 
           {/* Dark brown navigation background with bulged edge for seamless docking */}
           <div 

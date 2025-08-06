@@ -23,42 +23,34 @@ export default function Header({ className = "" }: HeaderProps) {
   const t = translations[language]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId.toLowerCase())
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+    setIsMobileMenuOpen(false) // Close mobile menu after navigation
   }
 
   return (
     <>
-      {/* Combined Header - Single element with both logo and navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
-        {/* Unified background container */}
+      {/* Clean straight navigation bar */}
+      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#3E2516]">
         <div className="h-full w-full relative">
-          {/* Yellow logo background with curve */}
-          <div 
-            className="absolute top-0 left-0 2xl:w-[460px] xl:w-[410px] lg:w-[370px] md:w-[330px] sm:w-[290px] w-[250px] h-full flex items-center justify-start pl-4"
-            style={{
-              background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              borderRadius: '0 0 140px 0',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-            }}
-          >
+          {/* Logo overlapping on top - left aligned */}
+          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20">
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex items-center justify-start h-full w-full"
+              className="focus:outline-none bg-[#F2DC74] rounded-lg p-2 shadow-lg hover:bg-[#F2DC74]/90 transition-colors duration-200"
               data-testid="logo-button"
             >
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-128 xl:h-112 lg:h-96 md:h-80 sm:h-72 h-64 object-contain"
-                style={{ 
-                  maxWidth: '90%',
-                  display: 'block',
-                  marginLeft: '-1rem'
-                }}
+                className="h-10 w-auto object-contain"
                 onLoad={() => console.log('Logo loaded successfully')}
                 onError={(e) => {
                   console.error('Logo failed to load from:', nilsHolgerLogo);
@@ -67,109 +59,66 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background with concave garage-like indent for yellow to nestle into */}
-          <div 
-            className="absolute top-0 h-full 2xl:left-[200px] xl:left-[170px] lg:left-[140px] md:left-[120px] sm:left-[100px] left-[80px] right-0"
-            style={{
-              background: '#3C2315',
-              clipPath: 'ellipse(140px 100% at 0% 50%)',
-              marginLeft: '140px'
-            }}
-          >
-            {/* Navigation container - right aligned content with adjusted padding for convex curve */}
-            <div className="h-full flex items-center justify-end pr-6 2xl:pl-44 xl:pl-40 lg:pl-36 md:pl-32 sm:pl-28 pl-24 relative z-10">
-              {/* Desktop Navigation Links - Right aligned */}
-              <nav className="hidden 2xl:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-3">
-                {t.nav.map((item, index) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="2xl:text-sm xl:text-xs lg:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
-                    data-testid={`nav-${item.toLowerCase()}`}
-                    style={{ 
-                      fontFamily: '"Playfair Display", "Merriweather", serif',
-                      fontWeight: '700'
-                    }}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </nav>
-              
-              {/* Tablet Navigation Links - smaller and fewer items */}
-              <nav className="hidden lg:flex 2xl:hidden items-center space-x-2">
-                {["ABOUT", "SERVICES", "CONTACT"].map((item, index) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
-                    className="text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
-                    data-testid={`nav-${item.toLowerCase()}`}
-                    style={{ 
-                      fontFamily: '"Playfair Display", "Merriweather", serif',
-                      fontWeight: '700'
-                    }}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </nav>
-
-              {/* Desktop Right-aligned elements */}
-              <div className="hidden lg:flex items-center space-x-4 ml-10">
-                {/* Search Bar */}
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm text-[#3C2315] w-32 focus:outline-none focus:ring-1 focus:ring-[#F5D97C]"
-                    data-testid="search-input"
-                  />
-                </div>
-                
-                {/* Language Toggle - off-white background */}
+          {/* Navigation content - right aligned */}
+          <div className="h-full flex items-center justify-end px-6 ml-20">
+            {/* Desktop Navigation Links */}
+            <nav className="hidden lg:flex items-center space-x-6">
+              {t.nav.map((item, index) => (
                 <button
-                  onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-                  className="bg-[#FCF4EE] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap"
-                  data-testid="language-toggle"
-                  style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
+                  key={item}
+                  onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
+                  className="text-sm text-white hover:text-[#F2DC74] font-medium transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
+                  data-testid={`nav-${item.toLowerCase()}`}
+                  style={{ 
+                    fontFamily: '"Playfair Display", serif',
+                    fontWeight: '600'
+                  }}
                 >
-                  {language === "sv" ? "SV" : "EN"}
+                  {item}
                 </button>
+              ))}
+            </nav>
 
-                {/* Book Consultation Button */}
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
-                  data-testid="book-consultation"
-                  style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
-                >
-                  {t.bookConsultation}
-                </Button>
-              </div>
-
-              {/* Mobile hamburger menu */}
-              <button
-                className="lg:hidden text-[#F5F5F5] hover:text-white transition-colors duration-200 ml-4"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                data-testid="mobile-menu-toggle"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
+            {/* Right side elements */}
+            <div className="hidden lg:flex items-center space-x-4 ml-8">
+              {/* Search Icon */}
+              <button className="text-white hover:text-[#F2DC74] transition-colors duration-200">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </button>
+
+              {/* Language Toggle - yellow background */}
+              <button
+                onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
+                className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] text-sm font-semibold transition-colors duration-200 px-3 py-1 rounded whitespace-nowrap"
+                data-testid="language-toggle"
+                style={{ fontFamily: '"Playfair Display", serif' }}
+              >
+                {language.toUpperCase()} | {language === "sv" ? "EN" : "SV"}
+              </button>
+
+              {/* Book Consultation Button - yellow with rounded edges */}
+              <Button
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-none font-semibold text-sm tracking-wide px-6 py-2 rounded-full whitespace-nowrap shadow-sm uppercase"
+                data-testid="book-consultation"
+                style={{ fontFamily: '"Playfair Display", serif' }}
+              >
+                {t.bookConsultation}
+              </Button>
             </div>
+
+            {/* Mobile hamburger menu */}
+            <button
+              className="lg:hidden text-white hover:text-[#F2DC74] transition-colors duration-200 ml-4"
+              onClick={toggleMobileMenu}
+              data-testid="mobile-menu-toggle"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
@@ -178,48 +127,19 @@ export default function Header({ className = "" }: HeaderProps) {
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
+          onClick={toggleMobileMenu}
         >
-          <div className="fixed top-0 left-0 right-0 bg-[#3C2315] shadow-lg pt-20">
-            {/* Logo for Mobile with yellow background */}
-            <div className="mb-8 relative">
-              <div 
-                className="rounded-2xl p-6 flex items-center justify-center shadow-lg"
-                style={{
-                  background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-                  width: '320px',
-                  height: '120px',
-                  border: '1px solid rgba(255,255,255,0.2)',
-                  margin: '0 auto'
-                }}
-              >
-                <img
-                  src={nilsHolgerLogo}
-                  alt="Nils Holger – Furniture & Projects"
-                  className="h-16"
-                  style={{ 
-                    objectFit: 'contain', 
-                    display: 'block',
-                    maxWidth: '90%'
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Mobile Navigation */}
+          <div className="fixed top-0 left-0 right-0 bg-[#3E2516] shadow-lg pt-20" onClick={(e) => e.stopPropagation()}>
             <nav className="flex flex-col items-center space-y-6 px-6 pb-8">
               {t.nav.map((item, index) => (
                 <button
                   key={item}
-                  onClick={() => {
-                    scrollToSection(["about", "services", "products", "references", "contact"][index])
-                    setIsMobileMenuOpen(false)
-                  }}
-                  className="text-lg text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase"
+                  onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
+                  className="text-lg text-white hover:text-[#F2DC74] font-semibold transition-colors duration-200 tracking-wide uppercase"
                   data-testid={`mobile-nav-${item.toLowerCase()}`}
                   style={{ 
-                    fontFamily: '"Playfair Display", "Merriweather", serif',
-                    fontWeight: '700'
+                    fontFamily: '"Playfair Display", serif',
+                    fontWeight: '600'
                   }}
                 >
                   {item}
@@ -228,25 +148,20 @@ export default function Header({ className = "" }: HeaderProps) {
               
               {/* Mobile Language Toggle */}
               <button
-                onClick={() => {
-                  setLanguage(language === "sv" ? "en" : "sv")
-                  setIsMobileMenuOpen(false)
-                }}
-                className="bg-[#FCF4EE] hover:bg-white text-[#3C2315] text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-4 py-3 rounded-md mt-4"
+                onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
+                className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] text-sm font-semibold transition-colors duration-200 px-4 py-2 rounded mt-4"
                 data-testid="mobile-language-toggle"
-                style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
+                style={{ fontFamily: '"Playfair Display", serif' }}
               >
-                {language === "sv" ? "SV" : "EN"}
+                {language.toUpperCase()} | {language === "sv" ? "EN" : "SV"}
               </button>
 
               {/* Mobile Book Consultation Button */}
               <Button
-                variant="outline"
-                size="lg"
-                className="bg-[#F5D97C] hover:bg-[#F1D46A] text-[#3C2315] border-[#F5D97C] font-bold text-base tracking-wide px-8 py-3 rounded-md shadow-sm uppercase mt-4"
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-none font-semibold text-sm tracking-wide px-6 py-3 rounded-full shadow-sm uppercase mt-4"
                 data-testid="mobile-book-consultation"
-                style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
-                onClick={() => setIsMobileMenuOpen(false)}
+                style={{ fontFamily: '"Playfair Display", serif' }}
               >
                 {t.bookConsultation}
               </Button>

@@ -47,31 +47,17 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex flex-col items-center justify-center h-full w-full px-4"
+              className="focus:outline-none flex items-center justify-center h-full w-full px-4"
               data-testid="logo-button"
             >
-              <div className="text-center">
-                <h1 
-                  className="text-[#8B4513] 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-tight mb-2"
-                  style={{ 
-                    fontFamily: '"Playfair Display", "Merriweather", serif',
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                    fontStyle: 'italic'
-                  }}
-                >
-                  Nils Holger
-                </h1>
-                <p 
-                  className="text-[#8B4513] 2xl:text-lg xl:text-base lg:text-sm md:text-sm sm:text-xs text-xs font-semibold tracking-widest uppercase"
-                  style={{ 
-                    fontFamily: '"Playfair Display", "Merriweather", serif',
-                    textShadow: '1px 1px 2px rgba(0,0,0,0.2)',
-                    letterSpacing: '0.2em'
-                  }}
-                >
-                  FURNITURE & PROJECTS
-                </p>
-              </div>
+              <img
+                src={nilsHolgerLogo}
+                alt="Nils Holger – Furniture & Projects"
+                className="2xl:h-24 xl:h-20 lg:h-18 md:h-16 sm:h-14 h-12 max-w-full object-contain"
+                style={{ 
+                  filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))'
+                }}
+              />
             </button>
           </div>
 

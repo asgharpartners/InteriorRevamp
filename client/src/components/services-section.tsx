@@ -1,118 +1,122 @@
 import { useState } from 'react';
-import { Lightbulb, Compass, Hammer, Home, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const services = [
   {
-    title: "Project Management",
-    description: "Comprehensive oversight of your interior design project from conception to completion.",
-    longDescription: "Our experienced project managers coordinate all aspects of your design project, ensuring timelines are met, budgets are maintained, and quality standards are exceeded. We handle vendor relationships, permit processes, and daily oversight.",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Compass className="h-6 w-6" />
+    title: "OFFENTLIG INREDNING",
+    description: "Specialiserad inredning för hotell, restauranger, kontor och offentliga miljöer.",
+    longDescription: "Vi skapar funktionella och estetiska miljöer som förstärker din verksamhets identitet. Från koncept till implementation arbetar vi med hållbara material och genomtänkt design som står emot intensiv användning."
   },
   {
-    title: "Project Planning", 
-    description: "Strategic design planning and architectural coordination for seamless execution.",
-    longDescription: "Detailed space planning, technical drawings, and design development ensure your project is executed flawlessly. We collaborate with architects and contractors to create comprehensive project documentation.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Lightbulb className="h-6 w-6" />
+    title: "PROJEKTERING",
+    description: "Teknisk planering och ritningar för professionell genomförande.",
+    longDescription: "Våra erfarna projektörer utvecklar detaljerade tekniska lösningar som säkerställer att ditt projekt genomförs smidigt. Vi hanterar allt från 3D-visualiseringar till bygghandlingar."
   },
   {
-    title: "Construction & Renovation",
-    description: "Full-service construction and renovation for residential and commercial spaces.",
-    longDescription: "From minor renovations to complete space transformations, our skilled craftsmen bring designs to life with precision and care. We specialize in sustainable building practices and premium finishes.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Hammer className="h-6 w-6" />
+    title: "PROJEKTLEDNING",
+    description: "Fullständig projektövervakning från start till slutleverans.",
+    longDescription: "Vår projektledning koordinerar alla aspekter av ditt projekt - tidplan, budget, leverantörer och kvalitetskontroll. Du får en dedicated kontaktperson som säkerställer att allt flyter på enligt plan."
   },
   {
-    title: "Furniture Carpentry",
-    description: "Bespoke furniture pieces crafted with traditional Swedish woodworking techniques.",
-    longDescription: "Our master carpenters create custom furniture pieces that perfectly complement your space. Using sustainably sourced wood and time-honored techniques, each piece is built to last generations.",
-    image: "https://images.unsplash.com/photo-1606744824163-985d376605aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Home className="h-6 w-6" />
+    title: "BYGGNATION & RENOVERING",
+    description: "Professionell byggnation och renovering av kommersiella utrymmen.",
+    longDescription: "Från mindre renoveringar till kompletta ombyggnationer. Vi specialiserar oss på hållbara byggmetoder och högkvalitativa material som ger långvariga resultat."
   },
   {
-    title: "Upholstery & Repair",
-    description: "Expert upholstery services and restoration of cherished furniture pieces.",
-    longDescription: "Breathe new life into beloved furniture with our expert upholstery and repair services. We work with premium fabrics and leathers to restore and refresh pieces while maintaining their original character.",
-    image: "https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Hammer className="h-6 w-6" />
+    title: "KONTROLLANSVAR (KA)",
+    description: "Certifierad byggövervakning och kvalitetssäkring enligt gällande regelverk.",
+    longDescription: "Våra auktoriserade KA-ansvariga säkerställer att alla arbeten uppfyller svenska byggstandarder. Vi hanterar all dokumentation och inspektioner för trygg projektgenomförande."
   },
   {
-    title: "Interior Coordination",
-    description: "Complete interior styling and design coordination for cohesive, beautiful spaces.",
-    longDescription: "Our design coordinators ensure every element of your space works in harmony. From color palettes to furniture placement, lighting to accessories, we create perfectly balanced interiors.",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Lightbulb className="h-6 w-6" />
+    title: "EGEN TILLVERKNING",
+    description: "Skräddarsydda möbler och inredningslösningar från eget snickeri.",
+    longDescription: "I vår egen verkstad tillverkar vi unika möbler och inredningsdetaljer. Varje stycke är handgjort med traditionella tekniker och hållbara material som håller i generationer."
   },
   {
-    title: "Professional Painting",
-    description: "Premium painting services using eco-friendly materials and expert techniques.",
-    longDescription: "Transform your space with our professional painting services. We use premium, eco-friendly paints and employ specialized techniques to achieve flawless finishes that enhance your interior design.",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Home className="h-6 w-6" />
-  },
-  {
-    title: "Control Responsibility (KA)",
-    description: "Certified construction oversight ensuring compliance with building regulations.",
-    longDescription: "Our certified KA professionals provide construction oversight and quality control, ensuring all work meets Swedish building standards and regulations. We handle all compliance documentation and inspections.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800",
-    icon: <Compass className="h-6 w-6" />
+    title: "OMKLÄDNAD & REPARATION",
+    description: "Professionell restaurering och förnyelse av befintliga möbler.",
+    longDescription: "Ge dina möbler nytt liv med vår expertis inom omklädnad och reparation. Vi arbetar med premium textilier och läder för att bevara möblernas karaktär samtidigt som vi förlänger deras livslängd."
   }
 ];
 
 export function ServicesSection() {
   const { t } = useLanguage();
-  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
   const toggleCard = (index: number) => {
-    const newExpanded = new Set(expandedCards);
-    if (newExpanded.has(index)) {
-      newExpanded.delete(index);
-    } else {
-      newExpanded.add(index);
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
+  const scrollToSection = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    setExpandedCards(newExpanded);
   };
 
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Services</h2>
-        </div>
-        
-        <div className="max-w-5xl mx-auto space-y-4">
-          {services.slice(0, 7).map((service, index) => (
+    <section id="services" className="bg-white">
+      {/* Section Title */}
+      <div className="text-center py-16 bg-off-white">
+        <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">Tjänster</h2>
+        <p className="text-dark-grey max-w-2xl mx-auto px-4">
+          Professionella inrednings- och byggtjänster för offentliga miljöer
+        </p>
+      </div>
+
+      {/* Services Grid */}
+      <div className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 min-h-[400px]">
+          {services.map((service, index) => (
             <div 
-              key={index} 
-              className="bg-white border border-dark-grey/10 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+              key={index}
+              className="relative bg-[#2B2B2B] border-r border-b border-white/10 last:border-r-0 md:last:border-r-0 flex flex-col group overflow-hidden"
+              style={{ minHeight: '400px' }}
             >
+              {/* Card Header - Always Visible */}
               <div 
-                className="p-6 cursor-pointer flex items-center justify-between"
+                className="p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10"
                 onClick={() => toggleCard(index)}
-                data-testid={`service-toggle-${index}`}
+                data-testid={`service-card-${index}`}
               >
-                <div className="flex items-center space-x-4">
-                  <div className="text-[#AD8C44]">
-                    {service.icon}
-                  </div>
-                  <h3 className="font-serif text-xl font-bold text-dark-brown">
-                    {service.title}
-                  </h3>
-                </div>
-                <div className="text-[#AD8C44]">
-                  {expandedCards.has(index) ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                <h3 className="font-serif text-lg font-bold text-off-white mb-4 tracking-wide leading-tight">
+                  {service.title}
+                </h3>
+                
+                {/* Arrow Icon */}
+                <div className={`w-8 h-8 mx-auto flex items-center justify-center transition-all duration-300 ${
+                  expandedCard === index ? 'transform rotate-180' : ''
+                }`}>
+                  <ChevronDown 
+                    size={24} 
+                    className="text-[#AD8C44]" 
+                  />
                 </div>
               </div>
-              
-              {expandedCards.has(index) && (
-                <div className="px-6 pb-6 border-t border-dark-grey/10">
-                  <div className="pt-4">
-                    <p className="text-dark-grey mb-4">{service.description}</p>
-                    <p className="text-dark-brown text-sm leading-relaxed">{service.longDescription}</p>
+
+              {/* Expanded Content Overlay */}
+              {expandedCard === index && (
+                <div className="absolute inset-0 bg-off-white/95 backdrop-blur-sm z-20 flex flex-col justify-center p-8 animate-in slide-in-from-bottom duration-300">
+                  <div className="text-center">
+                    <h3 className="font-serif text-lg font-bold text-dark-brown mb-4 tracking-wide">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-dark-grey mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <p className="text-dark-brown text-xs leading-relaxed mb-6">
+                      {service.longDescription}
+                    </p>
+                    
                     <button 
-                      className="mt-4 text-[#AD8C44] text-sm font-medium hover:text-[#AD8C44]/80 transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        scrollToSection('contact');
+                      }}
+                      className="text-[#AD8C44] text-sm font-semibold hover:text-[#AD8C44]/80 transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}
                     >
                       Läs mer →
@@ -120,6 +124,9 @@ export function ServicesSection() {
                   </div>
                 </div>
               )}
+
+              {/* Hover Effect */}
+              <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
           ))}
         </div>

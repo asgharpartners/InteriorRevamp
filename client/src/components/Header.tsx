@@ -67,16 +67,16 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background with smooth convex left edge for puzzle-piece docking */}
+          {/* Dark brown navigation background with garage-like concave left edge */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[340px] xl:left-[290px] lg:left-[250px] md:left-[210px] sm:left-[170px] left-[130px] right-0"
+            className="absolute top-0 h-full 2xl:left-[280px] xl:left-[240px] lg:left-[200px] md:left-[160px] sm:left-[120px] left-[80px] right-0"
             style={{
               background: '#3C2315',
-              borderRadius: '140px 0 0 140px'
+              clipPath: 'ellipse(140px 100% at 0% 50%)'
             }}
           >
-            {/* Navigation container - right aligned content with adjusted padding for convex curve */}
-            <div className="h-full flex items-center justify-end pr-6 2xl:pl-44 xl:pl-40 lg:pl-36 md:pl-32 sm:pl-28 pl-24 relative z-10">
+            {/* Navigation container - right aligned content with padding for garage curve */}
+            <div className="h-full flex items-center justify-end pr-6 2xl:pl-52 xl:pl-48 lg:pl-44 md:pl-40 sm:pl-36 pl-32 relative z-10">
               {/* Desktop Navigation Links - Right aligned */}
               <nav className="hidden 2xl:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-3">
                 {t.nav.map((item, index) => (

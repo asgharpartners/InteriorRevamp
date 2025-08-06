@@ -39,7 +39,7 @@ export default function Header({ className = "" }: HeaderProps) {
         <div className="h-full w-full relative">
           {/* Yellow logo background with curve */}
           <div 
-            className="absolute top-0 left-0 2xl:w-[520px] xl:w-[460px] lg:w-[420px] md:w-[380px] sm:w-[340px] w-[300px] h-full flex items-center justify-start pl-4"
+            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start pl-4"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 140px 0',
@@ -66,10 +66,10 @@ export default function Header({ className = "" }: HeaderProps) {
 
           {/* Dark brown navigation background with bulged edge for seamless docking */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[380px] xl:left-[340px] lg:left-[320px] md:left-[290px] sm:left-[270px] left-[240px] right-0"
+            className="absolute top-0 h-full 2xl:left-[520px] xl:left-[460px] lg:left-[420px] md:left-[380px] sm:left-[340px] left-[300px] right-0"
             style={{
               background: '#3C2315',
-              clipPath: 'path("M 0 0 Q 140 0 140 140 L 140 160 L 9999 160 L 9999 0 Z")'
+              clipPath: 'path("M -1 0 Q 139 0 139 140 L 139 160 L 9999 160 L 9999 0 Z")'
             }}
           >
             {/* Navigation container - right aligned content */}

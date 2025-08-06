@@ -28,44 +28,7 @@ export default function HomePage() {
       
 
 
-      {/* Process Section */}
-      <section className="py-20 bg-dark-brown text-off-white">
-        <div className="w-full px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="font-serif text-4xl font-bold mb-16">{t('process.title')}</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Lightbulb className="text-dark-brown text-xl" />
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.concept.title')}</h3>
-                <p>{t('process.concept.description')}</p>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Compass className="text-dark-brown text-xl" />
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.design.title')}</h3>
-                <p>{t('process.design.description')}</p>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Hammer className="text-dark-brown text-xl" />
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.craft.title')}</h3>
-                <p>{t('process.craft.description')}</p>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Home className="text-dark-brown text-xl" />
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.deliver.title')}</h3>
-                <p>{t('process.deliver.description')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <ServicesSection />
       

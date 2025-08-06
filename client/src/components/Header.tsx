@@ -53,7 +53,7 @@ export default function Header({ className = "" }: HeaderProps) {
               <img
                 src={nilsHolgerLogo}
                 alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-32 xl:h-28 lg:h-24 md:h-20 sm:h-18 h-16 object-contain"
+                className="2xl:h-128 xl:h-112 lg:h-96 md:h-80 sm:h-72 h-64 object-contain"
                 style={{ 
                   maxWidth: '85%',
                   display: 'block'

@@ -47,17 +47,28 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex items-center justify-center h-full w-full px-4"
+              className="focus:outline-none flex items-center justify-start h-full w-full pl-8"
               data-testid="logo-button"
             >
-              <img
-                src={nilsHolgerLogo}
-                alt="Nils Holger – Furniture & Projects"
-                className="2xl:h-24 xl:h-20 lg:h-18 md:h-16 sm:h-14 h-12 max-w-full object-contain"
-                style={{ 
-                  filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))'
-                }}
-              />
+              <div className="flex flex-col items-start">
+                <img
+                  src={nilsHolgerLogo}
+                  alt="Nils Holger – Furniture & Projects"
+                  className="2xl:h-28 xl:h-24 lg:h-20 md:h-18 sm:h-16 h-14 object-contain"
+                  style={{ 
+                    maxWidth: '90%',
+                    display: 'block'
+                  }}
+                  onLoad={() => console.log('Logo loaded successfully')}
+                  onError={(e) => {
+                    console.error('Logo failed to load from:', nilsHolgerLogo);
+                    // Show fallback text
+                    const fallback = document.createElement('div');
+                    fallback.innerHTML = '<div class="text-2xl font-bold text-amber-800">NILS HOLGER<br><span class="text-sm">FURNITURE & PROJECTS</span></div>';
+                    e.currentTarget.parentNode?.replaceChild(fallback, e.currentTarget);
+                  }}
+                />
+              </div>
             </button>
           </div>
 

@@ -38,7 +38,7 @@ export default function Header({ className = "" }: HeaderProps) {
         <div className="h-full w-full relative">
           {/* Yellow logo background with curve */}
           <div 
-            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start pl-4"
+            className="absolute top-0 left-0 2xl:w-[460px] xl:w-[410px] lg:w-[370px] md:w-[330px] sm:w-[290px] w-[250px] h-full flex items-center justify-start pl-4"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 140px 0',
@@ -69,7 +69,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
           {/* Dark brown navigation background with bulged edge for seamless docking */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[380px] xl:left-[320px] lg:left-[280px] md:left-[240px] sm:left-[200px] left-[160px] right-0"
+            className="absolute top-0 h-full 2xl:left-[340px] xl:left-[290px] lg:left-[250px] md:left-[210px] sm:left-[170px] left-[130px] right-0"
             style={{
               background: '#3C2315',
               borderRadius: '140px 0 0 0'

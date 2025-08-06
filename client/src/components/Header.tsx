@@ -67,13 +67,12 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background with convex bulge for yellow to nestle into */}
+          {/* Dark brown navigation background with concave garage-like indent for yellow to nestle into */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[200px] xl:left-[180px] lg:left-[160px] md:left-[140px] sm:left-[120px] left-[100px] right-0"
+            className="absolute top-0 h-full 2xl:left-[200px] xl:left-[170px] lg:left-[140px] md:left-[120px] sm:left-[100px] left-[80px] right-0"
             style={{
               background: '#3C2315',
-              borderRadius: '50% 0 0 50%',
-              width: 'calc(100% + 140px)',
+              clipPath: 'ellipse(140px 100% at 0% 50%)',
               marginLeft: '140px'
             }}
           >

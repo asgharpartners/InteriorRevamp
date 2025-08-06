@@ -26,9 +26,85 @@ export default function HomePage() {
       <Header />
       <HeroSlider />
       
+      {/* Shared Landscape Layout - Intro & Process */}
+      <div className="w-full">
+        {/* Intro Section - Upper Half */}
+        <section className="bg-[#F5F1EA] flex items-center justify-center" style={{ minHeight: '50vh' }}>
+          <div className="max-w-4xl mx-auto text-center px-4 py-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-8 leading-tight">
+              Välkomna till Nils Holger –<br />
+              Furniture & Projects
+            </h2>
+            <p className="text-xl md:text-2xl text-dark-grey max-w-3xl mx-auto leading-relaxed">
+              Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt.<br />
+              Vi arbetar i såväl interiöra som exteriöra miljöer.
+            </p>
+          </div>
+        </section>
 
+        {/* Vår Process Section - Lower Half */}
+        <section className="bg-[#3E2516] text-white flex items-center justify-center" style={{ minHeight: '50vh' }}>
+          <div className="max-w-6xl mx-auto text-center px-4 py-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-16">Vår process</h2>
+            
+            {/* Process Steps Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-[#3E2516] font-bold text-xl">1</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold mb-4">Förutsättningslöst möte</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Behov och visioner, Tidplan, Omfattning, Budget, Upplägg
+                </p>
+              </div>
 
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-[#3E2516] font-bold text-xl">2</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold mb-4">Design & Koncept</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Vi utvecklar ett genomtänkt inredningskoncept baserat på dina mål och platsens förutsättningar.
+                </p>
+              </div>
 
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-[#3E2516] font-bold text-xl">3</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold mb-4">Produktion & Förädling</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Vi producerar och förädlar lösningar i egen verkstad eller via utvalda partners.
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-[#3E2516] font-bold text-xl">4</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold mb-4">Leverans & Installation</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Vi ansvarar för transport, montering och färdigställande – punktligt och professionellt.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-[#AD8C44] text-[#3E2516] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+              data-testid="discuss-project-button"
+            >
+              Diskutera ditt projekt
+            </button>
+          </div>
+        </section>
+      </div>
 
       <ServicesSection />
       

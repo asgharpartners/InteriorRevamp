@@ -38,7 +38,7 @@ export default function Header({ className = "" }: HeaderProps) {
         <div className="h-full w-full relative">
           {/* Yellow logo background with curve */}
           <div 
-            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start"
+            className="absolute top-0 left-0 2xl:w-[521px] xl:w-[461px] lg:w-[421px] md:w-[381px] sm:w-[341px] w-[301px] h-full flex items-center justify-start pl-4"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 140px 0',
@@ -55,8 +55,9 @@ export default function Header({ className = "" }: HeaderProps) {
                 alt="Nils Holger – Furniture & Projects"
                 className="2xl:h-128 xl:h-112 lg:h-96 md:h-80 sm:h-72 h-64 object-contain"
                 style={{ 
-                  maxWidth: '85%',
-                  display: 'block'
+                  maxWidth: '90%',
+                  display: 'block',
+                  marginLeft: '-1rem'
                 }}
                 onLoad={() => console.log('Logo loaded successfully')}
                 onError={(e) => {

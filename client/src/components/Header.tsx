@@ -72,7 +72,7 @@ export default function Header({ className = "" }: HeaderProps) {
             className="absolute top-0 h-full 2xl:left-[340px] xl:left-[290px] lg:left-[250px] md:left-[210px] sm:left-[170px] left-[130px] right-0"
             style={{
               background: '#3C2315',
-              borderBottomLeftRadius: '140px'
+              borderTopLeftRadius: '140px'
             }}
           >
             {/* Navigation container - right aligned content with adjusted padding for convex curve */}

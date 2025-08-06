@@ -47,8 +47,7 @@ export default function Header({ className = "" }: HeaderProps) {
           >
             <button 
               onClick={() => scrollToSection("hero")} 
-              className="focus:outline-none flex items-center justify-start h-full w-full"
-              style={{ paddingLeft: '0.75cm' }}
+              className="focus:outline-none flex items-center justify-start h-full w-full pl-2"
               data-testid="logo-button"
             >
               <img
@@ -56,8 +55,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 alt="Nils Holger – Furniture & Projects"
                 className="2xl:h-128 xl:h-112 lg:h-96 md:h-80 sm:h-72 h-64 object-contain"
                 style={{ 
-                  width: 'calc(100% - 1.5cm)',
-                  maxHeight: '100%',
+                  maxWidth: '85%',
                   display: 'block'
                 }}
                 onLoad={() => console.log('Logo loaded successfully')}

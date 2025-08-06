@@ -64,12 +64,12 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background with concave curve for seamless docking */}
+          {/* Dark brown navigation background with bulged edge for seamless docking */}
           <div 
             className="absolute top-0 h-full 2xl:left-[380px] xl:left-[340px] lg:left-[320px] md:left-[290px] sm:left-[270px] left-[240px] right-0"
             style={{
               background: '#3C2315',
-              clipPath: 'path("M 140 0 Q 0 0 0 140 L 0 160 L 9999 160 L 9999 0 Z")'
+              clipPath: 'path("M 0 0 Q 140 0 140 140 L 140 160 L 9999 160 L 9999 0 Z")'
             }}
           >
             {/* Navigation container - right aligned content */}

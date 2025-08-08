@@ -111,7 +111,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
   if (!isVisible) return null;
 
   return (
-    <div ref={containerRef} className={`fixed bottom-6 right-6 z-40 ${className}`}>
+    <div ref={containerRef} className={`fixed top-1/2 right-6 transform -translate-y-1/2 z-40 ${className}`}>
       {/* Floating Button */}
       <button
         ref={buttonRef}
@@ -148,11 +148,11 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
         <div
           ref={menuRef}
           className={`
-            absolute bottom-16 right-0
-            w-64 md:w-72
-            max-h-96 overflow-y-auto
-            py-2 space-y-1
-            animate-in slide-in-from-bottom-2 fade-in duration-200
+            absolute top-0 right-16
+            w-48 md:w-52
+            max-h-80 overflow-y-auto
+            py-1 space-y-1
+            animate-in slide-in-from-right-2 fade-in duration-200
           `}
           role="menu"
           aria-orientation="vertical"
@@ -162,12 +162,13 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
               key={shortcut.id}
               onClick={() => scrollToSection(shortcut.id)}
               className={`
-                w-full text-left px-4 py-3
+                w-full text-left px-3 py-2
+                text-xs font-bold tracking-wide uppercase
                 text-[#F5F1EA] hover:text-white
                 bg-[#3E2516]/80 hover:bg-[#3E2516]/90
                 backdrop-blur-sm
                 rounded-md
-                shadow-md hover:shadow-lg
+                shadow-sm hover:shadow-md
                 transition-all duration-200
                 focus:outline-none focus:ring-2 focus:ring-[#AD8C44] focus:ring-offset-2
                 ${activeSection === shortcut.id ? 'ring-2 ring-[#F2DC74] bg-[#3E2516]/95' : ''}
@@ -175,6 +176,10 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
               role="menuitem"
               tabIndex={isMenuVisible ? 0 : -1}
               data-testid={`shortcut-${shortcut.id}`}
+              style={{ 
+                fontFamily: '"Playfair Display", "Merriweather", serif',
+                fontWeight: '700'
+              }}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
@@ -183,9 +188,9 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
               }}
             >
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">{shortcut.label}</span>
+                <span className="whitespace-nowrap">{shortcut.label}</span>
                 {activeSection === shortcut.id && (
-                  <div className="w-2 h-2 bg-[#F2DC74] rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-[#F2DC74] rounded-full ml-2"></div>
                 )}
               </div>
             </button>

@@ -90,15 +90,18 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Navigation content - positioned on the right with safe margins */}
-          <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-10 2xl:left-[460px] xl:left-[410px] lg:left-[370px] md:left-[330px] sm:left-[290px] left-[250px]">
-              {/* Desktop Navigation Links - responsive to avoid logo overlap */}
-              <nav className="hidden xl:flex items-center xl:space-x-2 2xl:space-x-4">
+          {/* Navigation content - flexible centered layout */}
+          <div className="absolute top-0 h-full flex items-center justify-center w-full px-4 z-10">
+            {/* Navigation container with proper spacing from logo */}
+            <div className="flex items-center justify-center w-full max-w-5xl 2xl:ml-[460px] xl:ml-[410px] lg:ml-[370px] md:ml-[330px] sm:ml-[290px] ml-[250px]">
+              
+              {/* Full navigation for extra large screens */}
+              <nav className="hidden 2xl:flex items-center space-x-4 flex-1 justify-center">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="xl:text-xs 2xl:text-sm text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 xl:px-3 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                    className="text-sm text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -110,12 +113,12 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* Compact navigation for medium screens */}
-              <nav className="hidden lg:flex xl:hidden items-center space-x-1">
-                {["OM", "TJÄNSTER", "KONTAKT"].map((item, index) => (
+              {/* Compact navigation for large screens */}
+              <nav className="hidden xl:flex 2xl:hidden items-center space-x-2 flex-1 justify-center">
+                {t.nav.map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
+                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
                     className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
@@ -127,9 +130,27 @@ export default function Header({ className = "" }: HeaderProps) {
                   </button>
                 ))}
               </nav>
+              
+              {/* Essential navigation for medium screens */}
+              <nav className="hidden lg:flex xl:hidden items-center space-x-1 flex-1 justify-center">
+                {["OM", "TJÄNSTER", "KONTAKT"].map((item, index) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
+                    className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-1 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                    data-testid={`nav-${item.toLowerCase()}`}
+                    style={{ 
+                      fontFamily: '"Playfair Display", "Merriweather", serif',
+                      fontWeight: '700'
+                    }}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </nav>
 
-              {/* Desktop Right-aligned elements - compact spacing */}
-              <div className="hidden lg:flex items-center lg:space-x-2 xl:space-x-4 ml-4 lg:ml-6 xl:ml-10">
+              {/* Right-aligned elements - always visible on desktop */}
+              <div className="hidden lg:flex items-center space-x-2 ml-4">
                 {/* Search Icon */}
                 <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,9 +179,9 @@ export default function Header({ className = "" }: HeaderProps) {
                 </Button>
               </div>
 
-              {/* Mobile hamburger menu */}
+              {/* Mobile hamburger menu - positioned on far right */}
               <button
-                className="lg:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 ml-4 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                className="lg:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2"
                 onClick={toggleMobileMenu}
                 data-testid="mobile-menu-toggle"
               >
@@ -168,6 +189,7 @@ export default function Header({ className = "" }: HeaderProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
+            </div>
           </div>
         </div>
       </header>

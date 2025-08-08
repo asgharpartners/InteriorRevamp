@@ -221,32 +221,26 @@ export function ReferencesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="project-card cursor-pointer group">
-              <div className="relative overflow-hidden rounded-lg mb-4">
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-dark-brown/40 group-hover:bg-dark-brown/60 transition-all duration-300" />
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
                 <div className="absolute top-4 right-4 bg-warm-gold text-dark-brown px-3 py-1 rounded-full text-sm font-semibold">
                   {project.year}
                 </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="bg-off-white/20 text-xs px-2 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">
+                  {project.title}
+                </h3>
+                <p className="text-dark-grey mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="bg-[#AD8C44]/10 text-[#AD8C44] text-xs px-2 py-1 rounded font-medium">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-2">
-                {project.title}
-              </h3>
-              <p className="text-off-white/80">
-                {project.description}
-              </p>
             </div>
           ))}
         </div>

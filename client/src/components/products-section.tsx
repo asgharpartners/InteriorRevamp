@@ -80,25 +80,19 @@ export function ProductsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {productCategories.map((category, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg mb-6">
-                <img 
-                  src={category.image}
-                  alt={`${category.name} collection`}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-dark-brown/20 group-hover:bg-dark-brown/40 transition-all duration-300" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <Button className="w-full bg-off-white/90 text-dark-brown hover:bg-off-white transition-colors">
-                    View {category.name}
-                  </Button>
-                </div>
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+                <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">
+                  {category.name}
+                </h3>
+                <p className="text-dark-grey mb-6 leading-relaxed">
+                  {category.description}
+                </p>
+                <Button className="bg-[#AD8C44] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300">
+                  View {category.name}
+                </Button>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-dark-brown mb-2">
-                {category.name}
-              </h3>
-              <p className="text-dark-grey">
-                {category.description}
-              </p>
             </div>
           ))}
         </div>

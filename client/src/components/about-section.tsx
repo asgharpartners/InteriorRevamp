@@ -76,32 +76,36 @@ export function AboutSection() {
           <p className="text-xl text-dark-grey">The creative minds behind every project</p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center group">
-              <div className="relative mb-6">
-                <div className="w-36 h-36 rounded-full mx-auto border-4 border-[#AD8C44] p-1">
-                  <img 
-                    src={member.image}
-                    alt={`${member.name} - ${member.role}`}
-                    className="w-full h-full rounded-full object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                  />
-                </div>
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#AD8C44] rounded-full flex items-center justify-center">
-                  <div className="text-white">
-                    {member.icon}
+            <div key={index} className="group cursor-pointer">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 rounded-full mx-auto border-4 border-[#AD8C44] p-1">
+                    <img 
+                      src={member.image}
+                      alt={`${member.name} - ${member.role}`}
+                      className="w-full h-full rounded-full object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#AD8C44] rounded-full flex items-center justify-center">
+                    <div className="text-white">
+                      {member.icon}
+                    </div>
                   </div>
                 </div>
+                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2 tracking-wide">
+                  {member.name}
+                </h4>
+                <p className="text-[#AD8C44] font-semibold mb-3">
+                  {member.role}
+                </p>
+                <p className="text-dark-grey text-sm leading-relaxed">
+                  {member.description}
+                </p>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
-              <h4 className="font-serif text-xl font-bold text-dark-brown mb-2">
-                {member.name}
-              </h4>
-              <p className="text-dark-grey font-semibold mb-2">
-                {member.role}
-              </p>
-              <p className="text-sm text-dark-grey">
-                {member.description}
-              </p>
             </div>
           ))}
         </div>

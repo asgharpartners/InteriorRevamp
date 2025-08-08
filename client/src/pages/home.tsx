@@ -120,11 +120,16 @@ export default function HomePage() {
       </div>
 
       {/* Career & Internship Section */}
-      <section id="career" className="career-section py-12 bg-off-white">
+      <section id="career" className="career-section py-12 bg-off-white relative">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Section Title - same as Services */}
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">Career & Internship</h2>
+          {/* Section Title with Launching Soon badge */}
+          <div className="text-center mb-12 relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                Launching Soon
+              </span>
+            </div>
+            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4 pt-8">Career & Internship</h2>
             <p className="text-dark-grey max-w-2xl mx-auto leading-relaxed">
               We believe in nurturing the next generation of designers and craftspeople. 
               Our collaboration with students and young professionals creates opportunities for hands-on learning 
@@ -187,20 +192,15 @@ export default function HomePage() {
             </div>
           </div>
           
-          {/* Job Openings Card */}
-          <div className="career-card bg-white rounded-2xl shadow-sm border border-[#E5E5E5] p-8 text-center">
-            <h3 className="font-serif text-lg font-bold text-dark-brown mb-4 tracking-wide">Job Openings & Opportunities</h3>
-            <div className="mb-4">
-              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
-                Launching Soon
-              </span>
-            </div>
-            <p className="text-dark-grey mb-4 leading-relaxed">
+          {/* Job Openings Card - Brown background */}
+          <div className="career-card bg-[#3E2516] rounded-2xl shadow-sm border border-[#3E2516] p-8 text-center">
+            <h3 className="font-serif text-lg font-bold text-[#F5F1EA] mb-4 tracking-wide">Job Openings & Opportunities</h3>
+            <p className="text-[#F5F1EA]/80 mb-6 leading-relaxed">
               Stay tuned for upcoming internship and full-time positions
             </p>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="btn-primary bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+              className="btn-primary bg-[#AD8C44] text-[#3E2516] px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
               data-testid="career-contact-button"
             >
               Get In Touch

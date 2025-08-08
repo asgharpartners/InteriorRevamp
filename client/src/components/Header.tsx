@@ -98,7 +98,7 @@ export default function Header({ className = "" }: HeaderProps) {
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="lg:text-xs xl:text-sm text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
+                    className="lg:text-xs xl:text-sm text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -113,7 +113,7 @@ export default function Header({ className = "" }: HeaderProps) {
               {/* Desktop Right-aligned elements */}
               <div className="hidden lg:flex items-center space-x-4 ml-10">
                 {/* Search Icon */}
-                <button className="text-white hover:text-[#F2DC74] transition-colors duration-200">
+                <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
@@ -142,7 +142,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
               {/* Mobile hamburger menu */}
               <button
-                className="lg:hidden text-[#F5F5F5] hover:text-white transition-colors duration-200 ml-4"
+                className="lg:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 ml-4 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                 onClick={toggleMobileMenu}
                 data-testid="mobile-menu-toggle"
               >

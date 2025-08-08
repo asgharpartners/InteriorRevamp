@@ -3,32 +3,25 @@ import { Pencil, User, Palette, Hammer } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: "Dennis Andersson",
-    role: "Senior Designer",
-    description: "Lead designer with 15+ years of experience in commercial and residential projects",
+    name: "Dennis",
+    role: "Projektledning",
+    description: "Ansvarar för projektledning och koordinering av alla typer av inrednings- och byggprojekt",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-    icon: <Pencil className="h-4 w-4" />
-  },
-  {
-    name: "Asghar Rahman",
-    role: "Project Manager", 
-    description: "Ensures seamless project execution from concept to completion",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
     icon: <User className="h-4 w-4" />
   },
   {
-    name: "Noor Hassan",
-    role: "Interior Coordinator",
-    description: "Specializes in space planning and design coordination",
-    image: "https://pixabay.com/get/gf8ace0f52b939f525af8ba1422bcb3f2af44cde261c1db2737d3fcc5558639142231945301115f2eff2b88b1ec87cf6d11bdb081d221466bf9ec57fed7fa83d8_1280.jpg",
-    icon: <Palette className="h-4 w-4" />
+    name: "Asghar",
+    role: "Försäljning och kommunikation", 
+    description: "Hanterar kundkontakt, försäljning och all kommunikation med våra beställare",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+    icon: <Pencil className="h-4 w-4" />
   },
   {
-    name: "Miks Bergström",
-    role: "Master Craftsman",
-    description: "Expert in traditional woodworking and furniture restoration",
-    image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-    icon: <Hammer className="h-4 w-4" />
+    name: "Noor",
+    role: "Administration och ekonomi",
+    description: "Ansvarar för administration, ekonomi och företagets administrativa processer",
+    image: "https://pixabay.com/get/gf8ace0f52b939f525af8ba1422bcb3f2af44cde261c1db2737d3fcc5558639142231945301115f2eff2b88b1ec87cf6d11bdb081d221466bf9ec57fed7fa83d8_1280.jpg",
+    icon: <Palette className="h-4 w-4" />
   }
 ];
 
@@ -54,15 +47,15 @@ export function AboutSection() {
             </h3>
             <div className="space-y-6 text-lg">
               <p>
-                Founded in 1998 by master craftsman Nils Holger Andersson, our studio began as a small workshop in Stockholm's Södermalm district. What started as a passion for traditional Swedish woodworking has evolved into a comprehensive design consultancy serving clients across Scandinavia.
+                Nils Holger är ett varumärke under Zenit International AB som bildades redan 1982. Vår långa historia har gett oss erfarenhet och kunskap, men annars vill vi gärna profilera oss som ett modernt företag som strävar efter hållbarhet och god kvalitet.
               </p>
               
               <p>
-                Our philosophy centers on the belief that great design should enhance daily life while respecting the environment. We source materials locally, employ time-honored craftsmanship techniques, and create pieces built to last generations.
+                Vi är ett utpräglat nätverksföretag med ett stort kontaktnät. Vi träffar gärna våra beställare i vår utställning efter avtalad tid, men oftast är det vi själva som åker ut till våra beställare på plats.
               </p>
               
               <p>
-                Today, our team of skilled designers, craftspeople, and project managers continues to push the boundaries of Scandinavian design while staying true to our roots of simplicity, functionality, and natural beauty.
+                Vi har ett litet showroom på Birger Jarlsgatan 99 i Stockholm där vi visar vissa utvalda produkter och en del varuprover. Vi delar lokal med Kakeljätten som är duktiga på sten & kakel. Vi har även kontor och ett mindre lager vid Säbyholm strax utanför Bro.
               </p>
             </div>
           </div>

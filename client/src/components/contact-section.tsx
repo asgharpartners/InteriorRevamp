@@ -92,17 +92,18 @@ export function ContactSection() {
               <div className="flex items-start space-x-4">
                 <MapPin className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="font-semibold text-dark-brown">Address</p>
+                  <p className="font-semibold text-dark-brown">Utställning/Kontor</p>
                   <p className="text-dark-grey">Birger Jarlsgatan 99</p>
-                  <p className="text-dark-grey">113 31 Stockholm, Sweden</p>
+                  <p className="text-dark-grey">104 32 Stockholm</p>
+                  <p className="text-dark-grey text-sm mt-1">Vi delar lokal med Kakeljätten som är duktiga på sten & kakel</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <Phone className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="font-semibold text-dark-brown">Phone</p>
-                  <p className="text-dark-grey">+46 8 123 456 78</p>
+                  <p className="font-semibold text-dark-brown">Telefon</p>
+                  <p className="text-dark-grey">+46 - 08 673 50 80</p>
                 </div>
               </div>
               
@@ -115,12 +116,11 @@ export function ContactSection() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <Clock className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
+                <MapPin className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="font-semibold text-dark-brown">Studio Hours</p>
-                  <p className="text-dark-grey">Monday - Friday: 9:00 - 17:00</p>
-                  <p className="text-dark-grey">Saturday: 10:00 - 15:00</p>
-                  <p className="text-dark-grey">Sunday: By appointment</p>
+                  <p className="font-semibold text-dark-brown">Kontor och lager</p>
+                  <p className="text-dark-grey">Säbyholm, strax utanför Bro</p>
+                  <p className="text-dark-grey text-sm mt-1">Vi träffar gärna våra beställare efter avtalad tid, men oftast åker vi ut till våra beställare på plats</p>
                 </div>
               </div>
             </div>

@@ -23,9 +23,9 @@ export const translations = {
       }
     },
     intro: {
-      title: "Welcome to Nils Holger – Furniture & Projects",
-      subtitle: "Our business idea is to be a reliable and flexible partner when it comes to interior design and construction for all types of public projects.",
-      description: "We work in both interior and exterior environments."
+      title: "Välkomna till Nils Holger – Furniture & Project",
+      subtitle: "Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt.",
+      description: "Vi arbetar i såväl interiöra som exteriöra miljöer."
     },
     process: {
       title: "Our Process",
@@ -121,7 +121,7 @@ export const translations = {
       }
     },
     intro: {
-      title: "Välkomna till Nils Holger – Furniture & Projects",
+      title: "Välkomna till Nils Holger – Furniture & Project",
       subtitle: "Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt.",
       description: "Vi arbetar i såväl interiöra som exteriöra miljöer."
     },

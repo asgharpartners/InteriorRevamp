@@ -4,35 +4,29 @@ import { useLanguage } from '@/hooks/use-language';
 
 const services = [
   {
-    title: "OFFENTLIG INREDNING",
-    description: "Specialiserad inredning för hotell, restauranger, kontor och offentliga miljöer.",
-    longDescription: "Vi skapar funktionella och estetiska miljöer som förstärker din verksamhets identitet. Från koncept till implementation arbetar vi med hållbara material och genomtänkt design som står emot intensiv användning."
-  },
-  {
     title: "PROJEKTERING",
-    description: "Teknisk planering och ritningar för professionell genomförande.",
-    longDescription: "Våra erfarna projektörer utvecklar detaljerade tekniska lösningar som säkerställer att ditt projekt genomförs smidigt. Vi hanterar allt från 3D-visualiseringar till bygghandlingar."
+    description: "När våra beställare behöver hjälp med att ta fram underlag för sitt projekt så bistår vi gärna med projektering och projekteringsledning med stöd av vårt nätverk.",
+    longDescription: "Avser alla typer av offentliga miljöer. När projekten är av större omfattning inbegriper det olika typer av konsultgrupper såsom arkitektur, konstruktion, El, VVS, brand, tillgänglighet m.fl."
   },
   {
     title: "PROJEKTLEDNING",
-    description: "Fullständig projektövervakning från start till slutleverans.",
-    longDescription: "Vår projektledning koordinerar alla aspekter av ditt projekt - tidplan, budget, leverantörer och kvalitetskontroll. Du får en dedicated kontaktperson som säkerställer att allt flyter på enligt plan."
-  },
-  {
-    title: "BYGGNATION & RENOVERING",
-    description: "Professionell byggnation och renovering av kommersiella utrymmen.",
-    longDescription: "Från mindre renoveringar till kompletta ombyggnationer. Vi specialiserar oss på hållbara byggmetoder och högkvalitativa material som ger långvariga resultat."
+    description: "När det finns färdiga underlag ser vi gärna att ett första möte blir en förutsättningslös diskussion om målbild & upplägg, omfattning, tidplan och ekonomi.",
+    longDescription: "Utifrån givna ramar tar vi sedan fram ett förslag på lösning oavsett innehåll. Inget projekt är för litet. Det kan t.ex. handla om att uppgradera en hotellobby, bygga om ett kontor, inreda nya hotellrum, skräddarsy en restaurang eller varför inte inreda en butik. Men det kan också handla om att bygga en helt ny byggnad eller att bygga om/ bygga till en befintlig. Oavsett vad så tar vi hand om ert projekt från start till mål!"
   },
   {
     title: "KONTROLLANSVAR (KA)",
-    description: "Certifierad byggövervakning och kvalitetssäkring enligt gällande regelverk.",
+    description: "Många ny-, om- eller tillbyggnadsprojekt kräver en kontrollansvarig funktion. Vi är certifierade med behörighet K.",
     longDescription: "Våra auktoriserade KA-ansvariga säkerställer att alla arbeten uppfyller svenska byggstandarder. Vi hanterar all dokumentation och inspektioner för trygg projektgenomförande."
   },
-
   {
-    title: "OMKLÄDNAD & REPARATION",
-    description: "Professionell restaurering och förnyelse av befintliga möbler.",
-    longDescription: "Ge dina möbler nytt liv med vår expertis inom omklädnad och reparation. Vi arbetar med premium textilier och läder för att bevara möblernas karaktär samtidigt som vi förlänger deras livslängd."
+    title: "BYGGNATION OCH RENOVERING",
+    description: "Med hjälp av vårt stora nätverk av underentreprenörer erbjuder vi även projekt- och/eller byggledning för i stort sett alla typer av arbeten inom byggnation och inredning.",
+    longDescription: "En enkel och prisvärd lösning för beställaren. I alla typer av lokaler blir det ofrånkomligen slitage på ytskikten. Ibland kan detta innebära patina och en känsla av trivsel, men oftast så innebär det att helhetsintrycket dras ned och att det är läge att fräscha upp eller byta ut vissa delar. Vi har stor erfarenhet av att snabbt och effektivt förändra offentliga rum så att verksamheten drabbas så lite som möjligt, enkelt och prisvärt."
+  },
+  {
+    title: "OMKLÄDNADER OCH REPARATION",
+    description: "Varför slänga bra och fungerande möbler som bara behöver en uppfräschning?",
+    longDescription: "Som ett hållbart och prisvärt alternativ i dagens \"slit & släng\" samhälle erbjuder vi omklädnad och renovering av alla typer av stoppade möbler och andra inredningsdetaljer. Stommen i stoppade möbler är ofta i utmärkt skick även efter många år i bruk även om själva ytan kanske har gjort sitt. Stolar, soffor och fåtöljer med smutsigt eller trasigt tyg blir som nya efter en omklädnad. Vi har stor erfarenhet av omklädnader och har klätt om tusentals stolar och fåtöljer till kontor, hotell och restauranger. Och skulle det behövas finns det ofta möjlighet att byta ut eller förstärka stoppning och olika typer av mekanismer (t.ex. fjädrar) som kan ha mattats av över tiden samtidigt som möbler kläs om. Vi erbjuder även reparation och renovering av andra inredningsdetaljer som t.ex. slipning av bordsskivor m.m. Att klä om möbler är en riktigt hållbar lösning. Förutom att det lönar sig rent ekonomiskt så innebär det ALLTID en miljömässig vinst."
   }
 ];
 

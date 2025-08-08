@@ -70,8 +70,8 @@ export default function HomePage() {
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(1)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
-                      Förutsättnings-<br />löst möte
+                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
+                      Förutsätt-<br />ningslöst<br />möte
                     </span>
                   </div>
                   <div className="flex items-center justify-center">
@@ -85,8 +85,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 1 && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
-                      <p className="text-dark-grey text-sm leading-relaxed text-left">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                      <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step1.description')}
                       </p>
                     </div>
@@ -113,7 +113,7 @@ export default function HomePage() {
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(2)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
                       Design &<br />Koncept
                     </span>
                   </div>
@@ -128,8 +128,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 2 && (
-                    <div className="absolute top-1/2 right-full transform -translate-y-1/2 mr-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
-                      <p className="text-dark-grey text-sm leading-relaxed text-left">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                      <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step2.description')}
                       </p>
                     </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(3)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
                       Produktion
                     </span>
                   </div>
@@ -171,8 +171,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 3 && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
-                      <p className="text-dark-grey text-sm leading-relaxed text-left">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                      <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step3.description')}
                       </p>
                     </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(4)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
                       Leverans
                     </span>
                   </div>
@@ -214,8 +214,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 4 && (
-                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
-                      <p className="text-dark-grey text-sm leading-relaxed text-left">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                      <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step4.description')}
                       </p>
                     </div>

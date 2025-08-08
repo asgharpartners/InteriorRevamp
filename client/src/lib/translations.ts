@@ -138,7 +138,7 @@ export const translations = {
       },
       step3: {
         title: "Produktion",
-        description: "Vi genomför varje projekt så det speglar ditt unika designkoncept - prisvärt och snällare mot miljön."
+        description: "Vi genomför varje projekt så det speglar ditt unika designkoncept – prisvärt och snällare mot miljön."
       },
       step4: {
         title: "Leverans",

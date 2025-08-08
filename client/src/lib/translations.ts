@@ -134,7 +134,7 @@ export const translations = {
       },
       step2: {
         title: "Design & Koncept",
-        description: "Vi utvecklar ett genomtänkt inredningskoncept baserat på dina mål och platsens förutsättningar."
+        description: "Vi genomför varje projekt så det speglar ditt unika designkoncept - prisvärt och snällare mot miljön."
       },
       step3: {
         title: "Produktion",

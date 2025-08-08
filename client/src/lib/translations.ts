@@ -130,19 +130,19 @@ export const translations = {
       title: "Vår Process",
       step1: {
         title: "Förutsättningslöst möte",
-        description: "Behov och visioner, Tidplan, Omfattning, Budget, Upplägg"
+        description: "Vi lyssnar först. Vi träffas för att förstå era behov, visioner och förutsättningar – tidplan, budget, omfattning och projektets mål. Tack vare vår långa erfarenhet och breda nätverk kan vi redan här ge idéer och lösningar som är realistiska och hållbara."
       },
       step2: {
         title: "Design & Koncept",
-        description: "Vi skapar skräddarsydda designlösningar baserat på era önskemål och behov"
+        description: "Skräddarsytt för er verksamhet. Vi tar fram unika inredningslösningar och möbelkoncept anpassade efter ert varumärke och er miljö – från hotellrum till kontorslandskap. Designen bygger på estetik, funktionalitet och lång livslängd."
       },
       step3: {
         title: "Produktion",
-        description: "Vi genomför varje projekt så det speglar ditt unika designkoncept – prisvärt och snällare mot miljön."
+        description: "Från idé till färdig lösning. Vi använder vårt nätverk av skickliga snickare, leverantörer och hantverkare för att tillverka och förädla möbler, material och detaljer. Vi säkrar att varje del motsvarar designkonceptet och håller högsta kvalitet – prisvärt och med hänsyn till miljön."
       },
       step4: {
         title: "Leverans",
-        description: "Vi hanterar installation och slutlig styling för att säkerställa excellens"
+        description: "Perfekt slutresultat – direkt på plats. Vi hanterar installation, montering och styling på plats, och lämnar över en nyckelfärdig miljö redo att användas. Allt sker med omsorg om detaljer och helhet, så att resultatet blir precis som ni tänkt er – eller bättre."
       }
     },
     services: {

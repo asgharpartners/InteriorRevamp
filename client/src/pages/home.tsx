@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '@/components/Header';
 import { HeroSlider } from '@/components/hero-slider';
 import { ServicesSection } from '@/components/services-section';
@@ -10,10 +11,11 @@ import { Footer } from '@/components/footer';
 import { StickyCTA } from '@/components/sticky-cta';
 import { FloatingShortcuts } from '@/components/floating-shortcuts';
 import { useLanguage } from '@/hooks/use-language';
-import { Lightbulb, Compass, Hammer, Home } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export default function HomePage() {
   const { t } = useLanguage();
+  const [expandedStep, setExpandedStep] = useState<number | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -22,89 +24,190 @@ export default function HomePage() {
     }
   };
 
+  const toggleStep = (index: number) => {
+    setExpandedStep(expandedStep === index ? null : index);
+  };
+
   return (
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
       
-      {/* Shared Landscape Layout - Intro & Process */}
-      <div className="w-full">
-        {/* Intro Section - Upper Half */}
-        <section className="bg-[#F5F1EA] flex items-center justify-center" style={{ minHeight: '50vh' }}>
-          <div className="max-w-4xl mx-auto text-center px-4 py-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-8 leading-tight">
-              {t('intro.title')}
-            </h2>
-            <p className="text-xl md:text-2xl text-dark-grey max-w-3xl mx-auto leading-relaxed">
-              {t('intro.subtitle')}<br />
-              {t('intro.description')}
-            </p>
-          </div>
-        </section>
-
-        {/* Vår Process Section - Lower Half */}
-        <section className="bg-[#3E2516] text-white flex items-center justify-center" style={{ minHeight: '50vh' }}>
-          <div className="max-w-6xl mx-auto text-center px-4 py-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-16">{t('process.title')}</h2>
+      {/* Combined Intro & Process Section */}
+      <section className="bg-[#F5F1EA] py-20" style={{ minHeight: '100vh' }}>
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             
-            {/* Process Steps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
-              {/* Step 1 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-[#3E2516] font-bold text-xl">1</span>
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.step1.title')}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  {t('process.step1.description')}
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-[#3E2516] font-bold text-xl">2</span>
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.step2.title')}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  {t('process.step2.description')}
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-[#3E2516] font-bold text-xl">3</span>
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.step3.title')}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  {t('process.step3.description')}
-                </p>
-              </div>
-
-              {/* Step 4 */}
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-[#3E2516] font-bold text-xl">4</span>
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4">{t('process.step4.title')}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  {t('process.step4.description')}
-                </p>
-              </div>
+            {/* Left Side - Intro Text */}
+            <div className="text-left">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-8 leading-tight">
+                {t('intro.title')}
+              </h2>
+              <p className="text-xl md:text-2xl text-dark-grey leading-relaxed">
+                {t('intro.subtitle')}<br />
+                {t('intro.description')}
+              </p>
             </div>
 
-            {/* CTA Button */}
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#AD8C44] text-[#3E2516] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
-              data-testid="discuss-project-button"
-            >
-              Diskutera ditt projekt
-            </button>
+            {/* Right Side - Process Diagram */}
+            <div className="relative">
+              <h3 className="font-serif text-3xl font-bold text-dark-brown mb-12 text-center">
+                {t('process.title')}
+              </h3>
+              
+              {/* Circular Process Steps */}
+              <div className="relative max-w-lg mx-auto">
+                {/* Step 1 - Top */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+                  <div 
+                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    onClick={() => toggleStep(1)}
+                    style={{ width: '200px' }}
+                  >
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white font-bold text-lg">1</span>
+                      </div>
+                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
+                        {t('process.step1.title')}
+                      </h4>
+                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 1 ? 'max-h-96' : 'max-h-0'}`}>
+                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                          {t('process.step1.description')}
+                        </p>
+                      </div>
+                      <ChevronDown 
+                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
+                          expandedStep === 1 ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Arrow 1 to 2 */}
+                <div className="absolute top-24 right-8 transform rotate-45">
+                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
+                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                </div>
+
+                {/* Step 2 - Right */}
+                <div className="absolute top-20 right-0 transform translate-x-4">
+                  <div 
+                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    onClick={() => toggleStep(2)}
+                    style={{ width: '200px' }}
+                  >
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white font-bold text-lg">2</span>
+                      </div>
+                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
+                        {t('process.step2.title')}
+                      </h4>
+                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 2 ? 'max-h-96' : 'max-h-0'}`}>
+                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                          {t('process.step2.description')}
+                        </p>
+                      </div>
+                      <ChevronDown 
+                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
+                          expandedStep === 2 ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Arrow 2 to 3 */}
+                <div className="absolute top-48 right-8 transform rotate-135">
+                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
+                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                </div>
+
+                {/* Step 3 - Bottom */}
+                <div className="absolute top-64 left-1/2 transform -translate-x-1/2 translate-y-4">
+                  <div 
+                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    onClick={() => toggleStep(3)}
+                    style={{ width: '200px' }}
+                  >
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white font-bold text-lg">3</span>
+                      </div>
+                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
+                        {t('process.step3.title')}
+                      </h4>
+                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 3 ? 'max-h-96' : 'max-h-0'}`}>
+                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                          {t('process.step3.description')}
+                        </p>
+                      </div>
+                      <ChevronDown 
+                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
+                          expandedStep === 3 ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Arrow 3 to 4 */}
+                <div className="absolute top-48 left-8 transform rotate-225">
+                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
+                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                </div>
+
+                {/* Step 4 - Left */}
+                <div className="absolute top-20 left-0 transform -translate-x-4">
+                  <div 
+                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    onClick={() => toggleStep(4)}
+                    style={{ width: '200px' }}
+                  >
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-white font-bold text-lg">4</span>
+                      </div>
+                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
+                        {t('process.step4.title')}
+                      </h4>
+                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 4 ? 'max-h-96' : 'max-h-0'}`}>
+                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                          {t('process.step4.description')}
+                        </p>
+                      </div>
+                      <ChevronDown 
+                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
+                          expandedStep === 4 ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Arrow 4 to 1 */}
+                <div className="absolute top-24 left-8 transform rotate-315">
+                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
+                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="text-center mt-16">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="bg-[#AD8C44] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+                  data-testid="discuss-project-button"
+                >
+                  Diskutera ditt projekt
+                </button>
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <ServicesSection />
       

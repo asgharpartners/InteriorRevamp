@@ -137,10 +137,10 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Student Collaboration Card */}
-          <div className="career-card bg-white rounded-2xl shadow-sm border border-[#E5E5E5] p-8 mb-6">
-            <h3 className="font-serif text-lg font-bold text-dark-brown mb-4 tracking-wide">Student Collaboration</h3>
-            <p className="text-dark-grey mb-6 leading-relaxed">
+          {/* Student Collaboration Card - Brown background */}
+          <div className="career-card bg-[#3E2516] rounded-2xl shadow-sm border border-[#3E2516] p-8 mb-6">
+            <h3 className="font-serif text-lg font-bold text-[#F5F1EA] mb-4 tracking-wide">Student Collaboration</h3>
+            <p className="text-[#F5F1EA]/80 mb-6 leading-relaxed">
               We regularly partner with design schools and universities to provide internship opportunities, 
               thesis project support, and mentorship programs. Students work alongside our experienced team 
               on live projects, gaining valuable industry experience.
@@ -148,8 +148,8 @@ export default function HomePage() {
             
             <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="text-left">
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">What We Offer</h4>
-                <ul className="text-dark-grey space-y-2">
+                <h4 className="font-serif text-lg font-bold text-[#F5F1EA] mb-3 tracking-wide">What We Offer</h4>
+                <ul className="text-[#F5F1EA]/80 space-y-2">
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
                     <span>Real project experience</span>
@@ -169,8 +169,8 @@ export default function HomePage() {
                 </ul>
               </div>
               <div className="text-left">
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">Areas of Focus</h4>
-                <ul className="text-dark-grey space-y-2">
+                <h4 className="font-serif text-lg font-bold text-[#F5F1EA] mb-3 tracking-wide">Areas of Focus</h4>
+                <ul className="text-[#F5F1EA]/80 space-y-2">
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
                     <span>Interior design</span>

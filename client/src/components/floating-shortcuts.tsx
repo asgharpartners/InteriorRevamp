@@ -168,9 +168,9 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
           ref={menuRef}
           className={`
             absolute top-0 right-14
-            w-48 md:w-52
+            w-40 md:w-44
             max-h-80 overflow-y-auto
-            py-1 space-y-1
+            py-1 space-y-0.5
             animate-in slide-in-from-right-2 fade-in duration-200
           `}
           role="menu"
@@ -181,16 +181,16 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
               key={shortcut.id}
               onClick={() => scrollToSection(shortcut.id)}
               className={`
-                w-full text-left px-3 py-2
+                w-full text-left px-2 py-1.5
                 text-xs font-bold tracking-wide uppercase
                 text-[#F5F1EA] hover:text-white
                 bg-[#3E2516]/80 hover:bg-[#3E2516]/90
                 backdrop-blur-sm
-                rounded-md
+                rounded-sm
                 shadow-sm hover:shadow-md
                 transition-all duration-200
-                focus:outline-none focus:ring-2 focus:ring-[#AD8C44] focus:ring-offset-2
-                ${activeSection === shortcut.id ? 'ring-2 ring-[#F2DC74] bg-[#3E2516]/95' : ''}
+                focus:outline-none focus:ring-1 focus:ring-[#AD8C44] focus:ring-offset-1
+                ${activeSection === shortcut.id ? 'ring-1 ring-[#F2DC74] bg-[#3E2516]/95' : ''}
               `}
               role="menuitem"
               tabIndex={isMenuVisible ? 0 : -1}

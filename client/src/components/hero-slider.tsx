@@ -83,18 +83,18 @@ export function HeroSlider() {
         ))}
       </div>
       
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Brown Background */}
       <button 
         onClick={previousSlide}
-        className="absolute left-8 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-warm-gold transition-colors z-10"
+        className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-[#3E2516]/60 hover:bg-[#3E2516]/80 text-white p-3 rounded-full transition-all duration-300 z-10"
       >
-        <ChevronLeft className="h-8 w-8" />
+        <ChevronLeft className="h-6 w-6" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-warm-gold transition-colors z-10"
+        className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-[#3E2516]/60 hover:bg-[#3E2516]/80 text-white p-3 rounded-full transition-all duration-300 z-10"
       >
-        <ChevronRight className="h-8 w-8" />
+        <ChevronRight className="h-6 w-6" />
       </button>
       
       {/* Dots */}

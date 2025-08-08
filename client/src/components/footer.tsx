@@ -18,6 +18,79 @@ export function Footer() {
   return (
     <footer className="bg-dark-brown text-off-white py-16">
       <div className="container mx-auto px-4">
+        {/* Partners Section */}
+        <div className="mb-16">
+          <h3 className="font-serif text-3xl font-bold text-center mb-12">{t('footer.partners')}</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
+            {/* Zederkof */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Zederkof</span>
+              </div>
+              <p className="text-off-white/60 text-xs">zederkof.se</p>
+            </div>
+            
+            {/* Realisera */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Realisera</span>
+              </div>
+              <p className="text-off-white/60 text-xs">realisera.se</p>
+            </div>
+            
+            {/* Sveacontract */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Sveacontract</span>
+              </div>
+              <p className="text-off-white/60 text-xs">sveacontract.se</p>
+            </div>
+            
+            {/* Interior Collection */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Interior Collection</span>
+              </div>
+              <p className="text-off-white/60 text-xs">interiorcollection.se</p>
+            </div>
+            
+            {/* Brafab */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Brafab</span>
+              </div>
+              <p className="text-off-white/60 text-xs">brafab.se</p>
+            </div>
+            
+            {/* Kakeljätten */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Kakeljätten</span>
+              </div>
+              <p className="text-off-white/60 text-xs">kakeljatten.se</p>
+            </div>
+            
+            {/* Sitzdesign */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Sitzdesign</span>
+              </div>
+              <p className="text-off-white/60 text-xs">sitzdesign.se</p>
+            </div>
+          </div>
+          
+          {/* Add Resizedesign as a second row */}
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-center justify-items-center mt-8">
+            {/* Resizedesign */}
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-12 bg-off-white/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-off-white/60 text-xs font-medium">Resizedesign</span>
+              </div>
+              <p className="text-off-white/60 text-xs">resizedesign.se</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Newsletter */}
           <div>
@@ -45,8 +118,8 @@ export function Footer() {
             <h4 className="font-serif text-xl font-bold mb-6">Contact</h4>
             <div className="space-y-3 text-off-white/80">
               <p>info@nilsholger.se</p>
-              <p>+46 8 123 456 78</p>
-              <p>Södermalm 15<br/>118 46 Stockholm</p>
+              <p>+46 - 08 673 50 80</p>
+              <p>Birger Jarlsgatan 99<br/>104 32 Stockholm</p>
             </div>
           </div>
           

@@ -89,7 +89,8 @@ export const translations = {
     },
     footer: {
       newsletter: "Stay Updated",
-      subscribe: "Subscribe"
+      subscribe: "Subscribe",
+      partners: "Our Partners"
     },
     stickyCta: {
       title: "Ready to transform your space?",
@@ -187,7 +188,8 @@ export const translations = {
     },
     footer: {
       newsletter: "Håll dig Uppdaterad",
-      subscribe: "Prenumerera"
+      subscribe: "Prenumerera",
+      partners: "Våra Partners"
     },
     stickyCta: {
       title: "Redo att förvandla era lokaler?",

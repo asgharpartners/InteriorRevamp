@@ -49,7 +49,11 @@ export default function HomePage() {
         </section>
 
         {/* Process Section - Lower Half */}
-        <section className="bg-[#3E2516] flex items-center justify-center" style={{ minHeight: '50vh' }}>
+        <section className="bg-[#3E2516] flex items-center justify-center relative" style={{ minHeight: '50vh' }}>
+          {/* Overlay when popup is open */}
+          {expandedStep !== null && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => toggleStep(null)}></div>
+          )}
           <div className="max-w-6xl mx-auto px-4 py-16">
             {/* Circular Process Steps */}
             <div className="relative w-[320px] h-[320px] mx-auto mb-12 max-w-full">
@@ -85,7 +89,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 1 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                    <div className="fixed inset-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-sm w-full bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 mx-auto">
                       <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step1.description')}
                       </p>
@@ -128,7 +132,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 2 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                    <div className="fixed inset-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-sm w-full bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 mx-auto">
                       <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step2.description')}
                       </p>
@@ -171,7 +175,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 3 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                    <div className="fixed inset-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-sm w-full bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 mx-auto">
                       <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step3.description')}
                       </p>
@@ -214,7 +218,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 4 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50">
+                    <div className="fixed inset-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-sm w-full bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 mx-auto">
                       <p className="text-[#F5F1EA] text-sm leading-relaxed text-left">
                         {t('process.step4.description')}
                       </p>

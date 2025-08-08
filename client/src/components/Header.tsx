@@ -131,7 +131,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* Essential navigation for medium screens */}
+              {/* Essential navigation for large screens */}
               <nav className="hidden lg:flex xl:hidden items-center space-x-1 flex-1 justify-center">
                 {["OM", "TJÄNSTER", "KONTAKT"].map((item, index) => (
                   <button
@@ -148,9 +148,27 @@ export default function Header({ className = "" }: HeaderProps) {
                   </button>
                 ))}
               </nav>
+              
+              {/* Minimal navigation for medium screens */}
+              <nav className="hidden md:flex lg:hidden items-center space-x-1 flex-1 justify-center">
+                {["OM", "KONTAKT"].map((item, index) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(["about", "contact"][index])}
+                    className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-1 py-1 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                    data-testid={`nav-${item.toLowerCase()}`}
+                    style={{ 
+                      fontFamily: '"Playfair Display", "Merriweather", serif',
+                      fontWeight: '700'
+                    }}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </nav>
 
-              {/* Right-aligned elements - always visible on desktop */}
-              <div className="hidden lg:flex items-center space-x-2 ml-4">
+              {/* Right-aligned elements - visible on medium screens and up */}
+              <div className="hidden md:flex items-center md:space-x-1 lg:space-x-2 ml-2 md:ml-4">
                 {/* Search Icon */}
                 <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,7 +199,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
               {/* Mobile hamburger menu - positioned on far right */}
               <button
-                className="lg:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2"
+                className="md:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2"
                 onClick={toggleMobileMenu}
                 data-testid="mobile-menu-toggle"
               >
@@ -197,7 +215,7 @@ export default function Header({ className = "" }: HeaderProps) {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
+          className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
           onClick={toggleMobileMenu}
         >
           <div className="fixed top-0 left-0 right-0 bg-[#3E2516] shadow-lg pt-20" onClick={(e) => e.stopPropagation()}>

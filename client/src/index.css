@@ -150,6 +150,16 @@
   }
 }
 
+/* Global scroll behavior and navigation aids */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll margin for floating shortcuts navigation */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 @layer utilities {
   .slider-container {
     position: relative;

@@ -8,6 +8,7 @@ import { AboutSection } from '@/components/about-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer';
 import { StickyCTA } from '@/components/sticky-cta';
+import { FloatingShortcuts } from '@/components/floating-shortcuts';
 import { useLanguage } from '@/hooks/use-language';
 import { Lightbulb, Compass, Hammer, Home } from 'lucide-react';
 
@@ -380,6 +381,7 @@ export default function HomePage() {
       <ContactSection />
       <Footer />
       <StickyCTA />
+      <FloatingShortcuts />
     </div>
   );
 }

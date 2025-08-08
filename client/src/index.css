@@ -72,6 +72,38 @@
     @apply font-sans antialiased;
     background-color: var(--off-white);
     color: var(--dark-grey);
+    /* Adjust padding for new header structure - logo above navigation */
+    padding-top: calc(120px + 56px); /* Logo height + Nav bar height for 2xl screens */
+  }
+  
+  @media (max-width: 1535px) {
+    body {
+      padding-top: calc(100px + 56px); /* xl screens */
+    }
+  }
+  
+  @media (max-width: 1279px) {
+    body {
+      padding-top: calc(90px + 56px); /* lg screens */
+    }
+  }
+  
+  @media (max-width: 1023px) {
+    body {
+      padding-top: calc(80px + 56px); /* md screens */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    body {
+      padding-top: calc(70px + 56px); /* sm screens */
+    }
+  }
+  
+  @media (max-width: 639px) {
+    body {
+      padding-top: calc(60px + 56px); /* base screens */
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

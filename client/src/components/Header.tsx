@@ -101,11 +101,11 @@ export default function Header({ className = "" }: HeaderProps) {
           {/* Desktop Navigation - positioned for proper spacing */}
           <div className="absolute top-0 h-full w-full flex items-center z-10">
             
-            {/* Center navigation section - adjusted for smaller logo background */}
+            {/* Center navigation section - safe spacing to avoid logo overlap */}
             <div className={`flex-1 flex px-4 transition-all duration-300 ${
               isScrolled 
-                ? 'justify-end pr-8 2xl:pr-12 xl:pr-16 lg:pr-20 md:pr-24' 
-                : 'justify-center 2xl:ml-[500px] xl:ml-[440px] lg:ml-[400px] md:ml-[340px]'
+                ? 'justify-end pr-8 2xl:pr-12 xl:pr-16 lg:pr-20' 
+                : 'justify-center 2xl:ml-[500px] xl:ml-[440px] lg:ml-[400px]'
             }`}>
               
               {/* Full navigation for desktop */}
@@ -152,10 +152,10 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* Standard navigation for large screens */}
+              {/* Standard navigation for large screens - with improved scroll behavior */}
               <nav className={`hidden lg:flex xl:hidden items-center space-x-2 ${
                 isScrolled 
-                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2 ml-auto mr-4' 
                   : ''
               }`}>
                 {t.nav.map((item, index) => (

@@ -149,19 +149,7 @@
     background-color: var(--language-bg-hover);
   }
 
-  /* Career section specific styles */
-  .career-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
 
-  @media (max-width: 768px) {
-    .career-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-  }
 }
 
 /* Global scroll behavior and navigation aids */

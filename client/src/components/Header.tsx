@@ -90,13 +90,13 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Navigation content - flexible centered layout */}
-          <div className="absolute top-0 h-full flex items-center justify-center w-full px-4 z-10">
-            {/* Navigation container with proper spacing from logo */}
-            <div className="flex items-center justify-center w-full max-w-5xl 2xl:ml-[460px] xl:ml-[410px] lg:ml-[370px] md:ml-[330px] sm:ml-[290px] ml-[250px]">
+          {/* Navigation content - flexible layout */}
+          <div className="absolute top-0 h-full flex items-center w-full px-4 z-10">
+            {/* Navigation container with logo spacing */}
+            <div className="flex items-center w-full 2xl:ml-[460px] xl:ml-[410px] lg:ml-[370px] md:ml-[330px] sm:ml-[290px] ml-[250px]">
               
               {/* Full navigation for extra large screens */}
-              <nav className="hidden 2xl:flex items-center space-x-4 flex-1 justify-center">
+              <nav className="hidden 2xl:flex items-center space-x-4 flex-1 justify-start ml-8">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -114,7 +114,7 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
               
               {/* Compact navigation for large screens */}
-              <nav className="hidden xl:flex 2xl:hidden items-center space-x-2 flex-1 justify-center">
+              <nav className="hidden xl:flex 2xl:hidden items-center space-x-2 flex-1 justify-start ml-6">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -132,11 +132,11 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
               
               {/* Essential navigation for large screens */}
-              <nav className="hidden lg:flex xl:hidden items-center space-x-1 flex-1 justify-center">
-                {["OM", "TJÄNSTER", "KONTAKT"].map((item, index) => (
+              <nav className="hidden lg:flex xl:hidden items-center space-x-2 flex-1 justify-start ml-4">
+                {t.nav.map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
+                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
                     className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-1 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
@@ -149,12 +149,12 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* Minimal navigation for medium screens */}
-              <nav className="hidden md:flex lg:hidden items-center space-x-1 flex-1 justify-center">
-                {["OM", "KONTAKT"].map((item, index) => (
+              {/* iPad-friendly navigation for medium screens */}
+              <nav className="hidden md:flex lg:hidden items-center space-x-1 flex-1 justify-start ml-2">
+                {t.nav.map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(["about", "contact"][index])}
+                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
                     className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-1 py-1 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
@@ -167,10 +167,10 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
 
-              {/* Right-aligned elements - visible on medium screens and up */}
-              <div className="hidden md:flex items-center md:space-x-1 lg:space-x-2 ml-2 md:ml-4">
+              {/* Right-aligned elements - far right positioning */}
+              <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3 xl:space-x-4 ml-auto pr-4">
                 {/* Search Icon */}
-                <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90">
+                <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
@@ -179,7 +179,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Language Toggle */}
                 <button
                   onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap"
+                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] md:text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap flex-shrink-0"
                   data-testid="language-toggle"
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >
@@ -189,7 +189,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Book Consultation Button */}
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-[#F2DC74] font-bold text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase"
+                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-[#F2DC74] font-bold md:text-xs lg:text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase flex-shrink-0"
                   data-testid="book-consultation"
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >

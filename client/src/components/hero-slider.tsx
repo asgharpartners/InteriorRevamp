@@ -73,28 +73,28 @@ export function HeroSlider() {
               </div>
             </div>
             
-            {/* Scroll cue arrow */}
+            {/* Scroll cue arrow - Brown */}
             {index === currentSlide && (
               <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <div className="w-6 h-6 border-r-2 border-b-2 border-white transform rotate-45"></div>
+                <div className="w-6 h-6 border-r-2 border-b-2 border-[#3E2516] transform rotate-45"></div>
               </div>
             )}
           </div>
         ))}
       </div>
       
-      {/* Navigation Arrows - Brown Background */}
+      {/* Navigation Arrows - Brown Icons */}
       <button 
         onClick={previousSlide}
-        className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-[#3E2516]/60 hover:bg-[#3E2516]/80 text-white p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute left-8 top-1/2 transform -translate-y-1/2 text-[#3E2516] hover:text-[#2B1B0F] text-3xl transition-colors duration-300 z-10"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="h-8 w-8" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-[#3E2516]/60 hover:bg-[#3E2516]/80 text-white p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#3E2516] hover:text-[#2B1B0F] text-3xl transition-colors duration-300 z-10"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="h-8 w-8" />
       </button>
       
       {/* Dots */}

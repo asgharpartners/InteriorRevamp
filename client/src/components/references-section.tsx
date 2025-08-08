@@ -191,11 +191,11 @@ export function ReferencesSection() {
   return (
     <section id="references" className="py-20 bg-dark-brown text-off-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <h2 className="font-serif text-4xl font-bold mb-4">
             {t('references.title')}
           </h2>
-          <p className="text-xl max-w-2xl mx-auto">
+          <p className="text-xl max-w-2xl">
             {t('references.subtitle')}
           </p>
         </div>
@@ -221,7 +221,7 @@ export function ReferencesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="project-card cursor-pointer group">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
                 <div className="absolute top-4 right-4 bg-warm-gold text-dark-brown px-3 py-1 rounded-full text-sm font-semibold">
                   {project.year}
                 </div>
@@ -231,7 +231,7 @@ export function ReferencesSection() {
                 <p className="text-dark-grey mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                <div className="flex flex-wrap gap-2 mb-6 justify-start">
                   {project.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="bg-[#AD8C44]/10 text-[#AD8C44] text-xs px-2 py-1 rounded font-medium">
                       {tag}

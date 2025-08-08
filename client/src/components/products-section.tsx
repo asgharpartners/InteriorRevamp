@@ -48,11 +48,11 @@ export function ProductsSection() {
   return (
     <section id="products" className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
             {t('products.title')}
           </h2>
-          <p className="text-xl text-dark-grey max-w-2xl mx-auto">
+          <p className="text-xl text-dark-grey max-w-2xl">
             {t('products.subtitle')}
           </p>
         </div>
@@ -80,7 +80,7 @@ export function ProductsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {productCategories.map((category, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
                 <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">
                   {category.name}
                 </h3>

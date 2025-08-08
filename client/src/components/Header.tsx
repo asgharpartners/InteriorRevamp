@@ -102,30 +102,12 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Navigation content - right aligned */}
             <div className="h-full flex items-center justify-end pr-6 2xl:pl-44 xl:pl-40 lg:pl-36 md:pl-32 sm:pl-28 pl-24 relative z-10">
               {/* Desktop Navigation Links */}
-              <nav className="hidden 2xl:flex items-center 2xl:space-x-6 xl:space-x-4 lg:space-x-3">
+              <nav className="hidden lg:flex items-center lg:space-x-2 xl:space-x-4 2xl:space-x-6">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="2xl:text-sm xl:text-xs lg:text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
-                    data-testid={`nav-${item.toLowerCase()}`}
-                    style={{ 
-                      fontFamily: '"Playfair Display", "Merriweather", serif',
-                      fontWeight: '700'
-                    }}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </nav>
-              
-              {/* Tablet Navigation Links */}
-              <nav className="hidden lg:flex 2xl:hidden items-center space-x-2">
-                {["ABOUT", "SERVICES", "CONTACT"].map((item, index) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
-                    className="text-xs text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
+                    className="lg:text-xs xl:text-sm text-[#F5F5F5] hover:text-white font-bold transition-colors duration-200 tracking-wide uppercase whitespace-nowrap"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',

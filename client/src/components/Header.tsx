@@ -90,13 +90,14 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Navigation content - flexible layout */}
-          <div className="absolute top-0 h-full flex items-center w-full px-4 z-10">
-            {/* Navigation container with logo spacing */}
-            <div className="flex items-center w-full 2xl:ml-[460px] xl:ml-[410px] lg:ml-[370px] md:ml-[330px] sm:ml-[290px] ml-[250px]">
+          {/* Desktop Navigation - positioned for proper spacing */}
+          <div className="absolute top-0 h-full w-full flex items-center z-10">
+            
+            {/* Center navigation section */}
+            <div className="flex-1 flex justify-center px-4 2xl:ml-[460px] xl:ml-[410px] lg:ml-[370px] md:ml-[280px]">
               
-              {/* Full navigation for extra large screens */}
-              <nav className="hidden 2xl:flex items-center space-x-4 flex-1 justify-start ml-8">
+              {/* Full navigation for desktop */}
+              <nav className="hidden 2xl:flex items-center space-x-6">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -114,7 +115,7 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
               
               {/* Compact navigation for large screens */}
-              <nav className="hidden xl:flex 2xl:hidden items-center space-x-2 flex-1 justify-start ml-6">
+              <nav className="hidden xl:flex 2xl:hidden items-center space-x-3">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -131,8 +132,8 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* Essential navigation for large screens */}
-              <nav className="hidden lg:flex xl:hidden items-center space-x-2 flex-1 justify-start ml-4">
+              {/* Standard navigation for large screens */}
+              <nav className="hidden lg:flex xl:hidden items-center space-x-2">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -149,13 +150,13 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* iPad-friendly navigation for medium screens */}
-              <nav className="hidden md:flex lg:hidden items-center space-x-1 flex-1 justify-start ml-2">
+              {/* iPad navigation - all links visible */}
+              <nav className="hidden md:flex lg:hidden items-center space-x-1">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-1 py-1 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                    className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-1 py-1 rounded-sm bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -166,9 +167,10 @@ export default function Header({ className = "" }: HeaderProps) {
                   </button>
                 ))}
               </nav>
+            </div>
 
-              {/* Right-aligned elements - far right positioning */}
-              <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3 xl:space-x-4 ml-auto pr-4">
+            {/* Right-aligned elements - always positioned at far right */}
+            <div className="hidden md:flex items-center space-x-4 pr-6 flex-shrink-0">
                 {/* Search Icon */}
                 <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,17 +199,17 @@ export default function Header({ className = "" }: HeaderProps) {
                 </Button>
               </div>
 
-              {/* Mobile hamburger menu - positioned on far right */}
-              <button
-                className="md:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2"
-                onClick={toggleMobileMenu}
-                data-testid="mobile-menu-toggle"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
+            
+            {/* Mobile hamburger menu - positioned absolutely */}
+            <button
+              className="md:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2 z-20"
+              onClick={toggleMobileMenu}
+              data-testid="mobile-menu-toggle"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>

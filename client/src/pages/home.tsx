@@ -113,11 +113,12 @@ export default function HomePage() {
       <div id="products">
         <ProductsSection />
       </div>
-      <BeforeAfterSlider />
       
       <div id="references">
         <ReferencesSection />
       </div>
+      
+      <BeforeAfterSlider />
 
       {/* Career & Internship Section */}
       <section id="career" className="career-section py-12 bg-off-white relative">

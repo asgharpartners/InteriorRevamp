@@ -108,6 +108,10 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
     }
   };
 
+  const handleButtonClick = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
   const handleButtonFocus = () => {
     setIsMenuVisible(true);
   };
@@ -126,6 +130,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
       {/* Floating Button */}
       <button
         ref={buttonRef}
+        onClick={handleButtonClick}
         onFocus={handleButtonFocus}
         onBlur={handleButtonBlur}
         className={`
@@ -138,6 +143,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
           transition-all duration-300 ease-out
           focus:outline-none focus:ring-2 focus:ring-[#AD8C44] focus:ring-offset-2
           hover:scale-105
+          active:scale-95
         `}
         aria-label={language === 'sv' ? 'Genvägar' : 'Shortcuts'}
         aria-expanded={isMenuVisible}
@@ -220,8 +226,9 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
       {/* Mobile backdrop */}
       {isMenuVisible && (
         <div 
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden -z-10"
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm lg:hidden -z-10"
           onClick={() => setIsMenuVisible(false)}
+          onTouchStart={() => setIsMenuVisible(false)}
         />
       )}
     </div>

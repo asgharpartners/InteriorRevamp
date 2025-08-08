@@ -174,31 +174,11 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
               
-              {/* iPad navigation - all links visible */}
-              <nav className={`hidden md:flex lg:hidden items-center space-x-1 ${
-                isScrolled 
-                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
-                  : ''
-              }`}>
-                {t.nav.map((item, index) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="text-xs text-[#F5F1EA] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-1 py-1 rounded-sm bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
-                    data-testid={`nav-${item.toLowerCase()}`}
-                    style={{ 
-                      fontFamily: '"Playfair Display", "Merriweather", serif',
-                      fontWeight: '700'
-                    }}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </nav>
+              {/* iPad navigation - removed to prevent overlap, use mobile menu instead */}
             </div>
 
-            {/* Right-aligned elements - always positioned at far right with safe margins */}
-            <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3 xl:space-x-4 pr-6 flex-shrink-0 2xl:mr-4 xl:mr-8 lg:mr-12 md:mr-16">
+            {/* Right-aligned elements - only show on larger screens to prevent overlap */}
+            <div className="hidden lg:flex items-center lg:space-x-3 xl:space-x-4 pr-6 flex-shrink-0 2xl:mr-4 xl:mr-8 lg:mr-12">
                 {/* Search Icon */}
                 <button 
                   onClick={() => setIsSearchOpen(true)}
@@ -232,9 +212,9 @@ export default function Header({ className = "" }: HeaderProps) {
               </div>
 
             
-            {/* Mobile hamburger menu - positioned absolutely */}
+            {/* Mobile hamburger menu - positioned absolutely, active up to lg breakpoint */}
             <button
-              className="md:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2 z-20"
+              className="lg:hidden text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 absolute top-1/2 right-4 transform -translate-y-1/2 z-20"
               onClick={toggleMobileMenu}
               data-testid="mobile-menu-toggle"
             >
@@ -249,7 +229,7 @@ export default function Header({ className = "" }: HeaderProps) {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
+          className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
           onClick={toggleMobileMenu}
         >
           <div className="fixed top-0 left-0 right-0 bg-[#3E2516] shadow-lg pt-20" onClick={(e) => e.stopPropagation()}>

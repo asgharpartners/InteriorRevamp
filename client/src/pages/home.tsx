@@ -160,55 +160,97 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Careers Section */}
-      <section className="py-20 bg-dark-brown text-off-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="font-serif text-4xl font-bold mb-6">Careers & Internships</h2>
-              <h3 className="text-2xl font-light mb-8">Join Our Creative Team</h3>
-              <p className="text-lg mb-8 leading-relaxed">
-                We're always looking for talented individuals who share our passion for Scandinavian design and sustainable craftsmanship. Whether you're a seasoned professional or just starting your career, we offer opportunities for growth in a collaborative, inspiring environment.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-warm-gold rounded-full flex items-center justify-center">
-                    <span className="text-dark-brown text-sm">✓</span>
-                  </div>
-                  <span>Competitive salary and benefits package</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-warm-gold rounded-full flex items-center justify-center">
-                    <span className="text-dark-brown text-sm">✓</span>
-                  </div>
-                  <span>Professional development opportunities</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-warm-gold rounded-full flex items-center justify-center">
-                    <span className="text-dark-brown text-sm">✓</span>
-                  </div>
-                  <span>Creative, collaborative work environment</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-warm-gold rounded-full flex items-center justify-center">
-                    <span className="text-dark-brown text-sm">✓</span>
-                  </div>
-                  <span>Flexible working arrangements</span>
-                </div>
+      {/* Career & Internship Section - Refactored to match Services visual system */}
+      <section id="career" className="career-section py-12 bg-off-white">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Section Title - H1 style matching Services */}
+          <div className="text-center mb-12">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-6">Career & Internship</h1>
+            <p className="text-dark-grey max-w-2xl mx-auto leading-relaxed text-lg">
+              We believe in nurturing the next generation of designers and craftspeople. 
+              Our collaboration with students and young professionals creates opportunities for hands-on learning 
+              in real-world projects while contributing fresh perspectives to our work.
+            </p>
+          </div>
+          
+          {/* Student Collaboration Card - Services card style */}
+          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-6">
+            <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Student Collaboration</h3>
+            <p className="text-dark-grey mb-6 leading-relaxed">
+              We regularly partner with design schools and universities to provide internship opportunities, 
+              thesis project support, and mentorship programs. Students work alongside our experienced team 
+              on live projects, gaining valuable industry experience.
+            </p>
+            
+            {/* Two-column grid */}
+            <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="text-left">
+                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">What We Offer</h4>
+                <ul className="text-dark-grey space-y-2">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Real project experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Professional mentorship</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Portfolio development support</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Industry network access</span>
+                  </li>
+                </ul>
               </div>
-              
-              <button className="bg-warm-gold text-dark-brown px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 font-semibold">
-                View Open Positions
-              </button>
+              <div className="text-left">
+                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">Areas of Focus</h4>
+                <ul className="text-dark-grey space-y-2">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Interior design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Furniture craftsmanship</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Project management</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <span>Sustainable design practices</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="order-1 lg:order-2">
-              <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Career opportunities at Nils Holger" 
-                className="rounded-lg shadow-2xl w-full h-auto"
-              />
+          </div>
+          
+          {/* Job Openings Card - Services card style */}
+          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
+            <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Job Openings & Opportunities</h3>
+            <p className="text-dark-grey mb-6 leading-relaxed">
+              Stay tuned for upcoming internship and full-time positions
+            </p>
+            
+            {/* Launching Soon Badge */}
+            <div className="mb-4">
+              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
+                Launching Soon
+              </span>
             </div>
+            
+            {/* Primary CTA Button */}
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="btn-primary bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+              data-testid="career-contact-button"
+            >
+              Get In Touch
+            </button>
           </div>
         </div>
       </section>

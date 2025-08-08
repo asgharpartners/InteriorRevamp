@@ -92,7 +92,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
           {/* Dark brown navigation background */}
           <div 
-            className="absolute top-0 h-full 2xl:left-[200px] xl:left-[170px] lg:left-[140px] md:left-[120px] sm:left-[100px] left-[80px] right-0"
+            className="absolute top-0 h-full 2xl:left-[320px] xl:left-[290px] lg:left-[260px] md:left-[230px] sm:left-[200px] left-[170px] right-0"
             style={{
               background: '#3E2516',
               clipPath: 'ellipse(140px 100% at 0% 50%)',

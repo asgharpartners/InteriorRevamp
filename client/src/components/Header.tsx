@@ -90,15 +90,33 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Navigation content - positioned on the right */}
-          <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-10">
-              {/* Desktop Navigation Links */}
-              <nav className="hidden lg:flex items-center lg:space-x-2 xl:space-x-4 2xl:space-x-6">
+          {/* Navigation content - positioned on the right with safe margins */}
+          <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-10 2xl:left-[460px] xl:left-[410px] lg:left-[370px] md:left-[330px] sm:left-[290px] left-[250px]">
+              {/* Desktop Navigation Links - responsive to avoid logo overlap */}
+              <nav className="hidden xl:flex items-center xl:space-x-2 2xl:space-x-4">
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="lg:text-xs xl:text-sm text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                    className="xl:text-xs 2xl:text-sm text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 xl:px-3 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
+                    data-testid={`nav-${item.toLowerCase()}`}
+                    style={{ 
+                      fontFamily: '"Playfair Display", "Merriweather", serif',
+                      fontWeight: '700'
+                    }}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </nav>
+              
+              {/* Compact navigation for medium screens */}
+              <nav className="hidden lg:flex xl:hidden items-center space-x-1">
+                {["OM", "TJÄNSTER", "KONTAKT"].map((item, index) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(["about", "services", "contact"][index])}
+                    className="text-xs text-[#3E2516] hover:text-[#2B1B0F] font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -110,8 +128,8 @@ export default function Header({ className = "" }: HeaderProps) {
                 ))}
               </nav>
 
-              {/* Desktop Right-aligned elements */}
-              <div className="hidden lg:flex items-center space-x-4 ml-10">
+              {/* Desktop Right-aligned elements - compact spacing */}
+              <div className="hidden lg:flex items-center lg:space-x-2 xl:space-x-4 ml-4 lg:ml-6 xl:ml-10">
                 {/* Search Icon */}
                 <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

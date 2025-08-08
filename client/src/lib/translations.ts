@@ -134,11 +134,11 @@ export const translations = {
       },
       step2: {
         title: "Design & Koncept",
-        description: "Vi genomför varje projekt så det speglar ditt unika designkoncept - prisvärt och snällare mot miljön."
+        description: "Vi skapar skräddarsydda designlösningar baserat på era önskemål och behov"
       },
       step3: {
         title: "Produktion",
-        description: "Vi genomför projektet med ett sätt att vara snällare mot miljön"
+        description: "Vi genomför varje projekt så det speglar ditt unika designkoncept - prisvärt och snällare mot miljön."
       },
       step4: {
         title: "Leverans",

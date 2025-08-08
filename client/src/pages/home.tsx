@@ -34,9 +34,9 @@ export default function HomePage() {
       <HeroSlider />
       
       {/* Combined Intro & Process Section */}
-      <section className="bg-[#F5F1EA] py-20" style={{ minHeight: '100vh' }}>
+      <section className="bg-[#F5F1EA] py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             
             {/* Left Side - Intro Text */}
             <div className="text-left">
@@ -51,151 +51,161 @@ export default function HomePage() {
 
             {/* Right Side - Process Diagram */}
             <div className="relative">
-              <h3 className="font-serif text-3xl font-bold text-dark-brown mb-12 text-center">
-                {t('process.title')}
-              </h3>
+              {/* Center Title */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                <h3 className="font-serif text-2xl font-bold text-[#3E2516] mb-2">
+                  Vår
+                </h3>
+                <h3 className="font-serif text-3xl font-bold text-[#3E2516]">
+                  process
+                </h3>
+              </div>
               
               {/* Circular Process Steps */}
-              <div className="relative max-w-lg mx-auto">
+              <div className="relative w-96 h-96 mx-auto">
                 {/* Step 1 - Top */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
                   <div 
-                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    className="w-24 h-24 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative group"
                     onClick={() => toggleStep(1)}
-                    style={{ width: '200px' }}
                   >
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white font-bold text-lg">1</span>
-                      </div>
-                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
-                        {t('process.step1.title')}
+                      <h4 className="font-serif font-bold text-[#3E2516] text-xs leading-tight">
+                        Förutsättnings-<br />löst möte
                       </h4>
-                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 1 ? 'max-h-96' : 'max-h-0'}`}>
-                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                    </div>
+                    
+                    {/* Expanded Description */}
+                    {expandedStep === 1 && (
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-20">
+                        <p className="text-dark-grey text-sm leading-relaxed">
                           {t('process.step1.description')}
                         </p>
                       </div>
-                      <ChevronDown 
-                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
-                          expandedStep === 1 ? 'rotate-180' : ''
-                        }`} 
-                      />
-                    </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Arrow 1 to 2 */}
-                <div className="absolute top-24 right-8 transform rotate-45">
-                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
-                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                {/* Arrow from Step 1 to Step 2 */}
+                <div className="absolute top-6 right-20">
+                  <svg width="60" height="60" viewBox="0 0 60 60" className="text-[#3E2516]">
+                    <path d="M10 30 Q30 10 50 30" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)" />
+                    <defs>
+                      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                      </marker>
+                    </defs>
+                  </svg>
                 </div>
 
                 {/* Step 2 - Right */}
-                <div className="absolute top-20 right-0 transform translate-x-4">
+                <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
                   <div 
-                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    className="w-24 h-24 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative group"
                     onClick={() => toggleStep(2)}
-                    style={{ width: '200px' }}
                   >
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white font-bold text-lg">2</span>
-                      </div>
-                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
-                        {t('process.step2.title')}
+                      <h4 className="font-serif font-bold text-[#3E2516] text-xs leading-tight">
+                        Design &<br />Koncept
                       </h4>
-                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 2 ? 'max-h-96' : 'max-h-0'}`}>
-                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                    </div>
+                    
+                    {/* Expanded Description */}
+                    {expandedStep === 2 && (
+                      <div className="absolute top-1/2 right-full transform -translate-y-1/2 mr-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-20">
+                        <p className="text-dark-grey text-sm leading-relaxed">
                           {t('process.step2.description')}
                         </p>
                       </div>
-                      <ChevronDown 
-                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
-                          expandedStep === 2 ? 'rotate-180' : ''
-                        }`} 
-                      />
-                    </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Arrow 2 to 3 */}
-                <div className="absolute top-48 right-8 transform rotate-135">
-                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
-                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                {/* Arrow from Step 2 to Step 3 */}
+                <div className="absolute bottom-20 right-6">
+                  <svg width="60" height="60" viewBox="0 0 60 60" className="text-[#3E2516]">
+                    <path d="M50 10 Q30 30 10 50" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead2)" />
+                    <defs>
+                      <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                      </marker>
+                    </defs>
+                  </svg>
                 </div>
 
                 {/* Step 3 - Bottom */}
-                <div className="absolute top-64 left-1/2 transform -translate-x-1/2 translate-y-4">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
                   <div 
-                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    className="w-24 h-24 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative group"
                     onClick={() => toggleStep(3)}
-                    style={{ width: '200px' }}
                   >
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white font-bold text-lg">3</span>
-                      </div>
-                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
-                        {t('process.step3.title')}
+                      <h4 className="font-serif font-bold text-[#3E2516] text-xs leading-tight">
+                        Produktion
                       </h4>
-                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 3 ? 'max-h-96' : 'max-h-0'}`}>
-                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                    </div>
+                    
+                    {/* Expanded Description */}
+                    {expandedStep === 3 && (
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-20">
+                        <p className="text-dark-grey text-sm leading-relaxed">
                           {t('process.step3.description')}
                         </p>
                       </div>
-                      <ChevronDown 
-                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
-                          expandedStep === 3 ? 'rotate-180' : ''
-                        }`} 
-                      />
-                    </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Arrow 3 to 4 */}
-                <div className="absolute top-48 left-8 transform rotate-225">
-                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
-                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                {/* Arrow from Step 3 to Step 4 */}
+                <div className="absolute bottom-6 left-20">
+                  <svg width="60" height="60" viewBox="0 0 60 60" className="text-[#3E2516]">
+                    <path d="M50 50 Q30 30 10 10" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead3)" />
+                    <defs>
+                      <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                      </marker>
+                    </defs>
+                  </svg>
                 </div>
 
                 {/* Step 4 - Left */}
-                <div className="absolute top-20 left-0 transform -translate-x-4">
+                <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
                   <div 
-                    className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-xl"
+                    className="w-24 h-24 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative group"
                     onClick={() => toggleStep(4)}
-                    style={{ width: '200px' }}
                   >
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white font-bold text-lg">4</span>
-                      </div>
-                      <h4 className="font-serif font-bold text-dark-brown mb-2 text-sm leading-tight">
-                        {t('process.step4.title')}
+                      <h4 className="font-serif font-bold text-[#3E2516] text-xs leading-tight">
+                        Leverans
                       </h4>
-                      <div className={`overflow-hidden transition-all duration-300 ${expandedStep === 4 ? 'max-h-96' : 'max-h-0'}`}>
-                        <p className="text-dark-grey text-xs leading-relaxed mt-3">
+                    </div>
+                    
+                    {/* Expanded Description */}
+                    {expandedStep === 4 && (
+                      <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-20">
+                        <p className="text-dark-grey text-sm leading-relaxed">
                           {t('process.step4.description')}
                         </p>
                       </div>
-                      <ChevronDown 
-                        className={`w-4 h-4 text-[#AD8C44] mx-auto mt-2 transition-transform duration-300 ${
-                          expandedStep === 4 ? 'rotate-180' : ''
-                        }`} 
-                      />
-                    </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Arrow 4 to 1 */}
-                <div className="absolute top-24 left-8 transform rotate-315">
-                  <div className="w-16 h-0.5 bg-[#AD8C44]"></div>
-                  <div className="absolute right-0 top-0 w-0 h-0 border-l-4 border-l-[#AD8C44] border-t-2 border-b-2 border-t-transparent border-b-transparent transform -translate-y-0.5"></div>
+                {/* Arrow from Step 4 to Step 1 */}
+                <div className="absolute top-20 left-6">
+                  <svg width="60" height="60" viewBox="0 0 60 60" className="text-[#3E2516]">
+                    <path d="M10 50 Q30 30 50 10" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead4)" />
+                    <defs>
+                      <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                      </marker>
+                    </defs>
+                  </svg>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="text-center mt-16">
+              <div className="text-center mt-8">
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="bg-[#AD8C44] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"

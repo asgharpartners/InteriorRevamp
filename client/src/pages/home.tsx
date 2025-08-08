@@ -78,7 +78,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-serif text-xl font-bold mb-4">Produktion & Förädling</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Vi producerar och förädlar lösningar i egen verkstad eller via utvalda partners.
+                  Vi producerar och förädlar lösningar i egen verkstad eller via utvalda partners, a way to be nicer towards the environment.
                 </p>
               </div>
 

@@ -53,7 +53,7 @@ export default function HomePage() {
 
           <div className="max-w-6xl mx-auto px-4 py-16">
             {/* Circular Process Steps */}
-            <div className="relative w-[400px] h-[400px] mx-auto mb-12 max-w-full">
+            <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] mx-auto mb-12 max-w-full">
               {/* Center Title */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
                 <h3 className="font-serif text-lg font-bold text-white mb-1">
@@ -65,7 +65,7 @@ export default function HomePage() {
               </div>
               
               {/* Step 1 - Top */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 sm:-translate-y-2">
                 <div className="text-center">
                   <div 
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
@@ -96,9 +96,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 1 to Step 2 */}
-              <div className="absolute top-16 right-16 z-10">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M10 30 Q30 10 50 30" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+              <div className="absolute top-12 right-12 sm:top-14 sm:right-14 lg:top-16 lg:right-16 z-10">
+                <svg width="40" height="40" viewBox="0 0 40 40" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
+                  <path d="M8 20 Q20 8 32 20" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
                   <defs>
                     <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
@@ -108,7 +108,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 2 - Right */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-2">
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1 sm:translate-x-2">
                 <div className="text-center">
                   <div 
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
@@ -139,9 +139,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 2 to Step 3 */}
-              <div className="absolute bottom-16 right-16 z-10">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M50 10 Q30 30 10 50" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead2)" />
+              <div className="absolute bottom-12 right-12 sm:bottom-14 sm:right-14 lg:bottom-16 lg:right-16 z-10">
+                <svg width="40" height="40" viewBox="0 0 40 40" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
+                  <path d="M32 8 Q20 20 8 32" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead2)" />
                   <defs>
                     <marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
@@ -151,7 +151,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 3 - Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 sm:translate-y-2">
                 <div className="text-center">
                   <div 
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
@@ -182,9 +182,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 3 to Step 4 */}
-              <div className="absolute bottom-16 left-16 z-10">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M50 50 Q30 30 10 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead3)" />
+              <div className="absolute bottom-12 left-12 sm:bottom-14 sm:left-14 lg:bottom-16 lg:left-16 z-10">
+                <svg width="40" height="40" viewBox="0 0 40 40" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
+                  <path d="M32 32 Q20 20 8 8" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead3)" />
                   <defs>
                     <marker id="arrowhead3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
@@ -194,7 +194,7 @@ export default function HomePage() {
               </div>
 
               {/* Step 4 - Left */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-2">
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1 sm:-translate-x-2">
                 <div className="text-center">
                   <div 
                     className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
@@ -225,9 +225,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 4 to Step 1 */}
-              <div className="absolute top-16 left-16 z-10">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M10 50 Q30 30 50 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead4)" />
+              <div className="absolute top-12 left-12 sm:top-14 sm:left-14 lg:top-16 lg:left-16 z-10">
+                <svg width="40" height="40" viewBox="0 0 40 40" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
+                  <path d="M8 32 Q20 20 32 8" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead4)" />
                   <defs>
                     <marker id="arrowhead4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />

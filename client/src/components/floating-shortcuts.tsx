@@ -54,17 +54,26 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [shortcuts]);
 
-  // Handle mouse events for hover behavior
+  // Handle mouse events for hover behavior with delay
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    
+    let hoverTimeout: NodeJS.Timeout | null = null;
 
     const handleMouseEnter = () => {
+      if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = null;
+      }
       setIsMenuVisible(true);
     };
 
     const handleMouseLeave = () => {
-      setIsMenuVisible(false);
+      // Add delay to prevent menu from disappearing when moving cursor to menu
+      hoverTimeout = setTimeout(() => {
+        setIsMenuVisible(false);
+      }, 200);
     };
 
     const handleEscape = (event: KeyboardEvent) => {
@@ -82,6 +91,9 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
       container.removeEventListener('mouseenter', handleMouseEnter);
       container.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('keydown', handleEscape);
+      if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+      }
     };
   }, [isMenuVisible]);
 
@@ -142,12 +154,20 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
         </div>
       </button>
 
+      {/* Hover Bridge - invisible area that connects button to menu */}
+      {isMenuVisible && (
+        <div 
+          className="absolute top-0 right-12 w-6 h-full pointer-events-none"
+          aria-hidden="true"
+        />
+      )}
+
       {/* Shortcuts Menu */}
       {isMenuVisible && (
         <div
           ref={menuRef}
           className={`
-            absolute top-0 right-16
+            absolute top-0 right-14
             w-48 md:w-52
             max-h-80 overflow-y-auto
             py-1 space-y-1

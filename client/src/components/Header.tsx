@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
+import { SearchModal } from "@/components/search-modal"
 const nilsHolgerLogo = "/nils-holger-logo-new.jpg"
 
 interface HeaderProps {
@@ -23,6 +24,7 @@ export default function Header({ className = "" }: HeaderProps) {
   const t = translations[language]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -172,7 +174,11 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Right-aligned elements - always positioned at far right with safe margins */}
             <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3 xl:space-x-4 pr-6 flex-shrink-0 2xl:mr-4 xl:mr-8 lg:mr-12 md:mr-16">
                 {/* Search Icon */}
-                <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 flex-shrink-0 min-w-fit">
+                <button 
+                  onClick={() => setIsSearchOpen(true)}
+                  className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 flex-shrink-0 min-w-fit"
+                  data-testid="search-button"
+                >
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
@@ -247,6 +253,21 @@ export default function Header({ className = "" }: HeaderProps) {
                 {language.toUpperCase()} | {language === "sv" ? "EN" : "SV"}
               </button>
 
+              {/* Mobile Search Button */}
+              <button 
+                onClick={() => {
+                  setIsSearchOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-white hover:text-[#F2DC74] transition-colors duration-200 flex items-center gap-2"
+                data-testid="mobile-search-button"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                {language === 'sv' ? 'Sök' : 'Search'}
+              </button>
+
               {/* Mobile Book Consultation Button */}
               <Button
                 onClick={() => scrollToSection("contact")}
@@ -260,6 +281,13 @@ export default function Header({ className = "" }: HeaderProps) {
           </div>
         </div>
       )}
+      
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+        onNavigate={scrollToSection}
+      />
     </>
   )
 }

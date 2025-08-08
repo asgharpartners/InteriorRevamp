@@ -24,26 +24,26 @@ export const translations = {
     },
     intro: {
       title: "Welcome to Nils Holger – Furniture & Projects",
-      paragraph1: "For over two decades, Nils Holger has been at the forefront of Scandinavian interior design, creating spaces that embody the perfect balance of functionality, beauty, and sustainability. Our approach combines traditional Swedish craftsmanship with contemporary design sensibilities.",
-      paragraph2: "From bespoke furniture pieces to complete interior transformations, we work closely with our clients to bring their vision to life. Every project is a testament to our commitment to quality, attention to detail, and deep respect for the natural materials we use."
+      subtitle: "Our business idea is to be a reliable and flexible partner when it comes to interior design and construction for all types of public projects.",
+      description: "We work in both interior and exterior environments."
     },
     process: {
       title: "Our Process",
-      concept: {
-        title: "Concept",
-        description: "We begin by understanding your vision, lifestyle, and functional needs to create a personalized design concept."
+      step1: {
+        title: "Prerequisite-Free Meeting",
+        description: "Needs and visions, Timeline, Scope, Budget, Setup"
       },
-      design: {
-        title: "Design", 
-        description: "Our team develops detailed plans, 3D visualizations, and material selections to bring your concept to life."
+      step2: {
+        title: "Design & Concept", 
+        description: "We develop a thoughtful interior concept based on your goals and the space's conditions."
       },
-      craft: {
-        title: "Craft",
-        description: "Using traditional techniques and premium materials, we handcraft each piece with meticulous attention to detail."
+      step3: {
+        title: "Production",
+        description: "We execute the project with a way to be nicer towards the environment"
       },
-      deliver: {
-        title: "Deliver",
-        description: "We handle every aspect of installation and styling to ensure your space exceeds expectations."
+      step4: {
+        title: "Delivery",
+        description: "We handle installation and final styling to ensure excellence"
       }
     },
     services: {
@@ -122,26 +122,26 @@ export const translations = {
     },
     intro: {
       title: "Välkomna till Nils Holger – Furniture & Projects",
-      paragraph1: "I över två decennier har Nils Holger varit i framkant av skandinavisk inredningsdesign och skapat utrymmen som förkroppsligar den perfekta balansen mellan funktionalitet, skönhet och hållbarhet. Vårt tillvägagångssätt kombinerar traditionellt svenskt hantverk med samtida designkänslor.",
-      paragraph2: "Från skräddarsydda möbelstycken till kompletta interiörtransformationer arbetar vi nära våra kunder för att förverkliga deras vision. Varje projekt är ett bevis på vårt engagemang för kvalitet, uppmärksamhet på detaljer och djup respekt för de naturliga material vi använder."
+      subtitle: "Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt.",
+      description: "Vi arbetar i såväl interiöra som exteriöra miljöer."
     },
     process: {
       title: "Vår Process",
-      concept: {
-        title: "Koncept",
-        description: "Vi börjar med att förstå din vision, livsstil och funktionella behov för att skapa ett personligt designkoncept."
+      step1: {
+        title: "Förutsättningslöst möte",
+        description: "Behov och visioner, Tidplan, Omfattning, Budget, Upplägg"
       },
-      design: {
-        title: "Design",
-        description: "Vårt team utvecklar detaljerade planer, 3D-visualiseringar och materialval för att förverkliga ditt koncept."
+      step2: {
+        title: "Design & Koncept",
+        description: "Vi utvecklar ett genomtänkt inredningskoncept baserat på dina mål och platsens förutsättningar."
       },
-      craft: {
-        title: "Hantverk",
-        description: "Med traditionella tekniker och premiummaterial handverkar vi varje stycke med minutiös uppmärksamhet på detaljer."
+      step3: {
+        title: "Produktion",
+        description: "Vi genomför projektet med ett sätt att vara snällare mot miljön"
       },
-      deliver: {
-        title: "Leverera",
-        description: "Vi hanterar alla aspekter av installation och styling för att säkerställa att ditt utrymme överträffar förväntningarna."
+      step4: {
+        title: "Leverans",
+        description: "Vi hanterar installation och slutlig styling för att säkerställa excellens"
       }
     },
     services: {

@@ -19,7 +19,6 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
   const shortcuts = [
     { id: 'hero', label: language === 'sv' ? 'Intro' : 'Intro' },
     { id: 'services', label: language === 'sv' ? 'Tjänster' : 'Services' },
-    { id: 'process', label: language === 'sv' ? 'Vår Process' : 'Our Process' },
     { id: 'products', label: language === 'sv' ? 'Produkter' : 'Products' },
     { id: 'references', label: language === 'sv' ? 'Referensprojekt' : 'Reference Projects' },
     { id: 'about', label: language === 'sv' ? 'Om Oss' : 'About Us' },

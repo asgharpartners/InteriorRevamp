@@ -89,8 +89,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 1 && (
-                    <div className="fixed top-20 left-4 right-4 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 max-w-md mx-auto">
-                      <p className="text-[#F5F1EA] text-sm leading-relaxed">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
+                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
                         {t('process.step1.description')}
                       </p>
                     </div>
@@ -132,8 +132,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 2 && (
-                    <div className="fixed top-20 left-4 right-4 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 max-w-md mx-auto">
-                      <p className="text-[#F5F1EA] text-sm leading-relaxed">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
+                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
                         {t('process.step2.description')}
                       </p>
                     </div>
@@ -175,8 +175,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 3 && (
-                    <div className="fixed top-20 left-4 right-4 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 max-w-md mx-auto">
-                      <p className="text-[#F5F1EA] text-sm leading-relaxed">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
+                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
                         {t('process.step3.description')}
                       </p>
                     </div>
@@ -218,8 +218,8 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 4 && (
-                    <div className="fixed top-20 left-4 right-4 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-6 z-50 max-w-md mx-auto">
-                      <p className="text-[#F5F1EA] text-sm leading-relaxed">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
+                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
                         {t('process.step4.description')}
                       </p>
                     </div>

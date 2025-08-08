@@ -52,13 +52,13 @@ export default function HomePage() {
         <section className="bg-[#3E2516] flex items-center justify-center" style={{ minHeight: '50vh' }}>
           <div className="max-w-6xl mx-auto px-4 py-16">
             {/* Circular Process Steps */}
-            <div className="relative w-[400px] h-[400px] mx-auto mb-12 max-w-full">
+            <div className="relative w-[320px] h-[320px] mx-auto mb-12 max-w-full">
               {/* Center Title */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
-                <h3 className="font-serif text-xl font-bold text-white mb-1">
+                <h3 className="font-serif text-lg font-bold text-white mb-1">
                   Vår
                 </h3>
-                <h3 className="font-serif text-3xl font-bold text-white">
+                <h3 className="font-serif text-2xl font-bold text-white">
                   process
                 </h3>
               </div>
@@ -67,10 +67,10 @@ export default function HomePage() {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-28 h-28 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(1)}
                   >
-                    <span className="text-[#3E2516] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
                       Förutsättnings-<br />löst möte
                     </span>
                   </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 1 && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-72 bg-white rounded-lg shadow-xl border border-gray-200 p-5 z-30">
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
                       <p className="text-dark-grey text-sm leading-relaxed text-left">
                         {t('process.step1.description')}
                       </p>
@@ -95,9 +95,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 1 to Step 2 */}
-              <div className="absolute top-16 right-16">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M10 30 Q30 10 50 30" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+              <div className="absolute top-12 right-12">
+                <svg width="50" height="50" viewBox="0 0 50 50" className="text-white">
+                  <path d="M10 25 Q25 10 40 25" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
                   <defs>
                     <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
@@ -107,13 +107,13 @@ export default function HomePage() {
               </div>
 
               {/* Step 2 - Right */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4">
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-28 h-28 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(2)}
                   >
-                    <span className="text-[#3E2516] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
                       Design &<br />Koncept
                     </span>
                   </div>
@@ -128,7 +128,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 2 && (
-                    <div className="absolute top-1/2 right-full transform -translate-y-1/2 mr-4 w-72 bg-white rounded-lg shadow-xl border border-gray-200 p-5 z-30">
+                    <div className="absolute top-1/2 right-full transform -translate-y-1/2 mr-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
                       <p className="text-dark-grey text-sm leading-relaxed text-left">
                         {t('process.step2.description')}
                       </p>
@@ -138,9 +138,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 2 to Step 3 */}
-              <div className="absolute bottom-16 right-16">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M50 10 Q30 30 10 50" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead2)" />
+              <div className="absolute bottom-12 right-12">
+                <svg width="50" height="50" viewBox="0 0 50 50" className="text-white">
+                  <path d="M40 10 Q25 25 10 40" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead2)" />
                   <defs>
                     <marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
@@ -150,13 +150,13 @@ export default function HomePage() {
               </div>
 
               {/* Step 3 - Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-28 h-28 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(3)}
                   >
-                    <span className="text-[#3E2516] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
                       Produktion
                     </span>
                   </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 3 && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-72 bg-white rounded-lg shadow-xl border border-gray-200 p-5 z-30">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
                       <p className="text-dark-grey text-sm leading-relaxed text-left">
                         {t('process.step3.description')}
                       </p>
@@ -181,9 +181,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 3 to Step 4 */}
-              <div className="absolute bottom-16 left-16">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M50 50 Q30 30 10 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead3)" />
+              <div className="absolute bottom-12 left-12">
+                <svg width="50" height="50" viewBox="0 0 50 50" className="text-white">
+                  <path d="M40 40 Q25 25 10 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead3)" />
                   <defs>
                     <marker id="arrowhead3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
@@ -193,13 +193,13 @@ export default function HomePage() {
               </div>
 
               {/* Step 4 - Left */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4">
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-28 h-28 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
                     onClick={() => toggleStep(4)}
                   >
-                    <span className="text-[#3E2516] font-bold text-xs leading-tight text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-xs leading-tight text-center px-1">
                       Leverans
                     </span>
                   </div>
@@ -214,7 +214,7 @@ export default function HomePage() {
                   
                   {/* Expanded Description */}
                   {expandedStep === 4 && (
-                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-72 bg-white rounded-lg shadow-xl border border-gray-200 p-5 z-30">
+                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-30">
                       <p className="text-dark-grey text-sm leading-relaxed text-left">
                         {t('process.step4.description')}
                       </p>
@@ -224,9 +224,9 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 4 to Step 1 */}
-              <div className="absolute top-16 left-16">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="text-white">
-                  <path d="M10 50 Q30 30 50 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead4)" />
+              <div className="absolute top-12 left-12">
+                <svg width="50" height="50" viewBox="0 0 50 50" className="text-white">
+                  <path d="M10 40 Q25 25 40 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead4)" />
                   <defs>
                     <marker id="arrowhead4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                       <polygon points="0 0, 8 3, 0 6" fill="currentColor" />

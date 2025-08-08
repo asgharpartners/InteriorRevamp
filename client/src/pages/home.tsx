@@ -380,7 +380,6 @@ export default function HomePage() {
 
       <ContactSection />
       <Footer />
-      <StickyCTA />
       <FloatingShortcuts />
     </div>
   );

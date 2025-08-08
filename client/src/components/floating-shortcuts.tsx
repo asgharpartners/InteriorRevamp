@@ -149,55 +149,47 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
           ref={menuRef}
           className={`
             absolute bottom-16 right-0
-            w-72 md:w-80
+            w-64 md:w-72
             max-h-96 overflow-y-auto
-            bg-[#F5F1EA] 
-            border border-[#3E2516]/20
-            rounded-lg shadow-xl
-            py-2
+            py-2 space-y-1
             animate-in slide-in-from-bottom-2 fade-in duration-200
           `}
           role="menu"
           aria-orientation="vertical"
         >
-          <div className="px-4 py-2 border-b border-[#3E2516]/10">
-            <h3 className="text-[#3E2516] font-semibold text-sm uppercase tracking-wide">
-              {language === 'sv' ? 'Genvägar' : 'Shortcuts'}
-            </h3>
-          </div>
-          
-          <div className="py-1">
-            {shortcuts.map((shortcut, index) => (
-              <button
-                key={shortcut.id}
-                onClick={() => scrollToSection(shortcut.id)}
-                className={`
-                  w-full text-left px-4 py-3
-                  text-[#3E2516] hover:text-[#2B1B0F]
-                  hover:bg-[#3E2516]/5
-                  transition-colors duration-150
-                  focus:outline-none focus:bg-[#3E2516]/10
-                  ${activeSection === shortcut.id ? 'bg-[#F2DC74]/30 border-r-2 border-[#AD8C44]' : ''}
-                `}
-                role="menuitem"
-                tabIndex={isMenuVisible ? 0 : -1}
-                data-testid={`shortcut-${shortcut.id}`}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    scrollToSection(shortcut.id);
-                  }
-                }}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium">{shortcut.label}</span>
-                  {activeSection === shortcut.id && (
-                    <div className="w-2 h-2 bg-[#AD8C44] rounded-full"></div>
-                  )}
-                </div>
-              </button>
-            ))}
-          </div>
+          {shortcuts.map((shortcut, index) => (
+            <button
+              key={shortcut.id}
+              onClick={() => scrollToSection(shortcut.id)}
+              className={`
+                w-full text-left px-4 py-3
+                text-[#F5F1EA] hover:text-white
+                bg-[#3E2516]/80 hover:bg-[#3E2516]/90
+                backdrop-blur-sm
+                rounded-md
+                shadow-md hover:shadow-lg
+                transition-all duration-200
+                focus:outline-none focus:ring-2 focus:ring-[#AD8C44] focus:ring-offset-2
+                ${activeSection === shortcut.id ? 'ring-2 ring-[#F2DC74] bg-[#3E2516]/95' : ''}
+              `}
+              role="menuitem"
+              tabIndex={isMenuVisible ? 0 : -1}
+              data-testid={`shortcut-${shortcut.id}`}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  scrollToSection(shortcut.id);
+                }
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium">{shortcut.label}</span>
+                {activeSection === shortcut.id && (
+                  <div className="w-2 h-2 bg-[#F2DC74] rounded-full"></div>
+                )}
+              </div>
+            </button>
+          ))}
         </div>
       )}
 

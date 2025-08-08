@@ -101,11 +101,11 @@ export default function Header({ className = "" }: HeaderProps) {
           {/* Desktop Navigation - positioned for proper spacing */}
           <div className="absolute top-0 h-full w-full flex items-center z-10">
             
-            {/* Center navigation section - shifts right when scrolled */}
-            <div className={`flex-1 flex justify-center px-4 transition-all duration-300 ${
+            {/* Center navigation section - maintains safe distance from logo */}
+            <div className={`flex-1 flex px-4 transition-all duration-300 ${
               isScrolled 
                 ? 'justify-end pr-8 2xl:pr-12 xl:pr-16 lg:pr-20 md:pr-24' 
-                : '2xl:ml-[520px] xl:ml-[470px] lg:ml-[420px] md:ml-[320px]'
+                : 'justify-center 2xl:ml-[540px] xl:ml-[490px] lg:ml-[440px] md:ml-[360px]'
             }`}>
               
               {/* Full navigation for desktop */}

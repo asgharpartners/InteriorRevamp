@@ -90,17 +90,8 @@ export default function Header({ className = "" }: HeaderProps) {
             </button>
           </div>
 
-          {/* Dark brown navigation background */}
-          <div 
-            className="absolute top-0 h-full 2xl:left-[320px] xl:left-[290px] lg:left-[260px] md:left-[230px] sm:left-[200px] left-[170px] right-0"
-            style={{
-              background: '#3E2516',
-              clipPath: 'ellipse(140px 100% at 0% 50%)',
-              marginLeft: '140px'
-            }}
-          >
-            {/* Navigation content - right aligned */}
-            <div className="h-full flex items-center justify-end pr-6 2xl:pl-44 xl:pl-40 lg:pl-36 md:pl-32 sm:pl-28 pl-24 relative z-10">
+          {/* Navigation content - positioned on the right */}
+          <div className="absolute top-0 right-0 h-full flex items-center justify-end pr-6 z-10">
               {/* Desktop Navigation Links */}
               <nav className="hidden lg:flex items-center lg:space-x-2 xl:space-x-4 2xl:space-x-6">
                 {t.nav.map((item, index) => (
@@ -159,7 +150,6 @@ export default function Header({ className = "" }: HeaderProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
-            </div>
           </div>
         </div>
       </header>

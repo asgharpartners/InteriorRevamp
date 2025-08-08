@@ -1,4 +1,4 @@
-import CleanHeader from '@/components/CleanHeader';
+import Header from '@/components/Header';
 import { HeroSlider } from '@/components/hero-slider';
 import { ServicesSection } from '@/components/services-section';
 import { BeforeAfterSlider } from '@/components/before-after-slider';
@@ -23,10 +23,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
-      <CleanHeader />
-      {/* Add top spacing for fixed header */}
-      <div className="pt-16">
-        <HeroSlider />
+      <Header />
+      <HeroSlider />
       
       {/* Shared Landscape Layout - Intro & Process */}
       <div className="w-full">
@@ -379,10 +377,9 @@ export default function HomePage() {
         </div>
       </section>
 
-        <ContactSection />
-        <Footer />
-        <StickyCTA />
-      </div>
+      <ContactSection />
+      <Footer />
+      <StickyCTA />
     </div>
   );
 }

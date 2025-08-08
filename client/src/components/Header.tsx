@@ -93,8 +93,8 @@ export default function Header({ className = "" }: HeaderProps) {
           {/* Desktop Navigation - positioned for proper spacing */}
           <div className="absolute top-0 h-full w-full flex items-center z-10">
             
-            {/* Center navigation section */}
-            <div className="flex-1 flex justify-center px-4 2xl:ml-[460px] xl:ml-[410px] lg:ml-[370px] md:ml-[280px]">
+            {/* Center navigation section - shifted right for better spacing */}
+            <div className="flex-1 flex justify-center px-4 2xl:ml-[520px] xl:ml-[470px] lg:ml-[420px] md:ml-[320px]">
               
               {/* Full navigation for desktop */}
               <nav className="hidden 2xl:flex items-center space-x-6">
@@ -169,11 +169,11 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
             </div>
 
-            {/* Right-aligned elements - always positioned at far right */}
-            <div className="hidden md:flex items-center space-x-4 pr-6 flex-shrink-0">
+            {/* Right-aligned elements - always positioned at far right with safe margins */}
+            <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3 xl:space-x-4 pr-6 flex-shrink-0 2xl:mr-4 xl:mr-8 lg:mr-12 md:mr-16">
                 {/* Search Icon */}
-                <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button className="text-[#3E2516] hover:text-[#2B1B0F] transition-colors duration-200 p-2 rounded-md bg-[#F5F1EA]/80 hover:bg-[#F5F1EA]/90 flex-shrink-0 min-w-fit">
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </button>
@@ -181,7 +181,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Language Toggle */}
                 <button
                   onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] md:text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wide uppercase px-3 py-2 rounded-md whitespace-nowrap flex-shrink-0"
+                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wide uppercase md:px-2 lg:px-3 py-2 rounded-md whitespace-nowrap flex-shrink-0 min-w-fit"
                   data-testid="language-toggle"
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >
@@ -191,7 +191,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Book Consultation Button */}
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-[#F2DC74] font-bold md:text-xs lg:text-sm tracking-wide px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase flex-shrink-0"
+                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-[#F2DC74] font-bold text-xs lg:text-sm tracking-wide md:px-2 lg:px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase flex-shrink-0 min-w-fit"
                   data-testid="book-consultation"
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >

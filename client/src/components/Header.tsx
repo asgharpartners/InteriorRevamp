@@ -67,9 +67,9 @@ export default function Header({ className = "" }: HeaderProps) {
       {/* Original header design with large logo */}
       <header className="fixed top-0 left-0 right-0 z-50 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
         <div className="h-full w-full relative">
-          {/* Yellow logo background with curve */}
+          {/* Yellow logo background with curve - increased width for better spacing */}
           <div 
-            className="absolute top-0 left-0 2xl:w-[460px] xl:w-[410px] lg:w-[370px] md:w-[330px] sm:w-[290px] w-[250px] h-full flex items-center justify-start pl-4"
+            className="absolute top-0 left-0 2xl:w-[500px] xl:w-[450px] lg:w-[400px] md:w-[350px] sm:w-[300px] w-[260px] h-full flex items-center justify-start pl-4"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
               borderRadius: '0 0 140px 0',
@@ -105,7 +105,7 @@ export default function Header({ className = "" }: HeaderProps) {
             <div className={`flex-1 flex px-4 transition-all duration-300 ${
               isScrolled 
                 ? 'justify-end pr-8 2xl:pr-12 xl:pr-16 lg:pr-20 md:pr-24' 
-                : 'justify-center 2xl:ml-[540px] xl:ml-[490px] lg:ml-[440px] md:ml-[360px]'
+                : 'justify-center 2xl:ml-[580px] xl:ml-[520px] lg:ml-[480px] md:ml-[400px]'
             }`}>
               
               {/* Full navigation for desktop */}

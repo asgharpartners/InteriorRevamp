@@ -51,30 +51,28 @@ export default function HomePage() {
         {/* Process Section - Lower Half */}
         <section className="bg-[#3E2516] flex items-center justify-center" style={{ minHeight: '50vh' }}>
           <div className="max-w-6xl mx-auto px-4 py-16">
-            {/* Center Title */}
-            <div className="text-center mb-16">
-              <h3 className="font-serif text-2xl font-bold text-white mb-2">
-                Vår
-              </h3>
-              <h3 className="font-serif text-4xl font-bold text-white">
-                process
-              </h3>
-            </div>
-            
             {/* Circular Process Steps */}
-            <div className="relative w-96 h-96 mx-auto mb-12">
+            <div className="relative w-[500px] h-[500px] mx-auto mb-12">
+              {/* Center Title */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                <h3 className="font-serif text-2xl font-bold text-white mb-2">
+                  Vår
+                </h3>
+                <h3 className="font-serif text-4xl font-bold text-white">
+                  process
+                </h3>
+              </div>
               {/* Step 1 - Top */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-32 h-32 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
+                    className="w-36 h-36 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
                     onClick={() => toggleStep(1)}
                   >
-                    <span className="text-white font-bold text-2xl">1</span>
+                    <span className="text-[#3E2516] font-bold text-sm leading-tight text-center px-2">
+                      Förutsättnings-<br />löst möte
+                    </span>
                   </div>
-                  <h4 className="font-serif font-bold text-white text-lg mb-2">
-                    Förutsättningslöst möte
-                  </h4>
                   <div className="flex items-center justify-center">
                     <ChevronDown 
                       className={`w-6 h-6 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
@@ -96,7 +94,7 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 1 to Step 2 */}
-              <div className="absolute top-16 right-20">
+              <div className="absolute top-20 right-24">
                 <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
                   <path d="M10 40 Q40 10 70 40" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)" />
                   <defs>
@@ -111,14 +109,13 @@ export default function HomePage() {
               <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-32 h-32 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
+                    className="w-36 h-36 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
                     onClick={() => toggleStep(2)}
                   >
-                    <span className="text-white font-bold text-2xl">2</span>
+                    <span className="text-[#3E2516] font-bold text-sm leading-tight text-center px-2">
+                      Design &<br />Koncept
+                    </span>
                   </div>
-                  <h4 className="font-serif font-bold text-white text-lg mb-2">
-                    Design & Koncept
-                  </h4>
                   <div className="flex items-center justify-center">
                     <ChevronDown 
                       className={`w-6 h-6 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
@@ -140,7 +137,7 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 2 to Step 3 */}
-              <div className="absolute bottom-20 right-16">
+              <div className="absolute bottom-24 right-20">
                 <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
                   <path d="M70 10 Q40 40 10 70" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead2)" />
                   <defs>
@@ -155,14 +152,13 @@ export default function HomePage() {
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-32 h-32 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
+                    className="w-36 h-36 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
                     onClick={() => toggleStep(3)}
                   >
-                    <span className="text-white font-bold text-2xl">3</span>
+                    <span className="text-[#3E2516] font-bold text-sm leading-tight text-center px-2">
+                      Produktion
+                    </span>
                   </div>
-                  <h4 className="font-serif font-bold text-white text-lg mb-2">
-                    Produktion
-                  </h4>
                   <div className="flex items-center justify-center">
                     <ChevronDown 
                       className={`w-6 h-6 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
@@ -184,7 +180,7 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 3 to Step 4 */}
-              <div className="absolute bottom-16 left-20">
+              <div className="absolute bottom-20 left-24">
                 <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
                   <path d="M70 70 Q40 40 10 10" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead3)" />
                   <defs>
@@ -199,14 +195,13 @@ export default function HomePage() {
               <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
                 <div className="text-center">
                   <div 
-                    className="w-32 h-32 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
+                    className="w-36 h-36 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-4"
                     onClick={() => toggleStep(4)}
                   >
-                    <span className="text-white font-bold text-2xl">4</span>
+                    <span className="text-[#3E2516] font-bold text-sm leading-tight text-center px-2">
+                      Leverans
+                    </span>
                   </div>
-                  <h4 className="font-serif font-bold text-white text-lg mb-2">
-                    Leverans
-                  </h4>
                   <div className="flex items-center justify-center">
                     <ChevronDown 
                       className={`w-6 h-6 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
@@ -228,7 +223,7 @@ export default function HomePage() {
               </div>
 
               {/* Arrow from Step 4 to Step 1 */}
-              <div className="absolute top-20 left-16">
+              <div className="absolute top-24 left-20">
                 <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
                   <path d="M10 70 Q40 40 70 10" stroke="currentColor" strokeWidth="3" fill="none" markerEnd="url(#arrowhead4)" />
                   <defs>

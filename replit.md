@@ -25,11 +25,12 @@ This is a modern B2B web platform for "Nils Holger Design," a Scandinavian inter
 12. Footer - Complete site navigation and social links
 
 **Navigation Design:**
-- Dark brown (#2B2B2B) full-width header
-- Logo with warm golden brown (#AD8C44) rounded background
-- Right-aligned navigation with sticky "Boka gratis konsultation" button
-- Language toggle (SV/EN) in light yellow box
-- Mobile hamburger menu with full-width dark dropdown
+- Fixed clean dark brown (#3E2516) full-width header
+- Logo overlapping header with golden brown (#AD8C44) rounded background
+- Right-aligned navigation with search, language toggle, and consultation button
+- Language toggle (SV/EN) on yellow background (#F2DC74)
+- Mobile hamburger menu with dropdown navigation
+- Functional search modal with Enter-to-navigate capability
 
 **Key Features:**
 - Bilingual support (Swedish/English)

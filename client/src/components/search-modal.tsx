@@ -86,6 +86,13 @@ export function SearchModal({ isOpen, onClose, onNavigate }: SearchModalProps) {
     setSearchResults(results);
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && searchResults.length > 0) {
+      // Navigate to the first search result when Enter is pressed
+      handleResultClick(searchResults[0].id);
+    }
+  };
+
   const handleResultClick = (sectionId: string) => {
     onNavigate(sectionId);
     onClose();
@@ -118,9 +125,10 @@ export function SearchModal({ isOpen, onClose, onNavigate }: SearchModalProps) {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <Input
               type="text"
-              placeholder={language === 'sv' ? 'Skriv för att söka...' : 'Type to search...'}
+              placeholder={language === 'sv' ? 'Skriv för att söka... (Tryck Enter för att navigera)' : 'Type to search... (Press Enter to navigate)'}
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
+              onKeyPress={handleKeyPress}
               className="pl-10 pr-10"
               autoFocus
               data-testid="search-input"

@@ -67,12 +67,12 @@ export default function Header({ className = "" }: HeaderProps) {
       {/* Original header design with large logo */}
       <header className="fixed top-0 left-0 right-0 z-50 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
         <div className="h-full w-full relative">
-          {/* Yellow logo background with curve - increased width for better spacing */}
+          {/* Yellow logo background with curve - smaller and more curvy */}
           <div 
-            className="absolute top-0 left-0 2xl:w-[500px] xl:w-[450px] lg:w-[400px] md:w-[350px] sm:w-[300px] w-[260px] h-full flex items-center justify-start pl-4"
+            className="absolute top-0 left-0 2xl:w-[420px] xl:w-[380px] lg:w-[340px] md:w-[300px] sm:w-[260px] w-[220px] h-full flex items-center justify-start pl-4"
             style={{
               background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
-              borderRadius: '0 0 140px 0',
+              borderRadius: '0 0 180px 0',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
             }}
           >
@@ -101,11 +101,11 @@ export default function Header({ className = "" }: HeaderProps) {
           {/* Desktop Navigation - positioned for proper spacing */}
           <div className="absolute top-0 h-full w-full flex items-center z-10">
             
-            {/* Center navigation section - maintains safe distance from logo */}
+            {/* Center navigation section - adjusted for smaller logo background */}
             <div className={`flex-1 flex px-4 transition-all duration-300 ${
               isScrolled 
                 ? 'justify-end pr-8 2xl:pr-12 xl:pr-16 lg:pr-20 md:pr-24' 
-                : 'justify-center 2xl:ml-[580px] xl:ml-[520px] lg:ml-[480px] md:ml-[400px]'
+                : 'justify-center 2xl:ml-[500px] xl:ml-[440px] lg:ml-[400px] md:ml-[340px]'
             }`}>
               
               {/* Full navigation for desktop */}

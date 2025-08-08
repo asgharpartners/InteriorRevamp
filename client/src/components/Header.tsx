@@ -24,6 +24,7 @@ export default function Header({ className = "" }: HeaderProps) {
   const t = translations[language]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
+  const [isScrolled, setIsScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -38,10 +39,15 @@ export default function Header({ className = "" }: HeaderProps) {
     setIsMobileMenuOpen(false) // Close mobile menu after navigation
   }
 
-  // Hide/show header based on scroll position
+  // Hide/show header based on scroll position and track scroll state
   useEffect(() => {
     const handleScroll = () => {
+      const scrollY = window.scrollY
       const heroSection = document.querySelector('[data-section="hero"]')
+      
+      // Set scrolled state for navigation positioning
+      setIsScrolled(scrollY > 200)
+      
       if (heroSection) {
         const heroBottom = heroSection.getBoundingClientRect().bottom
         setIsVisible(heroBottom > 0)
@@ -95,11 +101,19 @@ export default function Header({ className = "" }: HeaderProps) {
           {/* Desktop Navigation - positioned for proper spacing */}
           <div className="absolute top-0 h-full w-full flex items-center z-10">
             
-            {/* Center navigation section - shifted right for better spacing */}
-            <div className="flex-1 flex justify-center px-4 2xl:ml-[520px] xl:ml-[470px] lg:ml-[420px] md:ml-[320px]">
+            {/* Center navigation section - shifts right when scrolled */}
+            <div className={`flex-1 flex justify-center px-4 transition-all duration-300 ${
+              isScrolled 
+                ? 'justify-end pr-8 2xl:pr-12 xl:pr-16 lg:pr-20 md:pr-24' 
+                : '2xl:ml-[520px] xl:ml-[470px] lg:ml-[420px] md:ml-[320px]'
+            }`}>
               
               {/* Full navigation for desktop */}
-              <nav className="hidden 2xl:flex items-center space-x-6">
+              <nav className={`hidden 2xl:flex items-center space-x-6 ${
+                isScrolled 
+                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  : ''
+              }`}>
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -117,7 +131,11 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
               
               {/* Compact navigation for large screens */}
-              <nav className="hidden xl:flex 2xl:hidden items-center space-x-3">
+              <nav className={`hidden xl:flex 2xl:hidden items-center space-x-3 ${
+                isScrolled 
+                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  : ''
+              }`}>
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -135,7 +153,11 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
               
               {/* Standard navigation for large screens */}
-              <nav className="hidden lg:flex xl:hidden items-center space-x-2">
+              <nav className={`hidden lg:flex xl:hidden items-center space-x-2 ${
+                isScrolled 
+                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  : ''
+              }`}>
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
@@ -153,7 +175,11 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
               
               {/* iPad navigation - all links visible */}
-              <nav className="hidden md:flex lg:hidden items-center space-x-1">
+              <nav className={`hidden md:flex lg:hidden items-center space-x-1 ${
+                isScrolled 
+                  ? 'bg-[#3E2516]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  : ''
+              }`}>
                 {t.nav.map((item, index) => (
                   <button
                     key={item}

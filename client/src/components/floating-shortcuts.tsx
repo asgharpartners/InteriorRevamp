@@ -8,11 +8,12 @@ interface FloatingShortcutsProps {
 
 export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const { language } = useLanguage();
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Define shortcuts based on language
   const shortcuts = [
@@ -54,33 +55,36 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [shortcuts]);
 
-  // Handle outside click to close menu
+  // Handle mouse events for hover behavior
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (isMenuOpen && 
-          menuRef.current && 
-          !menuRef.current.contains(event.target as Node) &&
-          buttonRef.current &&
-          !buttonRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleMouseEnter = () => {
+      setIsMenuVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsMenuVisible(false);
     };
 
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && isMenuOpen) {
-        setIsMenuOpen(false);
+      if (event.key === 'Escape' && isMenuVisible) {
+        setIsMenuVisible(false);
         buttonRef.current?.focus();
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('keydown', handleEscape);
     
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [isMenuOpen]);
+  }, [isMenuVisible]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -89,30 +93,30 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
         behavior: 'smooth', 
         block: 'start' 
       });
-      setIsMenuOpen(false);
+      setIsMenuVisible(false);
     }
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleButtonFocus = () => {
+    setIsMenuVisible(true);
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      toggleMenu();
+  const handleButtonBlur = (event: React.FocusEvent) => {
+    // Only hide menu if focus is moving outside the container
+    if (!containerRef.current?.contains(event.relatedTarget as Node)) {
+      setIsMenuVisible(false);
     }
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className={`fixed bottom-6 right-6 z-40 ${className}`}>
+    <div ref={containerRef} className={`fixed bottom-6 right-6 z-40 ${className}`}>
       {/* Floating Button */}
       <button
         ref={buttonRef}
-        onClick={toggleMenu}
-        onKeyDown={handleKeyDown}
+        onFocus={handleButtonFocus}
+        onBlur={handleButtonBlur}
         className={`
           group relative
           w-11 h-11 md:w-12 md:h-12
@@ -122,18 +126,14 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
           shadow-lg hover:shadow-xl
           transition-all duration-300 ease-out
           focus:outline-none focus:ring-2 focus:ring-[#AD8C44] focus:ring-offset-2
-          ${isMenuOpen ? 'rotate-180' : 'hover:scale-105'}
+          hover:scale-105
         `}
         aria-label={language === 'sv' ? 'Genvägar' : 'Shortcuts'}
-        aria-expanded={isMenuOpen}
+        aria-expanded={isMenuVisible}
         data-testid="floating-shortcuts-button"
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          {isMenuOpen ? (
-            <ChevronUp className="w-5 h-5 md:w-6 md:h-6 text-[#3E2516] transition-transform duration-300" />
-          ) : (
-            <Menu className="w-5 h-5 md:w-6 md:h-6 text-[#3E2516] transition-transform duration-300" />
-          )}
+          <Menu className="w-5 h-5 md:w-6 md:h-6 text-[#3E2516] transition-transform duration-300" />
         </div>
         
         {/* Tooltip */}
@@ -144,7 +144,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
       </button>
 
       {/* Shortcuts Menu */}
-      {isMenuOpen && (
+      {isMenuVisible && (
         <div
           ref={menuRef}
           className={`
@@ -180,7 +180,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
                   ${activeSection === shortcut.id ? 'bg-[#F2DC74]/30 border-r-2 border-[#AD8C44]' : ''}
                 `}
                 role="menuitem"
-                tabIndex={isMenuOpen ? 0 : -1}
+                tabIndex={isMenuVisible ? 0 : -1}
                 data-testid={`shortcut-${shortcut.id}`}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
@@ -202,10 +202,10 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
       )}
 
       {/* Mobile backdrop */}
-      {isMenuOpen && (
+      {isMenuVisible && (
         <div 
           className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden -z-10"
-          onClick={() => setIsMenuOpen(false)}
+          onClick={() => setIsMenuVisible(false)}
         />
       )}
     </div>

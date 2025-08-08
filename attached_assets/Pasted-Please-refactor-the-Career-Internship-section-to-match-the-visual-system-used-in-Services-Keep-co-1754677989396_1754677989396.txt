@@ -1,0 +1,41 @@
+Please refactor the Career & Internship section to match the visual system used in Services. Keep content the same—this task is layout/visual only.
+
+1) Typography & spacing
+	•	Use the same H1 style as “Tjänster” for the section title Career & Internship.
+	•	Use the same H3 style as service-card titles for: Student Collaboration and Job Openings & Opportunities.
+	•	Body paragraphs use the same paragraph class as the Intro section (line-height and font-size identical).
+	•	Add consistent vertical rhythm: 48px top/bottom for section, 24px between blocks.
+
+2) Container & card system
+	•	Wrap the whole section in the same max-width container as Services.
+	•	Convert the light box under “Student Collaboration” into a card using the Services card styles: off‑white background, subtle shadow/border, 16px radius, equal padding (24–32px), no floating elements.
+
+3) Two-column grid (desktop)
+	•	Inside the card, create a 2‑column grid (gap 24px) for:
+	•	Left: What We Offer list
+	•	Right: Areas of Focus list
+	•	On screens < 768px, stack to 1 column with 16px gaps.
+
+4) Lists with icons
+	•	Apply the same bullet/icon style used in Services cards (small check or dot, aligned with text baseline, 8px gap).
+
+5) CTAs
+	•	“Launching Soon” → use the pill badge style used for “Läs mer” states (brand yellow background, dark-brown text).
+	•	“Get In Touch” → primary button style identical to the Book Free Consultation button (same size, radius, hover, and spacing). Place it centered below the badge with 16px top margin.
+
+6) Colors & alignment
+	•	Background of the section stays site off‑white.
+	•	Headings in dark brown, body text in the same body color as Services.
+	•	Center the top intro paragraph; keep column content left‑aligned.
+
+7) Accessibility & responsiveness
+	•	Ensure all headings follow semantic order (H1 > H2/H3).
+	•	Confirm keyboard focus states match site buttons/links.
+	•	Test at 1440, 1024, 768, 390 widths.
+
+Implementation notes (selectors OK to reuse):
+	•	Section wrapper: .career-section
+	•	Card: .career-card (reuse Services card CSS classes if available)
+	•	Grid: .career-grid { display:grid; grid-template-columns: 1fr 1fr; gap:24px } @media (max-width:768px){ grid-template-columns:1fr; gap:16px }
+	•	Badge: .badge--launching (use brand yellow)
+	•	Primary button: reuse .btn-primary

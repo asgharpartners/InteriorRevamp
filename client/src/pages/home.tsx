@@ -120,62 +120,91 @@ export default function HomePage() {
       </div>
 
       {/* Career & Internship Section */}
-      <section id="career" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Career & Internship</h2>
-            <p className="text-xl text-dark-grey mb-8 leading-relaxed">
+      <section id="career" className="career-section py-12 bg-off-white">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Section Title - same as Services */}
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">Career & Internship</h2>
+            <p className="text-dark-grey max-w-2xl mx-auto leading-relaxed">
               We believe in nurturing the next generation of designers and craftspeople. 
               Our collaboration with students and young professionals creates opportunities for hands-on learning 
               in real-world projects while contributing fresh perspectives to our work.
             </p>
+          </div>
+          
+          {/* Student Collaboration Card */}
+          <div className="career-card bg-white rounded-2xl shadow-sm border border-[#E5E5E5] p-8 mb-6">
+            <h3 className="font-serif text-lg font-bold text-dark-brown mb-4 tracking-wide">Student Collaboration</h3>
+            <p className="text-dark-grey mb-6 leading-relaxed">
+              We regularly partner with design schools and universities to provide internship opportunities, 
+              thesis project support, and mentorship programs. Students work alongside our experienced team 
+              on live projects, gaining valuable industry experience.
+            </p>
             
-            <div className="bg-[#AD8C44]/5 rounded-lg p-8 mb-8">
-              <h3 className="font-serif text-2xl font-bold text-dark-brown mb-4">Student Collaboration</h3>
-              <p className="text-dark-grey mb-6">
-                We regularly partner with design schools and universities to provide internship opportunities, 
-                thesis project support, and mentorship programs. Students work alongside our experienced team 
-                on live projects, gaining valuable industry experience.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="text-left">
-                  <h4 className="font-semibold text-dark-brown mb-2">What We Offer:</h4>
-                  <ul className="text-sm text-dark-grey space-y-1">
-                    <li>• Real project experience</li>
-                    <li>• Professional mentorship</li>
-                    <li>• Portfolio development support</li>
-                    <li>• Industry network access</li>
-                  </ul>
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-dark-brown mb-2">Areas of Focus:</h4>
-                  <ul className="text-sm text-dark-grey space-y-1">
-                    <li>• Interior design</li>
-                    <li>• Furniture craftsmanship</li>
-                    <li>• Project management</li>
-                    <li>• Sustainable design practices</li>
-                  </ul>
-                </div>
+            <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="text-left">
+                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">What We Offer</h4>
+                <ul className="text-dark-grey space-y-2">
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Real project experience</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Professional mentorship</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Portfolio development support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Industry network access</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="text-left">
+                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">Areas of Focus</h4>
+                <ul className="text-dark-grey space-y-2">
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Interior design</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Furniture craftsmanship</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Project management</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-2 flex-shrink-0 mt-2"></div>
+                    <span>Sustainable design practices</span>
+                  </li>
+                </ul>
               </div>
             </div>
-            
-            <div className="bg-dark-brown/5 rounded-lg p-6">
-              <h3 className="font-serif text-xl font-bold text-dark-brown mb-4">Job Openings & Opportunities</h3>
-              <p className="text-dark-grey mb-4">
-                <span className="inline-block bg-[#AD8C44] text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
-                  Launching Soon
-                </span>
-                Stay tuned for upcoming internship and full-time positions
-              </p>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300"
-                data-testid="career-contact-button"
-              >
-                Get In Touch
-              </button>
+          </div>
+          
+          {/* Job Openings Card */}
+          <div className="career-card bg-white rounded-2xl shadow-sm border border-[#E5E5E5] p-8 text-center">
+            <h3 className="font-serif text-lg font-bold text-dark-brown mb-4 tracking-wide">Job Openings & Opportunities</h3>
+            <div className="mb-4">
+              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
+                Launching Soon
+              </span>
             </div>
+            <p className="text-dark-grey mb-4 leading-relaxed">
+              Stay tuned for upcoming internship and full-time positions
+            </p>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="btn-primary bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+              data-testid="career-contact-button"
+            >
+              Get In Touch
+            </button>
           </div>
         </div>
       </section>

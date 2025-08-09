@@ -4,14 +4,7 @@ import { ChevronDown } from 'lucide-react';
 
 // Products for INSTAKA PRODUKTER section
 const instakaProducts = [
-  {
-    id: 3,
-    name: "Anpassade lösningar",
-    image: "/assets/IMG_1600_1754760687145.jpg",
-    description: "Möbler designade speciellt för dina unika krav och rumslayout.",
-    materials: "Varierar beroende på design och funktion",
-    customization: "Fullständig designprocess från koncept till slutprodukt"
-  }
+  // Empty array - no products in this section currently
 ];
 
 // Products for EGEN PRODUKTION section  
@@ -31,6 +24,14 @@ const egenProducts = [
     description: "Skräddarsydda förvaringslösningar som maximerar utrymme och minimerar visuell störning.",
     materials: "Lackat trä, dolda beslag av högsta kvalitet",
     customization: "Dimensioner och finish anpassas efter rum och behov"
+  },
+  {
+    id: 3,
+    name: "Anpassade lösningar",
+    image: "/assets/IMG_1600_1754760687145.jpg",
+    description: "Möbler designade speciellt för dina unika krav och rumslayout.",
+    materials: "Varierar beroende på design och funktion",
+    customization: "Fullständig designprocess från koncept till slutprodukt"
   }
 ];
 
@@ -106,7 +107,7 @@ export function ProductsSection() {
         </div>
 
         {/* INSTAKA PRODUKTER Section */}
-        {(activeFilter === 'all' || activeFilter === 'instaka') && (
+        {(activeFilter === 'all' || activeFilter === 'instaka') && instakaProducts.length > 0 && (
           <div className="py-20 bg-[#2B2B2B]">
             <div className="max-w-6xl mx-auto px-8 md:px-12">
               <div className="text-center mb-12">

@@ -9,6 +9,11 @@ const services = [
     longDescription: "Avser alla typer av offentliga miljöer. När projekten är av större omfattning inbegriper det olika typer av konsultgrupper såsom arkitektur, konstruktion, El, VVS, brand, tillgänglighet m.fl."
   },
   {
+    title: "DESIGNRÅDGIVNING & KONCEPTUTVECKLING",
+    description: "Från behovsanalys till tydlig designriktning.",
+    longDescription: "Vi hjälper er att tydliggöra visionen och översätta den till en konkret och funktionell plan. Vi tar fram moodboards, skisser och materialval samt rums- och funktionslayout som passar era behov, tidsramar och budget. Perfekt både för större ombyggnader och mindre uppdateringar — och som första steg innan full produktion och installation."
+  },
+  {
     title: "PROJEKTLEDNING",
     description: "När det finns färdiga underlag ser vi gärna att ett första möte blir en förutsättningslös diskussion om målbild & upplägg, omfattning, tidplan och ekonomi.",
     longDescription: "Utifrån givna ramar tar vi sedan fram ett förslag på lösning oavsett innehåll. Inget projekt är för litet. Det kan t.ex. handla om att uppgradera en hotellobby, bygga om ett kontor, inreda nya hotellrum, skräddarsy en restaurang eller varför inte inreda en butik. Men det kan också handla om att bygga en helt ny byggnad eller att bygga om/ bygga till en befintlig. Oavsett vad så tar vi hand om ert projekt från start till mål!"
@@ -55,9 +60,9 @@ export function ServicesSection() {
         </p>
       </div>
 
-      {/* Services Grid - 2 rows x 3 columns */}
+      {/* Services Grid - Responsive layout for 7 cards */}
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 min-h-[400px]">
           {services.map((service, index) => (
             <div 
               key={index}
@@ -107,7 +112,11 @@ export function ServicesSection() {
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
-                        scrollToSection('contact');
+                        if (service.title === "DESIGNRÅDGIVNING & KONCEPTUTVECKLING") {
+                          scrollToSection('design-koncept');
+                        } else {
+                          scrollToSection('contact');
+                        }
                       }}
                       className="text-[#AD8C44] text-sm font-semibold hover:text-[#AD8C44]/80 transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}

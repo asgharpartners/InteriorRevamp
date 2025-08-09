@@ -10,7 +10,7 @@ export default function ProjectsPage() {
       <Header />
       
       {/* Hero Section for Projects Page */}
-      <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
+      <section className="w-full bg-[#FAF7F2] pt-32 md:pt-40 lg:pt-48 pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#3C2415] mb-8">
             Våra Projekt

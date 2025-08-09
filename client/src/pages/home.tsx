@@ -32,11 +32,11 @@ export default function HomePage() {
         {/* Top Row - Intro */}
         <div className="w-full h-1/2 bg-[#FFPAF7] relative">
           <div className="absolute inset-0 px-8 sm:px-12 md:px-16 lg:px-20 py-6 flex items-center justify-center">
-            <div className="text-center w-full max-w-6xl">
-              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight tracking-wide">
+            <div className="w-full max-w-6xl">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight tracking-wide text-center">
                 {t('intro.title')}
               </h2>
-              <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3A2315]/80 leading-relaxed" style={{ whiteSpace: 'normal' }}>
+              <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3A2315]/80 leading-relaxed text-left" style={{ whiteSpace: 'normal' }}>
                 {t('intro.subtitle')} {t('intro.description')}
               </p>
             </div>

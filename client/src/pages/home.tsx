@@ -156,6 +156,28 @@ export default function HomePage() {
       </div>
 
       <BeforeAfterSlider />
+      
+      {/* Pre-Career Section Text */}
+      <section className="py-12 bg-[#FAF7F2] text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-[#5B401C] text-lg leading-relaxed mb-4">
+            Stay tuned for upcoming internship and full-time positions
+          </p>
+          <div className="mb-4">
+            <span className="inline-block bg-[#FBD44C] text-[#3A2315] px-6 py-2 rounded-full text-sm font-semibold">
+              Launching Soon
+            </span>
+          </div>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="bg-[#FBD44C] text-[#3A2315] px-8 py-3 rounded-lg font-medium hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
+            data-testid="pre-career-contact-button"
+          >
+            Get In Touch
+          </button>
+        </div>
+      </section>
+
       {/* Career & Internship Section - Refactored to match Services visual system */}
       <section id="career" className="career-section py-12 bg-off-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -169,30 +191,6 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Job Openings Card - Services card style */}
-          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center mb-6">
-            <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Job Openings & Opportunities</h3>
-            <p className="text-[#5B401C] mb-6 leading-relaxed">
-              Stay tuned for upcoming internship and full-time positions
-            </p>
-            
-            {/* Launching Soon Badge */}
-            <div className="mb-4">
-              <span className="badge--launching inline-block bg-[#FBD44C] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
-                Launching Soon
-              </span>
-            </div>
-            
-            {/* Primary CTA Button */}
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="btn-primary bg-[#FBD44C] text-[#3A2315] px-8 py-3 rounded-lg font-medium hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
-              data-testid="career-contact-button"
-            >
-              Get In Touch
-            </button>
-          </div>
-
           {/* Student Collaboration Card - Services card style */}
           <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
             <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Student Collaboration</h3>

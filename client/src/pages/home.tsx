@@ -82,7 +82,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Vår Process Section */}
-      <section className="w-full bg-[#3A2315] py-16 md:py-24">
+      <section className="w-full bg-[#2B2B2B] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           {/* Section Title */}
           <div className="text-center mb-12">
@@ -125,10 +125,10 @@ export default function HomePage() {
                 {/* Description (Hover Popup) */}
                 {openProcessStep === step.number && (
                   <div className="absolute top-0 left-0 right-0 bg-[#FBD44C] p-6 rounded-lg text-left z-10 min-h-full flex flex-col justify-center">
-                    <h4 className="font-serif font-bold text-lg text-[#3A2315] mb-3">
+                    <h4 className="font-serif font-bold text-lg text-[#2B2B2B] mb-3">
                       {step.subtitle}
                     </h4>
-                    <p className="text-[#3A2315] text-sm md:text-base leading-relaxed">
+                    <p className="text-[#2B2B2B] text-sm md:text-base leading-relaxed">
                       {step.description}
                     </p>
                   </div>

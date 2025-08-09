@@ -37,7 +37,7 @@ export default function CareerPage() {
       {/* Page Header */}
       <section className="pt-32 pb-16 bg-[#FAF7F2]">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#3A2315] mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#2B2B2B] mb-6">
             Career & Workshop
           </h1>
           <p className="text-[#5B401C] text-lg leading-relaxed max-w-3xl mx-auto">
@@ -53,13 +53,13 @@ export default function CareerPage() {
             Stay tuned for upcoming internship and full-time positions
           </p>
           <div className="mb-4">
-            <span className="inline-block bg-[#FBD44C] text-[#3A2315] px-6 py-2 rounded-full text-sm font-semibold">
+            <span className="inline-block bg-[#FBD44C] text-[#2B2B2B] px-6 py-2 rounded-full text-sm font-semibold">
               Launching Soon
             </span>
           </div>
           <button 
             onClick={() => scrollToSection('contact')}
-            className="bg-[#FBD44C] text-[#3A2315] px-8 py-3 rounded-lg font-medium hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
+            className="bg-[#FBD44C] text-[#2B2B2B] px-8 py-3 rounded-lg font-medium hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
             data-testid="pre-career-contact-button"
           >
             Get In Touch
@@ -72,7 +72,7 @@ export default function CareerPage() {
         <div className="max-w-6xl mx-auto px-4">
           {/* Section Title */}
           <div className="mb-12">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#3A2315] mb-6 text-center">Career & Internship</h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#2B2B2B] mb-6 text-center">Career & Internship</h1>
             <p className="text-[#5B401C] max-w-2xl leading-relaxed text-lg text-left">
               We believe in nurturing the next generation of designers and craftspeople. 
               Our collaboration with students and young professionals creates opportunities for hands-on learning 
@@ -82,7 +82,7 @@ export default function CareerPage() {
           
           {/* Student Collaboration Card */}
           <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
-            <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Student Collaboration</h3>
+            <h3 className="font-serif text-xl font-bold text-[#2B2B2B] mb-4 tracking-wide">Student Collaboration</h3>
             <p className="text-[#5B401C] mb-6 leading-relaxed">
               We regularly partner with design schools and universities to provide internship opportunities, 
               thesis project support, and mentorship programs. Students work alongside our experienced team 
@@ -92,7 +92,7 @@ export default function CareerPage() {
             {/* Two-column grid */}
             <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-[#F9F9F9] p-[2px]">
               <div className="career-card text-left bg-white p-8 h-[400px] flex flex-col justify-center">
-                <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">What We Offer</h4>
+                <h4 className="font-serif text-lg font-bold text-[#2B2B2B] mb-3 tracking-wide">What We Offer</h4>
                 <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>

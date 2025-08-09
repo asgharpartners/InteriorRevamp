@@ -97,8 +97,6 @@ export default function HomePage() {
               <div 
                 key={step.number} 
                 className="text-center relative group"
-                onMouseEnter={() => setOpenProcessStep(step.number)}
-                onMouseLeave={() => setOpenProcessStep(null)}
               >
                 {/* Step Circle */}
                 <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -110,8 +108,12 @@ export default function HomePage() {
                   {step.title}
                 </h3>
                 
-                {/* Chevron Indicator */}
-                <div className="mb-4 p-2 rounded-full transition-colors duration-200">
+                {/* Chevron Indicator - Clickable */}
+                <div 
+                  className="mb-4 p-2 rounded-full transition-colors duration-200 cursor-pointer hover:bg-[#FBD44C]/10"
+                  onClick={() => toggleProcessStep(step.number)}
+                  data-testid={`process-step-${step.number}-toggle`}
+                >
                   {openProcessStep === step.number ? (
                     <ChevronUp className="w-6 h-6 text-[#FBD44C] mx-auto" />
                   ) : (

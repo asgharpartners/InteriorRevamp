@@ -31,16 +31,14 @@ export default function HomePage() {
       <section id="intro-process" className="w-full h-[80vh] min-h-[80vh] flex flex-col">
         {/* Top Row - Intro */}
         <div className="w-full h-1/2 bg-[#FFPAF7] relative">
-          <div className="absolute inset-0 px-8 sm:px-12 md:px-16 lg:px-20 py-6 flex items-center justify-center">
-            <div className="w-full max-w-6xl">
+          <div className="absolute inset-0 px-4 sm:px-6 md:px-8 lg:px-12 py-6 flex items-center justify-start">
+            <div className="w-full">
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight tracking-wide text-center">
                 {t('intro.title')}
               </h2>
-              <div className="px-2 sm:px-4 md:px-6">
-                <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3A2315]/80 leading-relaxed text-left" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                  {t('intro.subtitle')} {t('intro.description')}
-                </p>
-              </div>
+              <p className="font-serif text-xs sm:text-sm md:text-base lg:text-lg text-[#3A2315]/80 leading-relaxed text-left" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                {t('intro.subtitle')} {t('intro.description')}
+              </p>
             </div>
           </div>
         </div>

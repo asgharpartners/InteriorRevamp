@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/hooks/use-language';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const products = [
   {
@@ -70,32 +70,42 @@ const products = [
 
 export function ProductsSection() {
   const { t } = useLanguage();
-  const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const openProductModal = (product: typeof products[0]) => {
-    setSelectedProduct(product);
-    setCurrentImageIndex(0);
+  const toggleCard = (index: number) => {
+    setExpandedCard(expandedCard === index ? null : index);
   };
 
-  const closeModal = () => {
-    setSelectedProduct(null);
-    setCurrentImageIndex(0);
+  const closeCard = () => {
+    setExpandedCard(null);
   };
 
-  const nextImage = () => {
-    if (selectedProduct) {
-      // For now, just cycle the same image since we have one per product
-      setCurrentImageIndex(0);
-    }
-  };
+  // Handle ESC key and click outside
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeCard();
+      }
+    };
 
-  const prevImage = () => {
-    if (selectedProduct) {
-      // For now, just cycle the same image since we have one per product
-      setCurrentImageIndex(0);
-    }
-  };
+    const handleClickOutside = (e: MouseEvent) => {
+      if (expandedCard !== null) {
+        const clickedCard = cardRefs.current[expandedCard];
+        if (clickedCard && !clickedCard.contains(e.target as Node)) {
+          closeCard();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [expandedCard]);
 
   return (
     <>
@@ -109,14 +119,14 @@ export function ProductsSection() {
             </p>
           </div>
         </div>
-        {/* Products Grid - 2 rows x 3 columns */}
+        {/* Products Grid with Expandable Cards */}
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <div 
                 key={product.id}
+                ref={(el) => (cardRefs.current[index] = el)}
                 className="service-card relative bg-[#2B2B2B] flex flex-col group overflow-hidden h-[400px]"
-                onClick={() => openProductModal(product)}
                 data-testid={`product-card-${product.id}`}
               >
                 {/* Background Image */}
@@ -128,6 +138,7 @@ export function ProductsSection() {
                 {/* Card Header - Always Visible */}
                 <div 
                   className="p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10"
+                  onClick={() => toggleCard(index)}
                 >
                   <h3 className="font-serif text-lg font-bold mb-4 tracking-wide leading-tight text-white">
                     {product.name}
@@ -145,6 +156,41 @@ export function ProductsSection() {
                     </span>
                   </div>
                 </div>
+
+                {/* Expandable Content Overlay */}
+                {expandedCard === index && (
+                  <div className="absolute inset-0 bg-[#FBD44C] p-8 flex flex-col justify-start overflow-y-auto z-20">
+                    <div className="flex justify-between items-start mb-6">
+                      <h3 className="font-serif text-xl font-bold text-[#2B2B2B] leading-tight pr-4">
+                        {product.name}
+                      </h3>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          closeCard();
+                        }}
+                        className="text-[#2B2B2B] hover:text-[#5B401C] transition-colors flex-shrink-0"
+                        data-testid={`close-product-${product.id}`}
+                      >
+                        <ChevronDown className="h-5 w-5" />
+                      </button>
+                    </div>
+                    
+                    <div className="text-[#2B2B2B] text-sm leading-relaxed space-y-4">
+                      <p>{product.description}</p>
+                      
+                      <div>
+                        <h4 className="font-semibold mb-1">Material:</h4>
+                        <p className="text-sm">{product.materials}</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold mb-1">Anpassning:</h4>
+                        <p className="text-sm">{product.customization}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -169,69 +215,6 @@ export function ProductsSection() {
           </div>
         </div>
       </section>
-
-      {/* Product Detail Modal */}
-      {selectedProduct && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto relative">
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 z-10 p-2 bg-white/90 rounded-full hover:bg-white transition-colors duration-200"
-              data-testid="close-product-modal"
-            >
-              <X className="h-5 w-5 text-dark-brown" />
-            </button>
-            
-            <div className="grid lg:grid-cols-2 gap-8 p-8">
-              {/* Image Gallery */}
-              <div className="relative">
-                <div className="aspect-square rounded-lg overflow-hidden mb-4">
-                  <img 
-                    src={selectedProduct.image}
-                    alt={selectedProduct.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              
-              {/* Product Details */}
-              <div className="flex flex-col justify-center">
-                <div className="inline-block px-4 py-2 bg-[#FBD44C]/20 text-[#5B401C] text-sm rounded-full mb-4 w-fit">
-                  {selectedProduct.category}
-                </div>
-                
-                <h2 className="font-serif text-3xl font-bold text-dark-brown mb-6">
-                  {selectedProduct.name}
-                </h2>
-                
-                <p className="text-[#5B401C] text-lg leading-relaxed mb-6">
-                  {selectedProduct.description}
-                </p>
-                
-                <div className="space-y-4 mb-8">
-                  <div>
-                    <h4 className="font-semibold text-dark-brown mb-2">Material:</h4>
-                    <p className="text-[#5B401C]">{selectedProduct.materials}</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-dark-brown mb-2">Anpassning:</h4>
-                    <p className="text-[#5B401C]">{selectedProduct.customization}</p>
-                  </div>
-                </div>
-                
-                <button 
-                  className="bg-[#FBD44C] text-[#5B401C] px-8 py-3 rounded-lg font-semibold hover:bg-[#FBD44C]/90 transition-colors duration-300 w-fit"
-                  onClick={closeModal}
-                  data-testid="contact-about-product"
-                >
-                  Kontakta oss för offert
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

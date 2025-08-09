@@ -265,46 +265,6 @@ export default function HomePage() {
       
       <BeforeAfterSlider />
 
-
-
-      {/* Partners Section */}
-      <section id="partners" className="py-20 bg-off-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-8">Partners</h2>
-          </div>
-          
-          {/* Brand Partners - Minimal layout matching footer style */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-              <div className="flex items-center justify-center p-4">
-                <span className="text-dark-brown/60 font-serif font-bold text-lg">HAY</span>
-              </div>
-              <div className="flex items-center justify-center p-4">
-                <span className="text-dark-brown/60 font-serif font-bold text-lg">GUBI</span>
-              </div>
-              <div className="flex items-center justify-center p-4">
-                <span className="text-dark-brown/60 font-serif font-bold text-lg">MUUTO</span>
-              </div>
-              <div className="flex items-center justify-center p-4">
-                <span className="text-dark-brown/60 font-serif font-bold text-lg">IKEA</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Partnership CTA */}
-          <div className="max-w-2xl mx-auto text-center">
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300"
-              data-testid="partner-inquiry-button"
-            >
-              Partner Inquiry
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Career & Internship Section - Refactored to match Services visual system */}
       <section id="career" className="career-section py-12 bg-off-white">
         <div className="max-w-6xl mx-auto px-4">

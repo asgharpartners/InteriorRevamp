@@ -30,8 +30,11 @@ export function BeforeAfterSlider() {
   const sliderRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
     setIsDragging(true);
+    document.body.style.cursor = 'ew-resize';
+    document.body.style.userSelect = 'none';
   };
 
   const handleMouseMove = (e: MouseEvent) => {
@@ -44,25 +47,50 @@ export function BeforeAfterSlider() {
 
   const handleMouseUp = () => {
     setIsDragging(false);
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
   };
 
   const handleClick = (e: React.MouseEvent) => {
-    if (!sliderRef.current) return;
+    if (!sliderRef.current || isDragging) return;
 
     const rect = sliderRef.current.getBoundingClientRect();
     const percentage = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
     setSliderPosition(percentage);
   };
 
+  // Touch handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isDragging || !sliderRef.current) return;
+
+    const rect = sliderRef.current.getBoundingClientRect();
+    const touch = e.touches[0];
+    const percentage = Math.max(0, Math.min(100, ((touch.clientX - rect.left) / rect.width) * 100));
+    setSliderPosition(percentage);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   useEffect(() => {
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd);
     }
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
     };
   }, [isDragging]);
 
@@ -93,34 +121,55 @@ export function BeforeAfterSlider() {
         <div className="max-w-4xl mx-auto">
           <div 
             ref={sliderRef}
-            className="comparison-slider rounded-lg overflow-hidden shadow-2xl mb-8 h-96 relative cursor-ew-resize"
+            className={`comparison-slider rounded-lg overflow-hidden shadow-2xl mb-8 h-96 relative select-none ${isDragging ? 'cursor-ew-resize' : 'cursor-ew-resize'}`}
             onClick={handleClick}
           >
             {/* Before image (base layer) */}
             <img 
               src={currentProjectData.before}
               alt="Before renovation"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover pointer-events-none"
+              draggable={false}
             />
             
             {/* After image (overlay) */}
             <div 
-              className="after-image"
+              className="after-image absolute top-0 left-0 h-full overflow-hidden"
               style={{ width: `${sliderPosition}%` }}
             >
               <img 
                 src={currentProjectData.after}
                 alt="After renovation"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-none"
+                style={{ width: `${sliderRef.current?.offsetWidth || 0}px` }}
+                draggable={false}
               />
             </div>
             
-            {/* Draggable handle */}
+            {/* Draggable handle with enhanced styling */}
             <div 
-              className="comparison-handle"
+              className={`comparison-handle absolute top-0 bottom-0 w-1 bg-white shadow-lg transform -translate-x-1/2 cursor-ew-resize z-10 ${isDragging ? 'shadow-2xl' : 'hover:shadow-xl'} transition-shadow duration-200`}
               style={{ left: `${sliderPosition}%` }}
               onMouseDown={handleMouseDown}
-            />
+              onTouchStart={handleTouchStart}
+            >
+              {/* Handle indicator */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-200 flex items-center justify-center">
+                <div className="w-1 h-4 bg-gray-400 rounded-full mx-0.5"></div>
+                <div className="w-1 h-4 bg-gray-400 rounded-full mx-0.5"></div>
+              </div>
+              
+              {/* Left arrow */}
+              <div className="absolute top-1/2 left-0 transform -translate-x-full -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-white"></div>
+              
+              {/* Right arrow */}
+              <div className="absolute top-1/2 right-0 transform translate-x-full -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-l-4 border-transparent border-l-white"></div>
+            </div>
+            
+            {/* Instructional text overlay */}
+            <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm">
+              Drag the slider to compare
+            </div>
           </div>
           
           <div className="text-left mb-8">

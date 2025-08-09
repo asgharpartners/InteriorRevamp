@@ -130,7 +130,7 @@ export default function Header({ className = "" }: HeaderProps) {
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="text-sm text-[#F5F1EA] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
+                    className="text-sm text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -152,7 +152,7 @@ export default function Header({ className = "" }: HeaderProps) {
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="text-xs text-[#F5F1EA] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
+                    className="text-xs text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -174,7 +174,7 @@ export default function Header({ className = "" }: HeaderProps) {
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
-                    className="text-xs text-[#F5F1EA] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-1 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
+                    className="text-xs text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-1 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',

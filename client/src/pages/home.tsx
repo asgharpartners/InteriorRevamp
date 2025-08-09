@@ -86,7 +86,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           {/* Section Title */}
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#FAF7F2] mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFAF7] mb-4">
               Vår Process
             </h2>
             <div className="w-16 h-0.5 bg-[#FBD44C] mx-auto"></div>
@@ -105,7 +105,7 @@ export default function HomePage() {
                 </div>
                 
                 {/* Step Title */}
-                <h3 className="font-serif font-bold text-lg md:text-xl text-[#FAF7F2] mb-3">
+                <h3 className="font-serif font-bold text-lg md:text-xl text-[#FFFAF7] mb-3">
                   {step.title}
                 </h3>
                 

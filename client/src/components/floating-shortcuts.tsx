@@ -154,7 +154,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
         </div>
         
         {/* Tooltip */}
-        <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-[#3E2516] text-[#F5F1EA] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+        <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-[#3E2516] text-[#FFFAF7] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
           {language === 'sv' ? 'Genvägar' : 'Shortcuts'}
           <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-[#3E2516]"></div>
         </div>
@@ -189,7 +189,7 @@ export function FloatingShortcuts({ className = "" }: FloatingShortcutsProps) {
               className={`
                 w-full text-left px-2 py-1.5
                 text-xs font-bold tracking-wide uppercase
-                text-[#F5F1EA] hover:text-white
+                text-[#FFFAF7] hover:text-white
                 bg-[#3E2516]/80 hover:bg-[#3E2516]/90
                 backdrop-blur-sm
                 rounded-sm

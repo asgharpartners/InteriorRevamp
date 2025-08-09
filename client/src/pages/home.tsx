@@ -33,10 +33,10 @@ export default function HomePage() {
         <div className="w-full h-1/2 bg-[#FFPAF7] relative">
           <div className="absolute inset-0 px-4 sm:px-6 md:px-8 lg:px-12 py-6 flex items-center justify-start">
             <div className="w-full">
-              <h2 className="font-serif sm:text-2xl md:text-3xl lg:text-4xl text-[#3A2315] lg:mb-6 tracking-wide font-extrabold pl-[0px] pr-[0px] text-[55px] text-center ml-[0px] mr-[0px] mt-[40px] mb-[40px]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: '1.6' }}>
+              <h2 className="font-serif sm:text-2xl md:text-3xl lg:text-4xl text-[#3A2315] lg:mb-6 tracking-wide font-extrabold pl-[0px] pr-[0px] text-[165px] text-center ml-[0px] mr-[0px] mt-[40px] mb-[40px]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: '1.6' }}>
                 {t('intro.title')}
               </h2>
-              <p className="font-serif sm:text-sm md:text-base lg:text-lg text-[#3a2315] text-[26px] ml-[30px] mr-[30px] text-justify font-bold" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: '1.8' }}>
+              <p className="font-serif sm:text-sm md:text-base lg:text-lg text-[#3a2315] text-[52px] ml-[30px] mr-[30px] text-justify font-bold" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: '1.8' }}>
                 {t('intro.subtitle')} {t('intro.description')}
               </p>
             </div>

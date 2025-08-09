@@ -124,17 +124,9 @@ export default function HomePage() {
                     <h4 className="font-serif font-bold text-lg text-[#3A2315] mb-3">
                       {step.subtitle}
                     </h4>
-                    <p className="text-[#3A2315] text-sm md:text-base leading-relaxed mb-4">
+                    <p className="text-[#3A2315] text-sm md:text-base leading-relaxed">
                       {step.description}
                     </p>
-                    <div className="mb-3">
-                      <span className="font-semibold text-[#3A2315] text-sm">Kopplade tjänster: </span>
-                      <span className="text-[#3A2315] text-sm">{step.services}.</span>
-                    </div>
-                    <div>
-                      <span className="font-semibold text-[#3A2315] text-sm">Koppling till varumärkesidentitet: </span>
-                      <span className="text-[#3A2315] text-sm">{step.brand}.</span>
-                    </div>
                   </div>
                 )}
               </div>

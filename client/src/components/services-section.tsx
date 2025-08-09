@@ -6,6 +6,7 @@ import reparationImage from '@assets/Reperation_1754742618187.png';
 import projekteringImage from '@assets/image_1754745251288.png';
 import designradgivningImage from '@assets/image_1754749142152.png';
 import byggnationImage from '@assets/image_1754753437709.png';
+import kaImage from '@assets/image_1754753810032.png';
 
 const services = [
   {
@@ -28,7 +29,8 @@ const services = [
   {
     title: "KONTROLLANSVAR (KA)",
     description: "Många ny-, om- eller tillbyggnadsprojekt kräver en kontrollansvarig funktion. Vi är certifierade med behörighet K.",
-    longDescription: "Våra auktoriserade KA-ansvariga säkerställer att alla arbeten uppfyller svenska byggstandarder. Vi hanterar all dokumentation och inspektioner för trygg projektgenomförande."
+    longDescription: "Våra auktoriserade KA-ansvariga säkerställer att alla arbeten uppfyller svenska byggstandarder. Vi hanterar all dokumentation och inspektioner för trygg projektgenomförande.",
+    image: kaImage
   },
   {
     title: "BYGGNATION OCH RENOVERING",
@@ -131,6 +133,12 @@ export function ServicesSection() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
                   style={{ backgroundImage: `url(${projektledningImage})` }}
+                />
+              )}
+              {service.title === "KONTROLLANSVAR (KA)" && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url(${kaImage})` }}
                 />
               )}
               {service.title === "BYGGNATION OCH RENOVERING" && (

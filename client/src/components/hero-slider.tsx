@@ -9,44 +9,54 @@ const slides = [
     subtitleKey: "hero.slide1.subtitle"
   },
   {
-    image: "/assets/707.6_1754760649131.jpg",
-    titleKey: "hero.slide2.title",
+    image: "/assets/Screenshot 2025-07-14 at 21.16.36_1754760595448.png",
+    titleKey: "hero.slide2.title", 
     subtitleKey: "hero.slide2.subtitle"
   },
   {
-    image: "/assets/707.9_1754760653675.jpg",
+    image: "/assets/Screenshot 2025-07-14 at 21.18.15_1754760563509.png",
     titleKey: "hero.slide3.title",
     subtitleKey: "hero.slide3.subtitle"
   },
   {
-    image: "/assets/DAR-06_1754760665742.jpg",
+    image: "/assets/707.6_1754760649131.jpg",
     titleKey: "hero.slide4.title",
     subtitleKey: "hero.slide4.subtitle"
   },
   {
-    image: "/assets/DSC02291_1754760673373.JPG",
+    image: "/assets/707.9_1754760653675.jpg",
     titleKey: "hero.slide5.title",
     subtitleKey: "hero.slide5.subtitle"
   },
   {
-    image: "/assets/IMG_1568_1754760681179.jpg",
+    image: "/assets/DAR-06_1754760665742.jpg",
     titleKey: "hero.slide6.title",
     subtitleKey: "hero.slide6.subtitle"
   },
   {
-    image: "/assets/IMG_1600_1754760687145.jpg",
+    image: "/assets/DSC02291_1754760673373.JPG",
     titleKey: "hero.slide7.title",
     subtitleKey: "hero.slide7.subtitle"
   },
   {
-    image: "/assets/IMG_1597_1754760693613.jpg",
+    image: "/assets/IMG_1568_1754760681179.jpg",
     titleKey: "hero.slide8.title",
     subtitleKey: "hero.slide8.subtitle"
   },
   {
-    image: "/assets/Royal_Hotel_Lobby_-_Swan_chairs_1754760702839.jpg",
+    image: "/assets/IMG_1600_1754760687145.jpg",
     titleKey: "hero.slide9.title",
     subtitleKey: "hero.slide9.subtitle"
+  },
+  {
+    image: "/assets/IMG_1597_1754760693613.jpg",
+    titleKey: "hero.slide10.title",
+    subtitleKey: "hero.slide10.subtitle"
+  },
+  {
+    image: "/assets/Royal_Hotel_Lobby_-_Swan_chairs_1754760702839.jpg",
+    titleKey: "hero.slide11.title",
+    subtitleKey: "hero.slide11.subtitle"
   }
 ];
 

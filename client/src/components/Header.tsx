@@ -26,6 +26,7 @@ export default function Header({ className = "" }: HeaderProps) {
   const [isVisible, setIsVisible] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -39,33 +40,36 @@ export default function Header({ className = "" }: HeaderProps) {
     setIsMobileMenuOpen(false) // Close mobile menu after navigation
   }
 
-  // Hide/show header based on scroll position and track scroll state
+  // Hide/show header based on scroll direction
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      const heroSection = document.querySelector('[data-section="hero"]')
       
-      // Set scrolled state for navigation positioning
+      // Set scrolled state for styling
       setIsScrolled(scrollY > 200)
       
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom
-        setIsVisible(heroBottom > 0)
+      // Hide header when scrolling down, show when scrolling up
+      if (scrollY > lastScrollY && scrollY > 100) {
+        // Scrolling down and past initial threshold
+        setIsVisible(false)
+      } else if (scrollY < lastScrollY || scrollY <= 100) {
+        // Scrolling up or at top of page
+        setIsVisible(true)
       }
+      
+      setLastScrollY(scrollY)
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  if (!isVisible) {
-    return null
-  }
+  }, [lastScrollY])
 
   return (
     <>
       {/* Original header design with large logo */}
-      <header className="fixed top-0 left-0 right-0 z-50 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px]">
+      <header className={`fixed top-0 left-0 right-0 z-50 2xl:h-[160px] xl:h-[140px] lg:h-[120px] md:h-[110px] sm:h-[90px] h-[80px] transition-transform duration-300 ease-in-out ${
+        isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'
+      }`}>
         <div className="h-full w-full relative">
           {/* Yellow logo background with curve - smaller and more curvy */}
           <div 

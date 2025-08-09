@@ -72,6 +72,14 @@ export default function HomePage() {
       {/* Vår Process Section */}
       <section className="w-full bg-[#5B401C] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
+          {/* Section Title */}
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#FAF7F2] mb-4">
+              Vår Process
+            </h2>
+            <div className="w-16 h-0.5 bg-[#FBD44C] mx-auto"></div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {processSteps.map((step) => (
               <div key={step.number} className="text-center">

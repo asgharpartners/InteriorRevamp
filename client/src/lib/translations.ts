@@ -10,16 +10,60 @@ export const translations = {
     },
     hero: {
       slide1: {
-        title: "Transform Your Commercial Space",
-        subtitle: "Professional interior design solutions for hotels, restaurants, and office environments"
+        title: "Elegant Hotel Design",
+        subtitle: "Scandinavian comfort with modern details"
       },
       slide2: {
-        title: "Scandinavian Design Excellence", 
-        subtitle: "Trusted by Sweden's leading hospitality and commercial brands"
+        title: "Our Creative Workshop", 
+        subtitle: "Where craftsmanship meets innovation"
       },
       slide3: {
-        title: "Sustainable Business Solutions",
-        subtitle: "Creating lasting value through environmentally conscious design"
+        title: "Custom Furniture Manufacturing",
+        subtitle: "From idea to finished product"
+      },
+      slide4: {
+        title: "Atmospheric Restaurant Design",
+        subtitle: "Creating unique dining experiences"
+      },
+      slide5: {
+        title: "Functional Storage Solutions",
+        subtitle: "Optimizing every space"
+      },
+      slide6: {
+        title: "Exclusive Boutique Environments",
+        subtitle: "Luxury shopping with personal touch"
+      },
+      slide7: {
+        title: "Integrated Interior Solutions",
+        subtitle: "Complete solutions for modern spaces"
+      },
+      slide8: {
+        title: "Thematic Restaurant Design",
+        subtitle: "Creating memorable experiences"
+      },
+      slide9: {
+        title: "Elegant Dining with Character",
+        subtitle: "Classic elegance in modern interpretation"
+      },
+      slide10: {
+        title: "Minimalist Seating Furniture",
+        subtitle: "Clean form and high comfort"
+      },
+      slide11: {
+        title: "Innovative Outdoor Environments",
+        subtitle: "Scandinavian design for all weather"
+      },
+      slide12: {
+        title: "Organic Office Solutions",
+        subtitle: "Design that inspires creativity"
+      },
+      slide13: {
+        title: "Iconic Hotel Design",
+        subtitle: "Timeless design classics in modern environments"
+      },
+      slide14: {
+        title: "Textile & Material Selection",
+        subtitle: "Quality fabrics for lasting beauty"
       }
     },
     intro: {
@@ -113,16 +157,60 @@ export const translations = {
     },
     hero: {
       slide1: {
-        title: "Förvandla Era Kommersiella Lokaler",
-        subtitle: "Professionella inredningslösningar för hotell, restauranger och kontorsmiljöer"
+        title: "Elegant Hotelldesign",
+        subtitle: "Skandinavisk komfort med moderna detaljer"
       },
       slide2: {
-        title: "Skandinavisk Designexcellens",
-        subtitle: "Förtroendet från Sveriges ledande hotell- och kommersiella varumärken"
+        title: "Vår Kreativa Verkstad",
+        subtitle: "Där hantverk möter innovation"
       },
       slide3: {
-        title: "Hållbara Affärslösningar",
-        subtitle: "Skapar bestående värde genom miljömedveten design"
+        title: "Skräddarsydd Möbeltillverkning",
+        subtitle: "Från idé till färdig produkt"
+      },
+      slide4: {
+        title: "Atmosfärisk Restaurangdesign",
+        subtitle: "Skapar unika matupplevelser"
+      },
+      slide5: {
+        title: "Funktionella Förvaringslösningar",
+        subtitle: "Optimerar varje utrymme"
+      },
+      slide6: {
+        title: "Exklusiva Boutique-miljöer",
+        subtitle: "Lyxig shopping med personlig touch"
+      },
+      slide7: {
+        title: "Integrerade Inredningslösningar",
+        subtitle: "Helhetslösningar för moderna rum"
+      },
+      slide8: {
+        title: "Tematisk Restaurangdesign",
+        subtitle: "Skapar minnesvärda upplevelser"
+      },
+      slide9: {
+        title: "Elegant Matsal med Karaktär",
+        subtitle: "Klassisk elegans i modern tappning"
+      },
+      slide10: {
+        title: "Minimalistiska Sittmöbler",
+        subtitle: "Ren form och hög komfort"
+      },
+      slide11: {
+        title: "Innovativa Utemiljöer",
+        subtitle: "Skandinavisk design för alla väder"
+      },
+      slide12: {
+        title: "Organiska Kontorslösningar",
+        subtitle: "Formgivning som inspirerar kreativitet"
+      },
+      slide13: {
+        title: "Ikonisk Hotelldesign",
+        subtitle: "Tidlösa designklassiker i moderna miljöer"
+      },
+      slide14: {
+        title: "Textil & Materialval",
+        subtitle: "Kvalitetstyger för bestående skönhet"
       }
     },
     intro: {

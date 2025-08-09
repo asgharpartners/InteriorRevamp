@@ -4,19 +4,74 @@ import { useLanguage } from '@/hooks/use-language';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
+    image: "/assets/clarion_tapto_1754760556876.jpg",
     titleKey: "hero.slide1.title",
     subtitleKey: "hero.slide1.subtitle"
   },
   {
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
+    image: "/assets/Screenshot 2025-07-14 at 21.16.36_1754760595448.png",
     titleKey: "hero.slide2.title", 
     subtitleKey: "hero.slide2.subtitle"
   },
   {
-    image: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
+    image: "/assets/Screenshot 2025-07-14 at 21.18.15_1754760563509.png",
     titleKey: "hero.slide3.title",
     subtitleKey: "hero.slide3.subtitle"
+  },
+  {
+    image: "/assets/Screenshot 2025-07-14 at 21.17.21_1754760600763.png",
+    titleKey: "hero.slide4.title",
+    subtitleKey: "hero.slide4.subtitle"
+  },
+  {
+    image: "/assets/Screenshot 2025-07-14 at 21.25.07_1754760614116.png",
+    titleKey: "hero.slide5.title",
+    subtitleKey: "hero.slide5.subtitle"
+  },
+  {
+    image: "/assets/707.6_1754760649131.jpg",
+    titleKey: "hero.slide6.title",
+    subtitleKey: "hero.slide6.subtitle"
+  },
+  {
+    image: "/assets/707.9_1754760653675.jpg",
+    titleKey: "hero.slide7.title",
+    subtitleKey: "hero.slide7.subtitle"
+  },
+  {
+    image: "/assets/DAR-06_1754760665742.jpg",
+    titleKey: "hero.slide8.title",
+    subtitleKey: "hero.slide8.subtitle"
+  },
+  {
+    image: "/assets/DSC02291_1754760673373.JPG",
+    titleKey: "hero.slide9.title",
+    subtitleKey: "hero.slide9.subtitle"
+  },
+  {
+    image: "/assets/IMG_1568_1754760681179.jpg",
+    titleKey: "hero.slide10.title",
+    subtitleKey: "hero.slide10.subtitle"
+  },
+  {
+    image: "/assets/IMG_1600_1754760687145.jpg",
+    titleKey: "hero.slide11.title",
+    subtitleKey: "hero.slide11.subtitle"
+  },
+  {
+    image: "/assets/IMG_1597_1754760693613.jpg",
+    titleKey: "hero.slide12.title",
+    subtitleKey: "hero.slide12.subtitle"
+  },
+  {
+    image: "/assets/Royal_Hotel_Lobby_-_Swan_chairs_1754760702839.jpg",
+    titleKey: "hero.slide13.title",
+    subtitleKey: "hero.slide13.subtitle"
+  },
+  {
+    image: "/assets/Screenshot 2025-07-14 at 21.23.54_1754760710943.png",
+    titleKey: "hero.slide14.title",
+    subtitleKey: "hero.slide14.subtitle"
   }
 ];
 

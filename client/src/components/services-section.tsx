@@ -3,12 +3,14 @@ import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import projektledningImage from '@assets/image_1754741347160.png';
 import reparationImage from '@assets/Reperation_1754742618187.png';
+import projekteringImage from '@assets/image_1754745251288.png';
 
 const services = [
   {
     title: "PROJEKTERING",
     description: "När våra beställare behöver hjälp med att ta fram underlag för sitt projekt så bistår vi gärna med projektering och projekteringsledning med stöd av vårt nätverk.",
-    longDescription: "Avser alla typer av offentliga miljöer. När projekten är av större omfattning inbegriper det olika typer av konsultgrupper såsom arkitektur, konstruktion, El, VVS, brand, tillgänglighet m.fl."
+    longDescription: "Avser alla typer av offentliga miljöer. När projekten är av större omfattning inbegriper det olika typer av konsultgrupper såsom arkitektur, konstruktion, El, VVS, brand, tillgänglighet m.fl.",
+    image: projekteringImage
   },
   {
     title: "DESIGNRÅDGIVNING & KONCEPTUTVECKLING",
@@ -109,6 +111,12 @@ export function ServicesSection() {
               }}
             >
               {/* Background images for specific service cards */}
+              {service.title === "PROJEKTERING" && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url(${projekteringImage})` }}
+                />
+              )}
               {service.title === "PROJEKTLEDNING" && (
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"

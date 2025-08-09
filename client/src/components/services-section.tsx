@@ -4,7 +4,7 @@ import { useLanguage } from '@/hooks/use-language';
 import projektledningImage from '@assets/image_1754741347160.png';
 import reparationImage from '@assets/Reperation_1754742618187.png';
 import projekteringImage from '@assets/image_1754745251288.png';
-import designradgivningImage from '@assets/image_1754749142152.png';
+import designradgivningImage from '@assets/image_1754754368025.png';
 import byggnationImage from '@assets/image_1754753437709.png';
 import kaImage from '@assets/image_1754753810032.png';
 

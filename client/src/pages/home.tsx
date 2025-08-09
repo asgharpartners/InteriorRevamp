@@ -59,11 +59,11 @@ export default function HomePage() {
 
       {/* Intro Section */}
       <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-6xl mx-auto px-6 text-left">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8">
             Välkomna till Nils Holger – Furniture & Project
           </h1>
-          <p className="text-base md:text-lg leading-relaxed text-[#3C2415] max-w-4xl mx-auto">
+          <p className="text-base md:text-lg leading-relaxed text-[#3C2415] max-w-4xl">
             Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt. Vi arbetar i såväl interiöra som exteriöra miljöer.
           </p>
         </div>
@@ -74,9 +74,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
-              <div key={step.number} className="text-center">
+              <div key={step.number} className="text-left">
                 {/* Step Circle */}
-                <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mb-4">
                   <span className="text-[#FBD44C] font-bold text-xl md:text-2xl">{step.number}</span>
                 </div>
                 

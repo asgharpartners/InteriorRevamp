@@ -128,12 +128,12 @@ export default function HomePage() {
                       {step.description}
                     </p>
                     <div className="mb-3">
-                      <span className="font-semibold text-[#3A2315] text-sm">Services tied in: </span>
+                      <span className="font-semibold text-[#3A2315] text-sm">Kopplade tjänster: </span>
                       <span className="text-[#3A2315] text-sm">{step.services}.</span>
                     </div>
                     <div>
-                      <span className="font-semibold text-[#3A2315] text-sm">Brand identity link: </span>
-                      <span className="text-[#3A2315] text-sm">{step.services}.</span>
+                      <span className="font-semibold text-[#3A2315] text-sm">Koppling till varumärkesidentitet: </span>
+                      <span className="text-[#3A2315] text-sm">{step.brand}.</span>
                     </div>
                   </div>
                 )}

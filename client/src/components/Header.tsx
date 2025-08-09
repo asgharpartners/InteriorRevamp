@@ -75,7 +75,7 @@ export default function Header({ className = "" }: HeaderProps) {
           <div 
             className="absolute top-0 left-0 2xl:w-[420px] xl:w-[380px] lg:w-[340px] md:w-[300px] sm:w-[260px] w-[220px] h-full flex items-center justify-start pl-4"
             style={{
-              background: 'linear-gradient(135deg, #F5D97C 0%, #F0D060 50%, #E8C555 100%)',
+              background: '#FBD44C',
               borderRadius: '0 0 180px 0',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
             }}

@@ -90,7 +90,7 @@ export function AboutSection() {
                     />
                   </div>
                   <div className="absolute -bottom-2 left-16 w-8 h-8 bg-[#AD8C44] rounded-full flex items-center justify-center">
-                    <div className="text-white">
+                    <div className="text-[#5B401C]">
                       {member.icon}
                     </div>
                   </div>

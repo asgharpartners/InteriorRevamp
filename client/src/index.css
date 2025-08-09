@@ -27,8 +27,8 @@
   --ring: hsl(27, 66%, 8%);
   --radius: 0.5rem;
   --dark-brown: #3A2315;
-  --dark-grey: #FFFAF7;
-  --off-white: #FFPAF7;
+  --dark-grey: #5B401C;
+  --off-white: #FFFAF7;
   --warm-gold: #D1AE77;
   
   /* New header navigation colors */
@@ -71,7 +71,7 @@
   body {
     @apply font-sans antialiased;
     background-color: var(--off-white);
-    color: var(--dark-grey);
+    color: var(--dark-brown);
   }
 
   h1, h2, h3, h4, h5, h6 {

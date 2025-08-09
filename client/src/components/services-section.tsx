@@ -96,7 +96,7 @@ export function ServicesSection() {
       {/* Section Title */}
       <div className="text-center py-16 bg-off-white">
         <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
-        <p className="text-dark-grey max-w-4xl mx-auto px-4 leading-relaxed">
+        <p className="text-[#5B401C] max-w-4xl mx-auto px-4 leading-relaxed">
           {t('services.subtitle')}
         </p>
       </div>
@@ -160,7 +160,7 @@ export function ServicesSection() {
                 onClick={() => toggleCard(index)}
                 data-testid={`service-card-${index}`}
               >
-                <h3 className="font-serif text-lg font-bold mb-4 tracking-wide leading-tight text-[#fffaf7]">
+                <h3 className="font-serif text-lg font-bold mb-4 tracking-wide leading-tight text-white">
                   {service.title}
                 </h3>
                 

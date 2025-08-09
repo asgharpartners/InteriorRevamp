@@ -105,12 +105,12 @@ export function ServicesSection() {
       </div>
       {/* Services Grid - 2 rows x 3 columns */}
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 min-h-[400px] gap-[1px] bg-[#FAF7F2]">
           {services.map((service, index) => (
             <div 
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="relative bg-[#2B2B2B] border-r border-b border-white/10 last:border-r-0 md:last:border-r-0 flex flex-col group overflow-hidden"
+              className="relative bg-[#2B2B2B] flex flex-col group overflow-hidden"
               style={{ minHeight: '400px' }}
               onMouseLeave={() => {
                 // Close popup when mouse leaves card on desktop

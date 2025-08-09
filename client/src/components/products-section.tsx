@@ -77,7 +77,7 @@ export function ProductsSection() {
         </div>
         
         {/* Product Categories Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[#FAF7F2] p-[1px]">
           {productCategories.map((category, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">

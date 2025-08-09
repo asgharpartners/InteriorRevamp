@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Vår Process Section */}
-      <section className="w-full bg-[#5B401C] py-16 md:py-24">
+      <section className="w-full bg-[#3A2315] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           {/* Section Title */}
           <div className="text-center mb-12">

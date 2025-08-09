@@ -57,6 +57,11 @@ const slides = [
     image: "/assets/Royal_Hotel_Lobby_-_Swan_chairs_1754760702839.jpg",
     titleKey: "hero.slide11.title",
     subtitleKey: "hero.slide11.subtitle"
+  },
+  {
+    image: "/assets/2_1754760510803.jpeg",
+    titleKey: "hero.slide12.title",
+    subtitleKey: "hero.slide12.subtitle"
   }
 ];
 

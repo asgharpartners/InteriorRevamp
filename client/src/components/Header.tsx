@@ -34,16 +34,33 @@ export default function Header({ className = "" }: HeaderProps) {
   }
 
   const scrollToSection = (sectionId: string) => {
-    // Special handling for references - navigate to projects page
-    if (sectionId.toLowerCase() === 'referenser' || sectionId.toLowerCase() === 'references') {
-      window.location.href = '/projects';
+    // Special handling for career - navigate to career page
+    if (sectionId.toLowerCase() === 'karriär' || sectionId.toLowerCase() === 'career') {
+      window.location.href = '/career';
       setIsMobileMenuOpen(false);
       return;
     }
     
-    // Special handling for career - navigate to career page
-    if (sectionId.toLowerCase() === 'karriär' || sectionId.toLowerCase() === 'career') {
-      window.location.href = '/career';
+    // For references, scroll to the references section on home page
+    if (sectionId.toLowerCase() === 'referenser' || sectionId.toLowerCase() === 'references') {
+      // Make sure we're on home page first
+      if (window.location.pathname !== '/') {
+        window.location.href = '/#references';
+        setIsMobileMenuOpen(false);
+        return;
+      }
+      // Already on home page, just scroll to section
+      const element = document.getElementById('references');
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    
+    // For other sections, navigate to home page first if needed
+    if (window.location.pathname !== '/') {
+      window.location.href = '/#' + sectionId.toLowerCase();
       setIsMobileMenuOpen(false);
       return;
     }

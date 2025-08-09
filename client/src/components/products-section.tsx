@@ -73,15 +73,15 @@ export function ProductsSection() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const toggleCard = (index: number) => {
-    setExpandedCard(expandedCard === index ? null : index);
+  const openCard = (index: number) => {
+    setExpandedCard(index);
   };
 
   const closeCard = () => {
     setExpandedCard(null);
   };
 
-  // Handle ESC key and click outside
+  // Handle ESC key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -89,23 +89,12 @@ export function ProductsSection() {
       }
     };
 
-    const handleClickOutside = (e: MouseEvent) => {
-      if (expandedCard !== null) {
-        const clickedCard = cardRefs.current[expandedCard];
-        if (clickedCard && !clickedCard.contains(e.target as Node)) {
-          closeCard();
-        }
-      }
-    };
-
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleClickOutside);
     
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [expandedCard]);
+  }, []);
 
   return (
     <>
@@ -127,6 +116,8 @@ export function ProductsSection() {
                 key={product.id}
                 ref={(el) => (cardRefs.current[index] = el)}
                 className="service-card relative bg-[#2B2B2B] flex flex-col group overflow-hidden h-[400px]"
+                onMouseEnter={() => openCard(index)}
+                onMouseLeave={closeCard}
                 data-testid={`product-card-${product.id}`}
               >
                 {/* Background Image */}
@@ -137,8 +128,7 @@ export function ProductsSection() {
 
                 {/* Card Header - Always Visible */}
                 <div 
-                  className="p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10"
-                  onClick={() => toggleCard(index)}
+                  className="p-8 flex-1 flex flex-col justify-center text-center relative z-10"
                 >
                   <h3 className="font-serif text-lg font-bold mb-4 tracking-wide leading-tight text-white">
                     {product.name}

@@ -31,14 +31,6 @@ const egenProducts = [
     description: "Skräddarsydda förvaringslösningar som maximerar utrymme och minimerar visuell störning.",
     materials: "Lackat trä, dolda beslag av högsta kvalitet",
     customization: "Dimensioner och finish anpassas efter rum och behov"
-  },
-  {
-    id: 7,
-    name: "Möbeltillverkning & Egen Produktion",
-    image: "/assets/Furniture Production & In-house Manufacturing_1754761065666.png",
-    description: "Egen tillverkning av möbler i vår svenska verkstad med fokus på hållbarhet.",
-    materials: "Certifierat trä från svenska skogar, miljövänliga ytbehandlingar", 
-    customization: "Fullständig designprocess från koncept till slutprodukt"
   }
 ];
 

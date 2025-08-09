@@ -27,7 +27,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
-      
       {/* Intro & Vår Process - Split 50/50 Landscape */}
       <section id="intro-process" className="w-full h-screen min-h-[100vh] flex">
         {/* Left Half - Intro */}
@@ -48,7 +47,7 @@ export default function HomePage() {
           <div className="text-center w-full max-w-md lg:max-w-lg">
             {/* Title */}
             <div className="mb-6 lg:mb-8">
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFPAF7] mb-3">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-[#fffaf6]">
                 Vår process
               </h2>
               <div className="w-12 h-0.5 bg-[#D1AE77] mx-auto"></div>
@@ -122,21 +121,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <ServicesSection />
-      
-
-      
       <div id="products">
         <ProductsSection />
       </div>
-      
       <div id="references">
         <ReferencesSection />
       </div>
-      
       <BeforeAfterSlider />
-
       {/* Career & Internship Section - Refactored to match Services visual system */}
       <section id="career" className="career-section py-12 bg-off-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -231,9 +223,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <AboutSection />
-
       {/* Workshop Section */}
       <section className="py-20 bg-dark-brown text-off-white">
         <div className="w-full">
@@ -263,7 +253,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <ContactSection />
       <Footer />
       <FloatingShortcuts />

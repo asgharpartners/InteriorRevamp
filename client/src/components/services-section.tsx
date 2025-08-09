@@ -98,7 +98,7 @@ export function ServicesSection() {
       <div className="py-16 bg-off-white">
         <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
           <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
-          <p className="text-[#5B401C] max-w-4xl mx-auto leading-relaxed text-left">
+          <p className="max-w-4xl mx-auto text-left text-[#3a2315] font-bold text-[18px]">
             {t('services.subtitle')}
           </p>
         </div>

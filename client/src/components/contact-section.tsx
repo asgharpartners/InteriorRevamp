@@ -156,7 +156,7 @@ export function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-dark-grey font-semibold">
+                      <FormLabel className="text-[#5B401C] font-semibold">
                         {t('contact.form.email')}
                       </FormLabel>
                       <FormControl>
@@ -177,7 +177,7 @@ export function ContactSection() {
                   name="projectType"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-dark-grey font-semibold">
+                      <FormLabel className="text-[#5B401C] font-semibold">
                         {t('contact.form.projectType')}
                       </FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -208,7 +208,7 @@ export function ContactSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-dark-grey font-semibold">
+                      <FormLabel className="text-[#5B401C] font-semibold">
                         {t('contact.form.message')}
                       </FormLabel>
                       <FormControl>

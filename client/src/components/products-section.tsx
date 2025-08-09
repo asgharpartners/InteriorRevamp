@@ -52,7 +52,7 @@ export function ProductsSection() {
           <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
             {t('products.title')}
           </h2>
-          <p className="text-xl text-dark-grey max-w-2xl">
+          <p className="text-xl text-[#5B401C] max-w-2xl">
             {t('products.subtitle')}
           </p>
         </div>
@@ -67,7 +67,7 @@ export function ProductsSection() {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                   activeTab === tab.id
                     ? 'bg-dark-brown text-off-white'
-                    : 'text-dark-grey hover:text-dark-brown'
+                    : 'text-[#5B401C] hover:text-dark-brown'
                 }`}
               >
                 {tab.label}
@@ -84,7 +84,7 @@ export function ProductsSection() {
                 <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">
                   {category.name}
                 </h3>
-                <p className="text-dark-grey mb-6 leading-relaxed">
+                <p className="text-[#5B401C] mb-6 leading-relaxed">
                   {category.description}
                 </p>
                 <Button className="bg-[#AD8C44] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300">

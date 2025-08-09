@@ -90,8 +90,8 @@ export default function CareerPage() {
             </p>
             
             {/* Two-column grid */}
-            <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[#FAF7F2] p-[1px]">
-              <div className="text-left bg-white p-6">
+            <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-[#F9F9F9] p-[2px]">
+              <div className="career-card text-left bg-white p-8 h-[400px] flex flex-col justify-center">
                 <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">What We Offer</h4>
                 <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
@@ -112,7 +112,7 @@ export default function CareerPage() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left bg-white p-6">
+              <div className="career-card text-left bg-white p-8 h-[400px] flex flex-col justify-center">
                 <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">Areas of Focus</h4>
                 <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">

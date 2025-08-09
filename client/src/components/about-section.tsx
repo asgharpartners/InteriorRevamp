@@ -74,10 +74,10 @@ export function AboutSection() {
           <p className="text-xl text-[#5B401C] max-w-2xl mx-auto text-left">Meet the passionate team behind Nils Holger's distinctive design philosophy</p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[#FAF7F2] p-[1px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
           {teamMembers.map((member, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+              <div className="team-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-[400px] flex flex-col justify-center transition-all duration-300 hover:shadow-md">
                 <div className="relative mb-6 flex justify-start">
                   <div className="w-20 h-20 rounded-full border-4 border-[#AD8C44] p-1">
                     <img 

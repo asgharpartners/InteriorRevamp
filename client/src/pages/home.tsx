@@ -57,8 +57,8 @@ export default function HomePage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 mb-6 lg:mb-8">
               {/* Step 1 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">1</span>
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">1</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Konsultation
@@ -70,8 +70,8 @@ export default function HomePage() {
 
               {/* Step 2 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">2</span>
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">2</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Koncept
@@ -83,8 +83,8 @@ export default function HomePage() {
 
               {/* Step 3 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">3</span>
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">3</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Produktion
@@ -96,8 +96,8 @@ export default function HomePage() {
 
               {/* Step 4 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">4</span>
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">4</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Installation

@@ -189,37 +189,117 @@ export function ProductsSection() {
           </div>
         </div>
         
-        {/* Product Category Buttons */}
-        <div className="py-16 bg-off-white">
-          <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <button 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#FBD44C] text-[#2B2B2B] font-semibold rounded-lg hover:bg-[#FBD44C]/90 transition-colors duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
-                data-testid="instaka-produkter-button"
-              >
-                Instaka Produkter
-                <span className="animate-shake inline-block">→</span>
-              </button>
-              
-              <button 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#AD8C44] text-white font-semibold rounded-lg hover:bg-[#936F39] transition-colors duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
-                data-testid="egen-produktion-button"
-              >
-                Egen Produktion
-                <span className="animate-shake inline-block">→</span>
-              </button>
+        {/* INSTAKA PRODUKTER Section */}
+        <div className="py-20 bg-[#2B2B2B]">
+          <div className="max-w-6xl mx-auto px-8 md:px-12">
+            <div className="text-center mb-12">
+              <h3 className="font-serif text-3xl font-bold text-[#FBD44C] mb-4">INSTAKA PRODUKTER</h3>
+              <p className="text-[#fffaf7] text-lg">Välj bland våra befintliga möbler och designlösningar</p>
             </div>
             
-            <a 
-              href="/assets/nordi_production_2023-1_1754761513396.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#2B2B2B] text-white font-medium rounded-lg hover:bg-[#3A2315] transition-colors duration-300"
-              data-testid="production-info-link"
-            >
-              Läs mer om vår produktion (PDF)
-              <span className="animate-shake inline-block">→</span>
-            </a>
+            {/* Instaka Produkter Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
+              {[
+                {
+                  name: "Kontorsmöbler",
+                  image: "/assets/IMG_1597_1754760693613.jpg",
+                  description: "Moderna kontorslösningar för effektiv arbetsmiljö"
+                },
+                {
+                  name: "Restaurangmöbler", 
+                  image: "/assets/DAR-06_1754760665742.jpg",
+                  description: "Eleganta möbler för restauranger och caféer"
+                },
+                {
+                  name: "Hotellinteriörer",
+                  image: "/assets/Royal_Hotel_Lobby_-_Swan_chairs_1754760702839.jpg", 
+                  description: "Lyxiga möbler för hotell och gästfrihet"
+                }
+              ].map((item, index) => (
+                <div key={index} className="group cursor-pointer">
+                  <div className="bg-[#2B2B2B] rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-[400px] relative transition-all duration-300 hover:shadow-lg">
+                    <div className="relative h-64 overflow-hidden">
+                      <img 
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-[#FBD44C]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-[#2B2B2B] font-semibold text-lg">Visa mer <span className="animate-shake inline-block">→</span></span>
+                      </div>
+                    </div>
+                    <div className="p-6 h-36 flex flex-col justify-center">
+                      <h4 className="font-serif text-lg font-bold text-[#fffaf7] mb-2">{item.name}</h4>
+                      <p className="text-[#fffaf7]/70 text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* EGEN PRODUKTION Section */}
+        <div className="py-20 bg-[#5B401C]">
+          <div className="max-w-6xl mx-auto px-8 md:px-12">
+            <div className="text-center mb-12">
+              <h3 className="font-serif text-3xl font-bold text-[#FBD44C] mb-4">EGEN PRODUKTION</h3>
+              <p className="text-[#fffaf7] text-lg">Skräddarsydda möbler och designlösningar från vår egen produktion</p>
+            </div>
+            
+            {/* Egen Produktion Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
+              {[
+                {
+                  name: "Designprocess",
+                  image: "/assets/Furniture Production & In-house Manufacturing_1754761065666.png",
+                  description: "Från skiss till färdig möbel - vår kreativa process"
+                },
+                {
+                  name: "Handgjort hantverk",
+                  image: "/assets/DSC02291_1754760673373.JPG",
+                  description: "Unika möbler tillverkade med traditionellt hantverk"
+                },
+                {
+                  name: "Anpassade lösningar",
+                  image: "/assets/2_1754760510803.jpeg",
+                  description: "Möbler designade speciellt för dina behov"
+                }
+              ].map((item, index) => (
+                <div key={index} className="group cursor-pointer">
+                  <div className="bg-[#2B2B2B] rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-[400px] relative transition-all duration-300 hover:shadow-lg">
+                    <div className="relative h-64 overflow-hidden">
+                      <img 
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-[#AD8C44]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-[#fffaf7] font-semibold text-lg">Visa mer <span className="animate-shake inline-block">→</span></span>
+                      </div>
+                    </div>
+                    <div className="p-6 h-36 flex flex-col justify-center">
+                      <h4 className="font-serif text-lg font-bold text-[#fffaf7] mb-2">{item.name}</h4>
+                      <p className="text-[#fffaf7]/70 text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Production Info Link */}
+            <div className="text-center mt-12">
+              <a 
+                href="/assets/nordi_production_2023-1_1754761513396.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FBD44C] text-[#2B2B2B] font-medium rounded-lg hover:bg-[#FBD44C]/90 transition-colors duration-300"
+                data-testid="production-info-link"
+              >
+                Läs mer om vår produktion (PDF)
+                <span className="animate-shake inline-block">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

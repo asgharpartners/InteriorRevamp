@@ -31,12 +31,12 @@ export default function HomePage() {
       <section id="intro-process" className="w-full h-[80vh] min-h-[80vh] flex flex-col">
         {/* Top Row - Intro */}
         <div className="w-full h-1/2 bg-[#FFPAF7] relative">
-          <div className="absolute left-0 top-0 w-full h-full px-2 sm:px-4 md:px-6 py-6 flex items-center">
-            <div className="text-left w-full">
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-6xl font-bold text-[#3A2315] mb-4 lg:mb-6 leading-tight tracking-wide">
+          <div className="absolute inset-0 px-8 sm:px-12 md:px-16 lg:px-20 py-6 flex items-center justify-center">
+            <div className="text-center w-full max-w-6xl">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight tracking-wide">
                 {t('intro.title')}
               </h2>
-              <p className="font-serif text-lg md:text-xl lg:text-2xl text-[#3A2315]/80 leading-relaxed w-full overflow-hidden text-ellipsis" style={{ whiteSpace: 'nowrap' }}>
+              <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3A2315]/80 leading-relaxed" style={{ whiteSpace: 'normal' }}>
                 {t('intro.subtitle')} {t('intro.description')}
               </p>
             </div>

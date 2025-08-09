@@ -51,6 +51,14 @@ export default {
           "4": "var(--chart-4)",
           "5": "var(--chart-5)",
         },
+        // Nils Holger Brand Colors
+        "brand-dark-brown": "var(--brand-dark-brown)",
+        "brand-golden": "var(--brand-golden)",
+        "brand-off-white": "var(--brand-off-white)",
+        "dark-brown": "var(--dark-brown)",
+        "dark-grey": "var(--dark-grey)",
+        "off-white": "var(--off-white)",
+        "warm-gold": "var(--warm-gold)",
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",

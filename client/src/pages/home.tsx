@@ -4,7 +4,7 @@ import { HeroSlider } from '@/components/hero-slider';
 import { ServicesSection } from '@/components/services-section';
 import { BeforeAfterSlider } from '@/components/before-after-slider';
 import { ProductsSection } from '@/components/products-section';
-import { ReferencesSection } from '@/components/references-section';
+
 import { AboutSection } from '@/components/about-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer';
@@ -150,9 +150,7 @@ export default function HomePage() {
       <div id="products">
         <ProductsSection />
       </div>
-      <div id="references">
-        <ReferencesSection />
-      </div>
+
       <BeforeAfterSlider />
       {/* Career & Internship Section - Refactored to match Services visual system */}
       <section id="career" className="career-section py-12 bg-off-white">

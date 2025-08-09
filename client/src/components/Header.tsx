@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
 import { SearchModal } from "@/components/search-modal"
+import { Link } from "wouter"
 const nilsHolgerLogo = "/nils-holger-logo-new.jpg"
 
 interface HeaderProps {
@@ -33,6 +34,13 @@ export default function Header({ className = "" }: HeaderProps) {
   }
 
   const scrollToSection = (sectionId: string) => {
+    // Special handling for references - navigate to projects page
+    if (sectionId.toLowerCase() === 'referenser' || sectionId.toLowerCase() === 'references') {
+      window.location.href = '/projects';
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    
     const element = document.getElementById(sectionId.toLowerCase())
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })

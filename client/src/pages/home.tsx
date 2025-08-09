@@ -68,11 +68,10 @@ export default function HomePage() {
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
-
       {/* Intro Section */}
       <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-8 md:px-12 text-left">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8 text-center">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8 text-center ml-[-100px] mr-[-100px]">
             Välkomna till Nils Holger – Furniture & Project
           </h1>
           <p className="text-base md:text-lg leading-relaxed text-[#3C2415] max-w-4xl text-left">
@@ -80,7 +79,6 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-
       {/* Vår Process Section */}
       <section className="w-full bg-[#3A2315] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -149,12 +147,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <ServicesSection />
       <div id="products">
         <ProductsSection />
       </div>
-
       <BeforeAfterSlider />
       <AboutSection />
       <ContactSection />

@@ -34,14 +34,14 @@ export default function HomePage() {
       <HeroSlider />
       
       {/* Two-Column Layout: Intro + Process */}
-      <div className="w-full min-h-screen flex flex-col lg:flex-row">
+      <div className="w-full h-[80vh] flex flex-col lg:flex-row">
         {/* Intro Section - Left Column */}
         <section className="bg-[#F5F1EA] flex-1 flex items-center justify-center">
-          <div className="max-w-2xl mx-auto text-left px-8 py-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-8 leading-tight">
+          <div className="max-w-xl mx-auto text-left px-6 py-8">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark-brown mb-6 leading-tight">
               {t('intro.title')}
             </h2>
-            <p className="text-xl md:text-2xl text-dark-grey leading-relaxed">
+            <p className="text-lg md:text-xl text-dark-grey leading-relaxed">
               {t('intro.subtitle')}<br />
               {t('intro.description')}
             </p>
@@ -49,12 +49,14 @@ export default function HomePage() {
         </section>
 
         {/* Process Section - Right Column */}
-        <section className="bg-[#3E2516] flex-1 flex items-center justify-center relative">
-          <div className="max-w-6xl mx-auto px-4 py-16">
+        <section className="bg-[#3E2516] flex-1 flex items-center justify-center relative overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center px-8 py-8">
             {/* Circular Process Steps */}
-            <div className="relative w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px] mx-auto mb-12 max-w-full">
+            <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] lg:w-[360px] lg:h-[360px] mx-auto">
               {/* Center Title */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 transition-opacity duration-300 ${
+                expandedStep !== null ? 'opacity-30' : 'opacity-100'
+              }`}>
                 <h3 className="font-serif text-lg font-bold text-white mb-1">
                   Vår
                 </h3>
@@ -64,31 +66,30 @@ export default function HomePage() {
               </div>
               
               {/* Step 1 - Top */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3 sm:-translate-y-4">
-                <div className="text-center">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+                <div className="text-center relative">
                   <div 
-                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(1)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Förutsätt-<br />ningslöst<br />möte
                     </span>
                   </div>
-                  <div className="flex items-center justify-center">
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
-                        expandedStep === 1 ? 'rotate-180' : ''
-                      }`}
-                      onClick={() => toggleStep(1)}
-                    />
-                  </div>
                   
-                  {/* Expanded Description */}
+                  {/* Compact Tooltip */}
                   {expandedStep === 1 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
-                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-l-2 border-t-2 border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
                         {t('process.step1.description')}
                       </p>
+                      <button 
+                        onClick={() => setExpandedStep(null)}
+                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                      >
+                        ×
+                      </button>
                     </div>
                   )}
                 </div>
@@ -107,31 +108,30 @@ export default function HomePage() {
               </div>
 
               {/* Step 2 - Right */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-3 sm:translate-x-4">
-                <div className="text-center">
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4">
+                <div className="text-center relative">
                   <div 
-                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(2)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Design &<br />Koncept
                     </span>
                   </div>
-                  <div className="flex items-center justify-center">
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
-                        expandedStep === 2 ? 'rotate-180' : ''
-                      }`}
-                      onClick={() => toggleStep(2)}
-                    />
-                  </div>
                   
-                  {/* Expanded Description */}
+                  {/* Compact Tooltip */}
                   {expandedStep === 2 && (
-                    <div className="fixed top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl md:top-1/2 bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
-                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-l-2 border-t-2 border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
                         {t('process.step2.description')}
                       </p>
+                      <button 
+                        onClick={() => setExpandedStep(null)}
+                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                      >
+                        ×
+                      </button>
                     </div>
                   )}
                 </div>
@@ -150,31 +150,30 @@ export default function HomePage() {
               </div>
 
               {/* Step 3 - Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-3 sm:translate-y-4">
-                <div className="text-center">
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
+                <div className="text-center relative">
                   <div 
-                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(3)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Produktion
                     </span>
                   </div>
-                  <div className="flex items-center justify-center">
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
-                        expandedStep === 3 ? 'rotate-180' : ''
-                      }`}
-                      onClick={() => toggleStep(3)}
-                    />
-                  </div>
                   
-                  {/* Expanded Description */}
+                  {/* Compact Tooltip */}
                   {expandedStep === 3 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
-                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-r-2 border-b-2 border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
                         {t('process.step3.description')}
                       </p>
+                      <button 
+                        onClick={() => setExpandedStep(null)}
+                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                      >
+                        ×
+                      </button>
                     </div>
                   )}
                 </div>
@@ -193,31 +192,30 @@ export default function HomePage() {
               </div>
 
               {/* Step 4 - Left */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-3 sm:-translate-x-4">
-                <div className="text-center">
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4">
+                <div className="text-center relative">
                   <div 
-                    className="w-20 h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto mb-3"
+                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(4)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Leverans
                     </span>
                   </div>
-                  <div className="flex items-center justify-center">
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#AD8C44] transition-transform duration-300 cursor-pointer ${
-                        expandedStep === 4 ? 'rotate-180' : ''
-                      }`}
-                      onClick={() => toggleStep(4)}
-                    />
-                  </div>
                   
-                  {/* Expanded Description */}
+                  {/* Compact Tooltip */}
                   {expandedStep === 4 && (
-                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl bg-[#3E2516] rounded-lg shadow-2xl border-2 border-[#AD8C44] p-4 md:p-8 z-50 max-h-[70vh] overflow-y-auto">
-                      <p className="text-[#F5F1EA] text-sm md:text-base leading-relaxed">
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
+                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-l-2 border-t-2 border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
                         {t('process.step4.description')}
                       </p>
+                      <button 
+                        onClick={() => setExpandedStep(null)}
+                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                      >
+                        ×
+                      </button>
                     </div>
                   )}
                 </div>
@@ -237,10 +235,10 @@ export default function HomePage() {
             </div>
 
             {/* CTA Button */}
-            <div className="text-center">
+            <div className="text-center mt-8">
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-[#AD8C44] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+                className="bg-[#AD8C44] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#AD8C44]/90 transition-all duration-300"
                 data-testid="discuss-project-button"
               >
                 Diskutera ditt projekt

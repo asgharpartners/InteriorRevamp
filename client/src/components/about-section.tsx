@@ -36,7 +36,7 @@ export function AboutSection() {
           <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
             {t('about.title')}
           </h2>
-          <p className="text-xl text-dark-grey max-w-2xl">
+          <p className="text-xl text-[#5B401C] max-w-2xl">
             {t('about.subtitle')}
           </p>
         </div>
@@ -46,7 +46,7 @@ export function AboutSection() {
             <h3 className="font-serif text-3xl font-bold text-dark-brown mb-6">
               {t('about.story')}
             </h3>
-            <div className="space-y-6 text-lg">
+            <div className="space-y-6 text-lg text-[#5B401C]">
               <p>
                 Nils Holger är ett varumärke under Zenit International AB som bildades redan 1982. Vår långa historia har gett oss erfarenhet och kunskap, men annars vill vi gärna profilera oss som ett modernt företag som strävar efter hållbarhet och god kvalitet.
               </p>
@@ -74,7 +74,7 @@ export function AboutSection() {
         {/* Team Members */}
         <div className="text-left mb-12">
           <h3 className="font-serif text-3xl font-bold text-dark-brown mb-4">Our Team</h3>
-          <p className="text-xl text-dark-grey">The creative minds behind every project</p>
+          <p className="text-xl text-[#5B401C]">The creative minds behind every project</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -101,7 +101,7 @@ export function AboutSection() {
                 <p className="text-[#AD8C44] font-semibold mb-3">
                   {member.role}
                 </p>
-                <p className="text-dark-grey text-sm leading-relaxed">
+                <p className="text-[#5B401C] text-sm leading-relaxed">
                   {member.description}
                 </p>
                 {/* Hover Effect */}

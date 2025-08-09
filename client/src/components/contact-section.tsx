@@ -63,7 +63,7 @@ export function ContactSection() {
           <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-dark-grey max-w-2xl">
+          <p className="text-xl text-[#5B401C] max-w-2xl">
             {t('contact.subtitle')}
           </p>
         </div>
@@ -93,9 +93,9 @@ export function ContactSection() {
                 <MapPin className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
                   <p className="font-semibold text-dark-brown">Utställning/Kontor</p>
-                  <p className="text-dark-grey">Birger Jarlsgatan 99</p>
-                  <p className="text-dark-grey">104 32 Stockholm</p>
-                  <p className="text-dark-grey text-sm mt-1">Vi delar lokal med Kakeljätten som är duktiga på sten & kakel</p>
+                  <p className="text-[#5B401C]">Birger Jarlsgatan 99</p>
+                  <p className="text-[#5B401C]">104 32 Stockholm</p>
+                  <p className="text-[#5B401C] text-sm mt-1">Vi delar lokal med Kakeljätten som är duktiga på sten & kakel</p>
                 </div>
               </div>
               
@@ -103,7 +103,7 @@ export function ContactSection() {
                 <Phone className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
                   <p className="font-semibold text-dark-brown">Telefon</p>
-                  <p className="text-dark-grey">+46 - 08 673 50 80</p>
+                  <p className="text-[#5B401C]">+46 - 08 673 50 80</p>
                 </div>
               </div>
               
@@ -111,7 +111,7 @@ export function ContactSection() {
                 <Mail className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
                   <p className="font-semibold text-dark-brown">Email</p>
-                  <p className="text-dark-grey">info@nilsholger.se</p>
+                  <p className="text-[#5B401C]">info@nilsholger.se</p>
                 </div>
               </div>
               
@@ -119,8 +119,8 @@ export function ContactSection() {
                 <MapPin className="text-[#AD8C44] mt-1 flex-shrink-0" size={20} />
                 <div>
                   <p className="font-semibold text-dark-brown">Kontor och lager</p>
-                  <p className="text-dark-grey">Säbyholm, strax utanför Bro</p>
-                  <p className="text-dark-grey text-sm mt-1">Vi träffar gärna våra beställare efter avtalad tid, men oftast åker vi ut till våra beställare på plats</p>
+                  <p className="text-[#5B401C]">Säbyholm, strax utanför Bro</p>
+                  <p className="text-[#5B401C] text-sm mt-1">Vi träffar gärna våra beställare efter avtalad tid, men oftast åker vi ut till våra beställare på plats</p>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ export function ContactSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-dark-grey font-semibold">
+                      <FormLabel className="text-[#5B401C] font-semibold">
                         {t('contact.form.name')}
                       </FormLabel>
                       <FormControl>
@@ -246,8 +246,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-dark-brown mb-1">Email</h4>
-                  <p className="text-dark-grey">info@nilsholger.se</p>
-                  <p className="text-dark-grey">projects@nilsholger.se</p>
+                  <p className="text-[#5B401C]">info@nilsholger.se</p>
+                  <p className="text-[#5B401C]">projects@nilsholger.se</p>
                 </div>
               </div>
               
@@ -257,8 +257,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-dark-brown mb-1">Phone</h4>
-                  <p className="text-dark-grey">+46 8 123 456 78</p>
-                  <p className="text-dark-grey">+46 70 987 654 32</p>
+                  <p className="text-[#5B401C]">+46 8 123 456 78</p>
+                  <p className="text-[#5B401C]">+46 70 987 654 32</p>
                 </div>
               </div>
               
@@ -268,7 +268,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-dark-brown mb-1">Showroom</h4>
-                  <p className="text-dark-grey">Södermalm 15<br/>118 46 Stockholm<br/>Sweden</p>
+                  <p className="text-[#5B401C]">Södermalm 15<br/>118 46 Stockholm<br/>Sweden</p>
                 </div>
               </div>
               

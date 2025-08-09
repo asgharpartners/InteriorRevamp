@@ -159,7 +159,7 @@ export default function HomePage() {
           {/* Section Title - H1 style matching Services */}
           <div className="text-center mb-12">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#3A2315] mb-6">Career & Internship</h1>
-            <p className="text-dark-grey max-w-2xl mx-auto leading-relaxed text-lg">
+            <p className="text-[#5B401C] max-w-2xl mx-auto leading-relaxed text-lg">
               We believe in nurturing the next generation of designers and craftspeople. 
               Our collaboration with students and young professionals creates opportunities for hands-on learning 
               in real-world projects while contributing fresh perspectives to our work.
@@ -169,7 +169,7 @@ export default function HomePage() {
           {/* Job Openings Card - Services card style */}
           <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center mb-6">
             <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Job Openings & Opportunities</h3>
-            <p className="text-dark-grey mb-6 leading-relaxed">
+            <p className="text-[#5B401C] mb-6 leading-relaxed">
               Stay tuned for upcoming internship and full-time positions
             </p>
             
@@ -193,7 +193,7 @@ export default function HomePage() {
           {/* Student Collaboration Card - Services card style */}
           <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
             <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Student Collaboration</h3>
-            <p className="text-dark-grey mb-6 leading-relaxed">
+            <p className="text-[#5B401C] mb-6 leading-relaxed">
               We regularly partner with design schools and universities to provide internship opportunities, 
               thesis project support, and mentorship programs. Students work alongside our experienced team 
               on live projects, gaining valuable industry experience.
@@ -203,7 +203,7 @@ export default function HomePage() {
             <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="text-left">
                 <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">What We Offer</h4>
-                <ul className="text-dark-grey space-y-2">
+                <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Real project experience</span>
@@ -224,7 +224,7 @@ export default function HomePage() {
               </div>
               <div className="text-left">
                 <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">Areas of Focus</h4>
-                <ul className="text-dark-grey space-y-2">
+                <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Interior design</span>

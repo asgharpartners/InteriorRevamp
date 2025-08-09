@@ -228,7 +228,7 @@ export function ReferencesSection() {
                 <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">
                   {project.title}
                 </h3>
-                <p className="text-dark-grey mb-4 leading-relaxed">
+                <p className="text-[#5B401C] mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 justify-start">

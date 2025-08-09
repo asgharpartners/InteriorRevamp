@@ -71,7 +71,14 @@ const products = [
 export function ProductsSection() {
   const { t } = useLanguage();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [activeFilter, setActiveFilter] = useState('all');
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const filterOptions = [
+    { id: 'all', label: 'ALL' },
+    { id: 'instaka', label: 'INSTAKA PRODUKTER' },
+    { id: 'egen', label: 'EGEN PRODUKTION' }
+  ];
 
   const openCard = (index: number) => {
     setExpandedCard(index);
@@ -108,9 +115,32 @@ export function ProductsSection() {
             </p>
           </div>
         </div>
+        {/* Filter Buttons */}
+        <div className="py-16 bg-off-white">
+          <div className="max-w-6xl mx-auto px-8 md:px-12">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {filterOptions.map((option) => (
+                <button
+                  key={option.id}
+                  onClick={() => setActiveFilter(option.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                    activeFilter === option.id
+                      ? 'bg-[#FBD44C] text-[#5B401C]'
+                      : 'bg-off-white/10 text-[#3A2315] hover:bg-off-white/20'
+                  }`}
+                  data-testid={`filter-${option.id}`}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Products Grid with Expandable Cards */}
         <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
+          {activeFilter === 'all' || activeFilter === 'instaka' ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
             {products.map((product, index) => (
               <div 
                 key={product.id}
@@ -186,11 +216,13 @@ export function ProductsSection() {
                 <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             ))}
-          </div>
+            </div>
+          ) : null}
         </div>
         
         {/* INSTAKA PRODUKTER Section */}
-        <div className="py-20 bg-[#2B2B2B]">
+        {(activeFilter === 'all' || activeFilter === 'instaka') && (
+          <div className="py-20 bg-[#2B2B2B]">
           <div className="max-w-6xl mx-auto px-8 md:px-12">
             <div className="text-center mb-12">
               <h3 className="font-serif text-3xl font-bold text-[#FBD44C] mb-4">INSTAKA PRODUKTER</h3>
@@ -237,10 +269,12 @@ export function ProductsSection() {
               ))}
             </div>
           </div>
-        </div>
+          </div>
+        )}
 
         {/* EGEN PRODUKTION Section */}
-        <div className="py-20 bg-[#5B401C]">
+        {(activeFilter === 'all' || activeFilter === 'egen') && (
+          <div className="py-20 bg-[#5B401C]">
           <div className="max-w-6xl mx-auto px-8 md:px-12">
             <div className="text-center mb-12">
               <h3 className="font-serif text-3xl font-bold text-[#FBD44C] mb-4">EGEN PRODUKTION</h3>
@@ -301,7 +335,8 @@ export function ProductsSection() {
               </a>
             </div>
           </div>
-        </div>
+          </div>
+        )}
       </section>
     </>
   );

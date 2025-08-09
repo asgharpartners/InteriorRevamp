@@ -151,6 +151,20 @@ export function ProductsSection() {
               </div>
             ))}
           </div>
+          
+          {/* Production Information Link */}
+          <div className="mt-16 text-center">
+            <a 
+              href="/assets/nordi_production_2023-1_1754761513396.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#AD8C44] text-white font-semibold rounded-lg hover:bg-[#936F39] transition-colors duration-300 shadow-lg hover:shadow-xl"
+              data-testid="production-info-link"
+            >
+              Läs mer om vår produktion
+              <span className="animate-shake inline-block">→</span>
+            </a>
+          </div>
         </div>
       </section>
 

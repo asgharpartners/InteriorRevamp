@@ -33,10 +33,10 @@ export default function HomePage() {
         <div className="w-full h-1/2 bg-[#FFPAF7] relative">
           <div className="absolute inset-0 px-4 sm:px-6 md:px-8 lg:px-12 py-6 flex items-center justify-start">
             <div className="w-full">
-              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#3A2315] mb-4 lg:mb-6 leading-tight tracking-wide text-left" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <h2 className="font-serif sm:text-2xl md:text-3xl lg:text-4xl text-[#3A2315] mb-4 lg:mb-6 tracking-wide text-left text-[55px] font-extrabold ml-[-1px] mr-[-1px] pl-[0px] pr-[0px]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {t('intro.title')}
               </h2>
-              <p className="font-serif text-xs sm:text-sm md:text-base lg:text-lg text-[#3A2315]/80 leading-relaxed text-left" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <p className="font-serif text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-left text-[#3a2315]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {t('intro.subtitle')} {t('intro.description')}
               </p>
             </div>

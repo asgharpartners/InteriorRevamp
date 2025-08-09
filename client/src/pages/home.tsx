@@ -31,10 +31,10 @@ export default function HomePage() {
       {/* Intro Page - Full Landscape */}
       <section id="intro" className="w-full h-screen min-h-[100vh] bg-[#FFPAF7] flex items-center justify-center">
         <div className="max-w-4xl mx-auto text-center px-8">
-          <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-[#221307] mb-8 leading-tight">
+          <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-[#3A2315] mb-8 leading-tight">
             {t('intro.title')}
           </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-[#221307]/80 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl lg:text-3xl text-[#3A2315]/80 leading-relaxed max-w-3xl mx-auto">
             {t('intro.subtitle')}<br />
             {t('intro.description')}
           </p>
@@ -42,7 +42,7 @@ export default function HomePage() {
       </section>
 
       {/* Vår Process Page - Full Landscape */}
-      <section id="var-process" className="w-full h-screen min-h-[100vh] bg-[#221307] flex items-center justify-center">
+      <section id="var-process" className="w-full h-screen min-h-[100vh] bg-[#3A2315] flex items-center justify-center">
         <div className="w-full max-w-5xl mx-auto px-4">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFPAF7] text-center mb-8 md:mb-10">
             Vår Process
@@ -53,7 +53,7 @@ export default function HomePage() {
             {/* Step 1 */}
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#221307] font-bold text-base md:text-lg lg:text-xl">1</span>
+                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">1</span>
               </div>
               <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
                 Förutsättningslöst möte
@@ -66,7 +66,7 @@ export default function HomePage() {
             {/* Step 2 */}
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#221307] font-bold text-base md:text-lg lg:text-xl">2</span>
+                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">2</span>
               </div>
               <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
                 Design & Koncept
@@ -79,7 +79,7 @@ export default function HomePage() {
             {/* Step 3 */}
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#221307] font-bold text-base md:text-lg lg:text-xl">3</span>
+                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">3</span>
               </div>
               <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
                 Produktion & Förädling
@@ -92,7 +92,7 @@ export default function HomePage() {
             {/* Step 4 */}
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#221307] font-bold text-base md:text-lg lg:text-xl">4</span>
+                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">4</span>
               </div>
               <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
                 Leverans & Installation
@@ -107,7 +107,7 @@ export default function HomePage() {
           <div className="text-center">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-[#D1AE77] text-[#221307] px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm md:text-base lg:text-lg hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+              className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm md:text-base lg:text-lg hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
               data-testid="discuss-project-button"
             >
               Diskutera ditt projekt
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           {/* Section Title - H1 style matching Services */}
           <div className="text-center mb-12">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-6">Career & Internship</h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#3A2315] mb-6">Career & Internship</h1>
             <p className="text-dark-grey max-w-2xl mx-auto leading-relaxed text-lg">
               We believe in nurturing the next generation of designers and craftspeople. 
               Our collaboration with students and young professionals creates opportunities for hands-on learning 
@@ -145,7 +145,7 @@ export default function HomePage() {
           
           {/* Job Openings Card - Services card style */}
           <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center mb-6">
-            <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Job Openings & Opportunities</h3>
+            <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Job Openings & Opportunities</h3>
             <p className="text-dark-grey mb-6 leading-relaxed">
               Stay tuned for upcoming internship and full-time positions
             </p>
@@ -160,7 +160,7 @@ export default function HomePage() {
             {/* Primary CTA Button */}
             <button 
               onClick={() => scrollToSection('contact')}
-              className="btn-primary bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+              className="btn-primary bg-[#D1AE77] text-[#3A2315] px-8 py-3 rounded-lg font-medium hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
               data-testid="career-contact-button"
             >
               Get In Touch
@@ -169,7 +169,7 @@ export default function HomePage() {
 
           {/* Student Collaboration Card - Services card style */}
           <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
-            <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Student Collaboration</h3>
+            <h3 className="font-serif text-xl font-bold text-[#3A2315] mb-4 tracking-wide">Student Collaboration</h3>
             <p className="text-dark-grey mb-6 leading-relaxed">
               We regularly partner with design schools and universities to provide internship opportunities, 
               thesis project support, and mentorship programs. Students work alongside our experienced team 
@@ -179,43 +179,43 @@ export default function HomePage() {
             {/* Two-column grid */}
             <div className="career-grid grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="text-left">
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">What We Offer</h4>
+                <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">What We Offer</h4>
                 <ul className="text-dark-grey space-y-2">
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Real project experience</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Professional mentorship</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Portfolio development support</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Industry network access</span>
                   </li>
                 </ul>
               </div>
               <div className="text-left">
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-3 tracking-wide">Areas of Focus</h4>
+                <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">Areas of Focus</h4>
                 <ul className="text-dark-grey space-y-2">
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Interior design</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Furniture craftsmanship</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Project management</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#AD8C44] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Sustainable design practices</span>
                   </li>
                 </ul>

@@ -54,7 +54,7 @@ export function ServicesSection() {
     <section id="services" className="bg-white">
       {/* Section Title */}
       <div className="text-center py-16 bg-off-white">
-        <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">Tjänster</h2>
+        <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
         <p className="text-dark-grey max-w-4xl mx-auto px-4 leading-relaxed">
           {t('services.subtitle')}
         </p>
@@ -85,7 +85,7 @@ export function ServicesSection() {
                 }`}>
                   <ChevronDown 
                     size={24} 
-                    className="text-[#AD8C44]" 
+                    className="text-[#D1AE77]" 
                   />
                 </div>
               </div>
@@ -118,7 +118,7 @@ export function ServicesSection() {
                           scrollToSection('contact');
                         }
                       }}
-                      className="text-[#AD8C44] text-sm font-semibold hover:text-[#AD8C44]/80 transition-colors duration-200 inline-flex items-center gap-1"
+                      className="text-[#D1AE77] text-sm font-semibold hover:text-[#D1AE77]/80 transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}
                     >
                       Läs mer →

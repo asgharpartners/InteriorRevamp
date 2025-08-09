@@ -199,17 +199,35 @@ export function ProductsSection() {
           </div>
         </div>
         
-        {/* Production Information Link */}
+        {/* Product Category Buttons */}
         <div className="py-16 bg-off-white">
           <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <button 
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#FBD44C] text-[#2B2B2B] font-semibold rounded-lg hover:bg-[#FBD44C]/90 transition-colors duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                data-testid="instaka-produkter-button"
+              >
+                Instaka Produkter
+                <span className="animate-shake inline-block">→</span>
+              </button>
+              
+              <button 
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#AD8C44] text-white font-semibold rounded-lg hover:bg-[#936F39] transition-colors duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                data-testid="egen-produktion-button"
+              >
+                Egen Produktion
+                <span className="animate-shake inline-block">→</span>
+              </button>
+            </div>
+            
             <a 
               href="/assets/nordi_production_2023-1_1754761513396.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#AD8C44] text-white font-semibold rounded-lg hover:bg-[#936F39] transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#2B2B2B] text-white font-medium rounded-lg hover:bg-[#3A2315] transition-colors duration-300"
               data-testid="production-info-link"
             >
-              Läs mer om vår produktion
+              Läs mer om vår produktion (PDF)
               <span className="animate-shake inline-block">→</span>
             </a>
           </div>

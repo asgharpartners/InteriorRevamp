@@ -142,8 +142,32 @@ export default function HomePage() {
             </p>
           </div>
           
+          {/* Job Openings Card - Services card style */}
+          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center mb-6">
+            <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Job Openings & Opportunities</h3>
+            <p className="text-dark-grey mb-6 leading-relaxed">
+              Stay tuned for upcoming internship and full-time positions
+            </p>
+            
+            {/* Launching Soon Badge */}
+            <div className="mb-4">
+              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
+                Launching Soon
+              </span>
+            </div>
+            
+            {/* Primary CTA Button */}
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="btn-primary bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+              data-testid="career-contact-button"
+            >
+              Get In Touch
+            </button>
+          </div>
+
           {/* Student Collaboration Card - Services card style */}
-          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-6">
+          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
             <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Student Collaboration</h3>
             <p className="text-dark-grey mb-6 leading-relaxed">
               We regularly partner with design schools and universities to provide internship opportunities, 
@@ -196,30 +220,6 @@ export default function HomePage() {
                 </ul>
               </div>
             </div>
-          </div>
-          
-          {/* Job Openings Card - Services card style */}
-          <div className="career-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
-            <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">Job Openings & Opportunities</h3>
-            <p className="text-dark-grey mb-6 leading-relaxed">
-              Stay tuned for upcoming internship and full-time positions
-            </p>
-            
-            {/* Launching Soon Badge */}
-            <div className="mb-4">
-              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
-                Launching Soon
-              </span>
-            </div>
-            
-            {/* Primary CTA Button */}
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="btn-primary bg-[#AD8C44] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
-              data-testid="career-contact-button"
-            >
-              Get In Touch
-            </button>
           </div>
         </div>
       </section>

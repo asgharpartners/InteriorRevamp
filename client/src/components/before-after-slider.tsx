@@ -136,7 +136,7 @@ export function BeforeAfterSlider() {
           <div className="flex justify-center items-center space-x-4">
             <button 
               onClick={previousProject}
-              className="flex items-center px-6 py-3 bg-warm-gold text-dark-brown rounded-lg hover:bg-opacity-90 transition-colors"
+              className="flex items-center px-6 py-3 bg-[#FBD44C] text-dark-brown rounded-lg hover:bg-opacity-90 transition-colors"
             >
               <ChevronLeft className="h-4 w-4 mr-2" />
               Previous
@@ -146,14 +146,14 @@ export function BeforeAfterSlider() {
                 <div
                   key={index}
                   className={`w-2 h-2 rounded-full ${
-                    index === currentProject ? 'bg-warm-gold' : 'bg-off-white/30'
+                    index === currentProject ? 'bg-[#FBD44C]' : 'bg-off-white/30'
                   }`}
                 />
               ))}
             </div>
             <button 
               onClick={nextProject}
-              className="flex items-center px-6 py-3 bg-warm-gold text-dark-brown rounded-lg hover:bg-opacity-90 transition-colors"
+              className="flex items-center px-6 py-3 bg-[#FBD44C] text-dark-brown rounded-lg hover:bg-opacity-90 transition-colors"
             >
               Next
               <ChevronRight className="h-4 w-4 ml-2" />

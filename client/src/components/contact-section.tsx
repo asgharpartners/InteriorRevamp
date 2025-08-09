@@ -241,7 +241,7 @@ export function ContactSection() {
             
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-warm-gold rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
                   <Mail className="h-5 w-5 text-dark-brown" />
                 </div>
                 <div>
@@ -252,7 +252,7 @@ export function ContactSection() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-warm-gold rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
                   <Phone className="h-5 w-5 text-dark-brown" />
                 </div>
                 <div>
@@ -263,7 +263,7 @@ export function ContactSection() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-warm-gold rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-dark-brown" />
                 </div>
                 <div>
@@ -273,7 +273,7 @@ export function ContactSection() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-warm-gold rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
                   <Clock className="h-5 w-5 text-dark-brown" />
                 </div>
                 <div>

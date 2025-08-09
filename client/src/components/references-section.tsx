@@ -208,7 +208,7 @@ export function ReferencesSection() {
               onClick={() => setActiveFilter(option.id)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeFilter === option.id
-                  ? 'bg-warm-gold text-dark-brown'
+                  ? 'bg-[#FBD44C] text-dark-brown'
                   : 'bg-off-white/10 text-off-white hover:bg-off-white/20'
               }`}
             >
@@ -222,7 +222,7 @@ export function ReferencesSection() {
           {filteredProjects.map((project) => (
             <div key={project.id} className="project-card cursor-pointer group">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-80 flex flex-col justify-center transition-all duration-300 hover:shadow-md">
-                <div className="absolute top-4 right-4 bg-warm-gold text-dark-brown px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 right-4 bg-[#FBD44C] text-dark-brown px-3 py-1 rounded-full text-sm font-semibold">
                   {project.year}
                 </div>
                 <h3 className="font-serif text-xl font-bold text-dark-brown mb-4 tracking-wide">

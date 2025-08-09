@@ -178,7 +178,7 @@ export default function HomePage() {
             
             {/* Launching Soon Badge */}
             <div className="mb-4">
-              <span className="badge--launching inline-block bg-[#F2DC74] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="badge--launching inline-block bg-[#FBD44C] text-[#3E2516] px-4 py-2 rounded-full text-sm font-semibold">
                 Launching Soon
               </span>
             </div>
@@ -186,7 +186,7 @@ export default function HomePage() {
             {/* Primary CTA Button */}
             <button 
               onClick={() => scrollToSection('contact')}
-              className="btn-primary bg-[#D1AE77] text-[#3A2315] px-8 py-3 rounded-lg font-medium hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+              className="btn-primary bg-[#FBD44C] text-[#3A2315] px-8 py-3 rounded-lg font-medium hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
               data-testid="career-contact-button"
             >
               Get In Touch
@@ -208,19 +208,19 @@ export default function HomePage() {
                 <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">What We Offer</h4>
                 <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Real project experience</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Professional mentorship</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Portfolio development support</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Industry network access</span>
                   </li>
                 </ul>
@@ -229,19 +229,19 @@ export default function HomePage() {
                 <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">Areas of Focus</h4>
                 <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Interior design</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Furniture craftsmanship</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Project management</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-[#D1AE77] rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                    <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
                     <span>Sustainable design practices</span>
                   </li>
                 </ul>

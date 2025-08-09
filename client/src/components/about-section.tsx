@@ -66,7 +66,7 @@ export function AboutSection() {
               alt="Nils Holger showroom interior view" 
               className="rounded-lg shadow-2xl w-full h-auto parallax-bg"
             />
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-warm-gold/20 rounded-full blur-xl" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#FBD44C]/20 rounded-full blur-xl" />
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-dark-brown/10 rounded-full blur-lg" />
           </div>
         </div>

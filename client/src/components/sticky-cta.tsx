@@ -42,7 +42,7 @@ export function StickyCTA() {
         </div>
         <Button
           onClick={scrollToContact}
-          className="bg-warm-gold text-dark-brown hover:bg-warm-gold/90 font-semibold text-sm px-4 py-2 rounded"
+          className="bg-[#FBD44C] text-dark-brown hover:bg-[#FBD44C]/90 font-semibold text-sm px-4 py-2 rounded"
           data-testid="sticky-cta-button"
         >
           {t('stickyCta.button')}

@@ -59,7 +59,7 @@ export default function HomePage() {
 
       {/* Intro Section */}
       <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 text-left">
+        <div className="max-w-6xl mx-auto px-8 md:px-12 text-left">
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8">
             Välkomna till Nils Holger – Furniture & Project
           </h1>
@@ -71,12 +71,12 @@ export default function HomePage() {
 
       {/* Vår Process Section */}
       <section className="w-full bg-[#5B401C] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-8 md:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {processSteps.map((step) => (
-              <div key={step.number} className="text-left">
+              <div key={step.number} className="text-center">
                 {/* Step Circle */}
-                <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mb-4">
+                <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-[#FBD44C] font-bold text-xl md:text-2xl">{step.number}</span>
                 </div>
                 

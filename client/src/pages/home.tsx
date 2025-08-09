@@ -49,55 +49,55 @@ export default function HomePage() {
           </h2>
           
           {/* Process Steps - Horizontal Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-12 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-12 mb-12 md:mb-16">
             {/* Step 1 */}
-            <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-[#221307] font-bold text-3xl md:text-4xl lg:text-5xl">1</span>
+            <div className="text-left">
+              <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-[#D1AE77] rounded-full flex items-center justify-center mb-4">
+                <span className="text-[#221307] font-bold text-xl md:text-2xl lg:text-3xl">1</span>
               </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-[#FFPAF7] font-semibold text-sm md:text-base lg:text-lg mb-2">
                 Förutsättningslöst möte
               </h3>
-              <p className="text-[#FFPAF7]/80 text-sm md:text-base leading-relaxed">
+              <p className="text-[#FFPAF7]/80 text-xs md:text-sm leading-relaxed">
                 Behov och visioner, Tidplan, Omfattning, Budget, Upplägg
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-[#221307] font-bold text-3xl md:text-4xl lg:text-5xl">2</span>
+            <div className="text-left">
+              <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-[#D1AE77] rounded-full flex items-center justify-center mb-4">
+                <span className="text-[#221307] font-bold text-xl md:text-2xl lg:text-3xl">2</span>
               </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-[#FFPAF7] font-semibold text-sm md:text-base lg:text-lg mb-2">
                 Design & Koncept
               </h3>
-              <p className="text-[#FFPAF7]/80 text-sm md:text-base leading-relaxed">
+              <p className="text-[#FFPAF7]/80 text-xs md:text-sm leading-relaxed">
                 Vi utvecklar ett genomtänkt inredningskoncept
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-[#221307] font-bold text-3xl md:text-4xl lg:text-5xl">3</span>
+            <div className="text-left">
+              <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-[#D1AE77] rounded-full flex items-center justify-center mb-4">
+                <span className="text-[#221307] font-bold text-xl md:text-2xl lg:text-3xl">3</span>
               </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-[#FFPAF7] font-semibold text-sm md:text-base lg:text-lg mb-2">
                 Produktion & Förädling
               </h3>
-              <p className="text-[#FFPAF7]/80 text-sm md:text-base leading-relaxed">
+              <p className="text-[#FFPAF7]/80 text-xs md:text-sm leading-relaxed">
                 Vi producerar & förädlar lösningar i egen verkstad / via partners
               </p>
             </div>
 
             {/* Step 4 */}
-            <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-[#221307] font-bold text-3xl md:text-4xl lg:text-5xl">4</span>
+            <div className="text-left">
+              <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-[#D1AE77] rounded-full flex items-center justify-center mb-4">
+                <span className="text-[#221307] font-bold text-xl md:text-2xl lg:text-3xl">4</span>
               </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-[#FFPAF7] font-semibold text-sm md:text-base lg:text-lg mb-2">
                 Leverans & Installation
               </h3>
-              <p className="text-[#FFPAF7]/80 text-sm md:text-base leading-relaxed">
+              <p className="text-[#FFPAF7]/80 text-xs md:text-sm leading-relaxed">
                 Transport, montering, färdigställande
               </p>
             </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
           <div className="text-center">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-[#D1AE77] text-[#221307] px-12 py-5 rounded-lg font-semibold text-xl hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+              className="bg-[#D1AE77] text-[#221307] px-6 py-3 md:px-10 md:py-4 lg:px-12 lg:py-5 rounded-lg font-semibold text-base md:text-lg lg:text-xl hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
               data-testid="discuss-project-button"
             >
               Diskutera ditt projekt

@@ -68,8 +68,8 @@ export function AboutSection() {
           </div>
           <div className="order-1 lg:order-2 relative">
             <img 
-              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Nils Holger showroom interior view" 
+              src="/assets/Our story_1754764825382.png" 
+              alt="Nils Holger showroom window display" 
               className="rounded-lg shadow-2xl w-full h-auto parallax-bg"
             />
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#FBD44C]/20 rounded-full blur-xl" />

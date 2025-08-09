@@ -234,64 +234,7 @@ export function ContactSection() {
               </form>
             </Form>
           </div>
-          
-          {/* Contact Information */}
-          <div>
-            <h3 className="font-serif text-2xl font-bold text-dark-brown mb-8">Get in touch</h3>
-            
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
-                  <Mail className="h-5 w-5 text-dark-brown" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-dark-brown mb-1">Email</h4>
-                  <p className="text-[#5B401C]">info@nilsholger.se</p>
-                  <p className="text-[#5B401C]">projects@nilsholger.se</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-dark-brown" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-dark-brown mb-1">Phone</h4>
-                  <p className="text-[#5B401C]">+46 8 123 456 78</p>
-                  <p className="text-[#5B401C]">+46 70 987 654 32</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-dark-brown" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-dark-brown mb-1">Showroom</h4>
-                  <p className="text-[#5B401C]">Södermalm 15<br/>118 46 Stockholm<br/>Sweden</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#FBD44C] rounded-lg flex items-center justify-center">
-                  <Clock className="h-5 w-5 text-dark-brown" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-dark-brown mb-1">Visiting Hours</h4>
-                  <p className="text-[#5B401C]">Mon-Fri: 9:00 - 18:00<br/>Saturday: 10:00 - 16:00<br/>Sunday: By appointment</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Map placeholder */}
-            <div className="mt-8">
-              <img 
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" 
-                alt="Nils Holger showroom location" 
-                className="w-full h-48 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

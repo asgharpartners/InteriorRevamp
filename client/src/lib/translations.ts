@@ -48,7 +48,7 @@ export const translations = {
     },
     services: {
       title: "Our Services",
-      subtitle: "From concept to completion, we offer comprehensive interior design and furniture services"
+      subtitle: "Vi erbjuder flexibla och skräddarsydda lösningar för alla typer av inredningsprojekt – från idé till färdig installation. Oavsett om det gäller hotell, kontor, restaurang eller andra offentliga miljöer arbetar vi nära våra kunder för att skapa hållbara och estetiskt genomtänkta resultat."
     },
     beforeAfter: {
       title: "Before & After",

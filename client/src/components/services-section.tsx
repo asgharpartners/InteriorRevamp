@@ -50,8 +50,8 @@ export function ServicesSection() {
       {/* Section Title */}
       <div className="text-center py-16 bg-off-white">
         <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">Tjänster</h2>
-        <p className="text-dark-grey max-w-2xl mx-auto px-4">
-          Professionella inrednings- och byggtjänster för offentliga miljöer
+        <p className="text-dark-grey max-w-4xl mx-auto px-4 leading-relaxed">
+          {t('services.subtitle')}
         </p>
       </div>
 
@@ -87,17 +87,20 @@ export function ServicesSection() {
 
               {/* Expanded Content Overlay */}
               {expandedCard === index && (
-                <div className="absolute inset-0 bg-off-white/95 backdrop-blur-sm z-20 flex flex-col justify-center p-8 animate-in slide-in-from-bottom duration-300">
+                <div 
+                  className="absolute inset-0 bg-[#3B2416] z-20 flex flex-col justify-center p-8 animate-in slide-in-from-bottom duration-300"
+                  onClick={() => toggleCard(index)}
+                >
                   <div className="text-center">
-                    <h3 className="font-serif text-lg font-bold text-dark-brown mb-4 tracking-wide">
+                    <h3 className="font-serif text-lg font-bold text-[#F5F1EA] mb-4 tracking-wide">
                       {service.title}
                     </h3>
                     
-                    <p className="text-dark-grey mb-4 text-sm leading-relaxed">
+                    <p className="text-[#F5F1EA]/90 mb-4 text-sm leading-relaxed">
                       {service.description}
                     </p>
                     
-                    <p className="text-dark-brown text-xs leading-relaxed mb-6">
+                    <p className="text-[#F5F1EA]/80 text-xs leading-relaxed mb-6">
                       {service.longDescription}
                     </p>
                     

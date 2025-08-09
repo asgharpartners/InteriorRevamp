@@ -125,15 +125,18 @@ export function ProductsSection() {
 
   return (
     <>
-      <section className="py-20 bg-[#3a2315]" id="products" data-testid="products-section">
-        <div className="max-w-6xl mx-auto px-8 md:px-12">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-[#FFFAF7] mb-6">
-              Våra Produkter
-            </h2>
-            <p className="text-[#FFFAF7] text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-              Upptäck vår kollektion av handgjorda möbler och skräddarsydda designlösningar
-            </p>
+      <section className="bg-[#3a2315]" id="products" data-testid="products-section">
+        {/* Title Section with different background */}
+        <div className="py-20 bg-[#2b2b2b]">
+          <div className="max-w-6xl mx-auto px-8 md:px-12">
+            <div className="text-center">
+              <h2 className="font-serif text-4xl font-bold text-[#FFFAF7] mb-6">
+                Våra Produkter
+              </h2>
+              <p className="text-[#FFFAF7] text-lg font-medium max-w-3xl mx-auto leading-relaxed">
+                Upptäck vår kollektion av handgjorda möbler och skräddarsydda designlösningar
+              </p>
+            </div>
           </div>
         </div>
 

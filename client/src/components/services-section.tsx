@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
@@ -38,10 +38,41 @@ const services = [
 export function ServicesSection() {
   const { t } = useLanguage();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggleCard = (index: number) => {
     setExpandedCard(expandedCard === index ? null : index);
   };
+
+  const closeCard = () => {
+    setExpandedCard(null);
+  };
+
+  // Handle ESC key and click outside
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeCard();
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (expandedCard !== null) {
+        const clickedCard = cardRefs.current[expandedCard];
+        if (clickedCard && !clickedCard.contains(e.target as Node)) {
+          closeCard();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [expandedCard]);
 
   const scrollToSection = (section: string) => {
     const element = document.getElementById(section);
@@ -65,8 +96,15 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div 
               key={index}
+              ref={(el) => (cardRefs.current[index] = el)}
               className="relative bg-[#2B2B2B] border-r border-b border-white/10 last:border-r-0 md:last:border-r-0 flex flex-col group overflow-hidden"
               style={{ minHeight: '400px' }}
+              onMouseLeave={() => {
+                // Close popup when mouse leaves card on desktop
+                if (expandedCard === index && window.innerWidth >= 768) {
+                  closeCard();
+                }
+              }}
             >
               {/* Card Header - Always Visible */}
               <div 
@@ -92,19 +130,19 @@ export function ServicesSection() {
               {/* Expanded Content Overlay */}
               {expandedCard === index && (
                 <div 
-                  className="absolute inset-0 bg-[#3B2416] z-20 flex flex-col justify-center p-8 animate-in slide-in-from-bottom duration-300"
-                  onClick={() => toggleCard(index)}
+                  className="absolute inset-0 bg-[#2B190F]/90 z-20 flex flex-col justify-start p-6 animate-in slide-in-from-bottom duration-300 rounded-lg"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="text-center">
-                    <h3 className="font-serif text-lg font-bold text-[#F5F1EA] mb-4 tracking-wide">
+                  <div className="text-left">
+                    <h3 className="font-serif text-lg font-bold text-[#F5F5F5] mb-3 tracking-wide">
                       {service.title}
                     </h3>
                     
-                    <p className="text-[#F5F1EA]/90 mb-4 text-sm leading-relaxed">
+                    <p className="text-[#F5F5F5] mb-4 text-sm leading-relaxed">
                       {service.description}
                     </p>
                     
-                    <p className="text-[#F5F1EA]/80 text-xs leading-relaxed mb-6">
+                    <p className="text-[#F5F5F5] text-xs leading-relaxed mb-6">
                       {service.longDescription}
                     </p>
                     

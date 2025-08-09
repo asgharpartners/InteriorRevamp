@@ -5,6 +5,7 @@ import projektledningImage from '@assets/image_1754741347160.png';
 import reparationImage from '@assets/Reperation_1754742618187.png';
 import projekteringImage from '@assets/image_1754745251288.png';
 import designradgivningImage from '@assets/image_1754749142152.png';
+import byggnationImage from '@assets/image_1754753437709.png';
 
 const services = [
   {
@@ -32,7 +33,8 @@ const services = [
   {
     title: "BYGGNATION OCH RENOVERING",
     description: "Med hjälp av vårt stora nätverk av underentreprenörer erbjuder vi även projekt- och/eller byggledning för i stort sett alla typer av arbeten inom byggnation och inredning.",
-    longDescription: "En enkel och prisvärd lösning för beställaren. I alla typer av lokaler blir det ofrånkomligen slitage på ytskikten. Ibland kan detta innebära patina och en känsla av trivsel, men oftast så innebär det att helhetsintrycket dras ned och att det är läge att fräscha upp eller byta ut vissa delar. Vi har stor erfarenhet av att snabbt och effektivt förändra offentliga rum så att verksamheten drabbas så lite som möjligt, enkelt och prisvärt."
+    longDescription: "En enkel och prisvärd lösning för beställaren. I alla typer av lokaler blir det ofrånkomligen slitage på ytskikten. Ibland kan detta innebära patina och en känsla av trivsel, men oftast så innebär det att helhetsintrycket dras ned och att det är läge att fräscha upp eller byta ut vissa delar. Vi har stor erfarenhet av att snabbt och effektivt förändra offentliga rum så att verksamheten drabbas så lite som möjligt, enkelt och prisvärt.",
+    image: byggnationImage
   },
   {
     title: "OMKLÄDNADER OCH REPARATION",
@@ -129,6 +131,12 @@ export function ServicesSection() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
                   style={{ backgroundImage: `url(${projektledningImage})` }}
+                />
+              )}
+              {service.title === "BYGGNATION OCH RENOVERING" && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url(${byggnationImage})` }}
                 />
               )}
               {service.title === "OMKLÄDNADER OCH REPARATION" && (

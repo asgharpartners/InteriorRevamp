@@ -11,11 +11,10 @@ import { Footer } from '@/components/footer';
 import { StickyCTA } from '@/components/sticky-cta';
 import { FloatingShortcuts } from '@/components/floating-shortcuts';
 import { useLanguage } from '@/hooks/use-language';
-import { ChevronDown } from 'lucide-react';
+
 
 export default function HomePage() {
   const { t } = useLanguage();
-  const [expandedStep, setExpandedStep] = useState<number | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -24,224 +23,94 @@ export default function HomePage() {
     }
   };
 
-  const toggleStep = (index: number) => {
-    setExpandedStep(expandedStep === index ? null : index);
-  };
-
   return (
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
       
-      {/* Two-Column Layout: Intro + Process */}
-      <div className="w-full h-[70vh] min-h-[540px] grid grid-cols-1 lg:grid-cols-2">
+      {/* Intro + Vår process (side-by-side, half page each) */}
+      <div className="w-full h-screen min-h-[100vh] grid grid-cols-1 lg:grid-cols-2">
         {/* Intro Section - Left Column */}
-        <section id="introSection" className="bg-[#F5F1EA] flex items-center justify-center py-10 md:py-12">
-          <div className="max-w-lg mx-auto text-left px-8">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark-brown mb-6 leading-tight">
+        <section id="intro" className="bg-off-white flex items-center justify-center py-12 lg:py-0">
+          <div className="max-w-[680px] mx-auto text-left px-8">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-dark-brown mb-6 leading-tight">
               {t('intro.title')}
             </h2>
-            <p className="text-lg md:text-xl text-dark-grey leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-dark-grey leading-relaxed">
               {t('intro.subtitle')}<br />
               {t('intro.description')}
             </p>
           </div>
         </section>
 
-        {/* Process Section - Right Column */}
-        <section id="processSection" className="bg-[#3E2516] flex items-center justify-center relative py-10 md:py-12">
-          <div className="w-full max-w-[540px] mx-auto p-8 md:p-10 lg:p-12">
-            {/* Circular Process Steps */}
-            <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] lg:w-[360px] lg:h-[360px] mx-auto">
-              {/* Center Title */}
-              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-30 transition-opacity duration-300 ${
-                expandedStep !== null ? 'opacity-30' : 'opacity-100'
-              }`}>
-                <h3 className="font-serif text-lg font-bold text-white mb-1">
-                  Vår
+        {/* Vår process Section - Right Column */}
+        <section id="var-process" className="bg-[#3E2516] flex items-center justify-center py-12 lg:py-0">
+          <div className="w-full max-w-4xl mx-auto px-8">
+            {/* Process Steps - Horizontal Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 lg:gap-8 mb-12">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#3E2516] font-bold text-2xl md:text-3xl lg:text-4xl">1</span>
+                </div>
+                <h3 className="text-off-white font-semibold text-sm md:text-base lg:text-lg mb-2">
+                  Förutsättningslöst möte
                 </h3>
-                <h3 className="font-serif text-2xl font-bold text-white">
-                  process
+                <p className="text-off-white/80 text-xs md:text-sm leading-relaxed">
+                  Behov och visioner, Tidplan, Omfattning, Budget, Upplägg
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#3E2516] font-bold text-2xl md:text-3xl lg:text-4xl">2</span>
+                </div>
+                <h3 className="text-off-white font-semibold text-sm md:text-base lg:text-lg mb-2">
+                  Design & Koncept
                 </h3>
+                <p className="text-off-white/80 text-xs md:text-sm leading-relaxed">
+                  Vi utvecklar ett genomtänkt inredningskoncept
+                </p>
               </div>
-              
-              {/* Step 1 - Top */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-6">
-                <div className="text-center relative">
-                  <div 
-                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
-                    onClick={() => toggleStep(1)}
-                  >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
-                      Förutsätt-<br />ningslöst<br />möte
-                    </span>
-                  </div>
-                  
-                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
-                    expandedStep === 1 ? 'transform rotate-180' : ''
-                  }`}>
-                    <ChevronDown 
-                      size={20} 
-                      className="text-[#AD8C44] cursor-pointer" 
-                      onClick={() => toggleStep(1)}
-                    />
-                  </div>
+
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#3E2516] font-bold text-2xl md:text-3xl lg:text-4xl">3</span>
                 </div>
+                <h3 className="text-off-white font-semibold text-sm md:text-base lg:text-lg mb-2">
+                  Produktion & Förädling
+                </h3>
+                <p className="text-off-white/80 text-xs md:text-sm leading-relaxed">
+                  Vi producerar & förädlar lösningar i egen verkstad / via partners
+                </p>
               </div>
 
-              {/* Arrow from Step 1 to Step 2 */}
-              <div className="absolute top-14 right-14 sm:top-16 sm:right-16 lg:top-18 lg:right-18 z-10">
-                <svg width="45" height="45" viewBox="0 0 45 45" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
-                  <path d="M10 22 Q22 10 34 22" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
-                  <defs>
-                    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                      <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
-                    </marker>
-                  </defs>
-                </svg>
-              </div>
-
-              {/* Step 2 - Right */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-6">
-                <div className="text-center relative">
-                  <div 
-                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
-                    onClick={() => toggleStep(2)}
-                  >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
-                      Design &<br />Koncept
-                    </span>
-                  </div>
-                  
-                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
-                    expandedStep === 2 ? 'transform rotate-180' : ''
-                  }`}>
-                    <ChevronDown 
-                      size={20} 
-                      className="text-[#AD8C44] cursor-pointer" 
-                      onClick={() => toggleStep(2)}
-                    />
-                  </div>
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#3E2516] font-bold text-2xl md:text-3xl lg:text-4xl">4</span>
                 </div>
-              </div>
-
-              {/* Arrow from Step 2 to Step 3 */}
-              <div className="absolute bottom-14 right-14 sm:bottom-16 sm:right-16 lg:bottom-18 lg:right-18 z-10">
-                <svg width="45" height="45" viewBox="0 0 45 45" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
-                  <path d="M34 10 Q22 22 10 34" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead2)" />
-                  <defs>
-                    <marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                      <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
-                    </marker>
-                  </defs>
-                </svg>
-              </div>
-
-              {/* Step 3 - Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-6">
-                <div className="text-center relative">
-                  <div 
-                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
-                    onClick={() => toggleStep(3)}
-                  >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
-                      Produktion
-                    </span>
-                  </div>
-                  
-                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
-                    expandedStep === 3 ? 'transform rotate-180' : ''
-                  }`}>
-                    <ChevronDown 
-                      size={20} 
-                      className="text-[#AD8C44] cursor-pointer" 
-                      onClick={() => toggleStep(3)}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow from Step 3 to Step 4 */}
-              <div className="absolute bottom-14 left-14 sm:bottom-16 sm:left-16 lg:bottom-18 lg:left-18 z-10">
-                <svg width="45" height="45" viewBox="0 0 45 45" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
-                  <path d="M34 34 Q22 22 10 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead3)" />
-                  <defs>
-                    <marker id="arrowhead3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                      <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
-                    </marker>
-                  </defs>
-                </svg>
-              </div>
-
-              {/* Step 4 - Left */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-6">
-                <div className="text-center relative">
-                  <div 
-                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
-                    onClick={() => toggleStep(4)}
-                  >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
-                      Leverans
-                    </span>
-                  </div>
-                  
-                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
-                    expandedStep === 4 ? 'transform rotate-180' : ''
-                  }`}>
-                    <ChevronDown 
-                      size={20} 
-                      className="text-[#AD8C44] cursor-pointer" 
-                      onClick={() => toggleStep(4)}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow from Step 4 to Step 1 */}
-              <div className="absolute top-14 left-14 sm:top-16 sm:left-16 lg:top-18 lg:left-18 z-10">
-                <svg width="45" height="45" viewBox="0 0 45 45" className="text-white sm:w-12 sm:h-12 lg:w-15 lg:h-15">
-                  <path d="M10 34 Q22 22 34 10" stroke="currentColor" strokeWidth="2" fill="none" markerEnd="url(#arrowhead4)" />
-                  <defs>
-                    <marker id="arrowhead4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                      <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
-                    </marker>
-                  </defs>
-                </svg>
+                <h3 className="text-off-white font-semibold text-sm md:text-base lg:text-lg mb-2">
+                  Leverans & Installation
+                </h3>
+                <p className="text-off-white/80 text-xs md:text-sm leading-relaxed">
+                  Transport, montering, färdigställande
+                </p>
               </div>
             </div>
-            
-            {/* Process Accordion Panels */}
-            {expandedStep && (
-              <div className="absolute inset-x-0 bottom-0 transform translate-y-full z-20">
-                <div className="w-full max-w-[clamp(320px,80%,560px)] mx-auto mt-4 lg:mt-8">
-                  <div className="process-panel bg-[#F8F3EC] border border-[#D6C6A6] rounded-lg shadow-lg p-6 animate-in slide-in-from-bottom duration-300">
-                    <div className="text-center">
-                      <h3 className="font-serif text-lg font-bold text-[#3A261B] mb-4 tracking-wide">
-                        {expandedStep === 1 && "Förutsättningslöst möte"}
-                        {expandedStep === 2 && "Design & Koncept"}
-                        {expandedStep === 3 && "Produktion"}
-                        {expandedStep === 4 && "Leverans"}
-                      </h3>
-                      
-                      <p className="text-[#3A261B]/80 text-sm leading-relaxed">
-                        {expandedStep === 1 && t('process.step1.description')}
-                        {expandedStep === 2 && t('process.step2.description')}
-                        {expandedStep === 3 && t('process.step3.description')}
-                        {expandedStep === 4 && t('process.step4.description')}
-                      </p>
-                      
-                      <button 
-                        onClick={() => setExpandedStep(null)}
-                        className="mt-4 text-[#AD8C44] text-sm font-semibold hover:text-[#AD8C44]/80 transition-colors duration-200"
-                      >
-                        Stäng ×
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
 
+            {/* CTA Button */}
+            <div className="text-center">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-[#AD8C44] text-[#3E2516] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#AD8C44]/90 transition-all duration-300 transform hover:scale-105"
+                data-testid="discuss-project-button"
+              >
+                Diskutera ditt projekt
+              </button>
+            </div>
           </div>
         </section>
       </div>

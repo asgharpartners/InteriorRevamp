@@ -36,7 +36,7 @@ export default function HomePage() {
               <h2 className="font-serif sm:text-2xl md:text-3xl lg:text-4xl text-[#3A2315] mb-4 lg:mb-6 tracking-wide text-left text-[55px] font-extrabold ml-[-1px] mr-[-1px] pl-[0px] pr-[0px]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {t('intro.title')}
               </h2>
-              <p className="font-serif sm:text-sm md:text-base lg:text-lg text-[#3a2315] text-[25px] text-left font-extrabold ml-[0px] mr-[0px] mt-[50px] mb-[50px] pl-[0px] pr-[0px] pt-[0px] pb-[0px]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <p className="font-serif text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-left text-[#3a2315]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {t('intro.subtitle')} {t('intro.description')}
               </p>
             </div>

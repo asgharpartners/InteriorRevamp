@@ -97,6 +97,7 @@ export default function HomePage() {
               <div 
                 key={step.number} 
                 className="text-center relative group"
+                onMouseLeave={() => setOpenProcessStep(null)}
               >
                 {/* Step Circle */}
                 <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mx-auto mb-4">

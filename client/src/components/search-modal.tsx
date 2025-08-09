@@ -28,13 +28,13 @@ export function SearchModal({ isOpen, onClose, onNavigate }: SearchModalProps) {
       title: t('intro.title'),
       content: `${t('intro.subtitle')} ${t('intro.description')}`,
       section: t('nav.about'),
-      id: 'hero'
+      id: 'intro'
     },
     {
       title: t('process.title'),
       content: `${t('process.step1.title')} ${t('process.step1.description')} ${t('process.step2.title')} ${t('process.step2.description')} ${t('process.step3.title')} ${t('process.step3.description')} ${t('process.step4.title')} ${t('process.step4.description')}`,
       section: t('nav.about'),
-      id: 'process'
+      id: 'var-process'
     },
     {
       title: t('services.title'),
@@ -59,6 +59,12 @@ export function SearchModal({ isOpen, onClose, onNavigate }: SearchModalProps) {
       content: `${t('about.subtitle')} ${t('about.story')}`,
       section: t('nav.about'),
       id: 'about'
+    },
+    {
+      title: 'Career & Internship',
+      content: 'Career opportunities, internships, student collaboration, mentorship programs',
+      section: t('nav.about'),
+      id: 'career'
     },
     {
       title: t('contact.title'),

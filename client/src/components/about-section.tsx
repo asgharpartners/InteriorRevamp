@@ -1,12 +1,13 @@
 import { useLanguage } from '@/hooks/use-language';
 import { Pencil, User, Palette, Hammer } from 'lucide-react';
+import dennisImage from '@assets/dennis_1754742490063.jpg';
 
 const teamMembers = [
   {
     name: "Dennis",
     role: "Projektledning",
     description: "Ansvarar för projektledning och koordinering av alla typer av inrednings- och byggprojekt",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+    image: dennisImage,
     icon: <User className="h-4 w-4" />
   },
   {

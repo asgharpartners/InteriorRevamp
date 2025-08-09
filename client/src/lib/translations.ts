@@ -48,7 +48,7 @@ export const translations = {
     },
     services: {
       title: "Our Services",
-      subtitle: "Vi erbjuder flexibla och skräddarsydda lösningar för alla typer av inredningsprojekt – från idé till färdig installation. Oavsett om det gäller hotell, kontor, restaurang eller andra offentliga miljöer arbetar vi nära våra kunder för att skapa hållbara och estetiskt genomtänkta resultat."
+      subtitle: "Från idé till färdig miljö. Vi tar hand om varje steg. Med expertis inom projektering, design, byggnation och projektledning skapar vi hållbara, skräddarsydda lösningar för alla offentliga rum."
     },
     beforeAfter: {
       title: "Before & After",

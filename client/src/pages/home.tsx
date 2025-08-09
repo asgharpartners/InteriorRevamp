@@ -94,7 +94,12 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {processSteps.map((step) => (
-              <div key={step.number} className="text-center">
+              <div 
+                key={step.number} 
+                className="text-center relative group"
+                onMouseEnter={() => setOpenProcessStep(step.number)}
+                onMouseLeave={() => setOpenProcessStep(null)}
+              >
                 {/* Step Circle */}
                 <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-[#FBD44C] font-bold text-xl md:text-2xl">{step.number}</span>
@@ -105,22 +110,18 @@ export default function HomePage() {
                   {step.title}
                 </h3>
                 
-                {/* Chevron Button */}
-                <button
-                  onClick={() => toggleProcessStep(step.number)}
-                  className="mb-4 p-2 hover:bg-[#3A2315] rounded-full transition-colors duration-200"
-                  data-testid={`process-step-${step.number}-toggle`}
-                >
+                {/* Chevron Indicator */}
+                <div className="mb-4 p-2 rounded-full transition-colors duration-200">
                   {openProcessStep === step.number ? (
-                    <ChevronUp className="w-6 h-6 text-[#FBD44C]" />
+                    <ChevronUp className="w-6 h-6 text-[#FBD44C] mx-auto" />
                   ) : (
-                    <ChevronDown className="w-6 h-6 text-[#FBD44C]" />
+                    <ChevronDown className="w-6 h-6 text-[#FBD44C] mx-auto" />
                   )}
-                </button>
+                </div>
                 
-                {/* Description (Accordion) */}
+                {/* Description (Hover Popup) */}
                 {openProcessStep === step.number && (
-                  <div className="bg-[#FBD44C] p-6 rounded-lg text-left">
+                  <div className="absolute top-0 left-0 right-0 bg-[#FBD44C] p-6 rounded-lg text-left z-10 min-h-full flex flex-col justify-center">
                     <h4 className="font-serif font-bold text-lg text-[#3A2315] mb-3">
                       {step.subtitle}
                     </h4>

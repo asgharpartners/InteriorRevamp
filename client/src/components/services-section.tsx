@@ -59,7 +59,6 @@ export function ServicesSection() {
           {t('services.subtitle')}
         </p>
       </div>
-
       {/* Services Grid - 2 rows x 3 columns */}
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 min-h-[400px]">
@@ -75,7 +74,7 @@ export function ServicesSection() {
                 onClick={() => toggleCard(index)}
                 data-testid={`service-card-${index}`}
               >
-                <h3 className="font-serif text-lg font-bold text-off-white mb-4 tracking-wide leading-tight">
+                <h3 className="font-serif text-lg font-bold mb-4 tracking-wide leading-tight text-[#fffaf7]">
                   {service.title}
                 </h3>
                 

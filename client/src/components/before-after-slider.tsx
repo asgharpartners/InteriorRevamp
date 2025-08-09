@@ -140,8 +140,11 @@ export function BeforeAfterSlider() {
               <img 
                 src={currentProjectData.after}
                 alt="After renovation"
-                className="w-full h-full object-cover pointer-events-none"
-                style={{ width: `${sliderRef.current?.offsetWidth || 0}px` }}
+                className="absolute top-0 left-0 h-full object-cover pointer-events-none"
+                style={{ 
+                  width: sliderRef.current ? `${sliderRef.current.offsetWidth}px` : '100%',
+                  minWidth: sliderRef.current ? `${sliderRef.current.offsetWidth}px` : '100%'
+                }}
                 draggable={false}
               />
             </div>

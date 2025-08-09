@@ -137,14 +137,14 @@ export default function Header({ className = "" }: HeaderProps) {
               {/* Full navigation for desktop */}
               <nav className={`hidden 2xl:flex items-center space-x-6 ${
                 isScrolled 
-                  ? 'bg-[#2b2b2b]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  ? 'bg-[#251104]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
                   : ''
               }`}>
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "career", "contact"][index])}
-                    className="text-sm text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#2b2b2b]/80 hover:bg-[#2b2b2b]/90"
+                    className="text-sm text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#251104]/80 hover:bg-[#251104]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -159,14 +159,14 @@ export default function Header({ className = "" }: HeaderProps) {
               {/* Compact navigation for large screens */}
               <nav className={`hidden xl:flex 2xl:hidden items-center space-x-3 ${
                 isScrolled 
-                  ? 'bg-[#2b2b2b]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
+                  ? 'bg-[#251104]/60 backdrop-blur-sm rounded-lg px-4 py-2' 
                   : ''
               }`}>
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(["about", "services", "products", "references", "career", "contact"][index])}
-                    className="text-xs text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#2b2b2b]/80 hover:bg-[#2b2b2b]/90"
+                    className="text-xs text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#251104]/80 hover:bg-[#251104]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
                       fontFamily: '"Playfair Display", "Merriweather", serif',
@@ -257,7 +257,7 @@ export default function Header({ className = "" }: HeaderProps) {
           className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
           onClick={toggleMobileMenu}
         >
-          <div className="fixed top-0 left-0 right-0 bg-[#2b2b2b] shadow-lg pt-20" onClick={(e) => e.stopPropagation()}>
+          <div className="fixed top-0 left-0 right-0 bg-[#251104] shadow-lg pt-20" onClick={(e) => e.stopPropagation()}>
             <nav className="flex flex-col items-center space-y-6 px-6 pb-8">
               {t.nav.map((item, index) => (
                 <button

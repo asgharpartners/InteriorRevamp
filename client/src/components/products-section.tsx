@@ -108,7 +108,7 @@ export function ProductsSection() {
 
         {/* INSTAKA PRODUKTER Section */}
         {(activeFilter === 'all' || activeFilter === 'instaka') && instakaProducts.length > 0 && (
-          <div className="py-20 bg-[#2B2B2B]">
+          <div className="py-20 bg-[#251104]">
             <div className="max-w-6xl mx-auto px-8 md:px-12">
               <div className="text-center mb-12">
                 <h3 className="font-serif text-3xl font-bold text-[#FBD44C] mb-4">INSTAKA PRODUKTER</h3>
@@ -119,7 +119,7 @@ export function ProductsSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
                 {instakaProducts.map((product, index) => (
                   <div key={product.id} className="group cursor-pointer">
-                    <div className="bg-[#2B2B2B] rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-[400px] relative transition-all duration-300 hover:shadow-lg">
+                    <div className="bg-[#251104] rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-[400px] relative transition-all duration-300 hover:shadow-lg">
                       <div className="relative h-64 overflow-hidden">
                         <img 
                           src={product.image}

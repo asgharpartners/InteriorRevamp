@@ -97,8 +97,8 @@ export function ServicesSection() {
       {/* Section Title */}
       <div className="py-16 bg-off-white">
         <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
-          <h2 className="font-serif text-4xl font-bold text-[#2B2B2B] mb-4">Tjänster</h2>
-          <p className="max-w-4xl mx-auto text-left text-[#2b2b2b] font-bold text-[18px]">
+          <h2 className="font-serif text-4xl font-bold text-[#251104] mb-4">Tjänster</h2>
+          <p className="max-w-4xl mx-auto text-left text-[#251104] font-bold text-[18px]">
             {t('services.subtitle')}
           </p>
         </div>
@@ -110,7 +110,7 @@ export function ServicesSection() {
             <div 
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="service-card relative bg-[#2B2B2B] flex flex-col group overflow-hidden h-[400px]"
+              className="service-card relative bg-[#251104] flex flex-col group overflow-hidden h-[400px]"
               onMouseLeave={() => {
                 // Close popup when mouse leaves card on desktop
                 if (expandedCard === index && window.innerWidth >= 768) {
@@ -185,7 +185,7 @@ export function ServicesSection() {
                 >
                   {/* Fixed Header */}
                   <div className="flex-shrink-0 mb-3">
-                    <h3 className="font-serif text-lg font-bold text-[#2B2B2B] tracking-wide">
+                    <h3 className="font-serif text-lg font-bold text-[#251104] tracking-wide">
                       {service.title}
                     </h3>
                   </div>
@@ -193,18 +193,18 @@ export function ServicesSection() {
                   {/* Scrollable Content Area */}
                   <div className="flex-1 overflow-y-auto min-h-0 pr-2 scrollbar-thin scrollbar-thumb-[#5B401C] scrollbar-track-transparent">
                     <div className="space-y-4">
-                      <p className="text-[#2B2B2B] text-sm leading-relaxed">
+                      <p className="text-[#251104] text-sm leading-relaxed">
                         {service.description}
                       </p>
                       
-                      <p className="text-[#2B2B2B] text-xs leading-relaxed">
+                      <p className="text-[#251104] text-xs leading-relaxed">
                         {service.longDescription}
                       </p>
                     </div>
                   </div>
                   
                   {/* Fixed Footer Button */}
-                  <div className="flex-shrink-0 mt-4 pt-3 border-t border-[#2B2B2B]/20">
+                  <div className="flex-shrink-0 mt-4 pt-3 border-t border-[#251104]/20">
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
@@ -214,7 +214,7 @@ export function ServicesSection() {
                           scrollToSection('contact');
                         }
                       }}
-                      className="text-[#5B401C] text-sm font-semibold hover:text-[#2B2B2B] transition-colors duration-200 inline-flex items-center gap-1"
+                      className="text-[#5B401C] text-sm font-semibold hover:text-[#251104] transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}
                     >
                       Läs mer <span className="animate-shake inline-block">→</span>

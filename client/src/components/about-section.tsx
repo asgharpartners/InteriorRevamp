@@ -86,7 +86,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-[#F9F9F9] p-[2px]">
           {teamMembers.map((member, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="team-card bg-[#2B2B2B] rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-[400px] flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+              <div className="team-card bg-[#251104] rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-[400px] flex flex-col justify-center transition-all duration-300 hover:shadow-md">
                 <div className="relative mb-6 flex justify-start">
                   <div className="w-20 h-20 rounded-full border-4 border-[#AD8C44] p-1">
                     <img 

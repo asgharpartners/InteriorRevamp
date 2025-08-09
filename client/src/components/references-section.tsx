@@ -247,7 +247,7 @@ export function ReferencesSection() {
             <div 
               key={project.id}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="project-card relative bg-[#2B2B2B] flex flex-col group overflow-hidden h-[400px]"
+              className="project-card relative bg-[#251104] flex flex-col group overflow-hidden h-[400px]"
               onMouseLeave={() => {
                 // Close popup when mouse leaves card on desktop
                 if (expandedCard === index && window.innerWidth >= 768) {

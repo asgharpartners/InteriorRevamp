@@ -26,24 +26,18 @@
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
   --ring: hsl(27, 66%, 8%);
   --radius: 0.5rem;
-  /* Nils Holger Brand Colors */
-  --brand-dark-brown: #331B0F;
-  --brand-golden: #D1AE77;
-  --brand-off-white: #FFFAF7;
+  --dark-brown: hsl(27, 66%, 8%);
+  --dark-grey: hsl(0, 0%, 28%);
+  --off-white: hsl(39, 71%, 97%);
+  --warm-gold: hsl(37, 49%, 64%);
   
-  /* Legacy color mappings for compatibility */
-  --dark-brown: #331B0F;
-  --dark-grey: #331B0F;
-  --off-white: #FFFAF7;
-  --warm-gold: #D1AE77;
-  
-  /* Header navigation colors updated to brand palette */
-  --header-dark: #331B0F;
-  --logo-brown: #D1AE77;
-  --logo-brown-hover: #C19F6B;
-  --nav-text: #FFFAF7;
-  --language-bg: #D1AE77;
-  --language-bg-hover: #C19F6B;
+  /* New header navigation colors */
+  --header-dark: #2B2B2B;
+  --logo-brown: #AD8C44;
+  --logo-brown-hover: #936F39;
+  --nav-text: #F5F5F5;
+  --language-bg: #FEEFC3;
+  --language-bg-hover: #FEE68A;
 }
 
 .dark {

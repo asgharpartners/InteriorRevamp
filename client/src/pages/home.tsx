@@ -42,11 +42,11 @@ export default function HomePage() {
       </section>
 
       {/* Vår Process Section - Full Page */}
-      <section id="var-process" className="w-full h-screen min-h-[100vh] bg-brand-dark-brown flex items-center justify-center">
+      <section id="var-process" className="w-full h-screen min-h-[100vh] bg-[#3E2516] flex items-center justify-center">
         <div className="w-full max-w-6xl mx-auto px-8">
           {/* Section Title */}
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brand-off-white mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-off-white mb-4">
               Vår Process
             </h2>
           </div>
@@ -55,52 +55,52 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 lg:gap-12 mb-16">
             {/* Step 1 */}
             <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-brand-golden rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-brand-dark-brown font-bold text-3xl md:text-4xl lg:text-5xl">1</span>
+              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-[#3E2516] font-bold text-3xl md:text-4xl lg:text-5xl">1</span>
               </div>
-              <h3 className="text-brand-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
                 Förutsättningslöst möte
               </h3>
-              <p className="text-brand-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
                 Behov och visioner, Tidplan, Omfattning, Budget, Upplägg
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-brand-golden rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-brand-dark-brown font-bold text-3xl md:text-4xl lg:text-5xl">2</span>
+              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-[#3E2516] font-bold text-3xl md:text-4xl lg:text-5xl">2</span>
               </div>
-              <h3 className="text-brand-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
                 Design & Koncept
               </h3>
-              <p className="text-brand-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
                 Vi utvecklar ett genomtänkt inredningskoncept
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-brand-golden rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-brand-dark-brown font-bold text-3xl md:text-4xl lg:text-5xl">3</span>
+              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-[#3E2516] font-bold text-3xl md:text-4xl lg:text-5xl">3</span>
               </div>
-              <h3 className="text-brand-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
                 Produktion & Förädling
               </h3>
-              <p className="text-brand-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
                 Vi producerar & förädlar lösningar i egen verkstad / via partners
               </p>
             </div>
 
             {/* Step 4 */}
             <div className="text-center">
-              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-brand-golden rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-brand-dark-brown font-bold text-3xl md:text-4xl lg:text-5xl">4</span>
+              <div className="w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-[#AD8C44] rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-[#3E2516] font-bold text-3xl md:text-4xl lg:text-5xl">4</span>
               </div>
-              <h3 className="text-brand-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
+              <h3 className="text-off-white font-semibold text-base md:text-lg lg:text-xl mb-3">
                 Leverans & Installation
               </h3>
-              <p className="text-brand-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-off-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
                 Transport, montering, färdigställande
               </p>
             </div>

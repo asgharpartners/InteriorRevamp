@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import projektledningImage from '@assets/image_1754741347160.png';
+import reparationImage from '@assets/Reperation_1754742618187.png';
 
 const services = [
   {
@@ -107,11 +108,17 @@ export function ServicesSection() {
                 }
               }}
             >
-              {/* Background image for Projektledning card */}
+              {/* Background images for specific service cards */}
               {service.title === "PROJEKTLEDNING" && (
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
                   style={{ backgroundImage: `url(${projektledningImage})` }}
+                />
+              )}
+              {service.title === "OMKLÄDNADER OCH REPARATION" && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url(${reparationImage})` }}
                 />
               )}
 

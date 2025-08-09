@@ -92,7 +92,7 @@ export function ProductsSection() {
         </div>
 
         {/* Filter Buttons */}
-        <div className="py-16 bg-off-white">
+        <div className="py-16 bg-[#2B2B2B]">
           <div className="max-w-6xl mx-auto px-8 md:px-12">
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {filterOptions.map((option) => (
@@ -101,8 +101,8 @@ export function ProductsSection() {
                   onClick={() => setActiveFilter(option.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                     activeFilter === option.id
-                      ? 'bg-[#FBD44C] text-[#5B401C]'
-                      : 'bg-off-white/10 text-[#3A2315] hover:bg-off-white/20'
+                      ? 'bg-[#FBD44C] text-[#fffaf7]'
+                      : 'bg-off-white/10 text-[#fffaf7] hover:bg-off-white/20'
                   }`}
                   data-testid={`filter-${option.id}`}
                 >

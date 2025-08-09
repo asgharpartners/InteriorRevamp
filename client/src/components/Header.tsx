@@ -11,11 +11,11 @@ interface HeaderProps {
 
 const translations = {
   sv: {
-    nav: ["OM", "TJÄNSTER", "PRODUKTER", "REFERENSER", "KONTAKT"],
+    nav: ["OM", "TJÄNSTER", "PRODUKTER", "REFERENSER", "KARRIÄR", "KONTAKT"],
     bookConsultation: "BOKA GRATIS KONSULTATION",
   },
   en: {
-    nav: ["ABOUT", "SERVICES", "PRODUCTS", "REFERENCES", "CONTACT"],
+    nav: ["ABOUT", "SERVICES", "PRODUCTS", "REFERENCES", "CAREER", "CONTACT"],
     bookConsultation: "BOOK FREE CONSULTATION",
   },
 }
@@ -37,6 +37,13 @@ export default function Header({ className = "" }: HeaderProps) {
     // Special handling for references - navigate to projects page
     if (sectionId.toLowerCase() === 'referenser' || sectionId.toLowerCase() === 'references') {
       window.location.href = '/projects';
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    
+    // Special handling for career - navigate to career page
+    if (sectionId.toLowerCase() === 'karriär' || sectionId.toLowerCase() === 'career') {
+      window.location.href = '/career';
       setIsMobileMenuOpen(false);
       return;
     }
@@ -129,7 +136,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
+                    onClick={() => scrollToSection(["about", "services", "products", "references", "career", "contact"][index])}
                     className="text-sm text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-3 py-2 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
@@ -151,7 +158,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
+                    onClick={() => scrollToSection(["about", "services", "products", "references", "career", "contact"][index])}
                     className="text-xs text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-2 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
@@ -173,7 +180,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {t.nav.map((item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
+                    onClick={() => scrollToSection(["about", "services", "products", "references", "career", "contact"][index])}
                     className="text-xs text-[#FFFAF7] hover:text-white font-bold transition-all duration-200 tracking-wide uppercase whitespace-nowrap px-2 py-1 rounded-md bg-[#3E2516]/80 hover:bg-[#3E2516]/90"
                     data-testid={`nav-${item.toLowerCase()}`}
                     style={{ 
@@ -249,7 +256,7 @@ export default function Header({ className = "" }: HeaderProps) {
               {t.nav.map((item, index) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(["about", "services", "products", "references", "contact"][index])}
+                  onClick={() => scrollToSection(["about", "services", "products", "references", "career", "contact"][index])}
                   className="text-lg text-white hover:text-[#F2DC74] font-semibold transition-colors duration-200 tracking-wide uppercase"
                   data-testid={`mobile-nav-${item.toLowerCase()}`}
                   style={{ 

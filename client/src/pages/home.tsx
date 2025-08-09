@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import { HeroSlider } from '@/components/hero-slider';
 import { ServicesSection } from '@/components/services-section';
 import { BeforeAfterSlider } from '@/components/before-after-slider';
-import { ProductsSection } from '@/components/products-section';
+
 
 import { AboutSection } from '@/components/about-section';
 import ProjectsSection from '@/components/projects-section';
@@ -149,9 +149,7 @@ export default function HomePage() {
         </div>
       </section>
       <ServicesSection />
-      <div id="products">
-        <ProductsSection />
-      </div>
+
       <BeforeAfterSlider />
       <ProjectsSection />
       <AboutSection />

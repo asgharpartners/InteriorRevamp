@@ -113,7 +113,7 @@ export default function CareerPage() {
                 </ul>
               </div>
               <div className="career-card text-left bg-white p-8 h-[400px] flex flex-col justify-center">
-                <h4 className="font-serif text-lg font-bold text-[#3A2315] mb-3 tracking-wide">Areas of Focus</h4>
+                <h4 className="font-serif text-lg font-bold text-[#2B2B2B] mb-3 tracking-wide">Areas of Focus</h4>
                 <ul className="text-[#5B401C] space-y-2">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 bg-[#FBD44C] rounded-full mr-3 flex-shrink-0 mt-2"></div>
@@ -171,7 +171,7 @@ export default function CareerPage() {
       {/* Contact Section for easy access */}
       <section id="contact" className="py-16 bg-[#FAF7F2]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3A2315] mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-6">
             Ready to Join Our Team?
           </h2>
           <p className="text-[#5B401C] text-lg leading-relaxed mb-8">
@@ -179,7 +179,7 @@ export default function CareerPage() {
           </p>
           <button 
             onClick={() => window.location.href = '/#contact'}
-            className="bg-[#FBD44C] text-[#3A2315] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
+            className="bg-[#FBD44C] text-[#2B2B2B] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
             data-testid="contact-us-button"
           >
             Contact Us

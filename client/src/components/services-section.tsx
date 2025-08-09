@@ -97,8 +97,8 @@ export function ServicesSection() {
       {/* Section Title */}
       <div className="py-16 bg-off-white">
         <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
-          <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
-          <p className="max-w-4xl mx-auto text-left text-[#3a2315] font-bold text-[18px]">
+          <h2 className="font-serif text-4xl font-bold text-[#2B2B2B] mb-4">Tjänster</h2>
+          <p className="max-w-4xl mx-auto text-left text-[#2b2b2b] font-bold text-[18px]">
             {t('services.subtitle')}
           </p>
         </div>
@@ -214,7 +214,7 @@ export function ServicesSection() {
                           scrollToSection('contact');
                         }
                       }}
-                      className="text-[#5B401C] text-sm font-semibold hover:text-[#3A2315] transition-colors duration-200 inline-flex items-center gap-1"
+                      className="text-[#5B401C] text-sm font-semibold hover:text-[#2B2B2B] transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}
                     >
                       Läs mer <span className="animate-shake inline-block">→</span>

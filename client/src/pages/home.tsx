@@ -30,7 +30,7 @@ export default function HomePage() {
       {/* Intro & Vår Process - Stacked in Two Rows */}
       <section id="intro-process" className="w-full h-[80vh] min-h-[80vh] flex flex-col">
         {/* Top Row - Intro */}
-        <div className="w-full h-1/2 bg-[#FFPAF7] flex items-center justify-center px-6 sm:px-8 md:px-12 py-6">
+        <div className="w-full h-1/2 bg-[#FFPAF7] flex items-center justify-center px-6 sm:px-8 md:px-12 py-6 text-[#fffaf6]">
           <div className="text-center max-w-md lg:max-w-lg">
             <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight">
               {t('intro.title')}

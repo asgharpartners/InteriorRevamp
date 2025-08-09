@@ -76,7 +76,7 @@ export default function HomePage() {
                 <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm mb-1">
                   Koncept
                 </h3>
-                <p className="text-[#FFPAF7]/80 text-xs leading-tight">
+                <p className="text-xs leading-tight text-[#fffaf6]">
                   Utvecklar unika designkoncept
                 </p>
               </div>

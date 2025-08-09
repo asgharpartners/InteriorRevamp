@@ -30,15 +30,16 @@ export default function HomePage() {
       {/* Intro & Vår Process - Stacked in Two Rows */}
       <section id="intro-process" className="w-full h-[80vh] min-h-[80vh] flex flex-col">
         {/* Top Row - Intro */}
-        <div className="w-full h-1/2 bg-[#FFPAF7] flex items-center justify-center px-2 sm:px-4 md:px-6 py-6">
-          <div className="text-center max-w-2xl lg:max-w-4xl w-full">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-6xl font-bold text-[#3A2315] mb-4 lg:mb-6 leading-tight tracking-wide">
-              {t('intro.title')}
-            </h2>
-            <p className="font-serif text-lg md:text-xl lg:text-2xl text-[#3A2315]/80 leading-relaxed w-full" style={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>
-              {t('intro.subtitle')}<br />
-              {t('intro.description')}
-            </p>
+        <div className="w-full h-1/2 bg-[#FFPAF7] relative">
+          <div className="absolute inset-0 px-2 sm:px-4 md:px-6 py-6" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="text-center max-w-2xl lg:max-w-4xl w-full">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-6xl font-bold text-[#3A2315] mb-4 lg:mb-6 leading-tight tracking-wide">
+                {t('intro.title')}
+              </h2>
+              <p className="font-serif text-lg md:text-xl lg:text-2xl text-[#3A2315]/80 leading-relaxed w-full" style={{ whiteSpace: 'nowrap', wordWrap: 'break-word' }}>
+                {t('intro.subtitle')} {t('intro.description')}
+              </p>
+            </div>
           </div>
         </div>
 

@@ -99,61 +99,63 @@ export function ProductsSection() {
 
   return (
     <>
-      <section id="products" className="py-20 bg-off-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-16 text-center">
-            <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
-              Produkter
-            </h2>
-            <p className="text-xl text-[#5B401C] max-w-3xl mx-auto">
+      <section id="products" className="bg-white">
+        {/* Section Title */}
+        <div className="py-16 bg-off-white">
+          <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
+            <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Produkter</h2>
+            <p className="max-w-4xl mx-auto text-left text-[#3a2315] font-bold text-[18px]">
               Upptäck vår kollektion av handgjorda möbler och skräddarsydda designlösningar
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
+        </div>
+        {/* Products Grid - 2 rows x 3 columns */}
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
             {products.map((product) => (
               <div 
-                key={product.id} 
-                className="group cursor-pointer"
+                key={product.id}
+                className="service-card relative bg-[#2B2B2B] flex flex-col group overflow-hidden h-[400px]"
                 onClick={() => openProductModal(product)}
                 data-testid={`product-card-${product.id}`}
               >
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-left relative overflow-hidden h-[400px] flex flex-col transition-all duration-300 hover:shadow-md">
-                  <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-dark-brown/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url('${product.image}')` }}
+                />
+
+                {/* Card Header - Always Visible */}
+                <div 
+                  className="p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10"
+                >
+                  <h3 className="font-serif text-lg font-bold mb-4 tracking-wide leading-tight text-white">
+                    {product.name}
+                  </h3>
+                  
+                  {/* Category Tag */}
+                  <div className="inline-block px-3 py-1 bg-[#FBD44C]/80 text-[#2B2B2B] text-sm rounded-full mb-4 mx-auto">
+                    {product.category}
                   </div>
                   
-                  <div className="flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="font-serif text-lg font-bold text-dark-brown mb-2 group-hover:text-[#AD8C44] transition-colors duration-300">
-                        {product.name}
-                      </h3>
-                      <div className="inline-block px-3 py-1 bg-[#FBD44C]/20 text-[#5B401C] text-sm rounded-full mb-3">
-                        {product.category}
-                      </div>
-                    </div>
-                    
-                    <div className="mt-auto">
-                      <span className="text-[#5B401C] text-sm font-medium group-hover:text-[#AD8C44] transition-colors duration-300">
-                        Läs mer <span className="animate-shake inline-block">→</span>
-                      </span>
-                    </div>
+                  {/* Arrow with animation */}
+                  <div className="w-8 h-8 mx-auto flex items-center justify-center">
+                    <span className="text-[#D1AE77] font-bold">
+                      Läs mer <span className="animate-shake inline-block">→</span>
+                    </span>
                   </div>
-                  
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-[#AD8C44]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             ))}
           </div>
-          
-          {/* Production Information Link */}
-          <div className="mt-16 text-center">
+        </div>
+        
+        {/* Production Information Link */}
+        <div className="py-16 bg-off-white">
+          <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
             <a 
               href="/assets/nordi_production_2023-1_1754761513396.pdf"
               target="_blank"

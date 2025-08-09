@@ -154,35 +154,32 @@ export function ServicesSection() {
                 }
               }}
             >
-              {/* Special content for Projektledning card */}
+              {/* Background image for Projektledning card */}
+              {service.title === "PROJEKTLEDNING" && generatedImage && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+                  style={{ backgroundImage: `url(${generatedImage})` }}
+                />
+              )}
+
+              {/* Generate/Upload Controls for Projektledning card */}
               {service.title === "PROJEKTLEDNING" && (
-                <div className="p-4">
-                  {/* Image Container */}
-                  <div className="w-full h-32 bg-[#1A1A1A] rounded-lg mb-3 flex items-center justify-center overflow-hidden">
-                    {generatedImage ? (
-                      <img 
-                        src={generatedImage} 
-                        alt="Projektledning illustration" 
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    ) : (
-                      <div className="text-[#666] text-sm">Ingen bild genererad</div>
-                    )}
-                  </div>
-                  
-                  {/* Generate/Upload Controls */}
-                  <div className="flex flex-col gap-2 mb-4">
+                <div className="absolute top-4 left-4 right-4 z-20">
+                  <div className="flex flex-col gap-2">
                     <button
-                      onClick={generateImage}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        generateImage();
+                      }}
                       disabled={isGeneratingImage}
-                      className="bg-[#D1AE77] text-[#2B2B2B] px-3 py-2 rounded text-xs font-medium hover:bg-[#D1AE77]/90 transition-colors disabled:opacity-50"
+                      className="bg-[#D1AE77] text-[#2B2B2B] px-3 py-2 rounded text-xs font-medium hover:bg-[#D1AE77]/90 transition-colors disabled:opacity-50 shadow-lg"
                       data-testid="generate-image-button"
                     >
                       {isGeneratingImage ? "Skapar bild ..." : "Generera bild"}
                     </button>
                     
                     {generatedImage && (
-                      <label className="text-[#D1AE77] text-xs cursor-pointer hover:text-[#D1AE77]/80 transition-colors text-center">
+                      <label className="text-[#D1AE77] text-xs cursor-pointer hover:text-[#D1AE77]/80 transition-colors text-center bg-[#2B2B2B]/80 px-2 py-1 rounded shadow-lg">
                         <input
                           type="file"
                           accept="image/*"
@@ -198,7 +195,7 @@ export function ServicesSection() {
 
               {/* Card Header - Always Visible */}
               <div 
-                className={`p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10 ${service.title === "PROJEKTLEDNING" ? "pt-4" : ""}`}
+                className="p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10"
                 onClick={() => toggleCard(index)}
                 data-testid={`service-card-${index}`}
               >

@@ -212,7 +212,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Language Toggle */}
                 <button
                   onClick={() => setLanguage(language === "sv" ? "en" : "sv")}
-                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wide uppercase md:px-2 lg:px-3 py-2 rounded-md whitespace-nowrap flex-shrink-0 min-w-fit"
+                  className="hover:bg-[#F2DC74]/90 text-[#3E2516] text-xs lg:text-sm font-medium transition-colors duration-200 tracking-wide uppercase md:px-2 lg:px-3 py-2 rounded-md whitespace-nowrap flex-shrink-0 min-w-fit bg-[#fbd44c]"
                   data-testid="language-toggle"
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >
@@ -222,7 +222,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Book Consultation Button */}
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="bg-[#F2DC74] hover:bg-[#F2DC74]/90 text-[#3E2516] border-[#F2DC74] font-bold text-xs lg:text-sm tracking-wide md:px-2 lg:px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase flex-shrink-0 min-w-fit"
+                  className="bg-[#fbd44c] hover:bg-[#fbd44c]/90 text-[#3E2516] border-[#fbd44c] font-bold text-xs lg:text-sm tracking-wide md:px-2 lg:px-4 py-2 h-9 rounded-md whitespace-nowrap shadow-sm uppercase flex-shrink-0 min-w-fit"
                   data-testid="book-consultation"
                   style={{ fontFamily: '"Playfair Display", "Merriweather", serif' }}
                 >
@@ -244,7 +244,6 @@ export default function Header({ className = "" }: HeaderProps) {
           </div>
         </div>
       </header>
-
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
@@ -306,7 +305,6 @@ export default function Header({ className = "" }: HeaderProps) {
           </div>
         </div>
       )}
-      
       {/* Search Modal */}
       <SearchModal 
         isOpen={isSearchOpen} 
@@ -314,5 +312,5 @@ export default function Header({ className = "" }: HeaderProps) {
         onNavigate={scrollToSection}
       />
     </>
-  )
+  );
 }

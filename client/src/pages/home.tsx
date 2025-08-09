@@ -63,7 +63,7 @@ export default function HomePage() {
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Konsultation
                 </h3>
-                <p className="text-[#FFPAF7]/80 text-xs leading-tight">
+                <p className="text-xs leading-tight text-[#fffaf6]">
                   Vi lyssnar på dina behov och visioner
                 </p>
               </div>

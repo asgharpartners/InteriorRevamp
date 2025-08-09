@@ -1,6 +1,8 @@
 import { useLanguage } from '@/hooks/use-language';
 import { Pencil, User, Palette, Hammer } from 'lucide-react';
-import dennisImage from '@assets/dennis_1754742490063.jpg';
+import dennisImage from '@assets/dennis-profile-circle_1754760283970.png';
+import asgharImage from '@assets/asghar-profile_1754760283970.jpeg';
+import noorImage from '@assets/noor-profile-circle_1754760297090.png';
 
 const teamMembers = [
   {
@@ -14,14 +16,14 @@ const teamMembers = [
     name: "Asghar",
     role: "Försäljning och kommunikation", 
     description: "Hanterar kundkontakt, försäljning och all kommunikation med våra beställare",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+    image: asgharImage,
     icon: <Pencil className="h-4 w-4" />
   },
   {
     name: "Noor",
     role: "Administration och ekonomi",
     description: "Ansvarar för administration, ekonomi och företagets administrativa processer",
-    image: "https://pixabay.com/get/gf8ace0f52b939f525af8ba1422bcb3f2af44cde261c1db2737d3fcc5558639142231945301115f2eff2b88b1ec87cf6d11bdb081d221466bf9ec57fed7fa83d8_1280.jpg",
+    image: noorImage,
     icon: <Palette className="h-4 w-4" />
   }
 ];

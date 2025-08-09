@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import projektledningImage from '@assets/image_1754741347160.png';
-import reparationImage from '@assets/Reperation_1754742618187.png';
+import reparationImage from '@assets/image_1754755683706.png';
 import projekteringImage from '@assets/image_1754754947827.png';
 import designradgivningImage from '@assets/image_1754754368025.png';
 import byggnationImage from '@assets/image_1754753437709.png';

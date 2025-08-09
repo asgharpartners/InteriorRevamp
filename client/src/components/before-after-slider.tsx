@@ -79,7 +79,7 @@ export function BeforeAfterSlider() {
   const currentProjectData = projects[currentProject];
 
   return (
-    <section className="py-20 bg-dark-brown text-off-white">
+    <section className="py-20 bg-dark-brown text-[#FFFAF7]">
       <div className="container mx-auto px-4">
         <div className="text-left mb-16">
           <h2 className="font-serif text-4xl font-bold mb-4">
@@ -124,10 +124,10 @@ export function BeforeAfterSlider() {
           </div>
           
           <div className="text-left mb-8">
-            <h3 className="font-serif text-2xl font-bold mb-2">
+            <h3 className="font-serif text-2xl font-bold mb-2 text-[#FFFAF7]">
               {currentProjectData.title}
             </h3>
-            <p className="text-lg">
+            <p className="text-lg text-[#FFFAF7]">
               {currentProjectData.description}
             </p>
           </div>
@@ -146,7 +146,7 @@ export function BeforeAfterSlider() {
                 <div
                   key={index}
                   className={`w-2 h-2 rounded-full ${
-                    index === currentProject ? 'bg-[#FBD44C]' : 'bg-off-white/30'
+                    index === currentProject ? 'bg-[#FBD44C]' : 'bg-[#FFFAF7]/30'
                   }`}
                 />
               ))}

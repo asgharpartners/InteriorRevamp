@@ -140,7 +140,7 @@ export function ProductsSection() {
                     
                     <div className="mt-auto">
                       <span className="text-[#5B401C] text-sm font-medium group-hover:text-[#AD8C44] transition-colors duration-300">
-                        Läs mer →
+                        Läs mer <span className="animate-shake inline-block">→</span>
                       </span>
                     </div>
                   </div>

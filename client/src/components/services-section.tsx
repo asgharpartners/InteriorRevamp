@@ -217,7 +217,7 @@ export function ServicesSection() {
                       className="text-[#5B401C] text-sm font-semibold hover:text-[#3A2315] transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}
                     >
-                      Läs mer →
+                      Läs mer <span className="animate-shake inline-block">→</span>
                     </button>
                   </div>
                 </div>

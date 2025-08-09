@@ -143,13 +143,13 @@ export function HeroSlider() {
         onClick={previousSlide}
         className="absolute left-8 top-1/2 transform -translate-y-1/2 text-[#3E2516] hover:text-[#2B1B0F] text-3xl transition-colors duration-300 z-10"
       >
-        <ChevronLeft className="h-8 w-8" />
+        <ChevronLeft className="h-8 w-8 animate-shake" />
       </button>
       <button 
         onClick={nextSlide}
         className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#3E2516] hover:text-[#2B1B0F] text-3xl transition-colors duration-300 z-10"
       >
-        <ChevronRight className="h-8 w-8" />
+        <ChevronRight className="h-8 w-8 animate-shake" />
       </button>
       
       {/* Dots */}

@@ -254,7 +254,7 @@ export default function ProjectsSection() {
                   />
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-[#5B401C]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white font-semibold text-lg">{t.viewProject}</span>
+                    <span className="text-white font-semibold text-lg">{t.viewProject} <span className="animate-shake inline-block">→</span></span>
                   </div>
                 </div>
                 

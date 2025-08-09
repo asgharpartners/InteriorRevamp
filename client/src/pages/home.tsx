@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import { HeroSlider } from '@/components/hero-slider';
 import { ServicesSection } from '@/components/services-section';
+import { ProductsSection } from '@/components/products-section';
 import { BeforeAfterSlider } from '@/components/before-after-slider';
 
 
@@ -149,7 +150,7 @@ export default function HomePage() {
         </div>
       </section>
       <ServicesSection />
-
+      <ProductsSection />
       <BeforeAfterSlider />
       <ProjectsSection />
       <AboutSection />

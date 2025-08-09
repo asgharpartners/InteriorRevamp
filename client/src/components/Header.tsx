@@ -11,11 +11,11 @@ interface HeaderProps {
 
 const translations = {
   sv: {
-    nav: ["OM", "TJÄNSTER", "REFERENSER", "KARRIÄR", "KONTAKT"],
+    nav: ["OM", "TJÄNSTER", "PRODUKTER", "REFERENSER", "KARRIÄR", "KONTAKT"],
     bookConsultation: "BOKA GRATIS KONSULTATION",
   },
   en: {
-    nav: ["ABOUT", "SERVICES", "REFERENCES", "CAREER", "CONTACT"],
+    nav: ["ABOUT", "SERVICES", "PRODUCTS", "REFERENCES", "CAREER", "CONTACT"],
     bookConsultation: "BOOK FREE CONSULTATION",
   },
 }

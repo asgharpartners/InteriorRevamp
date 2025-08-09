@@ -27,38 +27,38 @@ export default function HomePage() {
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
-      {/* Intro & Vår Process - Split 50/50 Landscape */}
-      <section id="intro-process" className="w-full h-screen min-h-[100vh] flex">
-        {/* Left Half - Intro */}
-        <div className="w-1/2 bg-[#FFPAF7] flex items-center justify-center px-6 sm:px-8 md:px-12 py-10">
+      {/* Intro & Vår Process - Stacked in Two Rows */}
+      <section id="intro-process" className="w-full h-[80vh] min-h-[80vh] flex flex-col">
+        {/* Top Row - Intro */}
+        <div className="w-full h-1/2 bg-[#FFPAF7] flex items-center justify-center px-6 sm:px-8 md:px-12 py-6">
           <div className="text-center max-w-md lg:max-w-lg">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3A2315] mb-4 lg:mb-6 leading-tight">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight">
               {t('intro.title')}
             </h2>
-            <p className="text-base md:text-lg text-[#3A2315]/80 leading-relaxed">
+            <p className="text-sm md:text-base text-[#3A2315]/80 leading-relaxed">
               {t('intro.subtitle')}<br />
               {t('intro.description')}
             </p>
           </div>
         </div>
 
-        {/* Right Half - Vår Process */}
-        <div className="w-1/2 bg-[#3A2315] flex items-center justify-center px-6 sm:px-8 md:px-12 py-10">
-          <div className="text-center w-full max-w-md lg:max-w-lg">
+        {/* Bottom Row - Vår Process */}
+        <div className="w-full h-1/2 bg-[#3A2315] flex items-center justify-center px-6 sm:px-8 md:px-12 py-6">
+          <div className="text-center w-full max-w-4xl">
             {/* Title */}
-            <div className="mb-6 lg:mb-8">
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-[#fffaf6]">
+            <div className="mb-4 lg:mb-6">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-[#fffaf6]">
                 Vår process
               </h2>
               <div className="w-12 h-0.5 bg-[#D1AE77] mx-auto"></div>
             </div>
             
             {/* Process Steps - Horizontal Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 mb-6 lg:mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-4 lg:mb-6">
               {/* Step 1 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">1</span>
+                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">1</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Konsultation
@@ -70,8 +70,8 @@ export default function HomePage() {
 
               {/* Step 2 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">2</span>
+                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">2</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Koncept
@@ -83,8 +83,8 @@ export default function HomePage() {
 
               {/* Step 3 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">3</span>
+                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">3</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Produktion
@@ -96,13 +96,13 @@ export default function HomePage() {
 
               {/* Step 4 */}
               <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-sm md:text-base lg:text-lg">4</span>
+                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">4</span>
                 </div>
                 <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Installation
                 </h3>
-                <p className="text-[#FFPAF7]/80 text-xs leading-tight">
+                <p className="text-xs leading-tight text-[#fffaf6]">
                   Professionell installation på plats
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function HomePage() {
             <div className="text-center">
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-base hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+                className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-xs md:text-sm hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
                 data-testid="discuss-project-button"
               >
                 Diskutera ditt projekt

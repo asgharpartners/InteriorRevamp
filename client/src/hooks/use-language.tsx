@@ -10,7 +10,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check localStorage first, then default to 'sv' (Swedish)
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('language');
+      return (saved as Language) || 'sv';
+    }
+    return 'sv';
+  });
 
   const t = (key: string): string => {
     const keys = key.split('.');
@@ -23,8 +30,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return value || key;
   };
 
+  const setLanguageWithPersistence = (lang: Language) => {
+    setLanguage(lang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', lang);
+    }
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: setLanguageWithPersistence, t }}>
       {children}
     </LanguageContext.Provider>
   );

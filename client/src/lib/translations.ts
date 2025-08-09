@@ -67,6 +67,10 @@ export const translations = {
       title: "Our Projects",
       subtitle: "Explore our portfolio of completed projects across various sectors"
     },
+    projects: {
+      title: "Our Projects",
+      subtitle: "Discover our comprehensive portfolio of interior design and construction projects. From hotels and restaurants to offices and residences – each project reflects our passion for Scandinavian design and sustainable solutions."
+    },
     about: {
       title: "About Us",
       subtitle: "Meet the passionate team behind Nils Holger's distinctive design philosophy",
@@ -165,6 +169,10 @@ export const translations = {
     references: {
       title: "Våra Projekt",
       subtitle: "Utforska vår portfölj av slutförda projekt inom olika sektorer"
+    },
+    projects: {
+      title: "Våra Projekt",
+      subtitle: "Upptäck vårt omfattande portfolio av inrednings- och byggprojekt. Från hotell och restauranger till kontor och bostäder – varje projekt speglar vår passion för skandinavisk design och hållbara lösningar."
     },
     about: {
       title: "Om Oss",

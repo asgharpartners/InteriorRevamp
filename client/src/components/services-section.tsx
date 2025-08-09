@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
+import projektledningImage from '@assets/image_1754741347160.png';
 
 const services = [
   {
@@ -106,7 +107,13 @@ export function ServicesSection() {
                 }
               }}
             >
-
+              {/* Background image for Projektledning card */}
+              {service.title === "PROJEKTLEDNING" && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url(${projektledningImage})` }}
+                />
+              )}
 
               {/* Card Header - Always Visible */}
               <div 

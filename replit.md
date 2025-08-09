@@ -12,15 +12,17 @@ This is a modern B2B web platform for "Nils Holger Design," a Scandinavian inter
 
 **Updated Website Structure (Jan 2025):**
 1. Start/Hero - Full-width slideshow with logo and tagline
-2. Services - 7 expandable service cards with descriptions (moved up after Hero removal)
-3. Products - Standard Products + In-House Manufacturing categories
-4. Before & After - Project transformation slider
-5. Reference Projects - Year-by-year timeline with sector filters
-6. Partners - Brand logos and collaboration opportunities
-7. Career & Internship - Student collaboration section
-8. About Us - Vision, story, team with yellow-bordered profile images
-9. Contact - Google Maps integration + booking form
-10. Footer - Complete site navigation and social links
+2. Intro - Full-width section with company welcome and mission statement
+3. Vår Process - Interactive accordion cards showing 4-step process
+4. Services - 7 expandable service cards with descriptions
+5. Products - Standard Products + In-House Manufacturing categories
+6. Before & After - Project transformation slider
+7. Reference Projects - Year-by-year timeline with sector filters
+8. Partners - Brand logos and collaboration opportunities
+9. Career & Internship - Student collaboration section
+10. About Us - Vision, story, team with yellow-bordered profile images
+11. Contact - Google Maps integration + booking form
+12. Footer - Complete site navigation and social links
 
 **Navigation Design:**
 - Dark brown (#2B2B2B) full-width header

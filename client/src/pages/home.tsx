@@ -11,10 +11,12 @@ import { Footer } from '@/components/footer';
 import { StickyCTA } from '@/components/sticky-cta';
 import { FloatingShortcuts } from '@/components/floating-shortcuts';
 import { useLanguage } from '@/hooks/use-language';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 
 export default function HomePage() {
   const { t } = useLanguage();
+  const [openProcessStep, setOpenProcessStep] = useState<number | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -23,10 +25,103 @@ export default function HomePage() {
     }
   };
 
+  const toggleProcessStep = (stepNumber: number) => {
+    setOpenProcessStep(openProcessStep === stepNumber ? null : stepNumber);
+  };
+
+  const processSteps = [
+    {
+      number: 1,
+      title: "Förutsättningslöst möte",
+      description: "Behov och visioner, Tidplan, Omfattning, Budget, Upplägg"
+    },
+    {
+      number: 2,
+      title: "Design & Koncept",
+      description: "Vi utvecklar ett genomtänkt inredningskoncept baserat på dina mål och platsens förutsättningar"
+    },
+    {
+      number: 3,
+      title: "Produktion & Förädling",
+      description: "Vi producerar och förädlar lösningar i egen verkstad eller via utvalda partners"
+    },
+    {
+      number: 4,
+      title: "Leverans & Installation",
+      description: "Transport, montering och färdigställande – punktligt och professionellt"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
+
+      {/* Intro Section */}
+      <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8">
+            Välkomna till Nils Holger – Furniture & Project
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed text-[#3C2415] max-w-4xl mx-auto">
+            Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt. Vi arbetar i såväl interiöra som exteriöra miljöer.
+          </p>
+        </div>
+      </section>
+
+      {/* Vår Process Section */}
+      <section className="w-full bg-[#5B401C] py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step) => (
+              <div key={step.number} className="text-center">
+                {/* Step Circle */}
+                <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-[#FBD44C] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#FBD44C] font-bold text-xl md:text-2xl">{step.number}</span>
+                </div>
+                
+                {/* Step Title */}
+                <h3 className="font-serif font-bold text-lg md:text-xl text-[#FAF7F2] mb-3">
+                  {step.title}
+                </h3>
+                
+                {/* Chevron Button */}
+                <button
+                  onClick={() => toggleProcessStep(step.number)}
+                  className="mb-4 p-2 hover:bg-[#3A2315] rounded-full transition-colors duration-200"
+                  data-testid={`process-step-${step.number}-toggle`}
+                >
+                  {openProcessStep === step.number ? (
+                    <ChevronUp className="w-6 h-6 text-[#FBD44C]" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-[#FBD44C]" />
+                  )}
+                </button>
+                
+                {/* Description (Accordion) */}
+                {openProcessStep === step.number && (
+                  <div className="bg-[#3A2315] p-4 rounded-lg">
+                    <p className="text-[#FAF7F2] text-sm md:text-base leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-[#FBD44C] text-[#5B401C] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#FBD44C]/90 transition-all duration-300 transform hover:scale-105"
+              data-testid="discuss-project-button"
+            >
+              Diskutera ditt projekt
+            </button>
+          </div>
+        </div>
+      </section>
 
       <ServicesSection />
       <div id="products">

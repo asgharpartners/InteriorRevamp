@@ -27,98 +27,81 @@ export default function HomePage() {
     <div className="min-h-screen bg-off-white" style={{ margin: 0, padding: 0 }}>
       <Header />
       <HeroSlider />
-      {/* Intro & Vår Process - Stacked in Two Rows */}
-      <section id="intro-process" className="w-full h-[80vh] min-h-[80vh] flex flex-col">
-        {/* Top Row - Intro */}
-        <div className="w-full h-1/2 bg-[#FFPAF7] relative">
-          <div className="absolute inset-0 px-4 sm:px-6 md:px-8 lg:px-12 py-6 flex items-center justify-start">
-            <div className="w-full">
-              <h2 className="font-serif sm:text-2xl md:text-3xl lg:text-4xl text-[#3A2315] lg:mb-6 tracking-wide font-extrabold pl-[0px] pr-[0px] text-[165px] text-center ml-[0px] mr-[0px] mt-[40px] mb-[40px]" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: '1.6' }}>
-                {t('intro.title')}
-              </h2>
-              <p className="font-serif sm:text-sm md:text-base lg:text-lg text-[#3a2315] text-[52px] ml-[30px] mr-[30px] text-justify font-bold" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: '1.8' }}>
-                {t('intro.subtitle')} {t('intro.description')}
+      {/* Vår Process Section */}
+      <section id="process" className="w-full h-[80vh] min-h-[80vh] bg-[#3A2315] flex items-center justify-center px-6 sm:px-8 md:px-12 py-6">
+        <div className="text-center w-full max-w-4xl">
+          {/* Title */}
+          <div className="mb-4 lg:mb-6">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-[#fffaf6]">
+              Vår process
+            </h2>
+            <div className="w-12 h-0.5 bg-[#D1AE77] mx-auto"></div>
+          </div>
+          
+          {/* Process Steps - Horizontal Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-4 lg:mb-6">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">1</span>
+              </div>
+              <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                Konsultation
+              </h3>
+              <p className="text-xs leading-tight text-[#fffaf6]">
+                Vi lyssnar på dina behov och visioner
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">2</span>
+              </div>
+              <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                Koncept
+              </h3>
+              <p className="text-xs leading-tight text-[#fffaf6]">
+                Utvecklar unika designkoncept
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">3</span>
+              </div>
+              <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                Produktion
+              </h3>
+              <p className="text-xs leading-tight text-[#fffaf6]">
+                Tillverkar skräddarsydda lösningar
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
+                <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">4</span>
+              </div>
+              <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                Installation
+              </h3>
+              <p className="text-xs leading-tight text-[#fffaf6]">
+                Professionell installation på plats
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Bottom Row - Vår Process */}
-        <div className="w-full h-1/2 bg-[#3A2315] flex items-center justify-center px-6 sm:px-8 md:px-12 py-6">
-          <div className="text-center w-full max-w-4xl">
-            {/* Title */}
-            <div className="mb-4 lg:mb-6">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-[#fffaf6]">
-                Vår process
-              </h2>
-              <div className="w-12 h-0.5 bg-[#D1AE77] mx-auto"></div>
-            </div>
-            
-            {/* Process Steps - Horizontal Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-4 lg:mb-6">
-              {/* Step 1 */}
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">1</span>
-                </div>
-                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
-                  Konsultation
-                </h3>
-                <p className="text-xs leading-tight text-[#fffaf6]">
-                  Vi lyssnar på dina behov och visioner
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">2</span>
-                </div>
-                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
-                  Koncept
-                </h3>
-                <p className="text-xs leading-tight text-[#fffaf6]">
-                  Utvecklar unika designkoncept
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">3</span>
-                </div>
-                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
-                  Produktion
-                </h3>
-                <p className="text-xs leading-tight text-[#fffaf6]">
-                  Tillverkar skräddarsydda lösningar
-                </p>
-              </div>
-
-              {/* Step 4 */}
-              <div className="text-center">
-                <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#5B401C] rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-[#FBD44C]">
-                  <span className="text-[#FBD44C] font-bold text-xs md:text-sm lg:text-base">4</span>
-                </div>
-                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
-                  Installation
-                </h3>
-                <p className="text-xs leading-tight text-[#fffaf6]">
-                  Professionell installation på plats
-                </p>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="text-center">
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-xs md:text-sm hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
-                data-testid="discuss-project-button"
-              >
-                Diskutera ditt projekt
-              </button>
-            </div>
+          {/* CTA Button */}
+          <div className="text-center">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-xs md:text-sm hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+              data-testid="discuss-project-button"
+            >
+              Diskutera ditt projekt
+            </button>
           </div>
         </div>
       </section>

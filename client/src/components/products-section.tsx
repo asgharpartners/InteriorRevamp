@@ -56,6 +56,15 @@ const products = [
     description: "Eleganta hotellmöbler som skapar minnesvärda upplevelser för gäster. Kombination av komfort och lyxig design.",
     materials: "Premiumtyger, massivt trä, metall",
     customization: "Anpassad efter hotellets varumärke och atmosfär"
+  },
+  {
+    id: 7,
+    name: "Möbeltillverkning & Egen Produktion",
+    category: "Produktion",
+    image: "/assets/Furniture Production & In-house Manufacturing_1754761065666.png",
+    description: "Från skiss till färdig möbel - vår interna designprocess och produktion. Vi utvecklar unika möbler med precisa mått och handgjord kvalitet.",
+    materials: "Massivt trä, metall, naturliga finish",
+    customization: "Fullständig designprocess från koncept till slutprodukt"
   }
 ];
 

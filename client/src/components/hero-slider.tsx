@@ -62,6 +62,11 @@ const slides = [
     image: "/assets/2_1754760510803.jpeg",
     titleKey: "hero.slide12.title",
     subtitleKey: "hero.slide12.subtitle"
+  },
+  {
+    image: "/assets/Screenshot 2025-08-09 at 20.34.47_1754764489232.png",
+    titleKey: "hero.slide14.title",
+    subtitleKey: "hero.slide14.subtitle"
   }
 ];
 

@@ -62,8 +62,8 @@ export const translations = {
         subtitle: "Timeless design classics in modern environments"
       },
       slide14: {
-        title: "Textile & Material Selection",
-        subtitle: "Quality fabrics for lasting beauty"
+        title: "Modern Minimalist Living",
+        subtitle: "Contemporary comfort with Scandinavian elegance"
       }
     },
     intro: {
@@ -209,8 +209,8 @@ export const translations = {
         subtitle: "Tidlösa designklassiker i moderna miljöer"
       },
       slide14: {
-        title: "Textil & Materialval",
-        subtitle: "Kvalitetstyger för bestående skönhet"
+        title: "Modern Minimalistisk Boende",
+        subtitle: "Samtida komfort med skandinavisk elegans"
       }
     },
     intro: {

@@ -132,19 +132,19 @@ export function ServicesSection() {
               {/* Expanded Content Overlay */}
               {expandedCard === index && (
                 <div 
-                  className="absolute inset-0 bg-[#2B190F]/90 z-20 flex flex-col justify-start p-6 animate-in slide-in-from-bottom duration-300 rounded-lg"
+                  className="absolute inset-0 bg-[#FBD44C] z-20 flex flex-col justify-start p-6 animate-in slide-in-from-bottom duration-300 rounded-lg"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div className="text-left">
-                    <h3 className="font-serif text-lg font-bold text-[#F5F5F5] mb-3 tracking-wide">
+                    <h3 className="font-serif text-lg font-bold text-[#2B2B2B] mb-3 tracking-wide">
                       {service.title}
                     </h3>
                     
-                    <p className="text-[#F5F5F5] mb-4 text-sm leading-relaxed">
+                    <p className="text-[#2B2B2B] mb-4 text-sm leading-relaxed">
                       {service.description}
                     </p>
                     
-                    <p className="text-[#F5F5F5] text-xs leading-relaxed mb-6">
+                    <p className="text-[#2B2B2B] text-xs leading-relaxed mb-6">
                       {service.longDescription}
                     </p>
                     
@@ -157,7 +157,7 @@ export function ServicesSection() {
                           scrollToSection('contact');
                         }
                       }}
-                      className="text-[#D1AE77] text-sm font-semibold hover:text-[#D1AE77]/80 transition-colors duration-200 inline-flex items-center gap-1"
+                      className="text-[#5B401C] text-sm font-semibold hover:text-[#3A2315] transition-colors duration-200 inline-flex items-center gap-1"
                       data-testid={`service-read-more-${index}`}
                     >
                       Läs mer →

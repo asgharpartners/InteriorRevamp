@@ -33,11 +33,11 @@ export default function HomePage() {
       <Header />
       <HeroSlider />
       
-      {/* Combined Intro & Process Section */}
-      <div className="w-full">
-        {/* Intro Section - Upper Half */}
-        <section className="bg-[#F5F1EA] flex items-center justify-center" style={{ minHeight: '50vh' }}>
-          <div className="max-w-4xl mx-auto text-left px-4 py-16">
+      {/* Two-Column Layout: Intro + Process */}
+      <div className="w-full min-h-screen flex flex-col lg:flex-row">
+        {/* Intro Section - Left Column */}
+        <section className="bg-[#F5F1EA] flex-1 flex items-center justify-center">
+          <div className="max-w-2xl mx-auto text-left px-8 py-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-brown mb-8 leading-tight">
               {t('intro.title')}
             </h2>
@@ -48,9 +48,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Process Section - Lower Half */}
-        <section className="bg-[#3E2516] flex items-center justify-center relative" style={{ minHeight: '50vh' }}>
-
+        {/* Process Section - Right Column */}
+        <section className="bg-[#3E2516] flex-1 flex items-center justify-center relative">
           <div className="max-w-6xl mx-auto px-4 py-16">
             {/* Circular Process Steps */}
             <div className="relative w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px] mx-auto mb-12 max-w-full">

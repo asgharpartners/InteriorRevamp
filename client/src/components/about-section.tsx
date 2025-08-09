@@ -36,9 +36,6 @@ export function AboutSection() {
           <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
             {t('about.title')}
           </h2>
-          <p className="text-xl text-[#5B401C] max-w-2xl mx-auto text-left">
-            {t('about.subtitle')}
-          </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">

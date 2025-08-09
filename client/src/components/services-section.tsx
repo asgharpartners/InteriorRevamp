@@ -4,6 +4,7 @@ import { useLanguage } from '@/hooks/use-language';
 import projektledningImage from '@assets/image_1754741347160.png';
 import reparationImage from '@assets/Reperation_1754742618187.png';
 import projekteringImage from '@assets/image_1754745251288.png';
+import designradgivningImage from '@assets/image_1754749142152.png';
 
 const services = [
   {
@@ -15,7 +16,8 @@ const services = [
   {
     title: "DESIGNRÅDGIVNING & KONCEPTUTVECKLING",
     description: "Från behovsanalys till tydlig designriktning.",
-    longDescription: "Vi hjälper er att tydliggöra visionen och översätta den till en konkret och funktionell plan. Vi tar fram moodboards, skisser och materialval samt rums- och funktionslayout som passar era behov, tidsramar och budget. Perfekt både för större ombyggnader och mindre uppdateringar — och som första steg innan full produktion och installation."
+    longDescription: "Vi hjälper er att tydliggöra visionen och översätta den till en konkret och funktionell plan. Vi tar fram moodboards, skisser och materialval samt rums- och funktionslayout som passar era behov, tidsramar och budget. Perfekt både för större ombyggnader och mindre uppdateringar — och som första steg innan full produktion och installation.",
+    image: designradgivningImage
   },
   {
     title: "PROJEKTLEDNING",
@@ -115,6 +117,12 @@ export function ServicesSection() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
                   style={{ backgroundImage: `url(${projekteringImage})` }}
+                />
+              )}
+              {service.title === "DESIGNRÅDGIVNING & KONCEPTUTVECKLING" && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                  style={{ backgroundImage: `url(${designradgivningImage})` }}
                 />
               )}
               {service.title === "PROJEKTLEDNING" && (

@@ -32,11 +32,11 @@ export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4 text-center">
+        <div className="mb-16 text-center">
+          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
             {t('about.title')}
           </h2>
-          <p className="text-xl text-[#5B401C] max-w-2xl text-left">
+          <p className="text-xl text-[#5B401C] max-w-2xl mx-auto text-left">
             {t('about.subtitle')}
           </p>
         </div>
@@ -72,9 +72,9 @@ export function AboutSection() {
         </div>
         
         {/* Team Members */}
-        <div className="mb-12">
-          <h3 className="font-serif text-3xl font-bold text-dark-brown mb-4 text-center">Our Team</h3>
-          <p className="text-xl text-[#5B401C] text-left">Meet the passionate team behind Nils Holger's distinctive design philosophy</p>
+        <div className="mb-12 text-center">
+          <h3 className="font-serif text-3xl font-bold text-dark-brown mb-4">Our Team</h3>
+          <p className="text-xl text-[#5B401C] max-w-2xl mx-auto text-left">Meet the passionate team behind Nils Holger's distinctive design philosophy</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

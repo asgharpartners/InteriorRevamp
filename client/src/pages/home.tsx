@@ -70,11 +70,11 @@ export default function HomePage() {
       <HeroSlider />
       {/* Intro Section */}
       <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-8 md:px-12 text-left">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8 text-center ml-[-100px] mr-[-100px]">
+        <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8">
             Välkomna till Nils Holger – Furniture & Project
           </h1>
-          <p className="md:text-lg text-[#3C2415] max-w-4xl text-left text-[20px] font-bold ml-[61px] mr-[61px]">
+          <p className="text-base md:text-lg leading-relaxed text-[#3C2415] max-w-4xl mx-auto text-left">
             Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt. Vi arbetar i såväl interiöra som exteriöra miljöer.
           </p>
         </div>

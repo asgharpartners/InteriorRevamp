@@ -81,11 +81,11 @@ export function BeforeAfterSlider() {
   return (
     <section className="py-20 bg-dark-brown text-[#FFFAF7]">
       <div className="container mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="font-serif text-4xl font-bold mb-4 text-center">
+        <div className="mb-16 text-center">
+          <h2 className="font-serif text-4xl font-bold mb-4">
             {t('beforeAfter.title')}
           </h2>
-          <p className="text-xl max-w-2xl text-left">
+          <p className="text-xl max-w-2xl mx-auto text-left">
             {t('beforeAfter.subtitle')}
           </p>
         </div>

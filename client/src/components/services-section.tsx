@@ -96,9 +96,9 @@ export function ServicesSection() {
     <section id="services" className="bg-white">
       {/* Section Title */}
       <div className="py-16 bg-off-white">
-        <div className="max-w-6xl mx-auto px-8 md:px-12">
-          <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4 text-center">Tjänster</h2>
-          <p className="text-[#5B401C] max-w-4xl leading-relaxed text-left">
+        <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
+          <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
+          <p className="text-[#5B401C] max-w-4xl mx-auto leading-relaxed text-left">
             {t('services.subtitle')}
           </p>
         </div>

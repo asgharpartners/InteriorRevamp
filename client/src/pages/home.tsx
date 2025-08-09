@@ -28,90 +28,97 @@ export default function HomePage() {
       <Header />
       <HeroSlider />
       
-      {/* Intro Page - Full Landscape */}
-      <section id="intro" className="w-full h-screen min-h-[100vh] bg-[#FFPAF7] flex items-center justify-center">
-        <div className="max-w-4xl mx-auto text-center px-8">
-          <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-[#3A2315] mb-8 leading-tight">
-            {t('intro.title')}
-          </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-[#3A2315]/80 leading-relaxed max-w-3xl mx-auto">
-            {t('intro.subtitle')}<br />
-            {t('intro.description')}
-          </p>
-        </div>
-      </section>
-
-      {/* Vår Process Page - Full Landscape */}
-      <section id="var-process" className="w-full h-screen min-h-[100vh] bg-[#3A2315] flex items-center justify-center">
-        <div className="w-full max-w-5xl mx-auto px-4">
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFPAF7] text-center mb-8 md:mb-10">
-            Vår Process
-          </h2>
-          
-          {/* Process Steps - Horizontal Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-8 mb-6 md:mb-8">
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">1</span>
-              </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
-                Förutsättningslöst möte
-              </h3>
-              <p className="text-[#FFPAF7]/80 text-xs leading-tight">
-                Behov och visioner, Tidplan, Omfattning, Budget, Upplägg
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">2</span>
-              </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
-                Design & Koncept
-              </h3>
-              <p className="text-[#FFPAF7]/80 text-xs leading-tight">
-                Vi utvecklar ett genomtänkt inredningskoncept
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">3</span>
-              </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
-                Produktion & Förädling
-              </h3>
-              <p className="text-[#FFPAF7]/80 text-xs leading-tight">
-                Vi producerar & förädlar lösningar i egen verkstad / via partners
-              </p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
-                <span className="text-[#3A2315] font-bold text-base md:text-lg lg:text-xl">4</span>
-              </div>
-              <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm lg:text-base mb-1">
-                Leverans & Installation
-              </h3>
-              <p className="text-[#FFPAF7]/80 text-xs leading-tight">
-                Transport, montering, färdigställande
-              </p>
-            </div>
+      {/* Intro & Vår Process - Split 50/50 Page */}
+      <section id="intro-process" className="w-full h-screen min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
+        {/* Left Column - Intro */}
+        <div className="bg-[#FFPAF7] flex items-center justify-center min-h-[80vh] md:min-h-[100vh] px-8 md:px-12 lg:px-16 py-10 md:py-12">
+          <div className="max-w-[640px] text-center">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#3A2315] mb-6 leading-tight">
+              {t('intro.title')}
+            </h2>
+            <p className="text-base md:text-lg text-[#3A2315]/80 leading-relaxed">
+              {t('intro.subtitle')}<br />
+              {t('intro.description')}
+            </p>
           </div>
+        </div>
 
-          {/* CTA Button */}
-          <div className="text-center">
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm md:text-base lg:text-lg hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
-              data-testid="discuss-project-button"
-            >
-              Diskutera ditt projekt
-            </button>
+        {/* Right Column - Vår Process */}
+        <div className="bg-[#3A2315] flex items-center justify-center min-h-[80vh] md:min-h-[100vh] px-8 md:px-12 lg:px-16 py-10 md:py-12">
+          <div className="max-w-[640px] w-full text-center">
+            {/* Title with accent line */}
+            <div className="mb-8 md:mb-10">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#FFPAF7] mb-3">
+                Vår process
+              </h2>
+              <div className="w-16 h-1 bg-[#D1AE77] mx-auto"></div>
+            </div>
+            
+            {/* Process Steps - Single Row */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 mb-8">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="w-24 h-24 lg:w-28 lg:h-28 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-[#3A2315] font-bold text-xl lg:text-2xl">01</span>
+                </div>
+                <h3 className="text-[#FFPAF7] font-semibold text-sm lg:text-base mb-2">
+                  Konsultation
+                </h3>
+                <p className="text-[#FFPAF7]/80 text-xs lg:text-sm leading-snug">
+                  Förutsättningslöst möte
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="w-24 h-24 lg:w-28 lg:h-28 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-[#3A2315] font-bold text-xl lg:text-2xl">02</span>
+                </div>
+                <h3 className="text-[#FFPAF7] font-semibold text-sm lg:text-base mb-2">
+                  Koncept
+                </h3>
+                <p className="text-[#FFPAF7]/80 text-xs lg:text-sm leading-snug">
+                  Design & utveckling
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="w-24 h-24 lg:w-28 lg:h-28 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-[#3A2315] font-bold text-xl lg:text-2xl">03</span>
+                </div>
+                <h3 className="text-[#FFPAF7] font-semibold text-sm lg:text-base mb-2">
+                  Produktion
+                </h3>
+                <p className="text-[#FFPAF7]/80 text-xs lg:text-sm leading-snug">
+                  Hållbar tillverkning
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="w-24 h-24 lg:w-28 lg:h-28 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-[#3A2315] font-bold text-xl lg:text-2xl">04</span>
+                </div>
+                <h3 className="text-[#FFPAF7] font-semibold text-sm lg:text-base mb-2">
+                  Installation
+                </h3>
+                <p className="text-[#FFPAF7]/80 text-xs lg:text-sm leading-snug">
+                  Professionell leverans
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-[#D1AE77] text-[#3A2315] px-6 py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm lg:text-base hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+                data-testid="discuss-project-button"
+              >
+                Diskutera ditt projekt
+              </button>
+            </div>
           </div>
         </div>
       </section>

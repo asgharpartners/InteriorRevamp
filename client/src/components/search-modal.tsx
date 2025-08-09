@@ -28,13 +28,13 @@ export function SearchModal({ isOpen, onClose, onNavigate }: SearchModalProps) {
       title: t('intro.title'),
       content: `${t('intro.subtitle')} ${t('intro.description')}`,
       section: t('nav.about'),
-      id: 'intro'
+      id: 'intro-process'
     },
     {
-      title: t('process.title'),
-      content: `${t('process.step1.title')} ${t('process.step1.description')} ${t('process.step2.title')} ${t('process.step2.description')} ${t('process.step3.title')} ${t('process.step3.description')} ${t('process.step4.title')} ${t('process.step4.description')}`,
+      title: 'Vår process',
+      content: 'Konsultation, Koncept, Produktion, Installation - våra fyra steg för att förverkliga ditt projekt från idé till färdig lösning',
       section: t('nav.about'),
-      id: 'var-process'
+      id: 'intro-process'
     },
     {
       title: t('services.title'),

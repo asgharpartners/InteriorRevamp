@@ -16,8 +16,8 @@ const projects = [
     description: "Transformation of corporate workspace with Scandinavian design principles"
   },
   {
-    before: "https://images.unsplash.com/photo-1606744824163-985d376605aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-    after: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+    before: "/assets/Before 2_1754764030502.png",
+    after: "/assets/After 2_1754764025506.png",
     title: "Residential Living Space",
     description: "Complete home renovation with custom furniture and natural materials"
   }

@@ -42,7 +42,84 @@ export default function HomePage() {
           </div>
         </div>
 
-        
+        {/* Right Half - Vår Process */}
+        <div className="w-1/2 bg-[#3A2315] flex items-center justify-center px-6 sm:px-8 md:px-12 py-10">
+          <div className="text-center w-full max-w-md lg:max-w-lg">
+            {/* Title */}
+            <div className="mb-6 lg:mb-8">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-[#fffaf6]">
+                Vår process
+              </h2>
+              <div className="w-12 h-0.5 bg-[#D1AE77] mx-auto"></div>
+            </div>
+            
+            {/* Process Steps - Horizontal Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 mb-6 lg:mb-8">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">1</span>
+                </div>
+                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                  Konsultation
+                </h3>
+                <p className="text-xs leading-tight text-[#fffaf6]">
+                  Vi lyssnar på dina behov och visioner
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">2</span>
+                </div>
+                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                  Koncept
+                </h3>
+                <p className="text-xs leading-tight text-[#fffaf6]">
+                  Utvecklar unika designkoncept
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">3</span>
+                </div>
+                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                  Produktion
+                </h3>
+                <p className="text-xs leading-tight text-[#fffaf6]">
+                  Tillverkar skräddarsydda lösningar
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">4</span>
+                </div>
+                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
+                  Installation
+                </h3>
+                <p className="text-[#FFPAF7]/80 text-xs leading-tight">
+                  Professionell installation på plats
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-[#D1AE77] text-[#3A2315] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-base hover:bg-[#D1AE77]/90 transition-all duration-300 transform hover:scale-105"
+                data-testid="discuss-project-button"
+              >
+                Diskutera ditt projekt
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
       <ServicesSection />
       <div id="products">

@@ -99,7 +99,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-[#D1AE77] rounded-full flex items-center justify-center mx-auto mb-2">
                   <span className="text-[#3A2315] font-bold text-sm md:text-base lg:text-lg">4</span>
                 </div>
-                <h3 className="text-[#FFPAF7] font-semibold text-xs md:text-sm mb-1">
+                <h3 className="font-semibold text-xs md:text-sm mb-1 text-[#fffaf6]">
                   Installation
                 </h3>
                 <p className="text-[#FFPAF7]/80 text-xs leading-tight">

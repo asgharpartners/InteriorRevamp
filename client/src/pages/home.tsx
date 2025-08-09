@@ -33,22 +33,34 @@ export default function HomePage() {
     {
       number: 1,
       title: "Förutsättningslöst möte",
-      description: "Behov och visioner, Tidplan, Omfattning, Budget, Upplägg"
+      subtitle: "Vi lyssnar först.",
+      description: "Vi träffas för att förstå era behov, visioner och förutsättningar – tidplan, budget, omfattning och projektets mål. Tack vare vår långa erfarenhet och breda nätverk kan vi redan här ge idéer och lösningar som är realistiska och hållbara.",
+      services: "projektledning, rådgivning, behovsanalys",
+      brand: "Flexibel och lätt att arbeta med, alltid utifrån kundens unika förutsättningar."
     },
     {
       number: 2,
       title: "Design & Koncept",
-      description: "Vi utvecklar ett genomtänkt inredningskoncept baserat på dina mål och platsens förutsättningar"
+      subtitle: "Skräddarsytt för er verksamhet.",
+      description: "Vi tar fram unika inredningslösningar och möbelkoncept anpassade efter ert varumärke och er miljö – från hotellrum till kontorslandskap. Designen bygger på estetik, funktionalitet och lång livslängd.",
+      services: "inredningsdesign, specialsnickeri, möbelritning, textil & tapetsering",
+      brand: "Hög estetisk nivå, skandinavisk minimalism och hållbarhet."
     },
     {
       number: 3,
-      title: "Produktion & Förädling",
-      description: "Vi producerar och förädlar lösningar i egen verkstad eller via utvalda partners"
+      title: "Produktion",
+      subtitle: "Från idé till färdig lösning.",
+      description: "Vi använder vårt nätverk av skickliga snickare, leverantörer och hantverkare för att tillverka och förädla möbler, material och detaljer. Vi säkrar att varje del motsvarar designkonceptet och håller högsta kvalitet – prisvärt och med hänsyn till miljön.",
+      services: "möbeltillverkning, renovering, upphandling av material, kvalitetssäkring",
+      brand: "Professionellt genomförande med fokus på hållbara material och leveranser i tid."
     },
     {
       number: 4,
-      title: "Leverans & Installation",
-      description: "Transport, montering och färdigställande – punktligt och professionellt"
+      title: "Leverans",
+      subtitle: "Perfekt slutresultat – direkt på plats.",
+      description: "Vi hanterar installation, montering och styling på plats, och lämnar över en nyckelfärdig miljö redo att användas. Allt sker med omsorg om detaljer och helhet, så att resultatet blir precis som ni tänkt er – eller bättre.",
+      services: "turnkey-lösningar, montering, slutstyling, kvalitetskontroll",
+      brand: "Lätt att arbeta med, trygg helhetsleverantör, levererar på löften."
     }
   ];
 
@@ -108,10 +120,21 @@ export default function HomePage() {
                 
                 {/* Description (Accordion) */}
                 {openProcessStep === step.number && (
-                  <div className="bg-[#3A2315] p-4 rounded-lg">
-                    <p className="text-[#FAF7F2] text-sm md:text-base leading-relaxed">
+                  <div className="bg-[#FBD44C] p-6 rounded-lg text-left">
+                    <h4 className="font-serif font-bold text-lg text-[#3A2315] mb-3">
+                      {step.subtitle}
+                    </h4>
+                    <p className="text-[#3A2315] text-sm md:text-base leading-relaxed mb-4">
                       {step.description}
                     </p>
+                    <div className="mb-3">
+                      <span className="font-semibold text-[#3A2315] text-sm">Services tied in: </span>
+                      <span className="text-[#3A2315] text-sm">{step.services}.</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[#3A2315] text-sm">Brand identity link: </span>
+                      <span className="text-[#3A2315] text-sm">{step.services}.</span>
+                    </div>
                   </div>
                 )}
               </div>

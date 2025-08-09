@@ -4,7 +4,60 @@ import { ChevronDown } from 'lucide-react';
 
 // Products for INSTAKA PRODUKTER section
 const instakaProducts = [
-  // Empty array - no products in this section currently
+  {
+    id: 1,
+    name: "Nordic Lounge Chair",
+    image: "/assets/Royal_Hotel_Lobby_-_Swan_chairs_1754760702839.jpg",
+    description: "Elegant lounge chair with classic Scandinavian design"
+  },
+  {
+    id: 2,
+    name: "Minimalist Coffee Table",
+    image: "/assets/IMG_1568_1754760681179.jpg",
+    description: "Clean-lined coffee table perfect for modern spaces"
+  },
+  {
+    id: 3,
+    name: "Oak Dining Set",
+    image: "/assets/IMG_1600_1754760687145.jpg",
+    description: "Sustainable oak dining table with matching chairs"
+  },
+  {
+    id: 4,
+    name: "Storage Solutions",
+    image: "/assets/IMG_1597_1754760693613.jpg",
+    description: "Functional storage units with hidden compartments"
+  },
+  {
+    id: 5,
+    name: "Bar Furniture",
+    image: "/assets/bar_1754760510804.jpeg",
+    description: "Professional bar setup for restaurants and hotels"
+  },
+  {
+    id: 6,
+    name: "Workspace Desk",
+    image: "/assets/DSC02291_1754760673373.JPG",
+    description: "Ergonomic workspace solutions for offices"
+  },
+  {
+    id: 7,
+    name: "Outdoor Seating",
+    image: "/assets/707.6_1754760649131.jpg",
+    description: "Weather-resistant outdoor furniture collection"
+  },
+  {
+    id: 8,
+    name: "Restaurant Tables",
+    image: "/assets/707.9_1754760653675.jpg",
+    description: "Durable restaurant tables for high-traffic venues"
+  },
+  {
+    id: 9,
+    name: "Custom Lighting",
+    image: "/assets/DAR-06_1754760665742.jpg",
+    description: "Architectural lighting solutions for any space"
+  }
 ];
 
 // Products for EGEN PRODUKTION section  
@@ -72,20 +125,20 @@ export function ProductsSection() {
 
   return (
     <>
-      <section className="py-20 bg-off-white" id="products" data-testid="products-section">
+      <section className="py-20 bg-[#3a2315]" id="products" data-testid="products-section">
         <div className="max-w-6xl mx-auto px-8 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-[#2B2B2B] mb-6">
+            <h2 className="font-serif text-4xl font-bold text-[#FFFAF7] mb-6">
               Våra Produkter
             </h2>
-            <p className="text-[#5B401C] text-lg font-medium max-w-3xl mx-auto leading-relaxed">
+            <p className="text-[#FFFAF7] text-lg font-medium max-w-3xl mx-auto leading-relaxed">
               Upptäck vår kollektion av handgjorda möbler och skräddarsydda designlösningar
             </p>
           </div>
         </div>
 
         {/* Filter Buttons */}
-        <div className="py-16 bg-[#2B2B2B]">
+        <div className="py-16 bg-[#251104]">
           <div className="max-w-6xl mx-auto px-8 md:px-12">
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {filterOptions.map((option) => (
@@ -107,7 +160,7 @@ export function ProductsSection() {
         </div>
 
         {/* INSTAKA PRODUKTER Section */}
-        {(activeFilter === 'all' || activeFilter === 'instaka') && instakaProducts.length > 0 && (
+        {(activeFilter === 'all' || activeFilter === 'instaka') && (
           <div className="py-20 bg-[#251104]">
             <div className="max-w-6xl mx-auto px-8 md:px-12">
               <div className="text-center mb-12">
@@ -181,7 +234,7 @@ export function ProductsSection() {
                   href="/assets/nordi_production_2023-1_1754761513396.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#FBD44C] text-[#2B2B2B] font-medium rounded-lg hover:bg-[#FBD44C]/90 transition-colors duration-300"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#FBD44C] text-[#251104] font-medium rounded-lg hover:bg-[#FBD44C]/90 transition-colors duration-300"
                   data-testid="production-info-link"
                 >
                   Läs mer om vår produktion (PDF)

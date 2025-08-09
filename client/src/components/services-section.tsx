@@ -38,17 +38,7 @@ const services = [
 export function ServicesSection() {
   const { t } = useLanguage();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
-  const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  // Load saved image from localStorage on component mount
-  useState(() => {
-    const savedImage = localStorage.getItem('projektledning-generated-image');
-    if (savedImage) {
-      setGeneratedImage(savedImage);
-    }
-  });
 
   const toggleCard = (index: number) => {
     setExpandedCard(expandedCard === index ? null : index);
@@ -56,44 +46,6 @@ export function ServicesSection() {
 
   const closeCard = () => {
     setExpandedCard(null);
-  };
-
-  const generateImage = async () => {
-    setIsGeneratingImage(true);
-    try {
-      const response = await fetch('/api/generate-image', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      
-      const data = await response.json();
-      
-      if (data.success && data.imageUrl) {
-        setGeneratedImage(data.imageUrl);
-        localStorage.setItem('projektledning-generated-image', data.imageUrl);
-      } else {
-        console.error('Failed to generate image:', data.message);
-      }
-    } catch (error) {
-      console.error('Error generating image:', error);
-    } finally {
-      setIsGeneratingImage(false);
-    }
-  };
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const imageUrl = e.target?.result as string;
-        setGeneratedImage(imageUrl);
-        localStorage.setItem('projektledning-generated-image', imageUrl);
-      };
-      reader.readAsDataURL(file);
-    }
   };
 
   // Handle ESC key and click outside
@@ -154,44 +106,7 @@ export function ServicesSection() {
                 }
               }}
             >
-              {/* Background image for Projektledning card */}
-              {service.title === "PROJEKTLEDNING" && generatedImage && (
-                <div 
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-                  style={{ backgroundImage: `url(${generatedImage})` }}
-                />
-              )}
 
-              {/* Generate/Upload Controls for Projektledning card */}
-              {service.title === "PROJEKTLEDNING" && (
-                <div className="absolute top-4 left-4 right-4 z-20">
-                  <div className="flex flex-col gap-2">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        generateImage();
-                      }}
-                      disabled={isGeneratingImage}
-                      className="bg-[#D1AE77] text-[#2B2B2B] px-3 py-2 rounded text-xs font-medium hover:bg-[#D1AE77]/90 transition-colors disabled:opacity-50 shadow-lg"
-                      data-testid="generate-image-button"
-                    >
-                      {isGeneratingImage ? "Skapar bild ..." : "Generera bild"}
-                    </button>
-                    
-                    {generatedImage && (
-                      <label className="text-[#D1AE77] text-xs cursor-pointer hover:text-[#D1AE77]/80 transition-colors text-center bg-[#2B2B2B]/80 px-2 py-1 rounded shadow-lg">
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={handleImageUpload}
-                          className="hidden"
-                        />
-                        Byt bild
-                      </label>
-                    )}
-                  </div>
-                </div>
-              )}
 
               {/* Card Header - Always Visible */}
               <div 

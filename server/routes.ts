@@ -3,9 +3,6 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema, insertProjectSchema, insertServiceSchema, insertProductSchema } from "@shared/schema";
 import { z } from "zod";
-import OpenAI from "openai";
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
@@ -127,39 +124,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({ message: "Failed to create product" });
       }
-    }
-  });
-
-  // AI Image Generation endpoint
-  app.post("/api/generate-image", async (req, res) => {
-    try {
-      const prompt = "Projektmöte på plats i hotell/restaurantmiljö, skandinavisk minimalism, varma trätoner, tydlig planering.";
-      
-      // For now, return the placeholder image URL
-      // In a real implementation, you would call OpenAI's DALL-E API
-      // const response = await openai.images.generate({
-      //   model: "dall-e-3",
-      //   prompt: prompt,
-      //   n: 1,
-      //   size: "1024x576",
-      //   quality: "standard",
-      // });
-      
-      // Return placeholder for now
-      const imageUrl = "/placeholders/projektledning.jpg";
-      
-      res.json({ 
-        success: true, 
-        imageUrl: imageUrl,
-        prompt: prompt
-      });
-    } catch (error) {
-      console.error('Error generating image:', error);
-      res.status(500).json({ 
-        success: false, 
-        message: "Failed to generate image",
-        error: error instanceof Error ? error.message : "Unknown error"
-      });
     }
   });
 

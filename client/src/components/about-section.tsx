@@ -32,11 +32,11 @@ export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-16">
-          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
+        <div className="mb-16">
+          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4 text-center">
             {t('about.title')}
           </h2>
-          <p className="text-xl text-[#5B401C] max-w-2xl">
+          <p className="text-xl text-[#5B401C] max-w-2xl text-left">
             {t('about.subtitle')}
           </p>
         </div>

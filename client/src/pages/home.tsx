@@ -72,7 +72,7 @@ export default function HomePage() {
       {/* Intro Section */}
       <section className="w-full bg-[#FAF7F2] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-8 md:px-12 text-left">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8 text-left">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8 text-center">
             Välkomna till Nils Holger – Furniture & Project
           </h1>
           <p className="text-base md:text-lg leading-relaxed text-[#3C2415] max-w-4xl text-left">

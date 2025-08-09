@@ -71,9 +71,9 @@ export default function CareerPage() {
       <section id="career" className="career-section py-12 bg-off-white">
         <div className="max-w-6xl mx-auto px-4">
           {/* Section Title */}
-          <div className="text-center mb-12">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#3A2315] mb-6">Career & Internship</h1>
-            <p className="text-[#5B401C] max-w-2xl mx-auto leading-relaxed text-lg">
+          <div className="mb-12">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#3A2315] mb-6 text-center">Career & Internship</h1>
+            <p className="text-[#5B401C] max-w-2xl leading-relaxed text-lg text-left">
               We believe in nurturing the next generation of designers and craftspeople. 
               Our collaboration with students and young professionals creates opportunities for hands-on learning 
               in real-world projects while contributing fresh perspectives to our work.

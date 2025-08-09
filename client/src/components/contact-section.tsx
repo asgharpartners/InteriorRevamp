@@ -59,11 +59,11 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-off-white">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-16">
-          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4">
+        <div className="mb-16">
+          <h2 className="font-serif text-4xl font-bold text-dark-brown mb-4 text-center">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-[#5B401C] max-w-2xl">
+          <p className="text-xl text-[#5B401C] max-w-2xl text-left">
             {t('contact.subtitle')}
           </p>
         </div>

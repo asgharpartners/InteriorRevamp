@@ -60,9 +60,9 @@ export function ServicesSection() {
         </p>
       </div>
 
-      {/* Services Grid - Responsive layout for 7 cards */}
+      {/* Services Grid - 2 rows x 3 columns */}
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 min-h-[400px]">
           {services.map((service, index) => (
             <div 
               key={index}

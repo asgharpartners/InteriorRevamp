@@ -94,11 +94,13 @@ export function ServicesSection() {
   return (
     <section id="services" className="bg-white">
       {/* Section Title */}
-      <div className="text-center py-16 bg-off-white">
-        <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
-        <p className="text-[#5B401C] max-w-4xl mx-auto px-4 leading-relaxed">
-          {t('services.subtitle')}
-        </p>
+      <div className="text-left py-16 bg-off-white">
+        <div className="max-w-6xl mx-auto px-8 md:px-12">
+          <h2 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">Tjänster</h2>
+          <p className="text-[#5B401C] max-w-4xl leading-relaxed">
+            {t('services.subtitle')}
+          </p>
+        </div>
       </div>
       {/* Services Grid - 2 rows x 3 columns */}
       <div className="w-full">

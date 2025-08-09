@@ -77,7 +77,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
           {teamMembers.map((member, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="team-card bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-[400px] flex flex-col justify-center transition-all duration-300 hover:shadow-md">
+              <div className="team-card bg-[#2B2B2B] rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-[400px] flex flex-col justify-center transition-all duration-300 hover:shadow-md">
                 <div className="relative mb-6 flex justify-start">
                   <div className="w-20 h-20 rounded-full border-4 border-[#AD8C44] p-1">
                     <img 
@@ -92,13 +92,13 @@ export function AboutSection() {
                     </div>
                   </div>
                 </div>
-                <h4 className="font-serif text-lg font-bold text-dark-brown mb-2 tracking-wide">
+                <h4 className="font-serif text-lg font-bold text-[#fffaf7] mb-2 tracking-wide">
                   {member.name}
                 </h4>
-                <p className="text-[#AD8C44] font-semibold mb-3">
+                <p className="text-[#fffaf7] font-semibold mb-3">
                   {member.role}
                 </p>
-                <p className="text-[#5B401C] text-sm leading-relaxed">
+                <p className="text-[#fffaf7] text-sm leading-relaxed">
                   {member.description}
                 </p>
                 {/* Hover Effect */}

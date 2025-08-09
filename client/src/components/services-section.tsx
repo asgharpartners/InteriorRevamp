@@ -38,7 +38,17 @@ const services = [
 export function ServicesSection() {
   const { t } = useLanguage();
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Load saved image from localStorage on component mount
+  useState(() => {
+    const savedImage = localStorage.getItem('projektledning-generated-image');
+    if (savedImage) {
+      setGeneratedImage(savedImage);
+    }
+  });
 
   const toggleCard = (index: number) => {
     setExpandedCard(expandedCard === index ? null : index);
@@ -46,6 +56,44 @@ export function ServicesSection() {
 
   const closeCard = () => {
     setExpandedCard(null);
+  };
+
+  const generateImage = async () => {
+    setIsGeneratingImage(true);
+    try {
+      const response = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
+      const data = await response.json();
+      
+      if (data.success && data.imageUrl) {
+        setGeneratedImage(data.imageUrl);
+        localStorage.setItem('projektledning-generated-image', data.imageUrl);
+      } else {
+        console.error('Failed to generate image:', data.message);
+      }
+    } catch (error) {
+      console.error('Error generating image:', error);
+    } finally {
+      setIsGeneratingImage(false);
+    }
+  };
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const imageUrl = e.target?.result as string;
+        setGeneratedImage(imageUrl);
+        localStorage.setItem('projektledning-generated-image', imageUrl);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   // Handle ESC key and click outside
@@ -106,9 +154,51 @@ export function ServicesSection() {
                 }
               }}
             >
+              {/* Special content for Projektledning card */}
+              {service.title === "PROJEKTLEDNING" && (
+                <div className="p-4">
+                  {/* Image Container */}
+                  <div className="w-full h-32 bg-[#1A1A1A] rounded-lg mb-3 flex items-center justify-center overflow-hidden">
+                    {generatedImage ? (
+                      <img 
+                        src={generatedImage} 
+                        alt="Projektledning illustration" 
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="text-[#666] text-sm">Ingen bild genererad</div>
+                    )}
+                  </div>
+                  
+                  {/* Generate/Upload Controls */}
+                  <div className="flex flex-col gap-2 mb-4">
+                    <button
+                      onClick={generateImage}
+                      disabled={isGeneratingImage}
+                      className="bg-[#D1AE77] text-[#2B2B2B] px-3 py-2 rounded text-xs font-medium hover:bg-[#D1AE77]/90 transition-colors disabled:opacity-50"
+                      data-testid="generate-image-button"
+                    >
+                      {isGeneratingImage ? "Skapar bild ..." : "Generera bild"}
+                    </button>
+                    
+                    {generatedImage && (
+                      <label className="text-[#D1AE77] text-xs cursor-pointer hover:text-[#D1AE77]/80 transition-colors text-center">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleImageUpload}
+                          className="hidden"
+                        />
+                        Byt bild
+                      </label>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {/* Card Header - Always Visible */}
               <div 
-                className="p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10"
+                className={`p-8 cursor-pointer flex-1 flex flex-col justify-center text-center relative z-10 ${service.title === "PROJEKTLEDNING" ? "pt-4" : ""}`}
                 onClick={() => toggleCard(index)}
                 data-testid={`service-card-${index}`}
               >

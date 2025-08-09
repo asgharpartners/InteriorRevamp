@@ -118,11 +118,11 @@ export function HeroSlider() {
             />
             <div className="absolute inset-0 bg-dark-brown/40 group-hover:bg-dark-brown/60 transition-all duration-500" />
             <div className="absolute inset-0 flex items-center justify-center text-center text-white">
-              <div className="max-w-4xl px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
+              <div className="max-w-4xl px-4 opacity-100 transition-opacity duration-500">
+                <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 text-shadow">
                   {t(slide.titleKey)}
                 </h2>
-                <p className="text-lg md:text-xl text-white/80">
+                <p className="text-lg md:text-xl text-white/90 text-shadow">
                   {t(slide.subtitleKey)}
                 </p>
               </div>

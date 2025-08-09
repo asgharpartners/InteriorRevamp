@@ -1,6 +1,7 @@
 import { useLanguage } from '@/hooks/use-language';
-import { Pencil, User, Palette, Hammer } from 'lucide-react';
+import { Pencil, User, Palette, Hammer, Factory } from 'lucide-react';
 import dennisImage from '@assets/dennis_1754742490063.jpg';
+import miksImage from '@assets/Screenshot 2025-08-09 at 19.33.37_1754760848991.png';
 
 const teamMembers = [
   {
@@ -23,6 +24,13 @@ const teamMembers = [
     description: "Ansvarar för administration, ekonomi och företagets administrativa processer",
     image: "https://pixabay.com/get/gf8ace0f52b939f525af8ba1422bcb3f2af44cde261c1db2737d3fcc5558639142231945301115f2eff2b88b1ec87cf6d11bdb081d221466bf9ec57fed7fa83d8_1280.jpg",
     icon: <Palette className="h-4 w-4" />
+  },
+  {
+    name: "Miks",
+    role: "Local Production",
+    description: "Ansvarar för lokal produktion och tillverkning av skräddarsydda möbler och inredningslösningar",
+    image: miksImage,
+    icon: <Factory className="h-4 w-4" />
   }
 ];
 
@@ -74,7 +82,7 @@ export function AboutSection() {
           <p className="text-xl text-[#5B401C] max-w-2xl mx-auto text-left">Meet the passionate team behind Nils Holger's distinctive design philosophy</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px] bg-[#F9F9F9] p-[2px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-[#F9F9F9] p-[2px]">
           {teamMembers.map((member, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="team-card bg-[#2B2B2B] rounded-2xl shadow-sm border border-gray-200 p-8 text-left relative overflow-hidden h-[400px] flex flex-col justify-center transition-all duration-300 hover:shadow-md">

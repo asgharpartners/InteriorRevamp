@@ -4,16 +4,17 @@ import { useLanguage } from '@/hooks/use-language';
 import projektledningImage from '@assets/image_1754741347160.png';
 import reparationImage from '@assets/image_1754755683706.png';
 import projekteringImage from '@assets/image_1754754947827.png';
-import designradgivningImage from '@assets/image_1754754368025.png';
+import designradgivningImage from '@assets/designradgivning_new.png';
 import byggnationImage from '@assets/image_1754753437709.png';
 import kaImage from '@assets/image_1754753810032.png';
+import oldDesignradgivningImage from '@assets/image_1754754368025.png';
 
 const services = [
   {
     title: "PROJEKTERING",
     description: "När våra beställare behöver hjälp med att ta fram underlag för sitt projekt så bistår vi gärna med projektering och projekteringsledning med stöd av vårt nätverk.",
     longDescription: "Avser alla typer av offentliga miljöer. När projekten är av större omfattning inbegriper det olika typer av konsultgrupper såsom arkitektur, konstruktion, El, VVS, brand, tillgänglighet m.fl.",
-    image: projekteringImage
+    image: oldDesignradgivningImage
   },
   {
     title: "DESIGNRÅDGIVNING & KONCEPTUTVECKLING",
@@ -122,7 +123,7 @@ export function ServicesSection() {
               {service.title === "PROJEKTERING" && (
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-                  style={{ backgroundImage: `url(${projekteringImage})` }}
+                  style={{ backgroundImage: `url(${oldDesignradgivningImage})` }}
                 />
               )}
               {service.title === "DESIGNRÅDGIVNING & KONCEPTUTVECKLING" && (

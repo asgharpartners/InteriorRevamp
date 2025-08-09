@@ -36,9 +36,11 @@ export default function HomePage() {
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#3A2315] mb-3 lg:mb-4 leading-tight tracking-wide text-center">
                 {t('intro.title')}
               </h2>
-              <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3A2315]/80 leading-relaxed text-left" style={{ whiteSpace: 'normal' }}>
-                {t('intro.subtitle')} {t('intro.description')}
-              </p>
+              <div className="px-2 sm:px-4 md:px-6">
+                <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#3A2315]/80 leading-relaxed text-left" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                  {t('intro.subtitle')} {t('intro.description')}
+                </p>
+              </div>
             </div>
           </div>
         </div>

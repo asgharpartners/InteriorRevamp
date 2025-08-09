@@ -41,19 +41,9 @@ export default function Header({ className = "" }: HeaderProps) {
       return;
     }
     
-    // For references, scroll to the references section on home page
+    // For references, navigate to the references page
     if (sectionId.toLowerCase() === 'referenser' || sectionId.toLowerCase() === 'references') {
-      // Make sure we're on home page first
-      if (window.location.pathname !== '/') {
-        window.location.href = '/#references';
-        setIsMobileMenuOpen(false);
-        return;
-      }
-      // Already on home page, just scroll to section
-      const element = document.getElementById('references');
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      window.location.href = '/references';
       setIsMobileMenuOpen(false);
       return;
     }

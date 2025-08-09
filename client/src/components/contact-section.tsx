@@ -71,7 +71,7 @@ export function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information & Map */}
           <div>
-            <h3 className="font-serif text-2xl font-bold text-dark-brown mb-8">Visit Our Studio</h3>
+            <h3 className="font-serif text-2xl font-bold text-dark-brown mb-8">Visit Our Showroom</h3>
             
             {/* Google Maps Embed */}
             <div className="mb-8 rounded-lg overflow-hidden shadow-lg">

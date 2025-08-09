@@ -74,7 +74,7 @@ export default function HomePage() {
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C2415] mb-8 text-center ml-[-100px] mr-[-100px]">
             Välkomna till Nils Holger – Furniture & Project
           </h1>
-          <p className="md:text-lg text-[#3C2415] max-w-4xl text-left text-[20px] font-bold">
+          <p className="md:text-lg text-[#3C2415] max-w-4xl text-left text-[20px] font-bold ml-[61px] mr-[61px]">
             Vår affärsidé är att vara en pålitlig och flexibel partner när det gäller inredning och byggnation för alla typer av offentliga projekt. Vi arbetar i såväl interiöra som exteriöra miljöer.
           </p>
         </div>

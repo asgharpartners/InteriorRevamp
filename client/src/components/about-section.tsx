@@ -72,9 +72,9 @@ export function AboutSection() {
         </div>
         
         {/* Team Members */}
-        <div className="text-left mb-12">
-          <h3 className="font-serif text-3xl font-bold text-dark-brown mb-4">Our Team</h3>
-          <p className="text-xl text-[#5B401C]">The creative minds behind every project</p>
+        <div className="mb-12">
+          <h3 className="font-serif text-3xl font-bold text-dark-brown mb-4 text-center">Our Team</h3>
+          <p className="text-xl text-[#5B401C] text-left">Meet the passionate team behind Nils Holger's distinctive design philosophy</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

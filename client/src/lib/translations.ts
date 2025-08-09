@@ -55,7 +55,7 @@ export const translations = {
       subtitle: "Witness the transformative power of thoughtful design and expert craftsmanship"
     },
     products: {
-      title: "Our Products",
+      title: "Products",
       subtitle: "Discover our collection of handcrafted furniture and bespoke design solutions",
       tabs: {
         custom: "Custom-made Products",
@@ -158,7 +158,7 @@ export const translations = {
       subtitle: "Bevittna den transformativa kraften av genomtänkt design och experthantverk"
     },
     products: {
-      title: "Våra Produkter", 
+      title: "Produkter", 
       subtitle: "Upptäck vår kollektion av handgjorda möbler och skräddarsydda designlösningar",
       tabs: {
         custom: "Skräddarsydda Produkter",

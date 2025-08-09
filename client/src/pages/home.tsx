@@ -34,10 +34,10 @@ export default function HomePage() {
       <HeroSlider />
       
       {/* Two-Column Layout: Intro + Process */}
-      <div className="w-full h-[80vh] flex flex-col lg:flex-row">
+      <div className="w-full h-[85vh] flex flex-col lg:flex-row">
         {/* Intro Section - Left Column */}
         <section className="bg-[#F5F1EA] flex-1 flex items-center justify-center">
-          <div className="max-w-xl mx-auto text-left px-6 py-8">
+          <div className="max-w-lg mx-auto text-left px-8 py-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark-brown mb-6 leading-tight">
               {t('intro.title')}
             </h2>
@@ -49,10 +49,10 @@ export default function HomePage() {
         </section>
 
         {/* Process Section - Right Column */}
-        <section className="bg-[#3E2516] flex-1 flex items-center justify-center relative overflow-hidden">
-          <div className="w-full h-full flex items-center justify-center px-8 py-8">
+        <section className="bg-[#3E2516] flex-1 flex items-center justify-center relative">
+          <div className="w-full h-full flex items-center justify-center px-12 py-12">
             {/* Circular Process Steps */}
-            <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] lg:w-[360px] lg:h-[360px] mx-auto">
+            <div className="relative w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] mx-auto">
               {/* Center Title */}
               <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 transition-opacity duration-300 ${
                 expandedStep !== null ? 'opacity-30' : 'opacity-100'
@@ -66,27 +66,27 @@ export default function HomePage() {
               </div>
               
               {/* Step 1 - Top */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(1)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
                       Förutsätt-<br />ningslöst<br />möte
                     </span>
                   </div>
                   
                   {/* Compact Tooltip */}
                   {expandedStep === 1 && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
-                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-l-2 border-t-2 border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#3E2516] border-l border-t border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
                         {t('process.step1.description')}
                       </p>
                       <button 
                         onClick={() => setExpandedStep(null)}
-                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
                       >
                         ×
                       </button>
@@ -108,27 +108,27 @@ export default function HomePage() {
               </div>
 
               {/* Step 2 - Right */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4">
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(2)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
                       Design &<br />Koncept
                     </span>
                   </div>
                   
                   {/* Compact Tooltip */}
                   {expandedStep === 2 && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
-                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-l-2 border-t-2 border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
+                    <div className="absolute top-1/2 right-full transform -translate-y-1/2 mr-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
+                      <div className="absolute top-1/2 -right-1 transform -translate-y-1/2 w-2 h-2 bg-[#3E2516] border-r border-b border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
                         {t('process.step2.description')}
                       </p>
                       <button 
                         onClick={() => setExpandedStep(null)}
-                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
                       >
                         ×
                       </button>
@@ -150,27 +150,27 @@ export default function HomePage() {
               </div>
 
               {/* Step 3 - Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(3)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
                       Produktion
                     </span>
                   </div>
                   
                   {/* Compact Tooltip */}
                   {expandedStep === 3 && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-r-2 border-b-2 border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
+                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#3E2516] border-r border-b border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
                         {t('process.step3.description')}
                       </p>
                       <button 
                         onClick={() => setExpandedStep(null)}
-                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
                       >
                         ×
                       </button>
@@ -192,27 +192,27 @@ export default function HomePage() {
               </div>
 
               {/* Step 4 - Left */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4">
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(4)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
                       Leverans
                     </span>
                   </div>
                   
                   {/* Compact Tooltip */}
                   {expandedStep === 4 && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-[#3E2516] rounded-lg shadow-xl border-2 border-[#AD8C44] p-4 z-50">
-                      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3E2516] border-l-2 border-t-2 border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs sm:text-sm leading-relaxed">
+                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
+                      <div className="absolute top-1/2 -left-1 transform -translate-y-1/2 w-2 h-2 bg-[#3E2516] border-l border-t border-[#AD8C44] rotate-45"></div>
+                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
                         {t('process.step4.description')}
                       </p>
                       <button 
                         onClick={() => setExpandedStep(null)}
-                        className="absolute top-1 right-2 text-[#AD8C44] hover:text-[#F5F1EA] text-lg"
+                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
                       >
                         ×
                       </button>
@@ -234,16 +234,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div className="text-center mt-8">
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-[#AD8C44] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#AD8C44]/90 transition-all duration-300"
-                data-testid="discuss-project-button"
-              >
-                Diskutera ditt projekt
-              </button>
-            </div>
+
           </div>
         </section>
       </div>

@@ -222,14 +222,7 @@ export function ReferencesSection() {
   return (
     <section id="references" className="py-20 bg-dark-brown text-off-white">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-16">
-          <h2 className="font-serif text-4xl font-bold mb-4 text-off-white">
-            {t('references.title')}
-          </h2>
-          <p className="text-xl max-w-2xl text-off-white">
-            {t('references.subtitle')}
-          </p>
-        </div>
+
         
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -239,8 +232,8 @@ export function ReferencesSection() {
               onClick={() => setActiveFilter(option.id)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeFilter === option.id
-                  ? 'bg-[#FBD44C] text-off-white'
-                  : 'bg-off-white/10 text-off-white hover:bg-off-white/20'
+                  ? 'bg-[#FBD44C] text-[#fffaf7]'
+                  : 'bg-off-white/10 text-[#fffaf7] hover:bg-off-white/20'
               }`}
             >
               {option.label}

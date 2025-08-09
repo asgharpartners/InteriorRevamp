@@ -34,10 +34,10 @@ export default function HomePage() {
       <HeroSlider />
       
       {/* Two-Column Layout: Intro + Process */}
-      <div className="w-full h-[85vh] flex flex-col lg:flex-row">
+      <div className="w-full h-[70vh] min-h-[540px] grid grid-cols-1 lg:grid-cols-2">
         {/* Intro Section - Left Column */}
-        <section className="bg-[#F5F1EA] flex-1 flex items-center justify-center">
-          <div className="max-w-lg mx-auto text-left px-8 py-12">
+        <section id="introSection" className="bg-[#F5F1EA] flex items-center justify-center py-10 md:py-12">
+          <div className="max-w-lg mx-auto text-left px-8">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark-brown mb-6 leading-tight">
               {t('intro.title')}
             </h2>
@@ -49,12 +49,12 @@ export default function HomePage() {
         </section>
 
         {/* Process Section - Right Column */}
-        <section className="bg-[#3E2516] flex-1 flex items-center justify-center relative">
-          <div className="w-full h-full flex items-center justify-center px-12 py-12">
+        <section id="processSection" className="bg-[#3E2516] flex items-center justify-center relative py-10 md:py-12">
+          <div className="w-full max-w-[540px] mx-auto p-8 md:p-10 lg:p-12">
             {/* Circular Process Steps */}
-            <div className="relative w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] mx-auto">
+            <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] lg:w-[360px] lg:h-[360px] mx-auto">
               {/* Center Title */}
-              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 transition-opacity duration-300 ${
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-30 transition-opacity duration-300 ${
                 expandedStep !== null ? 'opacity-30' : 'opacity-100'
               }`}>
                 <h3 className="font-serif text-lg font-bold text-white mb-1">
@@ -69,29 +69,23 @@ export default function HomePage() {
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(1)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Förutsätt-<br />ningslöst<br />möte
                     </span>
                   </div>
                   
-                  {/* Compact Tooltip */}
-                  {expandedStep === 1 && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
-                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#3E2516] border-l border-t border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
-                        {t('process.step1.description')}
-                      </p>
-                      <button 
-                        onClick={() => setExpandedStep(null)}
-                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  )}
+                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
+                    expandedStep === 1 ? 'transform rotate-180' : ''
+                  }`}>
+                    <ChevronDown 
+                      size={20} 
+                      className="text-[#AD8C44] cursor-pointer" 
+                      onClick={() => toggleStep(1)}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -111,29 +105,23 @@ export default function HomePage() {
               <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(2)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Design &<br />Koncept
                     </span>
                   </div>
                   
-                  {/* Compact Tooltip */}
-                  {expandedStep === 2 && (
-                    <div className="absolute top-1/2 right-full transform -translate-y-1/2 mr-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
-                      <div className="absolute top-1/2 -right-1 transform -translate-y-1/2 w-2 h-2 bg-[#3E2516] border-r border-b border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
-                        {t('process.step2.description')}
-                      </p>
-                      <button 
-                        onClick={() => setExpandedStep(null)}
-                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  )}
+                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
+                    expandedStep === 2 ? 'transform rotate-180' : ''
+                  }`}>
+                    <ChevronDown 
+                      size={20} 
+                      className="text-[#AD8C44] cursor-pointer" 
+                      onClick={() => toggleStep(2)}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -153,29 +141,23 @@ export default function HomePage() {
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(3)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Produktion
                     </span>
                   </div>
                   
-                  {/* Compact Tooltip */}
-                  {expandedStep === 3 && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#3E2516] border-r border-b border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
-                        {t('process.step3.description')}
-                      </p>
-                      <button 
-                        onClick={() => setExpandedStep(null)}
-                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  )}
+                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
+                    expandedStep === 3 ? 'transform rotate-180' : ''
+                  }`}>
+                    <ChevronDown 
+                      size={20} 
+                      className="text-[#AD8C44] cursor-pointer" 
+                      onClick={() => toggleStep(3)}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -195,29 +177,23 @@ export default function HomePage() {
               <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-6">
                 <div className="text-center relative">
                   <div 
-                    className="w-18 h-18 sm:w-20 sm:h-20 lg:w-22 lg:h-22 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
+                    className="process-node w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-[#AD8C44] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 relative mx-auto"
                     onClick={() => toggleStep(4)}
                   >
-                    <span className="text-[#F5F1EA] font-bold text-[10px] sm:text-[11px] leading-[11px] sm:leading-[12px] text-center px-1">
+                    <span className="text-[#F5F1EA] font-bold text-[9px] sm:text-[10px] leading-[10px] sm:leading-[11px] text-center px-1">
                       Leverans
                     </span>
                   </div>
                   
-                  {/* Compact Tooltip */}
-                  {expandedStep === 4 && (
-                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-3 w-56 bg-[#3E2516] rounded-md shadow-lg border border-[#AD8C44] p-3 z-50">
-                      <div className="absolute top-1/2 -left-1 transform -translate-y-1/2 w-2 h-2 bg-[#3E2516] border-l border-t border-[#AD8C44] rotate-45"></div>
-                      <p className="text-[#F5F1EA] text-xs leading-relaxed">
-                        {t('process.step4.description')}
-                      </p>
-                      <button 
-                        onClick={() => setExpandedStep(null)}
-                        className="absolute top-0 right-1 text-[#AD8C44] hover:text-[#F5F1EA] text-sm"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  )}
+                  <div className={`w-6 h-6 mx-auto mt-2 flex items-center justify-center transition-all duration-300 ${
+                    expandedStep === 4 ? 'transform rotate-180' : ''
+                  }`}>
+                    <ChevronDown 
+                      size={20} 
+                      className="text-[#AD8C44] cursor-pointer" 
+                      onClick={() => toggleStep(4)}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -233,7 +209,38 @@ export default function HomePage() {
                 </svg>
               </div>
             </div>
-
+            
+            {/* Process Accordion Panels */}
+            {expandedStep && (
+              <div className="absolute inset-x-0 bottom-0 transform translate-y-full z-20">
+                <div className="w-full max-w-[clamp(320px,80%,560px)] mx-auto mt-4 lg:mt-8">
+                  <div className="process-panel bg-[#F8F3EC] border border-[#D6C6A6] rounded-lg shadow-lg p-6 animate-in slide-in-from-bottom duration-300">
+                    <div className="text-center">
+                      <h3 className="font-serif text-lg font-bold text-[#3A261B] mb-4 tracking-wide">
+                        {expandedStep === 1 && "Förutsättningslöst möte"}
+                        {expandedStep === 2 && "Design & Koncept"}
+                        {expandedStep === 3 && "Produktion"}
+                        {expandedStep === 4 && "Leverans"}
+                      </h3>
+                      
+                      <p className="text-[#3A261B]/80 text-sm leading-relaxed">
+                        {expandedStep === 1 && t('process.step1.description')}
+                        {expandedStep === 2 && t('process.step2.description')}
+                        {expandedStep === 3 && t('process.step3.description')}
+                        {expandedStep === 4 && t('process.step4.description')}
+                      </p>
+                      
+                      <button 
+                        onClick={() => setExpandedStep(null)}
+                        className="mt-4 text-[#AD8C44] text-sm font-semibold hover:text-[#AD8C44]/80 transition-colors duration-200"
+                      >
+                        Stäng ×
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
           </div>
         </section>

@@ -8,6 +8,16 @@ export default function ReferencesPage() {
     <div className="min-h-screen">
       <Header />
       <div className="pt-20"> {/* Account for fixed header */}
+        
+        {/* Page Title Section */}
+        <section className="py-16 bg-off-white">
+          <div className="max-w-6xl mx-auto px-8 md:px-12 text-center">
+            <h1 className="font-serif text-4xl font-bold text-[#3A2315] mb-4">
+              Best of our projects in 20 years until now:
+            </h1>
+          </div>
+        </section>
+        
         <ProjectsSection />
       </div>
       <Footer />

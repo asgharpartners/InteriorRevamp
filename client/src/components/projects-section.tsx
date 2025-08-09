@@ -220,7 +220,7 @@ export default function ProjectsSection() {
       <div className="container mx-auto px-4">
         
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-20">
           {filterOptions.map((option) => (
             <button
               key={option.id}

@@ -6,7 +6,7 @@ import { BeforeAfterSlider } from '@/components/before-after-slider';
 import { ProductsSection } from '@/components/products-section';
 
 import { AboutSection } from '@/components/about-section';
-import { ReferencesSection } from '@/components/references-section';
+import ProjectsSection from '@/components/projects-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer';
 import { StickyCTA } from '@/components/sticky-cta';
@@ -153,7 +153,7 @@ export default function HomePage() {
         <ProductsSection />
       </div>
       <BeforeAfterSlider />
-      <ReferencesSection />
+      <ProjectsSection />
       <AboutSection />
       <ContactSection />
       <Footer />

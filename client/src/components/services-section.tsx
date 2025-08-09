@@ -146,22 +146,31 @@ export function ServicesSection() {
               {/* Expanded Content Overlay */}
               {expandedCard === index && (
                 <div 
-                  className="absolute inset-0 bg-[#FBD44C] z-20 flex flex-col justify-start p-6 animate-in slide-in-from-bottom duration-300 rounded-lg"
+                  className="absolute inset-0 bg-[#FBD44C] z-20 flex flex-col p-6 animate-in slide-in-from-bottom duration-300 rounded-lg"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="text-left">
-                    <h3 className="font-serif text-lg font-bold text-[#2B2B2B] mb-3 tracking-wide">
+                  {/* Fixed Header */}
+                  <div className="flex-shrink-0 mb-3">
+                    <h3 className="font-serif text-lg font-bold text-[#2B2B2B] tracking-wide">
                       {service.title}
                     </h3>
-                    
-                    <p className="text-[#2B2B2B] mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    <p className="text-[#2B2B2B] text-xs leading-relaxed mb-6">
-                      {service.longDescription}
-                    </p>
-                    
+                  </div>
+                  
+                  {/* Scrollable Content Area */}
+                  <div className="flex-1 overflow-y-auto min-h-0 pr-2 scrollbar-thin scrollbar-thumb-[#5B401C] scrollbar-track-transparent">
+                    <div className="space-y-4">
+                      <p className="text-[#2B2B2B] text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                      
+                      <p className="text-[#2B2B2B] text-xs leading-relaxed">
+                        {service.longDescription}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Fixed Footer Button */}
+                  <div className="flex-shrink-0 mt-4 pt-3 border-t border-[#2B2B2B]/20">
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();

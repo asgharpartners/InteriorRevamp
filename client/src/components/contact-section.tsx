@@ -236,6 +236,25 @@ export function ContactSection() {
           </div>
 
         </div>
+        
+        {/* Yellow Chair Image Section */}
+        <div className="mt-20 text-center">
+          <div className="max-w-4xl mx-auto">
+            <img 
+              src="/assets/Screenshot 2025-08-09 at 20.34.47_1754764489232.png"
+              alt="Modern minimalist living space with yellow chair"
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+            <div className="mt-6">
+              <h3 className="font-serif text-2xl font-bold text-dark-brown mb-3">
+                Modern Minimalist Living
+              </h3>
+              <p className="text-lg text-[#5B401C] max-w-2xl mx-auto">
+                Contemporary comfort with Scandinavian elegance - showcasing our approach to creating inviting spaces with clean lines and warm accents.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

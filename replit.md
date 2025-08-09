@@ -12,7 +12,7 @@ This is a modern B2B web platform for "Nils Holger Design," a Scandinavian inter
 
 **Updated Website Structure (Jan 2025):**
 1. Start/Hero - Full-width slideshow with logo and tagline
-2. Intro & Process Combined - 50/50 split page (Intro left, Process right) with single section ID
+2. Intro & Process Combined - 50/50 landscape split (Intro left, Process right) always side-by-side
 3. Services - 7 expandable service cards with descriptions
 4. Products - Standard Products + In-House Manufacturing categories
 5. Before & After - Project transformation slider

@@ -250,7 +250,7 @@ export default function HomePage() {
       </section>
       <AboutSection />
       {/* Workshop Section */}
-      <section className="py-20 bg-dark-brown text-off-white">
+      <section className="py-20 bg-dark-brown text-[#FFFAF7]">
         <div className="w-full">
           <div className="relative h-96 mb-16">
             <div 
@@ -260,18 +260,18 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-dark-brown/60" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
-                <h2 className="font-serif text-5xl font-bold mb-4">{t('workshop.title')}</h2>
-                <p className="text-2xl font-light">{t('workshop.subtitle')}</p>
+                <h2 className="font-serif text-5xl font-bold mb-4 text-[#FFFAF7]">{t('workshop.title')}</h2>
+                <p className="text-2xl font-light text-[#FFFAF7]">{t('workshop.subtitle')}</p>
               </div>
             </div>
           </div>
           
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <p className="text-xl leading-relaxed mb-8">
+              <p className="text-xl leading-relaxed mb-8 text-[#FFFAF7]">
                 Our 2,000 square meter workshop in Nykvarn combines traditional Swedish woodworking techniques with modern precision tools. Here, our master craftsmen transform sustainably sourced timber into bespoke furniture pieces that will grace homes and businesses for generations.
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed text-[#FFFAF7]">
                 Every piece that leaves our workshop carries the mark of genuine craftsmanship – from hand-selected wood grain to carefully applied finishes, each detail reflects our commitment to excellence and our respect for the natural beauty of Scandinavian materials.
               </p>
             </div>

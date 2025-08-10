@@ -1,0 +1,44 @@
+Here’s a clean, copy‑paste prompt for Replit to make Intro and Vår Process share one page 50/50 and match the sizes in your screenshots:
+
+⸻
+
+Task: Split “Intro” and “Vår Process” into a single 50/50 page
+	1.	Layout
+
+	•	Create a single full‑width section <section id="intro-process"> using a 2‑column grid (left/right) at 50% / 50%.
+	•	Each column must be equal height = 100vh on desktop (so both together fill exactly one screen).
+	•	Left column background: off‑white (#FAF5EE or current token).
+Right column background: dark brown (#3A2216 or current token).
+	•	Vertically center content in both columns. Keep a max‑width for text (e.g., max-w-[640px]).
+
+	2.	Intro (left column) — make smaller
+
+	•	Use the exact Swedish text already used (“Välkomna till Nils Holger …”).
+	•	Reduce typography & spacing to match the smaller screenshot:
+	•	Heading: clamp to approx text-4xl on mobile → text-6xl on desktop, tight leading.
+	•	Body: text-lg desktop (text-base mobile).
+	•	Reduce outer paddings to px-8 md:px-12 lg:px-16, py-10 md:py-12.
+	•	No oversized top/bottom whitespace. The column must not scroll on desktop.
+
+	3.	Vår Process (right column) — match the sample
+
+	•	Title: “Vår process” (case as design). Centered, text-4xl → 5xl; underline accent line like your sample.
+	•	Four steps in one row on desktop: 01 Konsultation / 02 Koncept / 03 Produktion / 04 Installation.
+	•	Each step = circular badge (gold), large number inside, title under, 1–2 line caption (use your current Swedish copy).
+	•	Circle size: ~112–128px; consistent spacing (gap-10 lg:gap-14).
+	•	Add the CTA button centered under the row: “Diskutera ditt projekt” (gold background).
+	•	Remove any pop‑up tooltips here; this section is static (like the reference). Keep hover only (no click popups).
+
+	4.	Responsive rules
+
+	•	At ≤1024px: keep two columns but reduce paddings and circle sizes (e.g., 96px).
+	•	At ≤768px: stack vertically (Intro first, then Process), each at min-h-[80vh], with balanced paddings.
+	•	Ensure the two columns never cause horizontal scroll.
+
+	5.	Polish
+
+	•	Trim extra margins: no excess top/bottom whitespace.
+	•	Ensure color contrast AA for text on both backgrounds.
+	•	Reuse existing tokens for colors/typography if available.
+
+Please implement and keep all copy exactly as it is today (no wording changes), just apply the layout/size adjustments above.

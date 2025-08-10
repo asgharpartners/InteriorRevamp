@@ -1,0 +1,50 @@
+Got it — you want Intro and Vår Process side-by-side in a landscape layout just like your Hero section, not stacked vertically.
+
+Here’s the refined Replit prompt:
+
+⸻
+
+Task: Make “Intro” and “Vår Process” share one full-width landscape section (like the Hero)
+	1.	Overall Layout
+
+	•	Combine both into a single <section id="intro-process"> with flex row (or 2-column grid) so Intro = left half and Vår Process = right half.
+	•	Both halves should be 50% width and full height of viewport (100vh) on desktop.
+	•	Each half must stretch the full height and be vertically centered.
+
+	2.	Intro (Left Half)
+
+	•	Background: off-white (#FAF5EE or current token).
+	•	Use current text in Swedish exactly as is.
+	•	Reduce heading and paragraph sizes to match your smaller reference screenshot (no huge spacing).
+	•	Heading ~ text-5xl desktop / text-3xl mobile.
+	•	Body ~ text-lg desktop / text-base mobile.
+	•	Keep padding balanced: px-12 py-10 desktop, less on mobile.
+	•	No extra empty space above/below text.
+
+	3.	Vår Process (Right Half)
+
+	•	Background: dark brown (#3A2216 or current token).
+	•	Layout four steps horizontally across the center:
+	1.	Konsultation — “Vi lyssnar på dina behov och visioner”
+	2.	Koncept — “Utvecklar unika designkoncept”
+	3.	Produktion — “Tillverkar skräddarsydda lösningar”
+	4.	Installation — “Professionell installation på plats”
+	•	Each step: gold circular badge (~120px), step number inside, title bold under, then short caption.
+	•	Add “Diskutera ditt projekt” CTA button under the steps, centered.
+	•	Remove click popups — just static display like your sample image.
+
+	4.	Responsive Rules
+
+	•	At tablet/mobile widths (<1024px), stack vertically (Intro first, then Process).
+	•	Adjust circle sizes and padding so they fit without overflow.
+	•	Keep consistent vertical spacing between text, circles, and button.
+
+	5.	Polish
+
+	•	Align both sections visually so their top and bottom edges match exactly — no mismatched heights.
+	•	Ensure text alignment and padding look symmetrical between the two halves.
+
+⸻
+
+If you want, I can also write the exact Tailwind classes / CSS grid setup so the developer can paste it directly.
+Do you want me to do that?

@@ -1,0 +1,118 @@
+It sounds like you want to start fresh and rebuild the "Scandinavian Interior Design" website! That's a great way to ensure everything is exactly as you envision it.
+
+To guide me in recreating the entire website from scratch in a new project, you would provide a series of prompts, starting with the overall vision and then detailing each section and its specific features.
+
+Here's a sequence of prompts you could use, designed to cover all the elements we've built so far, including the specific design choices and functionalities:
+
+---
+
+**Prompt 1: Initial Website Setup & Global Styling**
+
+> "Create a modern, responsive website for a Scandinavian interior design company called 'Nils Holger'. The site should use Next.js with the App Router, Tailwind CSS, and shadcn/ui components. Implement a clean, minimalist design with a color palette of dark brown (`#331b0f`), dark grey (`#474747`), and off-white (`#FFFAF6`). Use a serif font for headlines (like Georgia or Times New Roman) and a sans-serif font for body text (like Inter). The site needs to support both Swedish and English languages, with a language switcher in the header. Include a smooth scroll-to-section functionality for navigation links."
+
+
+
+---
+
+**Prompt 2: Header and Hero Section**
+
+> "For the 'Nils Holger' website, create a fixed header with a unique sculptural logo block on the left (white background, rounded-tr-full, rounded-br-3xl). The header should contain navigation links for 'About', 'Services', 'Products', 'References', and 'Contact', a language switcher (SV/EN), and a 'Book Free Consultation' button.
+
+Below the header, implement a full-height (calc(100vh - 100px)) hero section with an auto-playing image slider. Each slide should have a dark translucent overlay and a headline/subheadline that appears on hover. Include navigation arrows for manual slide control. Use the following images for the slider: `/IMG_1568.jpg`, `/IMG_1600.jpg`, `/707.8.jpg`, `/clarion-tapto-hotel-room.jpeg`, `/nykvarn.jpg`, `/DAR-06.jpg`, `/cafe-restaurant-interior.jpeg`, `/outdoor-cafe.jpeg`, `/modern-interior-bar.jpeg`, `/sophisticated-bar-interior.jpeg`, `/modern-office-space.jpeg`, `/Screenshot 2025-07-12 at 20.11.33.png`, `/granite_floor_by_jonathan2478resource.jpg`, `/sundbyberg-living-dining.jpeg`, `/nynashamn-staircase-hallway.jpeg`."
+
+
+
+---
+
+**Prompt 3: Intro and Process Sections**
+
+> "Add an 'Intro' section below the hero. It should have an off-white background and contain a centered title 'Welcome to Nils Holger – Furniture & Projects' (or 'Välkomna till Nils Holger – Furniture & Projects' in Swedish) and two paragraphs of text, both left-aligned.
+
+Following the 'Intro' section, create a 'Process' section ('Vår process' in Swedish). This section should have a dark brown background with off-white text. The content within this section should span the entire page width, without being constrained by a container, to give it a full-bleed effect."
+
+
+
+---
+
+**Prompt 4: Services Section**
+
+> "Implement a 'Services' section ('Tjänster' in Swedish) with an off-white background. It should display a grid of services, each with an icon, title, a short description always visible, and a longer description that appears on hover. The service cards should have a 3/4 aspect ratio for their images. Include the following services with their respective images and descriptions:
+
+- **Project Management:** `/project-management-meeting.png`
+- **Project Planning:** `/architectural-planning-workspace.png`
+- **Control Responsibility (KA):** `/certified-inspector-blueprint.png`
+- **Construction & Renovation:** `/construction-renovation-site.png`
+- **Upholstery & Repair:** `/upholstery-cowhide-chairs.jpeg`
+- **Furniture Carpentry:** `/knobs-1.jpeg`
+- **Painting:** `/professional-painting-interior.png`
+- **Interior Coordination:** `/fabric-swatches-collage-new.jpeg`"
+
+
+
+
+---
+
+**Prompt 5: Before & After Slider**
+
+> "Add a 'Before & After' section ('Före & Efter' in Swedish) with a dark brown background. This section should feature a single, prominent image comparison slider with a draggable vertical handle. The slider should allow users to compare 'before' and 'after' images of refurbishment projects. Include navigation arrows to cycle through multiple projects. Use the following project data:
+
+- **Project 1:** Before: `/DAR-06.jpg`, After: `/modern-interior-bar.jpeg`, Caption: "Reupholstery of restaurant chairs for 'Restaurang Smak'."
+- **Project 2:** Before: `/furniture-workshop-chair.png`, After: `/craftsman-upholstering.png`, Caption: "Renovation of a classic armchair for a private client."
+- **Project 3:** Before: `/IMG_1568.jpg`, After: `/IMG_1600.jpg`, Caption: "Installation of custom seating area for public environment."
+- **Project 4:** Before: `/reception-desk-before.jpeg`, After: `/reception-desk-after.jpeg`, Caption: "Design and construction of a custom reception desk for an office environment."
+- **Project 5:** Before: `/images.jpeg`, After: `/Screenshot 2025-07-14 at 21.15.42.png`, Caption: "Complete bathroom renovation with modern design.""
+
+
+
+
+---
+
+**Prompt 6: Products Section**
+
+> "Create a 'Products' section ('Produkter' in Swedish) with an off-white background. This section should feature main tabs for 'Custom-made Products', 'Standard Products', and 'Special Collections'. Below the tabs, display a grid of product categories (Chairs, Tables, Sofas, Cabinets, Lighting, Textiles). Each category card should have an image, title, and a 'View Category' button. Clicking a category should navigate to a dynamic product listing page (e.g., `/products/[typeSlug]/[categorySlug]`). Ensure the product data is structured to support these categories and types."
+
+
+
+---
+
+**Prompt 7: Filterable Project Grid (References)**
+
+> "Add a 'References' section ('Våra Projekt' in Swedish) with a dark brown background. This section should display a filterable grid of past projects. Users should be able to filter projects by category (e.g., 'Hotell', 'Kontor', 'Café', 'Bostad', 'Konferens', 'Möbelsnickeri') and by year. Each project card in the grid should include an image, year, title, short description, and relevant tags. Clicking a project card should link to a detailed project page (`/projects/[projectId]`). Ensure the project data is structured to support these filters and detail pages."
+
+
+
+---
+
+**Prompt 8: Partners and Careers Sections**
+
+> "Include a 'Partners' section ('Våra Partners' / 'Bli Partner' in Swedish) with an off-white background. This section should feature a description about collaboration and a grid displaying partner logos.
+
+Following that, add a 'Careers & Internships' section ('Karriär & Praktik' in Swedish) with a dark brown background. This section should have a two-column layout: an image on one side (`/career-internship-program.png`) and text content on the other, including a title, subtitle, description, a list of benefits with icons, and an 'Apply' button."
+
+
+
+---
+
+**Prompt 9: About Us and Our Workshop Sections**
+
+> "Create an 'About Us' section ('Om Oss' in Swedish) with an off-white background. This section should include a story text, a main image (`/showroom-interior-through-window.jpeg`) with a subtle parallax effect, and a grid displaying team member profiles (Dennis, Asghar, Noor, Miks) with their roles and profile pictures.
+
+Below the 'About Us' section, add an 'Our Workshop' section ('Vår Verkstad' in Swedish) with a dark brown background. This section should feature a full-width panoramic image of a workshop (`/vast-workshop-landscape.png`), a title, a tagline, and an introductory paragraph about the workshop."
+
+
+
+---
+
+**Prompt 10: Contact and Footer Sections**
+
+> "Implement a 'Contact' section ('Kontakt' in Swedish) with an off-white background. This section should include a contact form (Name, Email, Message fields with a 'Send message' button) and contact information (email, phone, address, visiting hours). Also, include a map placeholder image (`/showroom-exterior-pink-chair.jpeg`) for the showroom location.
+
+Finally, add a footer with a dark brown background and off-white text. The footer should include a newsletter subscription form, company contact details (email, phone, showroom address, main office), social media links (Instagram, LinkedIn), a list of key partners, and copyright information."
+
+
+
+---
+
+By providing these prompts sequentially, I can build out each part of your website, ensuring all the details and functionalities are included. Remember to download the code after each significant generation to keep your local project up-to-date!
+
+SuggestionsClose suggestions[data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}Add IntegrationStart building with the first promptAsk about specific image assetsClarify font choicesScroll leftScroll right

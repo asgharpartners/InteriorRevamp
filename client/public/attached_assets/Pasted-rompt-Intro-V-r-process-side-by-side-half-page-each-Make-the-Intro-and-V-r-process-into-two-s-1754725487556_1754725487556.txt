@@ -1,0 +1,39 @@
+rompt: Intro + Vår process (side‑by‑side, half page each)
+
+Make the Intro and Vår process into two separate sections that sit side‑by‑side and together fill one full viewport height (each ~50vh).
+
+Layout
+	•	Desktop (≥1024px): two columns (Intro left, Vår process right), each width: 50%, min-height: 50vh, vertically centered content.
+	•	Tablet (768–1023px): stack vertically, each section min-height: 50vh, consistent spacing.
+	•	Mobile (<768px): stack vertically, each section min-height: auto with generous padding.
+	•	Remove extra top/bottom whitespace; no scroll gaps.
+
+Intro (left column)
+	•	Keep current heading and body text exactly as is (Swedish).
+	•	Left align text, max‑width ~680px, balanced line‑height.
+	•	Background: off‑white (our site’s off‑white token).
+	•	Ensure the logo/header doesn’t overlap this block.
+
+Vår process (right column)
+	•	Use the structure in the reference screenshot: 4 large numbered circles in a single horizontal row with titles under each, and 1‑line subtitles under titles.
+	•	Use our current step texts (keep Swedish wording):
+	1.	Förutsättningslöst möte – Behov och visioner, Tidplan, Omfattning, Budget, Upplägg
+	2.	Design & Koncept – Vi utvecklar ett genomtänkt inredningskoncept
+	3.	Produktion & Förädling – Vi producerar & förädlar lösningar i egen verkstad / via partners
+	4.	Leverans & Installation – Transport, montering, färdigställande
+	•	Circle style: 96–120px diameter, site yellow fill, brown numbers.
+	•	Titles in off‑white; subtitles in a lighter off‑white; center‑aligned.
+	•	Background: primary brown.
+	•	Add CTA button under the row: “Diskutera ditt projekt” (yellow button → opens contact section anchor).
+
+Behavior & polish
+	•	Perfect vertical alignment between the two halves.
+	•	Maintain safe margins around the process row so circles never collide with edges on any screen.
+	•	Text never overlaps; circles wrap into 2x2 grid on tablet/mobile.
+	•	No popups/accordions here—just static, readable steps.
+	•	Keep section IDs: #intro, #var-process.
+
+Acceptance
+	•	On desktop: both halves fill one screen; no extra blank space above/below; clean seam between off‑white and brown.
+	•	On tablet/mobile: sections stack; spacing consistent; process circles readable and not cropped.
+	•	CTA scrolls to contact.
